@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<link rel="icon" type="image/svg" href="./images/favicon.svg">
+<title>Lo-Fi Python: Programming Fundamentals</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toc = document.getElementById("toc");
+        if (toc) {
+            const btn = document.createElement("button");
+            btn.id = "theme-toggle";
+            btn.textContent = "Toggle Dark/Light Mode";
+            // toc.appendChild(btn);
+            toc.insertBefore(btn, toc.firstChild);
+        }
+    });
+</script>
+</head>
+<body id="_sound_check" class="article toc2 toc-left">
+<link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+<!-- TODO: Keep link to font awesome? -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- <div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div> -->
+<div id="header">
+<h1>Lo-Fi Python: Programming Fundamentals</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi Python: Programming Fundamentals</a></span></p><ul class="sectlevel1">
+<li><a href="_sound_check.html"><span class="toc-current">Sound Check</span></a>
+<ul class="sectlevel2">
+<li><a href="_sound_check.html#_how_to_use_this_book">How to Use This Book</a>
+</li>
+<li><a href="_sound_check.html#_related_resources">Related Resources</a>
+</li>
+<li><a href="_sound_check.html#_setting_up_your_programming_environment">Setting Up Your Programming Environment</a>
+</li>
+<li><a href="_sound_check.html#_installing_python">Installing Python</a>
+</li>
+<li><a href="_sound_check.html#_selecting_an_ide">Selecting an IDE</a>
+</li>
+<li><a href="_sound_check.html#_installation_instructions">Installation Instructions</a>
+</li>
+<li><a href="_sound_check.html#_check_yourself_before_you_wreck_yourself_on_the_assignments">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+</li>
+</ul>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_methods.html">3. Methods</a>
+</li>
+<li><a href="_decisions.html">4. Decisions</a>
+</li>
+<li><a href="_loops.html">5. Loops</a>
+</li>
+<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_arrays.html">8. Arrays</a>
+</li>
+<li><a href="_graphical_user_interfaces.html">9. Graphical User Interfaces</a>
+</li>
+<li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_appendix_a_net_maui_configuration.html">Appendix A: .NET MAUI Configuration</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_sound_check">Sound Check</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p>A few things before we drop the needle</p>
+</div>
+<div class="paragraph">
+<p>This eBook was developed as a companion to my CIS156 course at <a href="https://www.estrellamountain.edu">Estrella Mountain Community College</a>, which serves as an introduction to programming for students in a variety of career and degree programs.
+The centerpiece of the book is really the video content, with the text providing context, code examples, and additional details.</p>
+</div>
+<div class="paragraph">
+<p>I believe that being able to read and learn from technical text is a critical skill for programmers and other IT professionals.
+But, I also know that many students aren&#8217;t likely to read large amounts of assigned text.
+So, this book is my attempt at a compromise: you will need to do some reading, but you&#8217;ll have video content that puts the concepts into practice.</p>
+</div>
+<div class="paragraph">
+<p>The nature of this course means that I work with students from a few different career paths.
+While some students are majoring in  <em>Programming and Systems Analysis</em> (or some other coding-related degree) and will go on to be professional programmers, most of my students will need only a basic understanding of programming concepts to succeed in their chosen field.
+Cybersecurity and system administration students, for example, may create or use Python scripts to automate tasks, but are unlikly to participate in large-scale software development projects.
+Students going on to careers in IT management will benefit from understanding how software is created, but probably won&#8217;t write much code themselves.
+Even web development students—who will write code of some kind—will probably not develop for a console or desktop environment, as we do when learning Python.
+So, I don&#8217;t expect most of my students to need a deep, technical understanding of Python.
+The ones who will go on to programming careers will be taking additional coding classes where they will deepen their understanding of Python and other languages, so for this course I can strip the content down; what musicians might call <em>low fidelity</em>, or lo-fi.</p>
+</div>
+<div class="paragraph">
+<p>Setting aside all of that pedagogical reasoning, I really don&#8217;t like making student pay for textbooks.
+Traditional textbooks are outrageously expeensive and go much deeper into programming than my introductory students need.
+My goal isn&#8217;t to create a comprehensive reference source.</p>
+</div>
+<div class="paragraph">
+<p>Instead, I want students to leave this course understanding fundamentals of progrmming that will serve as a foundation or additional learning, or as a basis for working with scripts and software developers</p>
+</div>
+<div class="paragraph">
+<p>And my ulterior motive is to help you enjoy programming and experience the nerdy goodness of writing a cool piece of code, so that at the end of the course you are interested in sticking with it and learning more.</p>
+</div>
+<div class="paragraph">
+<p>And if the book sucks, at least you didn&#8217;t pay for it.</p>
+</div>
+<div class="sect2">
+<h3 id="_how_to_use_this_book">How to Use This Book</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Each chapter begins with <strong>What&#8217;s the Point?</strong>, which gives you an idea of what you should be able to do after finishing the chapter content.</p>
+</li>
+<li>
+<p>This book is lo-fi because much of the content you need is delivered via video content, making this a little stripped down. When you see <strong>Time to Watch</strong>, just watch the embedded (or hyperlinked) YouTube video. Quizzes in Canvas may include questions about the video content, and assignments will require the skills and concepts covered in videos.</p>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph">
+<p>Be sure to watch the embedded video. Where applicable, there will be links to files used/created in the video.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>After the video, continue reading the chapter. The text content in the eBook is intended to be brief, with an overview of the topic, code examples, and details not covered in the videos.</p>
+</li>
+<li>
+<p>Reading and watching videos isn&#8217;t enough to learn programming. You need to stop regularly and try out what you&#8217;re learning.</p>
+<div class="exampleblock callout spin">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="spin-icon" width="88.88" height="62.42" viewBox="0 0 88.88 62.42" fill="currentColor"><path d="M60.84,29.26c-1.16.32-1.79,1.37-1.47,2.42.32,1.05,1.37,1.68,2.42,1.47,1.05-.32,1.68-1.37,1.47-2.42-.32-1.16-1.37-1.79-2.42-1.47Z"/><path d="M40.63,15.26c-.32-.21-.74-.32-1.16-.21l-17.26,4.32c-.53.11-.95.63-.95,1.26v18.63c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-13.79l14.74-3.79v9.26c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-22.63c-.21-.42-.31-.84-.63-1.05h0ZM18.42,45.26c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.27,2-2.74,2ZM35.68,40.95c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.16,2-2.74,2ZM38.53,22.95l-14.74,3.79v-5.16l14.74-3.68v5.05Z"/><path d="M88,24.21c-3.16-12-13.79-20.1-25.58-20.53V1.47c0-.84-.63-1.47-1.47-1.47H1.47C.63,0,0,.64,0,1.48v59.47c0,.84.63,1.47,1.47,1.47h59.47c.84,0,1.47-.63,1.47-1.47v-2.21c2-.11,4-.32,5.89-.84,14.64-3.89,23.48-18.94,19.69-33.68h0ZM61.27,39.05c-4.32,0-7.79-3.47-7.79-7.79s3.47-7.79,7.79-7.79,7.79,3.47,7.79,7.79-3.48,7.79-7.79,7.79ZM2.95,2.84h56.53v3.26H2.95s0-3.26,0-3.26ZM59.47,59.48H2.95v-2.74h56.53v2.74ZM59.47,53.69H2.95V9.05h56.53v11.05c-5.47.74-9.58,5.37-9.58,10.95s4.21,10.32,9.58,10.95v11.68ZM76.74,28c-.63.21-1.26-.21-1.47-.84-1.05-3.47-3.26-6.42-6.32-8.32-.32-.21-.42-.42-.53-.74-.11-.32,0-.63.11-.95.32-.53,1.05-.74,1.68-.42,3.58,2.21,6.21,5.68,7.37,9.68.21.74-.21,1.38-.84,1.59h0ZM81.37,26.74c-.63.21-1.26-.21-1.47-.84-1.37-4.74-4.32-8.74-8.53-11.26-.32-.21-.42-.42-.53-.74s0-.63.11-.95c.32-.53,1.05-.74,1.68-.42,4.74,2.84,8.11,7.37,9.58,12.63.21.74-.21,1.48-.84,1.58h0Z"/></svg><strong class="callout-title">Take It for a Spin</strong></p>
+</div>
+<div class="paragraph">
+<p>When you see <strong>Take It for a Spin</strong>, it&#8217;s a good time to open your IDE and write some code. In many cases, these markers also indicate the spot where you have learned enough to complete a practice assignment for class.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>There are some topics that I think are important or useful (or just cool) but fall outside the scope of the course. These optional or expanded topics are marked as <strong>Deep Cuts</strong>, with links to additional information, either on an external website or in the <a href="deep-cuts.html">Deep Cuts</a> section at the end of the book.</p>
+<div class="exampleblock callout dc">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="dc-icon" viewBox="0 0 274.1 276.86" width="1em" height="1em" fill="currentColor"><path d="M148.45,139.81c0-6.21-5.18-11.39-11.39-11.39s-11.39,5.18-11.39,11.39,5.18,11.39,11.39,11.39,11.39-5.18,11.39-11.39Z"/><path d="M220.6,121.86l-21.75,21.75,5.52,5.52-7.94,8.29c-2.08,2.08-2.08,5.18,0,7.25,1.04,1.04,2.42,1.38,3.45,1.38,1.38,0,2.77-.69,3.79-1.73l7.94-8.29,4.14,4.14,21.75-21.75-4.47-3.79,16.91-17.26c1.04-1.04,1.38-2.42,1.38-3.45V5.18c.01-2.77-2.41-5.18-5.16-5.18s-5.18,2.42-5.18,5.18v106.68l-15.19,15.54-5.19-5.53h0Z"/><path d="M258.23,75.26v38.66c0,3.11-1.38,6.21-3.45,8.29l-12.09,12.43,4.48,4.48-31.41,31.41-4.14-4.14-3.11,3.11c-2.42,2.42-5.52,3.79-8.63,3.79s-6.21-1.38-8.29-3.45c-4.83-4.48-4.83-12.43-.35-16.91l3.45-3.45-5.52-5.52,31.41-31.41,5.18,5.18,8.29-8.63V42.81C209.21,17.96,175.03,2.76,137.06,2.76c-75.6,0-137.06,61.45-137.06,137.05s61.45,137.05,137.05,137.05,137.05-61.45,137.05-137.05c0-23.12-5.87-45.22-15.87-64.56h0ZM196.09,192.98c2.42,2.42,2.08,6.21-.35,8.63-15.19,14.5-35.56,22.79-56.61,23.47-3.11,0-5.87-2.77-6.21-5.87,0-3.45,2.42-6.21,5.87-6.21,18.29-.35,35.56-7.6,48.68-20.02,2.41-2.42,6.2-2.42,8.62,0h0ZM65.25,71.11c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21,0-8.63,20.02-19.33,46.26-30.03,73.88-30.72,3.45-.35,6.21,2.77,6.21,5.87,0,3.45-2.77,6.21-5.87,6.21-24.51.35-47.99,10.01-65.59,27.27-1.05,1.4-2.77,1.73-4.15,1.73h0ZM82.51,88.38c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21.35-8.63,15.19-14.5,35.56-22.79,56.61-23.47,3.11-.35,6.21,2.42,6.21,5.87s-2.42,6.21-5.87,6.21c-18.29.35-35.56,7.6-48.68,20.02-1.02,1.04-2.75,1.73-4.14,1.73h0ZM94.93,139.81c0-23.12,18.99-42.12,42.12-42.12s42.12,18.99,42.12,42.12-18.99,42.12-42.12,42.12-42.12-19-42.12-42.12ZM213,218.87c-20.02,19.33-46.26,30.03-73.88,30.72-3.45,0-5.87-2.77-6.21-5.87,0-3.45,2.77-6.21,5.87-6.21,24.51-.35,47.99-10.01,65.59-27.27,2.42-2.42,6.21-2.08,8.63,0,2.42,2.42,2.42,6.21,0,8.63h0Z"/></svg><strong class="callout-title">Deep Cut</strong></p>
+</div>
+<div class="paragraph">
+<p>These generally add a little extra to skills/concepts in the eBook and videos. Since I&#8217;ve intentionally kept the content pretty minimal, I&#8217;ve left out all kinds of interesting and useful stuff. Assignments and quizzes will not include these topics, but these are things I expand on at the end of the book.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>At the end of each chapter, <strong>Check Yourself Before You Wreck Yourself (on the assignments)</strong> provides a few questions to help you review the material.
+You can find sample answers to these questions at the very end of the eBook, in the <a href="_liner_notes.html">Liner Notes</a> section.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_related_resources">Related Resources</h3>
+<div class="paragraph">
+<p>In general, this book includes resources within each chapter. The following links collect those resources so you can find them when necessary.</p>
+</div>
+<div class="paragraph">
+<p>GitHub landing page: <a href="https://timmcmichael.github.io" target="_blank" rel="noopener">https://timmcmichael.github.io</a></p>
+</div>
+<div class="paragraph">
+<p>YouTube channel: <a href="https://www.youtube.com/@ProfTimEMCC" target="_blank" rel="noopener">@ProfTimEMCC</a></p>
+</div>
+<div class="paragraph">
+<p>Course YouTube playlist: <a href="https://www.youtube.com/playlist?list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" target="_blank" rel="noopener">Beginning Python (CIS156)</a></p>
+</div>
+<div class="sect3">
+<h4 id="_source_code_files">Source code files:</h4>
+<div class="paragraph">
+<p>The source code files shown in the eBook and videos are available on GitHub; a link at the beginning of each chapter will take you to the appropriate folder in the repository.
+If you have trouble finding something (or using the GitHub site), please contact me at <a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a> or in Canvas.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GitHub Repository: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)" target="_blank" rel="noopener">https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_up_your_programming_environment">Setting Up Your Programming Environment</h3>
+<div class="paragraph">
+<p>Although our goal is the learn coding fundamentals that will apply to any programming language, we do need to use one specific language to do it.
+We&#8217;re going to use Python for this course, and we&#8217;ll learn more about the language (and why we&#8217;re using it) in the next chapter.</p>
+</div>
+<div class="paragraph">
+<p>In order to create and run Python programs, we&#8217;ll need a couple of things installed on your computer.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Python</dt>
+<dd>
+<p>The Python installation includes a handful of tools, including the Python <strong>interpreter</strong>, which runs Python programs.</p>
+</dd>
+<dt class="hdlist1">Integrated Development Environment (IDE)</dt>
+<dd>
+<p>An application used to write and test your Python programs</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>These two tools can be used on pretty much any laptop or desktop computer that runs Windows, macOS, or linux, even if it&#8217;s not very powerful.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+While Python development on a Chromebook, iPad, or similar device may be technically possible, it&#8217;s difficult for beginners and is not supported for this course.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>All of the tools we&#8217;ll use are free (or offer a free version that&#8217;s adequate for our needs).</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installing_python">Installing Python</h3>
+<div class="paragraph">
+<p>Python is available free of charge from the official Python website, <a href="https://www.python.org">python.org</a>.
+Python is continuously being updated and improved, so there are many different versions available.
+In general, you should install the latest stable release, and since multiple versions of Python can coexist on the same computer, there&#8217;s no reason not to install the latest version for this course.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+macOS comes with an old version of Python (2.x) already installed, but that version is outdated and not suitable for this course.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To install Python:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to <a href="https://www.python.org">python.org</a>.</p>
+</li>
+<li>
+<p>Click on the <strong>Downloads</strong> link.</p>
+</li>
+<li>
+<p>The website should automatically detect your operating system and provide a link to the appropriate installer. Confirm that it&#8217;s correct, then click the link to begin the download. If it does not correctly identify your operating system, the site will provide links to find other versions.</p>
+</li>
+<li>
+<p>Run the installer and follow the prompts to complete the installation.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em>Note: the Python website is subject to change. If the instructions above are out of date, please contact me at <a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a> so I can update them.</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_selecting_an_ide">Selecting an IDE</h3>
+<div class="paragraph">
+<p>An Integrated Development Environment (IDE) is an application coders use to develop programs.
+Think of it as a word processor—you can write your History essay in Microsoft Word or Google Docs.
+They both do pretty much the same thing, and your professor won&#8217;t know or care which one you use, so picking between them is a matter of preference.
+If you&#8217;re already familiar with a particular IDE—and that IDE supports Python—you can choose to use it for this course.
+If you&#8217;re new to programming, or if you want to make sure you&#8217;re using a tool I can help you with, I have a couple of recommendations.</p>
+</div>
+<div class="sect3">
+<h4 id="_jetbrains_pycharm">JetBrains PyCharm</h4>
+<div class="paragraph">
+<p>JetBrains PyCharm is a commericial IDE that is designed specifically for Python development.
+It is very robust and is widely used by professional Python developers.</p>
+</div>
+<div class="paragraph">
+<p><strong>For most students, this will be the best choice.</strong></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Pros</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Available for Windows, macOS, and Linux.</p>
+</li>
+<li>
+<p>Free for personal (non-commercial) use.</p>
+</li>
+<li>
+<p>It&#8217;s a full-featured IDE that&#8217;s specifically designed for Python development out of the box.</p>
+</li>
+<li>
+<p>Similar look and feel to other JetBrains products, so if you&#8217;ve used IntelliJ IDEA or Rider, for example, it will feel familiar.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Cons</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Not free for commercial use, so if you&#8217;re planning to use it for a job or to make money, you&#8217;ll need to pay for a license.</p>
+</li>
+<li>
+<p>Not as lightweight as VS Code, so it might be slower on older computers.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_visual_studio_code">Visual Studio Code</h4>
+<div class="paragraph">
+<p>Microsoft offers a free, open-source IDE called <strong>Visual Studio Code</strong>, or "VS Code".
+It&#8217;s intended to be a very lightweight, flexible IDE that can be used for many different programming languages.
+The idea is that the base installation is minimal, and then you add <em>extensions</em> to provide support for the specific work you&#8217;re doing.
+In fact, it&#8217;s <em>so</em> lightweight that many people argue that it&#8217;s not really an IDE at all—it&#8217;s more of a text editor with some IDE features.
+In other words, it doesn&#8217;t come with built-in support for Python (or any other language), but its easy to add that support after installation.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Microsoft has another product called <strong>Visual Studio Community</strong>, which is a different product and not the same thing as Visual Studio Code.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Pros</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Available for Windows, macOS, and Linux.</p>
+</li>
+<li>
+<p>Free and open-source.</p>
+</li>
+<li>
+<p>Very popular, so there are lots of resources available to help you learn how to use it.</p>
+</li>
+<li>
+<p>Supports many different programming languages, so you can use it for other courses or projects.</p>
+</li>
+<li>
+<p>The extensions used for Python have been around for a while and work very well.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Cons</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Not as feature-rich as JetBrains Rider, even with extensions installed.</p>
+</li>
+<li>
+<p>Not as user-friendly; created for power users, so it can feel a little primitive to beginners.</p>
+</li>
+<li>
+<p>Support for C# is relatively recent; though it&#8217;s getting better, it&#8217;s not as robust as the other options.</p>
+</li>
+<li>
+<p>Although there are a lot of resources for VS Code, most of those will be for different programming languages.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Much of my video content is recorded using VS Code, but I try to mix it up so that there are examples using both IDEs.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_something_else">Something Else?</h4>
+<div class="paragraph">
+<p>You&#8217;re welcome to use any IDE you like.
+But be aware that I will not be able to support you if you run into trouble with an IDE I&#8217;m not familiar with, and I can&#8217;t give points for files that, for one reason or another, I&#8217;m not able to open and run.
+And one specific caution: <strong>don&#8217;t rely on a web-based IDE for this course</strong> (i.e., a web page that lets you write and run Python code).
+They&#8217;re fine for some things, but they&#8217;re not adequate for the programs we&#8217;ll create as the course goes on.
+And since web-based IDEs often output weird files, you&#8217;re at risk of getting a zero on work created using such a tool.
+I&#8217;m not going to spend time sorting out code that doesn&#8217;t use standard formatting conventions and file formats.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can install and use multiple IDEs on your computer, so you can try them and see which one you like best.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_instructions">Installation Instructions</h3>
+<div class="paragraph">
+<p>The linked documents below provide detailed installation instructions—but they are fairly straightforward, so even if some of the details are out of date, you should be able to figure it out.
+If that&#8217;s not the case, email me at <a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a> so I can update this content.</p>
+</div>
+<div class="sect3">
+<h4 id="_installing_jetbrains_pycharm">Installing JetBrains PyCharm</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.google.com/document/d/1bWQuhbEgm0O8jAHeIe53bvNzq3TCnFo02FMi2XUDqXI/edit?usp=sharing" target="_blank" rel="noopener">Install JetBrains Rider on any OS</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_installing_visual_studio_code_for_python">Installing Visual Studio Code for Python</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.google.com/document/d/13q3nmtAI-KbE-sH9MH5aQlAxv5t-HZ56k1a9TtKsaP0/edit?usp=sharing" target="_blank" rel="noopener">Install VS Code for C# on Windows</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/1IvGJ9DDbGkKj9HxmsjgubvRuOjLNbnepi3HpZjXsH3w/edit?usp=sharing" target="_blank" rel="noopener">Install VS Code for C# on macOS</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/1lo9hoBZkBDux6OKjdbGfXdOw0JaptmNSCZuGBMFNXU8/edit?usp=share_link" target="_blank" rel="noopener">Install VS Code for C# on Linux</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After installing your IDE of choice, you&#8217;ll be ready to write your first Python program—which we&#8217;ll do in the next chapter!</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<div class="paragraph subtitle">
+<p>Review Questions</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>What tools do you need to develop Python programs?</p>
+</li>
+<li>
+<p>What does IDE stand for and what is it&#8217;s role in software development?</p>
+</li>
+<li>
+<p>What IDE did you choose? Why?</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Sample answers provided in the <a href="_liner_notes.html#sound-check-chapter">Liner Notes</a></em>.
+:sectnums:</p>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_computers_and_coding.html">Computers and Coding</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Polka Tulk Edition,&nbsp;revised&nbsp;2025-11-21<br />
+        00:36:05 UTC<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>

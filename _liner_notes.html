@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<link rel="icon" type="image/svg" href="./images/favicon.svg">
+<title>Lo-Fi Python: Programming Fundamentals</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toc = document.getElementById("toc");
+        if (toc) {
+            const btn = document.createElement("button");
+            btn.id = "theme-toggle";
+            btn.textContent = "Toggle Dark/Light Mode";
+            // toc.appendChild(btn);
+            toc.insertBefore(btn, toc.firstChild);
+        }
+    });
+</script>
+</head>
+<body id="_liner_notes" class="article toc2 toc-left">
+<link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+<!-- TODO: Keep link to font awesome? -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- <div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div> -->
+<div id="header">
+<h1>Lo-Fi Python: Programming Fundamentals</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi Python: Programming Fundamentals</a></span></p><ul class="sectlevel1">
+<li><a href="_sound_check.html">Sound Check</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_methods.html">3. Methods</a>
+</li>
+<li><a href="_decisions.html">4. Decisions</a>
+</li>
+<li><a href="_loops.html">5. Loops</a>
+</li>
+<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_arrays.html">8. Arrays</a>
+</li>
+<li><a href="_graphical_user_interfaces.html">9. Graphical User Interfaces</a>
+</li>
+<li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+</li>
+<li><a href="_liner_notes.html"><span class="toc-current">Liner Notes</span></a>
+<ul class="sectlevel2">
+<li><a href="_liner_notes.html#sound-check-chapter">Sound Check</a>
+</li>
+<li><a href="_liner_notes.html#computers-and-coding">1. Computers and Coding</a>
+</li>
+<li><a href="_liner_notes.html#variables-and-data-types">2. Variables and Data Types</a>
+</li>
+<li><a href="_liner_notes.html#methods">3. Methods</a>
+</li>
+<li><a href="_liner_notes.html#decisions">4. Decisions</a>
+</li>
+<li><a href="_liner_notes.html#loops">5. Loops</a>
+</li>
+<li><a href="_liner_notes.html#debugging-and-generative-ai">6. Debugging and Generative AI</a>
+</li>
+<li><a href="_liner_notes.html#classes-and-objects">7. Classes and Objects</a>
+</li>
+<li><a href="_liner_notes.html#arrays">8. Arrays</a>
+</li>
+<li><a href="_liner_notes.html#graphical-user-interfaces">9. Graphical User Interfaces</a>
+</li>
+<li><a href="_liner_notes.html#testing">B-Side: Lo-Fi Testing</a>
+</li>
+<li><a href="_liner_notes.html#software-dev">B-Side: Software Development</a>
+</li>
+</ul>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_appendix_a_net_maui_configuration.html">Appendix A: .NET MAUI Configuration</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_liner_notes">Liner Notes</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p>Sample answers to "Check Yourself&#8230;&#8203;" questions</p>
+</div>
+<div class="paragraph">
+<p>When you buy an album on vinyl, the liner notes (or "jacket notes") are the information that&#8217;s printed on the back of the sleeve or, for music on CD or cassette, in a booklet inside the plastic case.
+Basic liner notes are just the song titles, and the names of the artists and producers.
+But sometimes you get lucky, and the liner notes have blurbs written by the artists, or maybe even the complete lyrics to the songs.
+In other words, a cheat sheet that really helps you understand the music.</p>
+</div>
+<div class="paragraph">
+<p>These liner notes have answers and basic explanations to the <em>Check Yourself&#8230;&#8203;</em> questions from the chapters.
+These aren&#8217;t meant to be comprehensive answers, just a little information so you can confirm you&#8217;re&#8230;&#8203;well, I hate to say it, but&#8230;&#8203;on the right <em>track</em>.</p>
+</div>
+<div class="paragraph">
+<p>The review questions are intended to be a little open-ended, so your answers will vary from these.</p>
+</div>
+<div class="sect2">
+<h3 id="sound-check-chapter">Sound Check</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What tools do you need to develop Python programs?</strong></em></p>
+<p>You&#8217;ll need an IDE and the Python installation package.</p>
+</li>
+<li>
+<p><em><strong>What does IDE stand for and what is it&#8217;s role in software development?</strong></em></p>
+<p>IDE stands for Integrated Development Environment. It&#8217;s the software you&#8217;ll use to write your C# code.</p>
+</li>
+<li>
+<p><em><strong>What IDE did you choose? Why?</strong></em></p>
+<p>Anything is fine, as long as it supports C#! Popular choices include Visual Studio Community, Visual Studio Code, and JetBrains Rider.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="computers-and-coding">1. Computers and Coding</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is the primary role of a programming language in the context of computer programming?</strong></em></p>
+<p>The primary role of a programming language is to act as a bridge between human language and machine language. It allows humans to write instructions in a way that is easier for them to understand and use, which can then be accurately translated into machine language that a computer can execute.</p>
+</li>
+<li>
+<p><em><strong>What happens when you run a C# program? Describe that process in simple terms.</strong></em></p>
+<p>When you run a C# program, your code gets compiled (translated) into something the computer can understand, then the computer follows your instructions step by step and shows the results (like printing text or doing math).</p>
+</li>
+<li>
+<p><em><strong>What&#8217;s the difference between Console.Write() and Console.WriteLine()? When would you use each?</strong></em></p>
+<p>Console.Write() prints text and keeps the cursor on the same line. Console.WriteLine() prints text and moves the cursor to a new line. Use Write() when you want output to continue on the same line, and WriteLine() when you want it to start a new line afterward.</p>
+</li>
+<li>
+<p><em><strong>How would you explain what a “program” is to an 8-year-old?</strong></em></p>
+<p>A program is like a list of instructions you give to a computer—kind of like a recipe. The computer follows the steps exactly to do something, like showing a message or solving a puzzle.</p>
+</li>
+<li>
+<p><em><strong>Explain the difference between compiled and interpreted programming languages. Describe how C# is both compiled *and</strong> interpreted.*</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Compiled languages</strong> are those where the source code is translated into machine language by a compiler before the program is run. This machine language file can then be executed directly by the computer. An example of a compiled language is C.</p>
+</li>
+<li>
+<p><strong>Interpreted languages</strong> are those where the source code is translated into machine language on the fly, as the program is running, by an interpreter. An example of an interpreted language is Python.</p>
+</li>
+<li>
+<p><strong>C#</strong> is a somewhat unique case, as it is both compiled and interpreted. The source code is first compiled into an intermediate language called CIL, which is then interpreted by the .NET runtime (CLR) when the program is executed. This allows C# to have some of the performance benefits of compiled languages while still being able to run on different platforms.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="variables-and-data-types">2. Variables and Data Types</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is a variable, and why do we use them in programming?</strong></em></p>
+<p>A variable is a named storage location in a program that holds a value which can change as the program runs. We use variables to store, update, and reuse data.</p>
+</li>
+<li>
+<p><em><strong>Which C# data type would you use for each of the following?</strong></em></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The number of people in The Beatles</strong> → <code>int</code></p>
+</li>
+<li>
+<p><strong>The full name of the Beatles bass player</strong> → <code>string</code></p>
+</li>
+<li>
+<p><strong>Whether the Beatles are a great band (yes or no)</strong> → <code>bool</code></p>
+</li>
+<li>
+<p><strong>The price of <em>Sgt. Pepper&#8217;s Lonely Hearts Club Band</em> on vinyl</strong> → <code>double</code></p>
+</li>
+<li>
+<p><strong>John Lennon&#8217;s middle initial (it&#8217;s W, incidentally)</strong> → <code>char</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em><strong>Write a line of code that declares a variable named importantYear and sets it to 1964.</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> importantYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1964</span><span style="color: #f8f8f2">;</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>What will the following code print? Why?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> drummer </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Pete Best&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">drummer </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Ringo Starr&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">Console.WriteLine(drummer);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The code will print "Ringo Starr" because the variable <code>drummer</code> is first set to <a href="https://en.wikipedia.org/wiki/Pete_Best" target="_blank" rel="noopener">"Pete Best"</a> and then changed to "Ringo Starr". The most recent value assigned to the variable is what gets printed.</p>
+</div>
+</li>
+<li>
+<p><em><strong>What happens if you try to store a word (like "hello") in a variable declared as <code>int</code>?</strong></em></p>
+<p>The program will not compile. You can&#8217;t assign a value of one data type to a variable of another (incompatible) data type. You also can&#8217;t change the data type of a variable after you&#8217;ve declared it.</p>
+</li>
+<li>
+<p><em><strong>What&#8217;s wrong with this variable name: <code>4ladsFromLiverpool</code>?</strong></em></p>
+<p>A C# variable name can&#8217;t start with a number. You could call it <code>fourLadsFromLiverpool</code> instead.</p>
+</li>
+<li>
+<p><em><strong><em>True</em> or <em>False</em>: You must always assign a value to a variable at the same time you declare it</strong></em></p>
+<p><strong>False.</strong> You can declare a variable and assign a value to it later:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> albums;</span>
+<span style="color: #f8f8f2">albums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">12</span><span style="color: #f8f8f2">;</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>What are compound assignment operators in C#? Provide examples of how they are used in arithmetic operations.</strong></em></p>
+<p>Compound assignment operators combine an arithmetic operation with assignment. Examples:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> numBeatles </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">numBeatles </span><span style="color: #ff4689">-=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// Rest in peace, Stuart Sutcliffe!</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>Write a short program that asks for the user&#8217;s name and the number of Beatles albums they own, and then prints a personalized message like: “Hello Stu, you have 5 Beatles albums.”</strong></em></p>
+<div class="listingblock">
+<div class="title"><code>BeatlesGreeting.cs</code></div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;What is your name? &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> name </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Console.ReadLine();</span>
+
+<span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;How many Beatles albums do you own? &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> albums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(Console.ReadLine());</span>
+
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">$&quot;Hello {name}, you have {albums} Beatles albums.&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>10. What are the two ways to convert a <code>string</code> to a numeric type, such as <code>int</code> or <code>double</code>? Show the syntax of each.</strong></em></p>
+<p>You can convert a string to a numeric type using either the <code>Convert</code> class or the <code>Parse</code> method. Here are examples of both:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> nineteenSixtyNine </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;1969&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> woodstockYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(nineteenSixtyNine); </span><span style="color: #959077">// Using Convert class</span>
+<span style="color: #f8f8f2">woodstockYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">.Parse(nineteenSixtyNine); </span><span style="color: #959077">// Using Parse method</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="methods">3. Methods</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is a method, and why would you use one in your code?</strong></em></p>
+<p>A method is a named block of code that does something—like a mini-program inside your program. You use methods to organize your code, avoid repetition, and make your program easier to understand and manage. (Like reusable LEGO chunks.)</p>
+</li>
+<li>
+<p><em><strong>What&#8217;s the difference between calling a method and defining a method?</strong></em></p>
+<p>Defining a method is writing what the method does. Calling a method is telling it to actually run. You define once, but can call it as many times as you want.</p>
+</li>
+<li>
+<p><em><strong>What does the keyword <code>void</code> mean in a method definition?</strong></em></p>
+<p><code>void</code> means the method doesn&#8217;t return anything. It just does something, like printing text, but doesn&#8217;t give a value back.</p>
+</li>
+<li>
+<p><em><strong>Consider the code below. How would you call it to greet someone named "Brian Epstein"?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Greet</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> name)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">$&quot;Hello, {name}!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>[source,csharp]Greet("Brian Epstein");</p>
+</div>
+</li>
+<li>
+<p><em><strong>Why is it a good idea to define reusable code inside a method instead of copying and pasting it everywhere?</strong></em></p>
+<p>Defining reusable code inside a method is better than copying and pasting because it makes your code cleaner, easier to read, and less error-prone. If you need to change the code later, you only have to do it in one place instead of everywhere you pasted it. It also ensures that each copy of the code does the same thing, reducing the chance of mistakes.</p>
+</li>
+<li>
+<p><em><strong>Consider the code below. a. Overload the method by accepting the name of a band to introduce. b. Demonstrate how to call each version of the method.</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AnnounceBand</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Ladies and gentlemen, The Beatles!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha">
+<li>
+<p>Overloaded method:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AnnounceBand</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> bandName)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">	Console.WriteLine(</span><span style="color: #e6db74">$&quot;Ladies and gentlemen, {bandName}!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Calling each version:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">AnnounceBand(); </span><span style="color: #959077">// Calls the original method</span>
+<span style="color: #f8f8f2">AnnounceBand(</span><span style="color: #e6db74">&quot;The Rolling Stones&quot;</span><span style="color: #f8f8f2">); </span><span style="color: #959077">// Calls the overloaded method</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><em><strong>What happens if you define a method with a parameter but forget to provide an argument when you call it?</strong></em></p>
+<p>If you define a method with a parameter but forget to provide an argument when you call it, the program will not compile. The compiler will give an error because it expects an argument for the parameter.</p>
+</li>
+<li>
+<p><em><strong>What do we call the variable inside a method&#8217;s parentheses? How is it different from an argument?</strong></em></p>
+<p>The variable inside a method&#8217;s parentheses is called a <strong>parameter</strong>. It&#8217;s a placeholder for the value that will be passed to the method when it&#8217;s called. An <strong>argument</strong> is the actual value you provide when you call the method. For example, in <code>greet("Brian Epstein")</code>, "Brian Epstein" is the argument, and <code>name</code> in <code>greet(string name)</code> is the parameter.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="decisions">4. Decisions</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What type of value or expression must go inside the parentheses of an if statement?</strong></em></p>
+<p>The parentheses of an <code>if</code> statement must contain a <code>bool</code> value or expression. This determines whether the code inside the <code>if</code> block will run.</p>
+</li>
+<li>
+<p><em><strong>Write an <code>if</code> statement that checks if the variable <code>volume</code> is less than 11. If it is, print "This amp goes to <a href="https://www.youtube.com/watch?v=4xgx4k83zzc" target="_blank" rel="noopener">eleven</a>!".</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (volume </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">11</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">	Console.WriteLine(</span><span style="color: #e6db74">&quot;This amp goes to eleven!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>What does the <code>==</code> operator do, and how is it different from <code>=</code>?</strong></em></p>
+<p>The <code>==</code> operator checks if two values are equal. It&#8217;s used in Boolean expressions like <code>if</code> statements. The <code>=</code> operator is used for assignment, to set a variable&#8217;s value. For example, <code>x = 5</code> assigns 5 to x, while <code>if (x == 5)</code> checks if x is equal to 5.</p>
+</li>
+<li>
+<p><em><strong>Explain the difference between using <code>else if</code> and just writing another <code>if</code> statement?</strong></em></p>
+<p><code>else if</code> is only evaluated if the first <code>if</code> is false.
+A separate <code>if</code> is evaluated no matter what—even if the previous one was true.</p>
+</li>
+<li>
+<p><em><strong>Write a comment that explains the following code:</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (scratchCount </span><span style="color: #ff4689">&gt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">&amp;&amp;</span><span style="color: #f8f8f2"> scratchCount </span><span style="color: #ff4689">&lt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">6</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    condition </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;very good&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This code checks if the variable <code>scratchCount</code> is between 3 and 6 (inclusive). If it is, it sets the variable <code>condition</code> to "very good". The <code>&amp;&amp;</code> operator means both conditions must be true for the code inside the block to run.</p>
+</div>
+</li>
+<li>
+<p><em><strong>Rewrite the following <code>if-else if</code> structure using a <code>switch</code> statement:</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (trackNumber </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Playing: Brown Sugar&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNumber </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Playing: Sway&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNumber </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Playing: Wild Horses&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">else</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Playing: Unknown Track&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Sample code with a <code>switch</code> statement:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">switch</span><span style="color: #f8f8f2"> (trackNumber)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">case</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Playing: Brown Sugar&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">case</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Playing: Sway&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">case</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">:</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Playing: Wild Horses&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">default</span><span style="color: #f8f8f2">:</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Playing: Unknown Track&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="loops">5. Loops</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>Explain the difference between a definite loop and an indefinite loop?</strong></em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>A <strong>definite</strong> loop runs a set number of times (for example, a for loop that runs 10 times).</p>
+</li>
+<li>
+<p>An <strong>indefinite</strong> loop runs until some condition changes, so the number of times it repeats isn’t known ahead of time (for example, a while loop that keeps going until the user types “quit”).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em><strong>In a <code>while</code> loop, what happens if the Boolean condition is <code>false</code> on the first check?</strong></em></p>
+<p>If the Boolean condition is <code>false</code> on the first check, the code inside the <code>while</code> loop will not run at all. The program will skip the loop and continue with the next part of the code.</p>
+</li>
+<li>
+<p><em><strong>Describe one way an infinite loop can occur.</strong></em></p>
+<p>An infinite loop can occur if the condition in a <code>while</code> loop never becomes <code>false</code>. This can happen if you forget to update the variable that the condition checks, or if the update logic is incorrect. For example, if you have <code>while (count &lt; 10)</code> but never increase <code>count</code> inside the loop, it will run forever.</p>
+</li>
+<li>
+<p><em><strong>When doing input validation with loops, why might a do-while loop be preferable to a while loop?</strong></em></p>
+<p>A <code>do-while</code> loop always executes at least once, so the user is guaranteed to be asked for input before the condition is checked.</p>
+</li>
+<li>
+<p><em><strong>List and describe the three parts of a for loop in C#.</strong></em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Initialization – runs once before the loop starts (e.g., int i = 0).</p>
+</li>
+<li>
+<p>Condition – checked with each loop iteration; the loop continues while it&#8217;s true (e.g., i &lt; 5).</p>
+</li>
+<li>
+<p>Update – runs after each loop iteration, usually adjusting the loop variable (e.g., i++).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em><strong>Explain what the break statement does inside a loop.</strong></em></p>
+<p>It immediately exits the loop, skipping any remaining iterations, and continues execution after the loop.</p>
+</li>
+<li>
+<p><em><strong>Explain what the continue statement does inside a loop.</strong></em></p>
+<p>It skips the rest of the current iteration and re-checks the loop condition for the next cycle.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="debugging-and-generative-ai">6. Debugging and Generative AI</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is the difference between a compile-time error and a runtime error?</strong></em></p>
+<p><strong>Compile-time errors</strong> occur when the compiler cannot translate the source code into machine code due to syntax or semantic issues. These errors must be fixed before the program can run. <strong>Runtime errors</strong>, on the other hand, occur during the execution of the program and are often due to logic errors, causing the program to behave unexpectedly or crash.</p>
+</li>
+<li>
+<p><em><strong>How can using output statements help in debugging a program?</strong></em></p>
+<p>Output statements, such as <code>print()</code> statements, allow you to monitor the values of variables and the flow of execution in your program. This visibility helps you pinpoint where things are going wrong, making it easier to identify and correct errors.</p>
+</li>
+<li>
+<p><em><strong>What are some strategies you can use when you&#8217;re frustrated by a bug in your code?</strong></em></p>
+<p>When you&#8217;re frustrated by a bug in your code, take a break to clear your mind and return with fresh eyes. Use output statements to track variables and execution flow, clean up your code for better readability, and break down the problem into smaller parts. If needed, seek help from others and stay patient, knowing that debugging is a valuable part of the learning process.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="classes-and-objects">7. Classes and Objects</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is a class in object-oriented programming, and how does it relate to an object?</strong></em></p>
+<p>A class is a blueprint that defines the fields and methods an object will have. An object is an actual instance created from that class.</p>
+</li>
+<li>
+<p><em><strong>Explain encapsulation and why we typically make class fields private.</strong></em></p>
+<p>Encapsulation means bundling data and methods together and restricting direct access. We make fields private to protect them from unwanted changes and to control access through methods or properties.</p>
+</li>
+<li>
+<p><em><strong>What is the difference between an accessor (getter) method and a mutator (setter) method?</strong></em></p>
+<p>An accessor returns the value of a field, while a mutator changes (sets) the value of a field.</p>
+</li>
+<li>
+<p><em><strong>How do you instantiate (create) an object from a class in C#? Give the syntax to instantiate an object with a class called Guitar.</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Guitar myGuitar </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Guitar();</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>What is a constructor, and what role does it play when creating an object?</strong></em></p>
+<p>A constructor is a special method that runs when an object is created. It sets up the object, often by initializing fields.</p>
+</li>
+<li>
+<p><em><strong>What is a property in C#, and how does it differ from manually writing getters and setters?</strong></em></p>
+<p>A property provides a simpler, built-in way to define get and set access for a field. It replaces the need to write separate getter and setter methods.</p>
+</li>
+<li>
+<p><em><strong>Explain how data validation might be implemented in a setter (or property set) method.</strong></em></p>
+<p>In the setter, you can check the value before assigning it to the field. For example, only accept positive numbers or reject empty strings.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="arrays">8. Arrays</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is the purpose of an array in a program?</strong></em></p>
+<p>An array lets you store a bunch of related values together under one name, instead of creating a separate variable for each one.</p>
+</li>
+<li>
+<p><em><strong>How do you declare an array of 10 int values in C#?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">[] numbers </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">[</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">];</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>How would you print out how many elements are in an array <code>top40Songs</code>?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #f8f8f2">Console.WriteLine(top40Songs.Length);</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>If an array has 8 elements, what is the index of the first element? What is the index of the last element?</strong></em></p>
+<p>The first element is at index <strong>0</strong>, and the last element is at index <strong>7</strong> (because the count starts at zero).</p>
+</li>
+<li>
+<p><em><strong>What&#8217;s the difference between these two statements?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">[] numbers;</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2">[] numbers </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">[</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">];</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first line just <strong>declares</strong> the variable — it doesn’t actually make an array yet. The second line both declares and <strong>creates</strong> an array that can hold 3 integers.</p>
+</div>
+</li>
+<li>
+<p><em><strong>How do you assign a value of 42 to the first element in an array named <code>ratings</code>?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #f8f8f2">ratings[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">42</span><span style="color: #f8f8f2">;</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>Write a <code>for</code> loop to print all elements of an array called <code>names</code>.</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> names.Length; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(names[i]);</span>
+<span style="color: #f8f8f2">}</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="graphical-user-interfaces">9. Graphical User Interfaces</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>Q1</strong></em></p>
+<p>Answer</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="testing">B-Side: Lo-Fi Testing</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What are the two main parts of a test case, and why is it important to define them before you start writing code?</strong></em></p>
+<p>A test case includes <strong>inputs</strong> (the data the program uses) and the <strong>expected output</strong> (the result the program should produce). Defining test cases before coding helps you understand the problem better and plan how your program will work, instead of just jumping in and hoping it all comes together.</p>
+</li>
+<li>
+<p><em><strong>Why is it not enough to test your program with just one set of inputs? Give an example of an “edge case” that might catch a bug.</strong></em></p>
+<p>One test case might only show that your code works in that specific situation. To be sure your program works in general, you need to test it with a variety of inputs, including unusual or tricky ones.</p>
+<div class="paragraph">
+<p>An example of an edge case: If you&#8217;re writing a program that determines if a person is old enough to vote, the input 17 should return "no"; 18 should return "yes".</p>
+</div>
+</li>
+<li>
+<p><em><strong>How can writing your test cases early help you figure out what variables or calculations your program will need?</strong></em></p>
+<p>Thinking through test cases makes you figure out the steps to solve the problem. It helps you see what data you need, what formulas you&#8217;ll use, and what your program should do at each stage. It&#8217;s like using the test cases to reverse-engineer your program before you even start coding.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="software-dev">B-Side: Software Development</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What does “iterative development” mean, and why is it a useful habit for a programmer?</strong></em></p>
+<p>Iterative development means building software in small steps—write a bit of code, test it, improve it, and repeat. It’s useful because problems are easier to spot early, mistakes cost less to fix, and you always have a working version of your program.</p>
+</li>
+<li>
+<p><em><strong>What is refactoring? Why do we refactor code?</strong></em></p>
+<p>Refactoring is the process of improving the structure and readability of existing code without changing what the code actually does. We refactor to make code easier to understand, easier to maintain, and easier to extend in the future.</p>
+</li>
+<li>
+<p><em><strong>Compare object-oriented programming and procedural programming. How are they similar, and how are they different?</strong></em></p>
+<p>Both paradigms involve writing instructions for the computer to follow, but they organize code differently. Procedural programming focuses on functions and the step-by-step procedures those functions perform. Object-oriented programming organizes code around objects that contain both data and behaviors. OOP emphasizes modeling real-world things and relationships, while procedural programming emphasizes clear sequences of actions.</p>
+</li>
+<li>
+<p><em><strong>What is the most popular version control system used by software developers today? What are two key features of a version control system?</strong></em></p>
+<p>Git is the most widely used version control system today. Features include change/version tracking (keeping a history of changes made to files); branching &amp; merging (allowing multiple versions of code to be developed simultaneously and then combined); reverting changes; conflict resolution; etc.</p>
+</li>
+<li>
+<p><em><strong>How does the waterfall development methodology implement the phases of the Software Development Life Cycle?</strong></em></p>
+<p>Waterfall runs the SDLC phases in a strict, linear order—requirements first, then design, then implementation, then testing, and finally deployment and maintenance. Each phase must be completed before the next begins, with little or no going back to earlier steps.</p>
+</li>
+<li>
+<p><em><strong>What are some key principles of Agile software development?</strong></em></p>
+<p>Agile emphasizes small, frequent releases; close collaboration with customers; flexibility in responding to change; and continuous improvement. Agile teams work in short cycles (like sprints), regularly review progress, and adjust plans as they go.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="deep-cuts.html">Deep Cuts</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Polka Tulk Edition,&nbsp;revised&nbsp;2025-11-21<br />
+        00:36:05 UTC<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>

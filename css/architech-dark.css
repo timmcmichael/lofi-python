@@ -1,0 +1,135 @@
+/* Color styling for dark theme */
+
+/* @import url('../../css/architech.css'); */
+@import url('./architech.css');
+
+
+:root {
+  --maincolor: #0a0b0c;
+  --primarycolor: #b1bcc5;
+  /* #465a6a; */
+  --secondarycolor: #b0c4de;
+  /* #b1bcc5; */
+  --tertiarycolor: #87ceeb;
+  /* --highlightcolor: #b98e00; */
+  --highlightcolor: #614214;
+  --sidebarbackground: #21252b;
+  --linkcolor: #34bdf8;
+  --stickynote: #f9a825;
+  --inlinebackground: #0b3141;
+  --inlinecode: #ebb105;
+
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+body {
+  background-color: var(--maincolor);
+  color: var(--white);
+}
+
+h1 {
+  color: var(--primarycolor) !important;
+}
+
+h2,
+h3,
+h5,
+h6 {
+  color: var(--secondarycolor) !important;
+}
+
+h4 {
+  color: var(--tertiarycolor) !important;
+}
+
+.title {
+  color: var(--white) !important;
+}
+
+.author,
+.email,
+.author a {
+  color: var(--white) !important;
+}
+
+
+a {
+  color: var(--linkcolor) !important;
+}
+
+#toc.toc2 a:link {
+  color: var(--linkcolor);
+}
+
+.ulist a:link,
+.ul a:visited {
+  color: var(--linkcolor) !important;
+}
+
+blockquote {
+  color: var(--tertiarycolor) !important
+}
+
+.quoteblock {
+  color: var(--white)
+}
+
+.sidebarblock {
+  background-color: var(--sidebarbackground);
+}
+
+
+/* code {
+  color: var(--tertiarycolor);
+  background-color: var(--sidebarbackground) !important;
+  padding: 0 0.2em;
+  border-radius: 4px;
+} */
+
+
+/* Exclude code inside a listingblock */
+/* Fixes uneven background in pygments listings */
+/* .listingblock code {
+  all: unset;
+} */
+
+/* Callout legend text below code listings */
+td:not(.listingblock .content pre td) {
+  background-color: var(--maincolor);
+  color: var(--white);
+}
+
+#toc.toc2 {
+  background-image: url('../images/carbon_fibre.png');
+  background-color: var(--sidebarbackground);
+}
+
+#toctitle {
+  color: var(--tertiarycolor) !important;
+  font-family: var(--heading-font) !important;
+  font-weight: bold !important;
+  font-size: 1.5em !important;
+}
+
+/* improve highlighted text */
+mark {
+  color: var(--primarycolor);
+}
+
+/* Basic callout colors */
+.callout.dc .content,
+.callout.ttw .content,
+.callout.spin .content {
+  color: var(--white) !important;
+  background-color: var(--sidebarbackground) !important;
+}
+
+.literalblock pre {
+  background-color: #191b1d;
+}
+
+/* Toggle button hover effect */
+#theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

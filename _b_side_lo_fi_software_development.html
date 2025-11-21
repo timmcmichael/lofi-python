@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<link rel="icon" type="image/svg" href="./images/favicon.svg">
+<title>Lo-Fi Python: Programming Fundamentals</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toc = document.getElementById("toc");
+        if (toc) {
+            const btn = document.createElement("button");
+            btn.id = "theme-toggle";
+            btn.textContent = "Toggle Dark/Light Mode";
+            // toc.appendChild(btn);
+            toc.insertBefore(btn, toc.firstChild);
+        }
+    });
+</script>
+</head>
+<body id="_b_side_lo_fi_software_development" class="article toc2 toc-left">
+<link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+<!-- TODO: Keep link to font awesome? -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- <div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div> -->
+<div id="header">
+<h1>Lo-Fi Python: Programming Fundamentals</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi Python: Programming Fundamentals</a></span></p><ul class="sectlevel1">
+<li><a href="_sound_check.html">Sound Check</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_methods.html">3. Methods</a>
+</li>
+<li><a href="_decisions.html">4. Decisions</a>
+</li>
+<li><a href="_loops.html">5. Loops</a>
+</li>
+<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_arrays.html">8. Arrays</a>
+</li>
+<li><a href="_graphical_user_interfaces.html">9. Graphical User Interfaces</a>
+</li>
+<li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html"><span class="toc-current">B-Side: Lo-Fi Software Development</span></a>
+<ul class="sectlevel2">
+<li><a href="_b_side_lo_fi_software_development.html#_whats_the_point_11">What&#8217;s the Point?</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html#_habits_and_mindset">Habits and Mindset</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html#_programming_paradigms">Programming Paradigms</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html#_version_control">Version Control</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html#_software_development_life_cycle">Software Development Life Cycle</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html#_agile_software_development">Agile Software Development</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_12">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+</li>
+</ul>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_appendix_a_net_maui_configuration.html">Appendix A: .NET MAUI Configuration</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_b_side_lo_fi_software_development">B-Side: Lo-Fi Software Development</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p>A brief look at the world of software development</p>
+</div>
+<div class="paragraph">
+<p><em>In the days when we all got our music on vinyl, a single wasn&#8217;t something you played on Spotify or Apple Music—you went down to the record store and bought it.
+The single would take up one side of the record, and the artist could put another song on the back.
+The <strong>A-side</strong> was the hit everyone knew from the radio, and the <strong>B-side</strong> was a lesser-known track—sometimes a buried treasure, like <a href="https://www.youtube.com/watch?v=u90beUXTKwo" target="_blank" rel="noopener">"God Only Knows"</a> on the B-side of <a href="https://www.youtube.com/watch?v=dmcNbsLCpBQ" target="_blank" rel="noopener">"Wouldn&#8217;t It Be Nice"</a>.</em></p>
+</div>
+<div class="paragraph">
+<p><em>These B-Side chapters cover some of the topics that are important, but don&#8217;t necessarily fit into the main flow of our learning.</em></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Help Make These Materials Better!</div>
+<div class="paragraph">
+<p>I am actively working to complete and revise this eBook and the accompanying videos. Please consider using the following link to provide feedback and notify me of typos, mistakes, and suggestions for either the eBook or videos:</p>
+</div>
+<div class="paragraph">
+<p>TODO: <a href="https://forms.gle/H9VgmhJkQcKx9iRi8" target="_blank" rel="noopener">CIS162AD Course Materials Feedback (Google Form)</a></p>
+</div>
+<div class="paragraph">
+<p><mark>This is the working draft of a <strong>very incomplete</strong> eBook. Content will change as chapters are developed and refined. Most noticeably (other than stuff that&#8217;s just missing) is the presence of placeholder links where I haven&#8217;t quite finished videos. Check back later for a more complete version.</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_whats_the_point_11">What&#8217;s the Point?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Identify a few habits and practice of professional software developers</p>
+</li>
+<li>
+<p>Explain the importance of ethics to software developers</p>
+</li>
+<li>
+<p>Describe differences between common programming paradigms</p>
+</li>
+<li>
+<p>Explain the purpose of a version control system (VCS)</p>
+</li>
+<li>
+<p>Describe the basic phases of the Software Development Life Cycle (SDLC)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/10%20Software%20Development" target="_blank" rel="noopener">GitHub</a>.</em></p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Beginners learn to code by focusing on individual programming skills and concepts, like variables, loops, and methods.
+Typically, we write small programs that assess one or two of those concepts at a time; in a school setting, the teacher generally assigns problems that are intentionally limited, keeping the work simple and allowing the teacher to see how students are doing on specific skills.
+But for coding to be useful, we have to put those skills to use in larger projects that solve real problems.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s difficult to do in the context of a beginning coding class, where time is limited and the teacher is obligated to cover specific topics&#8212;&#8203;often at a demanding pace that leaves little room for exploration.
+So this chapter zooms out to look at the bigger picture of software development.
+If you go into a career as a developer—or engage in large-scale personal projects—these topics will be a part of your everyday work.
+If you aren&#8217;t a developer but work elsewhere in tech, understanding broad software development concepts will help you collaborate effectively with coders and technical teams.
+And even if you never write another line of code after this course, knowing a little about software development will help you understand how software works and why it sometimes doesn&#8217;t.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_habits_and_mindset">Habits and Mindset</h3>
+<div class="paragraph subtitle">
+<p>Think Like a Professional Developer</p>
+</div>
+<div class="paragraph">
+<p>Successful developers cultivate habits and attitudes that help them continuously improve their skills and make them effective members of a development team.
+When possible, I&#8217;ve tried to encourage these habits throughout our learning in this book and videos, but it&#8217;s important to identify some of them explicitly:</p>
+</div>
+<div class="sect3">
+<h4 id="_iterative_development">Iterative Development</h4>
+<div class="paragraph">
+<p>Very few programs, algorithms, or features are written perfectly on the first try.
+Instead, most good developers write a small piece of code and focus on getting it working; then they repeat the process for the next piece, and the next, until the entire program is complete.
+This approach—called <em>iterative development</em>—helps keep us from getting overwhelmed by a large or complex task; just break it down into smaller pieces, and focus on one piece at a time.</p>
+</div>
+<div class="paragraph">
+<p>If also helps us identify and fix problems early, before we have other code depending on it.</p>
+</div>
+<div class="paragraph">
+<p>Beginning coders can develop this mindset in a few ways:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Work the important stuff first</dt>
+<dd>
+<p>Identify the core functionality for the code you&#8217;re developing, and work on that first. For example, get the calculations working correctly before you worry about getting user input or displaying output nicely.</p>
+</dd>
+<dt class="hdlist1">Run your code frequently</dt>
+<dd>
+<p>After you write a few lines of code, run it and see how it behaves. If if it doesn&#8217;t produce visible evidence of how it&#8217;s working, you can at least verify that it compiles and runs without errors.</p>
+</dd>
+<dt class="hdlist1">Test small pieces</dt>
+<dd>
+<p>Once you have a small piece of code working, test it with different inputs or data to make sure it behaves correctly in a variety of situations.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_refactoring">Refactoring</h4>
+<div class="paragraph">
+<p>As part of our iterative development process, we might find that our code works correctly, but could be improved in some way.
+Maybe it&#8217;s repetitive, or too long, or hard to read, or inefficient.
+Or, maybe it doesn&#8217;t conform to best practices or coding standards.
+When we identify these kinds of issues, we can go back and improve the code without changing its behavior; this process is called <em>refactoring</em>.
+Refactoring is an important skill for developers to cultivate, as it helps keep code maintainable and adaptable to future changes.</p>
+</div>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Quick Track: Refactoring</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/dScLJZqCUec?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_documentation">Documentation</h4>
+<div class="paragraph">
+<p>I&#8217;ll be honest; I&#8217;m not sure I&#8217;ve ever met a developer who <strong>wants</strong> to write documentation.
+But, whether we like it or not, documentation is an essential part of software development.
+And to reiterate: documenting our code <strong>is part of software development</strong>, not an extra thing we do at the end if we have time.</p>
+</div>
+<div class="paragraph">
+<p>Good documentation helps others (and our future selves) understand how our code works, how to use it, and how to maintain it.
+Documentation can take many forms, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Comments within the code itself (inline comments, method headers, etc.)</p>
+</li>
+<li>
+<p>README files (files that explain how to use a project or application)</p>
+</li>
+<li>
+<p>API documentation (documents that explain how to use specific functions or classes)</p>
+</li>
+<li>
+<p>User manuals (documentation for the end users of the software)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In a professional setting, documentation standards are often established by the development team or organization, and may be enforced through code reviews or other quality assurance processes.
+In other words, your code won&#8217;t get incorporated into the project until you&#8217;ve written high quality documentation.
+In other <em>other</em> words, you&#8217;re no use to an employer if you can&#8217;t or won&#8217;t document your work effectively.</p>
+</div>
+<div class="paragraph">
+<p>In my classes, I ask students to include a comment block at the top of each program that includes some basic information, but not much beyond that—I&#8217;m really just trying to get beginners into the habit of including some documentation, and ingraining the idea that documentation is part of the coding process.
+You should be aware that most professional development teams have much more extensive documentation requirements, so be prepared to adapt to those expectations in your future work.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_software_development_ethics">Software Development Ethics</h4>
+<div class="paragraph">
+<p>Computers are embedded in nearly every aspect of our lives, making software developers an important influence on society.
+As developers, we have a responsibility to consider the ethical implications of our work.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Golden Rule</em> suggests that we should treat others as we would like to be treated; in software development, we could adapt that to say:</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Don&#8217;t build software you wouldn&#8217;t want used on you.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Here are a few thoughts to consider as you develop software:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>You&#8217;re responsible for the software you develop</strong></dt>
+<dd>
+<p>Your software will be used by real people and on real data. Be aware of the consequences of your work—and the consequences of errors in your work. Another professor I know asks his students, "Would you fly in an airplane that depended on your code to stay in the air?"</p>
+</dd>
+<dt class="hdlist1"><strong>Consider privacy and data handling</strong></dt>
+<dd>
+<p>We&#8217;ve all grown accustomed to the idea that data is collected about us whenever we use software. But as developers, we need to be thoughtful about what data we collect, how we store it, how we protect it, and who we share it with.</p>
+</dd>
+<dt class="hdlist1"><strong>Think about security</strong></dt>
+<dd>
+<p>Most security issues are beyond our scope here, but as you continue to learn, be mindful of security best practices. Design software with security in mind from the beginning, rather than as something you add when you&#8217;re done.</p>
+</dd>
+<dt class="hdlist1"><strong>Think about accessibility</strong></dt>
+<dd>
+<p>Software should be usable by as many people as possible, including those with disabilities. Consider accessibility features and best practices to ensure your software is inclusive. Remember that accessible design is good design for everyone!</p>
+</dd>
+<dt class="hdlist1"><strong>Respect intellectual property</strong></dt>
+<dd>
+<p>Copyright applies to code just as it does to other creative works. Don&#8217;t use code you&#8217;re not authorized to use, and always respect the licensing terms of any libraries or frameworks you incorporate into your projects. And just like in other ares of your life, cite your sources!</p>
+</dd>
+</dl>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>The <a href="https://en.wikipedia.org/wiki/Therac-25" target="_blank" rel="noopener">Therac-25</a> was a radiation therapy machine involved in several accidents in the 1980s that resulted in patients being exposed to massive overdoses of radiation, leading to permanent damage and multiple deaths. There were multiple causes for the accidents, but software errors and inadequate testing were significant factors. The Therac-25 incidents highlight the critical importance of software safety, rigorous testing, and ethical responsibility in software development, especially in fields where human lives are at stake.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commitment_to_lifelong_learning">Commitment to Lifelong Learning</h4>
+<div class="paragraph">
+<p>Software development is constantly evolving.
+While my goal is to teach you fundamental skills and concepts to serve you over a lifetime of coding, the nature of technology means that you&#8217;ll need to continue learning throughout your career.</p>
+</div>
+<div class="paragraph">
+<p>Staying current with new programming languages, frameworks, tools, and best practices is essential for long-term success as a developer.
+It also critical for making you marketable to employers!</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Learn how to learn from text</strong></dt>
+<dd>
+<p>Plenty of students don&#8217;t like to read, and this eBooks exists in part to reduce the amount of reading required in my courses. But the harsh reality is that reading documentation, articles, and books is an essential skill for developers. YouTube is great, but you simply cannot stay current without reading.</p>
+</dd>
+<dt class="hdlist1"><strong>Engage with other developers</strong></dt>
+<dd>
+<p>There are tons of great online communities where developers share knowledge and help each other solve problems. Participating in these communities helps you keep learning and connects you with people who can support your growth as a developer—and who you can support in return.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Consider joining the <a href="https://www.acm.org/">Association of Computing Machinery (ACM)</a>, which offers student memberships for as little as $20.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_programming_paradigms">Programming Paradigms</h3>
+<div class="paragraph subtitle">
+<p>Different Ways to Think About Code</p>
+</div>
+<div class="paragraph">
+<p><em>Programming paradigms</em> are different approaches or styles of programming that provide distinct ways to think about and structure code.
+Different paradigms offer different techniques for solving problems and different philosophies about how code should be developed and organized.
+These paradigms are huge topics that could be entire books and courses of their own, so we&#8217;re just going to identify a few of the most common ones here.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Procedural Programming</strong></dt>
+<dd>
+<p>Programs are organized around procedures or routines—what we have been calling <em>methods</em>. To design a program from this perspective, we break down the program into a series of steps or procedures that execute in a specific order. We were using this approach throughout the first six chapters of this book, but it&#8217;s usefulness is not limited to beginners; procedural programming is still widely used in industry for many types of applications.</p>
+</dd>
+<dt class="hdlist1"><strong>Object-Oriented Programming (OOP)</strong></dt>
+<dd>
+<p>OOP programs are organized around objects, which bundle code with the data it operates on, and a program works by creating and interacting with these objects. OOP is popular in industry and lends itself well to large, complex software systems. We began exploring OOP in the chapter on <a href="_classes_and_objects.html">Classes and Objects</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>Object-oriented programming</em> is a type of <em>procedural programming</em>, and both of those fall under the broader category of <em>imperative programming</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Declarative Programming</strong></dt>
+<dd>
+<p>Instead of specifying how to perform tasks step-by-step, declarative programming focuses on what the program should accomplish. In this paradigm, we describe what we want to achieve, and the underlying system figures out how to do it. SQL (Structured Query Language) is a common example of a declarative language used for database queries.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_version_control">Version Control</h3>
+<div class="paragraph subtitle">
+<p>Git, Code Repositories, Branches and Merges</p>
+</div>
+<div class="paragraph">
+<p>A large-scale development project involves many developers working simultaneously on different parts of the codebase.
+There is a high potential for conflicts and errors if two people are making changes to the same files at the same time.
+In addition to this, teams need to keep track of changes over time, with the ability to revert to previous versions if necessary.</p>
+</div>
+<div class="paragraph">
+<p>To manage this development environment, teams use a <em>version control system</em>, or VCS.
+A VCS allows developers to maintain different versions of the codebase; for example, you might have a version that&#8217;s been released or deployed to users and a version that&#8217;s still being worked on.
+You still need to be able to update and improve the deployed version, especially to address bugs or security issues, while new features are being developed for the next release.</p>
+</div>
+<div class="paragraph">
+<p>While you could just copy your project to a new folder to start working on a new version, that quickly becomes difficult to manage as the project grows and more versions are created.
+A VCS manages all of this for you.</p>
+</div>
+<div class="paragraph">
+<p>Some of the key features of a VCS include:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">*Tracking changes</dt>
+<dd>
+<p>A VCS records every change made to files in the project, along with information about who made the change and when. This allows the team to keep track of changes and see the history of the project over time. It also lets us blame the coder who broke everything!</p>
+</dd>
+<dt class="hdlist1">*Reversion functionality</dt>
+<dd>
+<p>A VCS allows developers to revert to a previous version of the code if a problem is discovered. So the coder who got blamed for breaking everything is able to go back to a working version without too much trouble.</p>
+</dd>
+<dt class="hdlist1">*Collaboration</dt>
+<dd>
+<p>A VCS facilitates collaboration by allowing developers to create <em>branches</em> of the project. A branch is like a separate copy of the project where we can work without impacting the main codebase or deployed project. Once we&#8217;re satisfied with our changes, we can <em>merge</em> our branch back into the main codebase—and the VCS will help sort out any conflicts that the merge might create.</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="_git">Git</h4>
+<div class="paragraph">
+<p>The most popular software for version control is <em>Git</em>, which was created by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>—the same guy who created Linux.
+It is free and open-source, so anybody can set it up and use it to manage their projects.
+Projects are stored in a <em>repository</em> (or <em>repo</em> for short), which contains all of the files and the history of changes made to those files.</p>
+</div>
+<div class="paragraph">
+<p>Git is a <em>distributed</em> version control system, meaning that every developer working on a project has a complete copy of the repository on their local machine.
+When a developer joins the project, they <em>clone</em> the repository to their computer.
+Then they can work offline and make whatever changes they want.
+When they&#8217;re ready to share their changes with the rest of the team, they sync their changes back to the central repository.</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t want to set up your own Git server, you can use a cloud-based solution, such as GitHub.
+GitHub uses the Git version control system and provides a web-based user interface for managing your repositories (along with a handful of other features); other cloudbased Git services include GitLab and Bitbucket offer similar services.
+Though it has paid plans and features, you can manage individual and small team projects on GitHub for free, and it&#8217;s become a popular platform for open-source projects.</p>
+</div>
+<div class="paragraph">
+<p>Git can manage files of any type, so it can be used for projects in any programming language—and for projects that aren&#8217;t even code-related.
+This eBook is managed on GitHub and published on their webhosting platform, "GitHub Pages".
+Although I work on the project alone, I like that Git allows me to work on the project from any of my computers (office, home, and laptop) and it keeps everything in sync.</p>
+</div>
+<div class="paragraph">
+<p>The use of Git is a pretty big topic, and another one that&#8217;s beyond the scope of this book, but it&#8217;s important to at least know about it.
+Some of my classes include an introduction to Git (and use GitHub), but there are also a ton of resources out there if you want to explore it on your own.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_software_development_life_cycle">Software Development Life Cycle</h3>
+<div class="paragraph subtitle">
+<p>The Basic Phases of a Software Project</p>
+</div>
+<div class="paragraph">
+<p>Learning to write code means creating a lot of programs—mostly small, straightforward programs at first.
+Remember those awful word problems where a train leaves Chicago traveling 40 mph, and another train leaves Denver at 35 mph?
+That kind of stuff; but in my course, we don&#8217;t get too caught up in the math part of it.
+But we care <strong>a lot</strong> about understanding the requirements of a program and implementing it successfully.</p>
+</div>
+<div class="paragraph">
+<p>All software development projects, regardless of size or complexity, incluse some common elements.
+The more complex the project, the more formalized these elements become—but even small projects benefit from a thoughtful approach to development.</p>
+</div>
+<div class="paragraph">
+<p>There are many ways to manage a software development project, but regardless of the specific methodology, most projects include some version of the following phases:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Planning and Analysis</dt>
+<dd>
+<p>Identify the goals and scope of the program. As a rule, keep it small and focused—we can always add features later. <strong>Ask yourself, <em>What does this program need to do?</em></strong></p>
+</dd>
+<dt class="hdlist1">Testing Plan</dt>
+<dd>
+<p>Determine how the final program will be tested. The testing plan itself will be useful, but just as importantly, the time spent creating the plan ensures forces us to understand the program thoroughly. If we don&#8217;t know how the program will work, we&#8217;re not yet ready to begin coding. <strong>Ask yourself, <em>How will I ensure the program works correctly?</em></strong></p>
+</dd>
+<dt class="hdlist1">Implementation</dt>
+<dd>
+<p>Write and test the code. We say that this is an <em>iterative</em> (or "repeating") process, meaning we&#8217;ll write and test one small piece, staying with it until we know it&#8217;s good. Then we&#8217;ll move on to the next piece and repeat. <strong>Ask yourself, <em>What code do I need in order to get the next part of the program working?</em></strong></p>
+</dd>
+<dt class="hdlist1">Deployment</dt>
+<dd>
+<p>Once the program is complete and has passed all tests, it&#8217;s time to deploy. This might mean sharing it with users, installing it on a server, or simply submitting it for a class assignment. <strong>Ask yourself, <em>How will I deliver this program to end users?</em></strong></p>
+</dd>
+<dt class="hdlist1">Revise or maintain</dt>
+<dd>
+<p>If our needs or program requirements change, we&#8217;ll need to go back to the first step and begin planning the next version. If not, we&#8217;ll need to monitor that the program continues to perform as expected over time. <strong>Ask yourself, <em>What&#8217;s next for this program?</em></strong></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>We can think of these general components as a cycle that repeats whenever we create or update software, and we refer to this cycle as the <em>Software Development Life Cycle</em> (SDLC).</p>
+</div>
+<div class="paragraph">
+<p>There are different methodologies for managing the SDLC; they still include the same basic phases, but they traverse those phases in different ways.</p>
+</div>
+<div class="sect3">
+<h4 id="_waterfall_software_development">Waterfall Software Development</h4>
+<div class="paragraph">
+<p>Waterfall development is a traditional software development methodology that follows a linear and sequential approach.
+It treats the components of the SDLC as distinct phases that flow downward, like a waterfall, following strictly from one phase to the next.
+Each phase has specific deliverables that must be complete before moving on to the next phase.</p>
+</div>
+<div class="paragraph">
+<p>For example, the project will begin with a detailed planning and analysis phase, where all requirements are gathered and documented.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Developers will meet with clients or stakeholders to understand their needs and expectations, using that information to create a comprehensive requirements document.</p>
+</li>
+<li>
+<p>Once the requirements are finalized (and no sooner!), the project moves to the design phase, where the overall architecture and structure of the software are planned out.</p>
+</li>
+<li>
+<p>After the design is complete (and no sooner!), the implementation phase begins, where programmers write the actual code that puts the design into action.</p>
+</li>
+<li>
+<p>Once the code is complete (and no sooner! Sort of&#8230;&#8203;), the testing phase begins, where the software is rigorously tested to make sure it meets all of the requirements specified in the planning phase. And, to be clear, some testing <strong>does</strong> occur during the implementation phase, because developers test their code as they write it. But this phase focuses on comprehensive testing of the entire system.</p>
+</li>
+<li>
+<p>Finally, once the software has passed all tests (and no sooner!), it is deployed to users.</p>
+</li>
+<li>
+<p>After deployment, the software enters the maintenance phase, where it is monitored for issues and updated as needed.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This <em>waterfall</em> approach is pretty common for a handful of reasons.
+It is a very straightforward and easy to manage process, since everyone focuses on one phase at a time.
+The structured and linear nature of waterfall development often appeals to programmers, who tend to be logical and methodical thinkers.
+And managers like it to, since the heavy emphasis on planning and documentation can identify potential issues early in the process—before they bome too costly to fix.</p>
+</div>
+<div class="paragraph">
+<p>However, waterfall development has some significant drawbacks.
+Most notably, it is rigid and does not adapt well to changes in requirements along the way.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_agile_software_development">Agile Software Development</h3>
+<div class="paragraph">
+<p>In response to the limitations of waterfall development, the software industry has moved toward more flexible project management approaches, such as <em>Agile</em> software development.</p>
+</div>
+<div class="paragraph">
+<p>Where traditional software development approaches rely on a detailed plan created at the beginning of a project, Agile shifts the focus to adaptability and responsiveness to change.</p>
+</div>
+<div class="paragraph">
+<p>Based on the <a href="https://agilemanifesto.org"><em>Manifesto for Agile Software Development</em></a>, agile development prioritizes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Individuals and interactions over processes and tools</p>
+</li>
+<li>
+<p>Working software over comprehensive documentation</p>
+</li>
+<li>
+<p>Customer collaboration over contract negotiation</p>
+</li>
+<li>
+<p>Responding to change over following a plan</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>One analogy for the differences between Waterfall and Agile is planning a road trip to Key West (which is, incidentally, <a href="https://www.youtube.com/watch?v=1EnyZ9zcWys">spectacular</a>, and best experienced in a convertible).
+In a Waterfall approach, you would plan the entire trip in advance, mapping out every stop, hotel, and activity along the way.
+You would stick to that plan no matter what, even if you discovered a better route or a more interesting destination.
+In an Agile approach, you would plan only the first leg of the trip, then reassess your plans at each stop based on new information and opportunities.
+If you heard about a great festival in New Orleans, you might alter your route to include that stop, even if it wasn&#8217;t really on your radar when you started.</p>
+</div>
+<div class="paragraph">
+<p>Agile is actually an umbrella term or general philosophy, and there are a handful of methodologies for implementing Agile principles in practice.
+Some of the most popular Agile methodologies include <em>Scrum</em>, <em>Kanban</em>, and <em>Extreme Programming (XP)</em>.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll identify a few key concepts in Scrum, which is one of the most widely used Agile methodologies:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>User Stories</strong></dt>
+<dd>
+<p>Requirements are captured as <em>user stories</em>, which are short descriptions of a feature from the perspective of an end user. User stories help prioritize work based on user needs.</p>
+</dd>
+<dt class="hdlist1"><strong>Sprints</strong></dt>
+<dd>
+<p>Scrum projects are divided into short, timeboxed iterations called <em>sprints</em>, typically lasting two to four weeks. Each sprint focuses on delivering a small, usable piece of functionality.</p>
+</dd>
+<dt class="hdlist1"><strong>Daily Stand-ups</strong></dt>
+<dd>
+<p>Teams hold brief daily meetings, called <em>stand-ups</em>, to discuss progress, identify obstacles, and plan the day&#8217;s work. These meetings help keep everyone aligned and informed.</p>
+</dd>
+<dt class="hdlist1"><strong>Sprint Reviews and Retrospectives</strong></dt>
+<dd>
+<p>At the end of each sprint, the team conducts a <em>sprint review</em> to demonstrate the completed work to stakeholders and gather feedback. They also hold a <em>retrospective</em> to reflect on the sprint process and identify areas for improvement.</p>
+</dd>
+<dt class="hdlist1"><strong>Product Owner</strong></dt>
+<dd>
+<p>The Product Owner represents the stakeholders and is responsible for defining and prioritizing the product backlog (the list of user stories and features to be developed). The Product Owner might be an external client, a project manager, or another team member.</p>
+</dd>
+<dt class="hdlist1"><strong>Scrum Master</strong></dt>
+<dd>
+<p>A Scrum Master facilitates the Scrum process, helping the team adhere to Agile principles and removing obstacles that impede progress.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Other Agile methodologies have their own specific practices and terminologies, but they all share the core principles of flexibility, collaboration, and continuous improvement.
+Beginning developers may not have the opportunity to work on Agile teams right away, but a basic understanding these concepts will prepare you for future roles in software development.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_12">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<div class="paragraph subtitle">
+<p>Chapter Review Questions</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>What does “iterative development” mean, and why is it a useful habit for a programmer?</p>
+</li>
+<li>
+<p>What is refactoring? Why do we refactor code?</p>
+</li>
+<li>
+<p>Compare object-oriented programming and procedural programming. How are they similar, and how are they different?</p>
+</li>
+<li>
+<p>What is the most popular version control system used by software developers today? What are two key features of a version control system?</p>
+</li>
+<li>
+<p>How does the waterfall development methodology implement the phases of the Software Development Life Cycle?</p>
+</li>
+<li>
+<p>What are some key principles of Agile software development?</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Sample answers provided in the <a href="_liner_notes.html#software-dev">Liner Notes</a></em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_liner_notes.html">Liner Notes</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Polka Tulk Edition,&nbsp;revised&nbsp;2025-11-21<br />
+        00:36:05 UTC<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>

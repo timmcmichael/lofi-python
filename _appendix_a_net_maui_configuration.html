@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<link rel="icon" type="image/svg" href="./images/favicon.svg">
+<title>Lo-Fi Python: Programming Fundamentals</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toc = document.getElementById("toc");
+        if (toc) {
+            const btn = document.createElement("button");
+            btn.id = "theme-toggle";
+            btn.textContent = "Toggle Dark/Light Mode";
+            // toc.appendChild(btn);
+            toc.insertBefore(btn, toc.firstChild);
+        }
+    });
+</script>
+</head>
+<body id="_appendix_a_net_maui_configuration" class="article toc2 toc-left">
+<link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+<!-- TODO: Keep link to font awesome? -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- <div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div> -->
+<div id="header">
+<h1>Lo-Fi Python: Programming Fundamentals</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi Python: Programming Fundamentals</a></span></p><ul class="sectlevel1">
+<li><a href="_sound_check.html">Sound Check</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_methods.html">3. Methods</a>
+</li>
+<li><a href="_decisions.html">4. Decisions</a>
+</li>
+<li><a href="_loops.html">5. Loops</a>
+</li>
+<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_arrays.html">8. Arrays</a>
+</li>
+<li><a href="_graphical_user_interfaces.html">9. Graphical User Interfaces</a>
+</li>
+<li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_appendix_a_net_maui_configuration.html"><span class="toc-current">Appendix A: .NET MAUI Configuration</span></a>
+<ul class="sectlevel2">
+<li><a href="_appendix_a_net_maui_configuration.html#_configure_net_maui_in_visual_studio_community_windows_only">Configure .NET MAUI in Visual Studio Community (Windows only)</a>
+</li>
+<li><a href="_appendix_a_net_maui_configuration.html#_configure_net_maui_in_jetbrains_rider_windows_macos_linux">Configure .NET MAUI in JetBrains Rider (Windows, macOS, Linux)</a>
+</li>
+</ul>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_appendix_a_net_maui_configuration">Appendix A: .NET MAUI Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p>Setting up for GUI and mobile development</p>
+</div>
+<div class="paragraph">
+<p>In order to create .NET MAUI applications, you need some tools that might not have been installed when you set up your development environment.
+My goal here is to provide a quick, step-by-step guide to get you up and running with .NET MAUI development in Visual Studio Community or JetBrains Rider, the two IDEs I recommend for beginning developers.
+I&#8217;ll also include links for people using VS Code, though I don&#8217;t yet recommend it for MAUI development, as it&#8217;s still somewhat limited in that area.</p>
+</div>
+<div class="paragraph">
+<p>By its nature, this kind of information can get out of date quickly, so each section includes links to the official documentation for the most up-to-date instructions.</p>
+</div>
+<div class="sect2">
+<h3 id="_configure_net_maui_in_visual_studio_community_windows_only">Configure .NET MAUI in Visual Studio Community (Windows only)</h3>
+<div class="paragraph">
+<p>Microsoft Learn provides detailed and up-to-date instructions for installing .NET MAUI workloads in Visual Studio Community: <a href="https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-10.0&amp;tabs=visual-studio" class="bare">https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-10.0&amp;tabs=visual-studio</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If it&#8217;s not already installed, you&#8217;ll begin by installing Visual Studio Community with the <strong>.NET Multi-platform App UI development</strong> workload.</p>
+</li>
+<li>
+<p>If you already have Visual Studio Community installed, you can add the <strong>.NET Multi-platform App UI development</strong> workload by modifying your installation via the Visual Studio Installer.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_create_and_test_a_new_net_maui_project_in_visual_studio_community">Create and test a new .NET MAUI project in Visual Studio Community</h4>
+<div class="paragraph">
+<p>Microsoft Learn provides detailed and up-to-date instructions for creating and testing a new .NET MAUI project in Visual Studio Community: <a href="https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-10.0&amp;tabs=vswin&amp;pivots=devices-windows" class="bare">https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-10.0&amp;tabs=vswin&amp;pivots=devices-windows</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configure_net_maui_in_jetbrains_rider_windows_macos_linux">Configure .NET MAUI in JetBrains Rider (Windows, macOS, Linux)</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If these directions are outdated, JetBrains provides detailed and up-to-date instructions for installing .NET MAUI workloads for Rider: <a href="https://www.jetbrains.com/help/rider/MAUI.html#before-you-start" class="bare">https://www.jetbrains.com/help/rider/MAUI.html#before-you-start</a>. And please let me know, so I can update this content!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>macOS users first need to have Xcode installed from the App Store, as it&#8217;s required for iOS and macOS development. Simply open the App Store application, search for "Xcode", and click "Get" to install it.</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open a terminal or command prompt. In macOS or Linux, you can use the terminal application. In Windows, you can use Command Prompt or PowerShell.</p>
+</li>
+<li>
+<p>Run the following command to install the .NET MAUI workload:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="bash"><span></span>dotnet<span style="color: #f8f8f2"> </span>workload<span style="color: #f8f8f2"> </span>install<span style="color: #f8f8f2"> </span>maui</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Note: on macOS or Linux, you may need to prefix the command with <code>sudo</code> to run it with administrative privileges:</em></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="bash"><span></span>sudo<span style="color: #f8f8f2"> </span>dotnet<span style="color: #f8f8f2"> </span>workload<span style="color: #f8f8f2"> </span>install<span style="color: #f8f8f2"> </span>maui</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If prompted, enter your password to authorize the installation.</p>
+</div>
+</li>
+<li>
+<p>Confirm that your system has the required Java software (JDK version 11 or later) by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="bash"><span></span>java<span style="color: #f8f8f2"> </span>--version</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the <code>java</code> command is not found, or if the version is less than 11, install or update Java JDK. For a detailed walkthrough, see the following guides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://drive.google.com/open?id=1yBFhti2juLLc-GNuxSwj1HBFjxxQL8LMwUBYOLPcUbA&amp;usp=drive_copy" target="_blank" rel="noopener">Install JDK on Windows</a></p>
+</li>
+<li>
+<p><a href="https://drive.google.com/open?id=1lTWz0KQkn3CbfjF4CICLNWpKhO9GedGhkO-SAHPkwAU&amp;usp=drive_copy" target="_blank" rel="noopener">Install JDK on macOS</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="deep-cuts.html">Deep Cuts</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_acknowledgements.html">Acknowledgements</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Polka Tulk Edition,&nbsp;revised&nbsp;2025-11-21<br />
+        00:36:05 UTC<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>

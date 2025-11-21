@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<link rel="icon" type="image/svg" href="./images/favicon.svg">
+<title>Lo-Fi Python: Programming Fundamentals</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toc = document.getElementById("toc");
+        if (toc) {
+            const btn = document.createElement("button");
+            btn.id = "theme-toggle";
+            btn.textContent = "Toggle Dark/Light Mode";
+            // toc.appendChild(btn);
+            toc.insertBefore(btn, toc.firstChild);
+        }
+    });
+</script>
+</head>
+<body id="_acknowledgements" class="article toc2 toc-left">
+<link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+<!-- TODO: Keep link to font awesome? -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- <div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div> -->
+<div id="header">
+<h1>Lo-Fi Python: Programming Fundamentals</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi Python: Programming Fundamentals</a></span></p><ul class="sectlevel1">
+<li><a href="_sound_check.html">Sound Check</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_methods.html">3. Methods</a>
+</li>
+<li><a href="_decisions.html">4. Decisions</a>
+</li>
+<li><a href="_loops.html">5. Loops</a>
+</li>
+<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_arrays.html">8. Arrays</a>
+</li>
+<li><a href="_graphical_user_interfaces.html">9. Graphical User Interfaces</a>
+</li>
+<li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_appendix_a_net_maui_configuration.html">Appendix A: .NET MAUI Configuration</a>
+</li>
+<li><a href="_acknowledgements.html"><span class="toc-current">Acknowledgements</span></a>
+<ul class="sectlevel2">
+<li><a href="_acknowledgements.html#_license">License</a>
+</li>
+<li><a href="_acknowledgements.html#_tools_used_in_production">Tools Used in Production</a>
+</li>
+<li><a href="_acknowledgements.html#_visuals_design">Visuals &amp; Design</a>
+</li>
+<li><a href="_acknowledgements.html#_music_stuff">Music Stuff</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_acknowledgements">Acknowledgements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This eBook and accompanying videos were created on macOS using a variety of free tools and resources.</p>
+</div>
+<div class="sect2">
+<h3 id="_license">License</h3>
+<div class="paragraph">
+<p>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>.
+You are free to remix, adapt, and share it—just don&#8217;t sell it, and please give credit. If you build on it, share your version under the same license.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tools_used_in_production">Tools Used in Production</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The text and most source code examples were written in asciidoc format using <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>, a free, open-source IDE.</p>
+</li>
+<li>
+<p>The HTML was generated with <a href="https://asciidoctor.org" target="_blank" rel="noopener">Asciidoctor</a>, a free, open-source tool for converting AsciiDoc to HTML and other formats.</p>
+</li>
+<li>
+<p>The source repository and published HTML version of the eBook are hosted on <a href="https://www.github.com" target="_blank" rel="noopener">GitHub</a> and <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>, respectively.</p>
+</li>
+<li>
+<p>Videos embedded in the course were created with <a href="https://obsproject.com" target="_blank" rel="noopener">OBS Studio</a>, <a href="https://canva.com" target="_blank" rel="noopener">Canva</a>, and <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" rel="noopener">Davinci Resolve</a>. A few visuals were created in <a href="https://www.apple.com/in/keynote/" target="_blank" rel="noopener">Apple Keynote</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_visuals_design">Visuals &amp; Design</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The CSS (visual style) for the HTML version of this eBook is inspired by the <a href="https://github.com/pages-themes/architect" target="_blank" rel="noopener">Architect</a> theme for GitHub Pages.</p>
+</li>
+<li>
+<p>Icons used throughout this book are by Guilherme Furtado from <a href="https://thenounproject.com" target="_blank" rel="noopener">The Noun Project</a>, used under the <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">Creative Commons Attribution 3.0 License</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://thenounproject.com/icon/video-3106913/" target="_blank" rel="noopener">"Video"</a> by Guilherme Furtado</p>
+</li>
+<li>
+<p><a href="https://thenounproject.com/icon/vinyl-7151277/" target="_blank" rel="noopener">"vinyl"</a> by Guilherme Furtado</p>
+</li>
+<li>
+<p><a href="https://thenounproject.com/icon/headphones-1816004/" target="_blank" rel="noopener">"Headphones"</a> by Guilherme Furtado</p>
+</li>
+<li>
+<p><a href="https://thenounproject.com/icon/album-7151282/" target="_blank" rel="noopener">"Album"</a> by Guilherme Furtado</p>
+</li>
+<li>
+<p><a href="https://thenounproject.com/icon/light-3006054/" target="_blank" rel="noopener">"Light"</a> by Guilherme Furtado</p>
+</li>
+<li>
+<p><a href="https://thenounproject.com/icon/alert-2915158/" target="_blank" rel="noopener">"Alert"</a> by Guilherme Furtado</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Some illustrations and visuals were created with help from DALL-E via ChatGPT and Microsoft Copilot.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_music_stuff">Music Stuff</h3>
+<div class="paragraph">
+<p>I&#8217;m not a musician, and really am no more of a fan than the average person.
+But I am nerdy about music history, and especially the cultural impact of music.</p>
+</div>
+<div class="paragraph">
+<p>A lot of the stupid little references in the book and videos are just things I happen to know; in some cases I just jump over to <a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank" rel="noopener">Wikipedia</a> and find something that&#8217;s interesting and is documented well enough that I trust it to be true.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re interested in music (well, rock music) history, there are a few things I can recommend:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://500songs.com" target="_blank" rel="noopener">A History of Rock Music in 500 Songs</a> by Andrew Hickey. This is an amazing ongoing podcast that is doing just what the title says, starting all the way back in 1939 and moving chronologically from there. It&#8217;s incredibly well-researched, and Andrew does such a good job of using these individual songs to create a cohesive narrative.</p>
+</li>
+<li>
+<p><a href="https://www.peterguralnick.com/" target="_blank" rel="noopener">Peter Guralnick</a> is a music historian and biographer who specializes in early rock and roll. His two-volume biography of Elvis Presley (<em>Last Train to Memphis</em> and <em>Careless Love</em>) is widely considered the definitive work on Elvis. His biography of Sam Phillips (<em>Sam Phillips: The Man Who Invented Rock 'n' Roll</em>) is also excellent and covers Sun Records and the early days of rock and roll. I haven&#8217;t gotten to his Sam Cooke biography yet, but it&#8217;s on my list.</p>
+</li>
+<li>
+<p><a href="https://www.marklewisohn.net/" target="_blank" rel="noopener">Mark Lewisohn</a> is a Beatles historian and author of <a href="https://www.marklewisohn.net/tune-in/" target="_blank" rel="noopener">Tune In</a>, which is the first book in a planned three-volume biography of the Beatles. It&#8217;s a massive book, but it&#8217;s incredibly well-researched and provides a detailed look at the Beatles' early years. The extended edition is an astonishing 1,700 pages long, and only covers to the end of 1962—before the band even released their first album! If you want a deep dive into their time in Hamburg, this book is for you. Beatles fans everywhere are impatiently awaiting the next volume.</p>
+</li>
+<li>
+<p><a href="https://www.cocaineandrhinestones.com" target="_blank" rel="noopener">Cocaine &amp; Rhinestones</a> by Tyler Mahan Coe. Another well-researched podcast, this one focuses on country music. I don&#8217;t listen to country music, but based on the title alone, I figured it was worth a listen. Turns out, it&#8217;s great—even for someone who doesn&#8217;t really like country.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_appendix_a_net_maui_configuration.html">Appendix A: .NET MAUI Configuration</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a></p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Polka Tulk Edition,&nbsp;revised&nbsp;2025-11-21<br />
+        00:36:05 UTC<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>
