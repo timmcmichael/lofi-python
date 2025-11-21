@@ -46,13 +46,13 @@
 </li>
 <li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
 </li>
-<li><a href="_methods.html">3. Methods</a>
+<li><a href="_decisions.html">3. Decisions</a>
 </li>
-<li><a href="_decisions.html">4. Decisions</a>
+<li><a href="_loops.html">4. Loops</a>
 </li>
-<li><a href="_loops.html">5. Loops</a>
+<li><a href="_functions.html">5. Functions</a>
 </li>
-<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
+<li><a href="_strings_2.html">6. Strings</a>
 </li>
 <li><a href="_classes_and_objects.html"><span class="toc-current">7. Classes and Objects</span></a>
 <ul class="sectlevel2">
@@ -64,7 +64,7 @@
 </li>
 <li><a href="_classes_and_objects.html#_fields">7.3. Fields</a>
 </li>
-<li><a href="_classes_and_objects.html#_methods_2">7.4. Methods</a>
+<li><a href="_classes_and_objects.html#_methods">7.4. Methods</a>
 </li>
 <li><a href="_classes_and_objects.html#_the_this_keyword">7.5. The <code>this</code> Keyword</a>
 </li>
@@ -84,19 +84,17 @@
 </li>
 </ul>
 </li>
-<li><a href="_arrays.html">8. Arrays</a>
+<li><a href="_data_structures.html">8. Data Structures</a>
 </li>
-<li><a href="_graphical_user_interfaces.html">9. Graphical User Interfaces</a>
+<li><a href="_exceptions.html">9. Exceptions</a>
 </li>
-<li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
+<li><a href="_files.html">10. Files</a>
 </li>
 <li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
 </li>
 <li><a href="_liner_notes.html">Liner Notes</a>
 </li>
 <li><a href="deep-cuts.html">Deep Cuts</a>
-</li>
-<li><a href="_appendix_a_net_maui_configuration.html">Appendix A: .NET MAUI Configuration</a>
 </li>
 <li><a href="_acknowledgements.html">Acknowledgements</a>
 </li>
@@ -330,7 +328,7 @@ For now, we&#8217;ll focus on the types of instance members: <strong>fields</str
 <h3 id="_fields">7.3. Fields</h3>
 <div class="paragraph">
 <p><strong>Fields</strong> are the implementation of the <em>attributes</em> of the class.
-They are also known as <strong>instance variables</strong> because they are similar to the variables we&#8217;ve been using in our programs, but their <a href="_methods.html#_variable_scope">scope</a> is the object created from the class, not the method where they&#8217;re defined.
+They are also known as <strong>instance variables</strong> because they are similar to the variables we&#8217;ve been using in our programs, but their <a href="_functions.html#_variable_scope">scope</a> is the object created from the class, not the method where they&#8217;re defined.
 A field is unique to the object; if we make two objects from our <code>PoolRecord</code> class, each object will have its own date, high temperature, and average temperature.</p>
 </div>
 <div class="paragraph">
@@ -380,7 +378,7 @@ Since a class will compile and run even if we leave off the <code>private</code>
 </div>
 </div>
 <div class="paragraph">
-<p>You might remember from <a href="_methods.html#_variable_scope">the section on variable scope in Chapter 3</a> that using global variables is terrible, and every time we create a global variable, a puppy loses its favorite toy.
+<p>You might remember from <a href="_functions.html#_variable_scope">the section on variable scope in Chapter 3</a> that using global variables is terrible, and every time we create a global variable, a puppy loses its favorite toy.
 And these fields look an awful lot like global variables.
 But fields in a class are <strong>not</strong> global variables; they&#8217;re <strong>instance</strong> variables—and that&#8217;s a good thing.
 The fields are <strong>encapsulated</strong> with that <code>private</code> keyword, so they can only be accessed and changed by the methods and properties of the class—which is also good thing.
@@ -389,7 +387,7 @@ And so no puppies' toys will be harmed as long as we use that <strong>private</s
 </div>
 </div>
 <div class="sect2">
-<h3 id="_methods_2">7.4. Methods</h3>
+<h3 id="_methods">7.4. Methods</h3>
 <div class="paragraph">
 <p>Ensuring that our fields are <code>private</code> is the first step in encapsulating our class, but it&#8217;s not the only step.
 We also need to create methods that can access and change the fields appropriately—otherwise, the fields are not very useful.
@@ -1194,7 +1192,7 @@ We add parameters to our constructor just like we do with any other method, by l
 </li>
 <li>
 <p>The parameter has the same name as the field: <code>date</code>. This is a common practice, but it&#8217;s potentially confusing.
-And it also violates guidance I gave you when we learned about <a href="_methods.html#_variable_scope">variable scope</a>.</p>
+And it also violates guidance I gave you when we learned about <a href="_functions.html#_variable_scope">variable scope</a>.</p>
 <div class="paragraph">
 <p>In this case, the parameter is a <em>local variable</em> to the constructor, and it&#8217;s <em>shadowing</em> the field. Our assignment statement needs to be carefully written: <code>this.date</code> refers to the field, and <code>date</code> refers to the parameter.</p>
 </div>
@@ -1202,7 +1200,7 @@ And it also violates guidance I gave you when we learned about <a href="_methods
 </ol>
 </div>
 <div class="paragraph">
-<p>We can also <a href="_methods.html#_overloading_a_method">overload</a> constructors, which means we can have multiple constructors with different parameters—just like we can with any other method.
+<p>We can also <a href="_functions.html#_overloading_a_method">overload</a> constructors, which means we can have multiple constructors with different parameters—just like we can with any other method.
 That can include having a parameterless constructor and one or more constructors with parameters, or having multiple constructors with different numbers of parameters.</p>
 </div>
 <div class="admonitionblock note">
@@ -1468,7 +1466,7 @@ Those accessors, in turn, have code block that define what happens when the prop
 <div class="sect2">
 <h3 id="_static_methods_and_constants">7.11. <code>static</code> Methods and Constants</h3>
 <div class="paragraph">
-<p>Since we first started learning about <a href="_methods.html">methods</a>, we&#8217;ve been using the <code>static</code> keyword as part of those definitions.
+<p>Since we first started learning about <a href="_classes_and_objects.html#_methods">methods</a>, we&#8217;ve been using the <code>static</code> keyword as part of those definitions.
 And though you&#8217;re probably often using <a href="_computers_and_coding.html#_first_c_program">top-level statements</a> in your programs, we&#8217;ve also seen the <code>static</code> keyword in front of the <code>Main()</code> method when we create a program the "old fashioned" way.
 However, we haven&#8217;t had enough context to understand what that keyword means.</p>
 </div>
@@ -1581,13 +1579,13 @@ This would mean that every savings account would earn the same interest rate, wh
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="_debugging_and_generative_ai.html">Debugging and Generative AI</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_arrays.html">Arrays</a> →</p>
+<p>← Previous: <a href="_strings_2.html">Strings</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_data_structures.html">Data Structures</a> →</p>
 </div>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2025-11-21<br />
-        00:36:05 UTC<br />
+        03:27:22 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

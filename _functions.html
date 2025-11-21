@@ -24,7 +24,7 @@
     });
 </script>
 </head>
-<body id="_methods" class="article toc2 toc-left">
+<body id="_functions" class="article toc2 toc-left">
 <link id="theme-link" rel="stylesheet" href="css/architech-light.css">
 <!-- TODO: Keep link to font awesome? -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -46,47 +46,45 @@
 </li>
 <li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
 </li>
-<li><a href="_methods.html"><span class="toc-current">3. Methods</span></a>
+<li><a href="_decisions.html">3. Decisions</a>
+</li>
+<li><a href="_loops.html">4. Loops</a>
+</li>
+<li><a href="_functions.html"><span class="toc-current">5. Functions</span></a>
 <ul class="sectlevel2">
-<li><a href="_methods.html#_whats_the_point_3">What&#8217;s the Point?</a>
+<li><a href="_functions.html#_whats_the_point_5">What&#8217;s the Point?</a>
 </li>
-<li><a href="_methods.html#_defining_our_own_methods">3.1. Defining Our Own Methods</a>
+<li><a href="_functions.html#_defining_our_own_methods">5.1. Defining Our Own Methods</a>
 </li>
-<li><a href="_methods.html#_variable_scope">3.2. Variable Scope</a>
+<li><a href="_functions.html#_variable_scope">5.2. Variable Scope</a>
 </li>
-<li><a href="_methods.html#_passing_data_to_methods">3.3. Passing Data to Methods</a>
+<li><a href="_functions.html#_passing_data_to_methods">5.3. Passing Data to Methods</a>
 </li>
-<li><a href="_methods.html#_returning_values">3.4. Returning Values</a>
+<li><a href="_functions.html#_returning_values">5.4. Returning Values</a>
 </li>
-<li><a href="_methods.html#_overloading_a_method">3.5. Overloading a Method</a>
+<li><a href="_functions.html#_overloading_a_method">5.5. Overloading a Method</a>
 </li>
-<li><a href="_methods.html#_solution_walkthrough">3.6. Solution Walkthrough</a>
+<li><a href="_functions.html#_solution_walkthrough">5.6. Solution Walkthrough</a>
 </li>
-<li><a href="_methods.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_4">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+<li><a href="_functions.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_6">Check Yourself Before You Wreck Yourself (on the assignments)</a>
 </li>
 </ul>
 </li>
-<li><a href="_decisions.html">4. Decisions</a>
-</li>
-<li><a href="_loops.html">5. Loops</a>
-</li>
-<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
+<li><a href="_strings_2.html">6. Strings</a>
 </li>
 <li><a href="_classes_and_objects.html">7. Classes and Objects</a>
 </li>
-<li><a href="_arrays.html">8. Arrays</a>
+<li><a href="_data_structures.html">8. Data Structures</a>
 </li>
-<li><a href="_graphical_user_interfaces.html">9. Graphical User Interfaces</a>
+<li><a href="_exceptions.html">9. Exceptions</a>
 </li>
-<li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
+<li><a href="_files.html">10. Files</a>
 </li>
 <li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
 </li>
 <li><a href="_liner_notes.html">Liner Notes</a>
 </li>
 <li><a href="deep-cuts.html">Deep Cuts</a>
-</li>
-<li><a href="_appendix_a_net_maui_configuration.html">Appendix A: .NET MAUI Configuration</a>
 </li>
 <li><a href="_acknowledgements.html">Acknowledgements</a>
 </li>
@@ -95,10 +93,10 @@
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_methods">3. Methods</h2>
+<h2 id="_functions">5. Functions</h2>
 <div class="sectionbody">
 <div class="paragraph subtitle">
-<p><span title='This is "Chapter Three" in binary (base 2)'>Chapter 0011 <sub>2</sub></span></p>
+<p><span title='This is "Chapter Five" in binary (base 2)'>Chapter 0101 <sub>2</sub></span></p>
 </div>
 <div class="exampleblock callout spin">
 <div class="content">
@@ -119,7 +117,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_whats_the_point_3">What&#8217;s the Point?</h3>
+<h3 id="_whats_the_point_5">What&#8217;s the Point?</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -137,7 +135,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/03%20Methods" target="_blank" rel="noopener">GitHub</a>.</em></p>
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/05%20Functions" target="_blank" rel="noopener">GitHub</a>.</em></p>
 </div>
 <hr>
 <div class="paragraph">
@@ -149,9 +147,9 @@ Consider the assembly instructions for building a LEGO set.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/chapter3/LEGO.png" alt="A few LEGO blocks" width="300">
+<img src="images/chapter5/LEGO.png" alt="A few LEGO blocks" width="300">
 </div>
-<div class="title">Figure 3.1 - LEGO blocks</div>
+<div class="title">Figure 5.1 - LEGO blocks</div>
 </div>
 <div class="paragraph">
 <p>It might take dozens of small steps to assemble it, but taken together, the instructions execute a single task: building the set.
@@ -178,7 +176,7 @@ We also say that we <em>call</em> a method, which sounds a little cooler than <e
 </div>
 </div>
 <div class="sect2">
-<h3 id="_defining_our_own_methods">3.1. Defining Our Own Methods</h3>
+<h3 id="_defining_our_own_methods">5.1. Defining Our Own Methods</h3>
 <div class="paragraph">
 <p>We&#8217;ve been defining a method from the start—or, more likely, the compiler has been defining one for us.
 The .NET runtime—which takes the compiler version of our code and executes it—looks for a method called <code>Main</code>, and that&#8217;s where it starts running the code.
@@ -204,7 +202,7 @@ In C#, parentheses almost always indicate a method, whether or not there is anyt
 <p>A method definition includes a method header followed by a code block.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.1 - A method definition in C#</div>
+<div class="title">Example 5.1 - A method definition in C#</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -254,7 +252,7 @@ In C#, parentheses almost always indicate a method, whether or not there is anyt
 <div class="ulist">
 <ul>
 <li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/03%20Methods/GoodSong.cs" target="_blank" rel="noopener"><code>GoodSong.cs</code></a></p>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/05%20Functions/GoodSong.cs" target="_blank" rel="noopener"><code>GoodSong.cs</code></a></p>
 </li>
 </ul>
 </div>
@@ -262,7 +260,7 @@ In C#, parentheses almost always indicate a method, whether or not there is anyt
 </div>
 </div>
 <div class="sect2">
-<h3 id="_variable_scope">3.2. Variable Scope</h3>
+<h3 id="_variable_scope">5.2. Variable Scope</h3>
 <div class="paragraph">
 <p>As we begin organizing our code into different methods and (when we learn <a href="#_0111_classes_and_objects">object-oriented programming basics</a>) classes, we&#8217;ll need to understand how data is compartmentalized within a program.
 Whenever we create a class or method—and other structures we&#8217;ll learn as we go—we use curly braces to define the boundaries, and we use indenting to help make those boundaries clear.
@@ -283,9 +281,9 @@ Many IDEs, including <a href="https://visualstudio.microsoft.com/" target="_blan
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/chapter3/NestedCodeBlocks.png" alt="A screenshot of Java source code with blocks indicated by bracketing">
+<img src="images/chapter5/NestedCodeBlocks.png" alt="A screenshot of Java source code with blocks indicated by bracketing">
 </div>
-<div class="title">Figure 3.2 - Nested blocks displayed with Visual Studio Code&#8217;s color coding.</div>
+<div class="title">Figure 5.2 - Nested blocks displayed with Visual Studio Code&#8217;s color coding.</div>
 </div>
 <div class="paragraph">
 <p>A variable can only be used or accessed inside the block in which it was declared, or within a block nested within that block; this is the variable&#8217;s <code>scope</code>.
@@ -298,7 +296,7 @@ If the variable is still not found, the compiler stops and produces an error.</p
 Trying to use a variable in a different code block is referred to as an <em>out of scope</em> reference.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.2 - Code with an out-of-scope variable reference.</div>
+<div class="title">Example 5.2 - Code with an out-of-scope variable reference.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">ScopeExample</span>
 <span style="color: #f8f8f2">{</span>
@@ -331,7 +329,7 @@ Trying to use a variable in a different code block is referred to as an <em>out 
 </table>
 </div>
 <div class="sect3">
-<h4 id="_variable_shadowing">3.2.1. Variable Shadowing</h4>
+<h4 id="_variable_shadowing">5.2.1. Variable Shadowing</h4>
 <div class="paragraph">
 <p>When we first started using variables, we learned that we can&#8217;t make two variables with the same name, but it&#8217;s a little more nuanced than that.
 We can&#8217;t make two variables with the same name <em>and scope</em>.
@@ -346,7 +344,7 @@ Then, program execution returns to <code>Main()</code>, where a <code>WriteLine(
 However, <em>this</em> <code>numberOfSongs</code> wasn&#8217;t changed to 10—the other one was.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.3 - Variable shadowing, which we should avoid.</div>
+<div class="title">Example 5.3 - Variable shadowing, which we should avoid.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -408,14 +406,14 @@ However, <em>this</em> <code>numberOfSongs</code> wasn&#8217;t changed to 10—t
 </div>
 </div>
 <div class="sect3">
-<h4 id="_global_variables">3.2.2. Global Variables</h4>
+<h4 id="_global_variables">5.2.2. Global Variables</h4>
 <div class="paragraph">
 <p>As you can see, variable scope has a big impact on how our code runs.
 Beginning programmers sometimes try to avoid scope issues by declaring their variables within the class code block, which makes them accessible to any block nested within the class—inclusing all of the methods the class encloses.
 This kind of class-level variable is sometimes called a <em>global variable</em>, and the use of global variables is generally discouraged.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.4 - Use of a global variable, which we should avoid.</div>
+<div class="title">Example 5.4 - Use of a global variable, which we should avoid.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -504,7 +502,7 @@ In the chapter on <a href="#_0111_classes_and_objects">classes and objects</a>, 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_passing_data_to_methods">3.3. Passing Data to Methods</h3>
+<h3 id="_passing_data_to_methods">5.3. Passing Data to Methods</h3>
 <div class="paragraph">
 <p>Sometimes a method needs some information in order to carry out its purpose.
 In our LEGO analogy, we need to have the right pieces to create the completed set; we have to hand over those pieces so they can be used to carry out that task.</p>
@@ -530,7 +528,7 @@ A parameter is a variable that exists in the method and receives the argument, a
 The methods we&#8217;ve defined so far didn&#8217;t need any outside information, so we haven&#8217;t been putting anything in the parentheses—but now let&#8217;s see an example with a parameter.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.5 - Method definition with a parameter, and a call with an argument.</div>
+<div class="title">Example 5.5 - Method definition with a parameter, and a call with an argument.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">ParameterExample</span>
 <span style="color: #f8f8f2">{</span>
@@ -595,16 +593,16 @@ The actual value passed in when we call a method is referred to as an <em>argume
 <div class="ulist">
 <ul>
 <li>
-<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/03%20Methods/AreaOfCircle.cs" target="_blank" rel="noopener"><code>AreaOfCircle.cs</code></a></p>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/05%20Functions/AreaOfCircle.cs" target="_blank" rel="noopener"><code>AreaOfCircle.cs</code></a></p>
 </li>
 <li>
-<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/03%20Methods/AreaOfOval.cs" target="_blank" rel="noopener"><code>AreaOfOval.cs</code></a></p>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/05%20Functions/AreaOfOval.cs" target="_blank" rel="noopener"><code>AreaOfOval.cs</code></a></p>
 </li>
 <li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/03%20Methods/AreaOfCircleFinished.cs" target="_blank" rel="noopener"><code>AreaOfCircleFinished.cs</code></a></p>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/05%20Functions/AreaOfCircleFinished.cs" target="_blank" rel="noopener"><code>AreaOfCircleFinished.cs</code></a></p>
 </li>
 <li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/03%20Methods/AreaOfOvalFinished.cs" target="_blank" rel="noopener"><code>AreaOfOval.cs</code></a></p>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/05%20Functions/AreaOfOvalFinished.cs" target="_blank" rel="noopener"><code>AreaOfOval.cs</code></a></p>
 </li>
 </ul>
 </div>
@@ -646,7 +644,7 @@ In general, think about what information the method needs to do its job, and the
 </div>
 </div>
 <div class="sect2">
-<h3 id="_returning_values">3.4. Returning Values</h3>
+<h3 id="_returning_values">5.4. Returning Values</h3>
 <div class="paragraph">
 <p>The methods we&#8217;ve seen to this point are basically commands—they simply perform a task, and then when they&#8217;re done, program execution just goes back to the method that called it and resumes there.
 But we can also create methods that are like questions—they execute a chunk of code, but when they are finished they give back an answer.</p>
@@ -658,7 +656,7 @@ But we can also create methods that are like questions—they execute a chunk of
 <p>Consider the two methods below.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.6 - A method that outputs a value and a method that returns a value.</div>
+<div class="title">Example 5.6 - A method that outputs a value and a method that returns a value.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -743,7 +741,7 @@ C# has a clever thing called a <em>tuple</em> that lets us return multiple value
 <p>A <code>return</code> statement in a <code>void</code> method stops execution of the method and returns to the calling method.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.7 - Invalid use of a <code>return</code> statement before the end of a method.</div>
+<div class="title">Example 5.7 - Invalid use of a <code>return</code> statement before the end of a method.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -776,7 +774,7 @@ C# has a clever thing called a <em>tuple</em> that lets us return multiple value
 </div>
 </div>
 <div class="sect3">
-<h4 id="_returning_vs_outputting">3.4.1. Returning vs. Outputting</h4>
+<h4 id="_returning_vs_outputting">5.4.1. Returning vs. Outputting</h4>
 <div class="paragraph">
 <p>Generally speaking, it&#8217;s better to return a value from a method rather than outputting a value within the method.
 There are a few reasons for this, but consider an obvious one.
@@ -789,7 +787,7 @@ That <code>Write()</code> statement won&#8217;t work—rather, the user will nev
 <p>Consider this code:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.8 - Improperly outputting a value rather than returning it.</div>
+<div class="title">Example 5.8 - Improperly outputting a value rather than returning it.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -824,7 +822,7 @@ That <code>Write()</code> statement won&#8217;t work—rather, the user will nev
 The solution is to return the string and perform the output in <code>Main()</code>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.9 - Returning a value back to <code>Main()</code> to be output.</div>
+<div class="title">Example 5.9 - Returning a value back to <code>Main()</code> to be output.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -903,7 +901,7 @@ I heavily   penalize input and output statements outside of the <code>Main()</co
 <div class="ulist">
 <ul>
 <li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/03%20Methods/AreaOfOvalReturn.cs" target="_blank" rel="noopener"><code>AreaOfOvalReturn.cs</code></a></p>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/05%20Functions/AreaOfOvalReturn.cs" target="_blank" rel="noopener"><code>AreaOfOvalReturn.cs</code></a></p>
 </li>
 </ul>
 </div>
@@ -912,7 +910,7 @@ I heavily   penalize input and output statements outside of the <code>Main()</co
 </div>
 </div>
 <div class="sect2">
-<h3 id="_overloading_a_method">3.5. Overloading a Method</h3>
+<h3 id="_overloading_a_method">5.5. Overloading a Method</h3>
 <div class="paragraph">
 <p>Sometimes the task, action, or calculation that a method produces has different ways of operating depending on the circumstances.</p>
 </div>
@@ -920,7 +918,7 @@ I heavily   penalize input and output statements outside of the <code>Main()</co
 <p>Consider a method that calculates the average age of two people:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.10 - An <code>AverageAge()</code> method that calculates the average of two ages.</div>
+<div class="title">Example 5.10 - An <code>AverageAge()</code> method that calculates the average of two ages.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -947,7 +945,7 @@ To overload a method, we write a new method with the same identifier, but with a
 An overload for our <code>AverageAge()</code> method could look like this:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.11 - An overload of <code>AverageAge()</code> that calculates the average of three ages.</div>
+<div class="title">Example 5.11 - An overload of <code>AverageAge()</code> that calculates the average of three ages.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -969,7 +967,7 @@ When we&#8217;re using the method, we can call whichever best suits our needs at
 An implementation that accepts `double`s is valid:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.12 - An overload of <code>AverageAge()</code> that calculates the average of three ages, using <code>double</code> values.</div>
+<div class="title">Example 5.12 - An overload of <code>AverageAge()</code> that calculates the average of three ages, using <code>double</code> values.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -985,13 +983,13 @@ An implementation that accepts `double`s is valid:</p>
 <p>If the compiler sees a call to <code>AverageAge()</code> with three <code>double</code> values, it will invoke this last version.</p>
 </div>
 <div class="sect3">
-<h4 id="_incorrect_overloading">3.5.1. Incorrect Overloading</h4>
+<h4 id="_incorrect_overloading">5.5.1. Incorrect Overloading</h4>
 <div class="paragraph">
 <p>Overloaded methods <strong>must</strong> have differences in the number and/or types of the parameters.
 The <em>names</em> of those parameters doesn&#8217;t differentiate them, so different names is not enough to make a valid overload.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.13 - An invalid attempt to overload a method.</div>
+<div class="title">Example 5.13 - An invalid attempt to overload a method.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -1053,13 +1051,13 @@ The method signature must be unique so the compiler can identify which method co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_calling_overloaded_methods">3.5.2. Calling Overloaded Methods</h4>
+<h4 id="_calling_overloaded_methods">5.5.2. Calling Overloaded Methods</h4>
 <div class="paragraph">
 <p>Once we have defined overloaded methods, we can call them just like any other method.
 We simply provide the arguments that match the method signature we want to use.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.14 - Testing three overloaded implementations of <code>AverageAge()</code>.</div>
+<div class="title">Example 5.14 - Testing three overloaded implementations of <code>AverageAge()</code>.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span>
 <span style="color: #f8f8f2">{</span>
@@ -1107,7 +1105,7 @@ We simply provide the arguments that match the method signature we want to use.<
 </div>
 </div>
 <div class="sect2">
-<h3 id="_solution_walkthrough">3.6. Solution Walkthrough</h3>
+<h3 id="_solution_walkthrough">5.6. Solution Walkthrough</h3>
 <div class="paragraph">
 <p>In "solution walkthrough" videos, I give a problem/prompt that is similar to the kinds of work I assign, and then I record myself writing a solution. It&#8217;s not absolutely mandatory to watch this video, but students report that these videos are particularly helpful.</p>
 </div>
@@ -1129,7 +1127,7 @@ We simply provide the arguments that match the method signature we want to use.<
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_4">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_6">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
 <div class="paragraph subtitle">
 <p>Chapter Review Questions</p>
 </div>
@@ -1212,13 +1210,13 @@ We simply provide the arguments that match the method signature we want to use.<
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="_variables_and_data_types.html">Variables and Data Types</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_decisions.html">Decisions</a> →</p>
+<p>← Previous: <a href="_loops.html">Loops</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_strings_2.html">Strings</a> →</p>
 </div>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2025-11-21<br />
-        00:36:05 UTC<br />
+        03:27:22 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

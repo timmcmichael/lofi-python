@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<link rel="icon" type="image/svg" href="./images/favicon.svg">
+<title>Lo-Fi Python: Programming Fundamentals</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toc = document.getElementById("toc");
+        if (toc) {
+            const btn = document.createElement("button");
+            btn.id = "theme-toggle";
+            btn.textContent = "Toggle Dark/Light Mode";
+            // toc.appendChild(btn);
+            toc.insertBefore(btn, toc.firstChild);
+        }
+    });
+</script>
+</head>
+<body id="_files" class="article toc2 toc-left">
+<link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+<!-- TODO: Keep link to font awesome? -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- <div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div> -->
+<div id="header">
+<h1>Lo-Fi Python: Programming Fundamentals</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi Python: Programming Fundamentals</a></span></p><ul class="sectlevel1">
+<li><a href="_sound_check.html">Sound Check</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_decisions.html">3. Decisions</a>
+</li>
+<li><a href="_loops.html">4. Loops</a>
+</li>
+<li><a href="_functions.html">5. Functions</a>
+</li>
+<li><a href="_strings_2.html">6. Strings</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_data_structures.html">8. Data Structures</a>
+</li>
+<li><a href="_exceptions.html">9. Exceptions</a>
+</li>
+<li><a href="_files.html"><span class="toc-current">10. Files</span></a>
+<ul class="sectlevel2">
+<li><a href="_files.html#_whats_the_point_10">What&#8217;s the Point?</a>
+</li>
+<li><a href="_files.html#_habits_and_mindset">10.1. Habits and Mindset</a>
+</li>
+<li><a href="_files.html#_programming_paradigms">10.2. Programming Paradigms</a>
+</li>
+<li><a href="_files.html#_version_control">10.3. Version Control</a>
+</li>
+<li><a href="_files.html#_software_development_life_cycle">10.4. Software Development Life Cycle</a>
+</li>
+<li><a href="_files.html#_coding_on_a_team">10.5. Coding on a Team</a>
+</li>
+<li><a href="_files.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_11">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+</li>
+</ul>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_files">10. Files</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p><span title='This is "Chapter Ten" in binary (base 2)'>Chapter 1010 <sub>2</sub></span></p>
+</div>
+<div class="exampleblock callout spin">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="https://optraffic.com/wp-content/uploads/2024/10/Standard-Stop-Signs--1024x768.jpg" alt="Stop" width="250" height="250">
+</div>
+</div>
+<div class="paragraph">
+<p><strong class="callout-title">Unfinished Chapter!!</strong></p>
+</div>
+<div class="paragraph">
+<p>I am actively working to complete this eBook, and I haven&#8217;t gotten to this chapter yet. In fact, it&#8217;s probably just a copy/paste from a similar chapter in my C# book.</p>
+</div>
+<div class="paragraph">
+<p><strong>In other words, don&#8217;t read this yet!</strong></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_whats_the_point_10">What&#8217;s the Point?</h3>
+<div class="paragraph">
+<p>*
+*</p>
+</div>
+<div class="paragraph">
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/10%20Files" target="_blank" rel="noopener">GitHub</a>.</em></p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_habits_and_mindset">10.1. Habits and Mindset</h3>
+<div class="paragraph subtitle">
+<p>Developing a Professional Mindset</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Iterative Development</p>
+</li>
+<li>
+<p>Refactoring</p>
+</li>
+<li>
+<p>Documentation</p>
+</li>
+<li>
+<p>Software Development Ethics</p>
+</li>
+<li>
+<p>Commitment to Lifelong Learning</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_programming_paradigms">10.2. Programming Paradigms</h3>
+<div class="paragraph subtitle">
+<p>Different Ways to Think About Code</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Imperative vs. Declarative</p>
+</li>
+<li>
+<p>Object-Oriented, Functional, etc.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_version_control">10.3. Version Control</h3>
+<div class="paragraph subtitle">
+<p>Git, Code Repositories, Branches and Merges</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What is Git, what&#8217;s a repository, why we use it</p>
+</li>
+<li>
+<p>Local vs. remote, commits, pushes</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_software_development_life_cycle">10.4. Software Development Life Cycle</h3>
+<div class="paragraph subtitle">
+<p>Breaking a Project Down into Manageable Steps</p>
+</div>
+<div class="paragraph">
+<p>Learning to write code means creating a lot of programs—mostly small, straightforward programs at first.
+Remember those awful word problems where a train leaves Chicago traveling 40 mph, and another train leaves Denver at 35 mph?
+That kind of stuff; but in my course, we don&#8217;t get too caught up in the math part of it.
+But we care <strong>a lot</strong> about understanding the requirements of a program and implementing it successfully.</p>
+</div>
+<div class="paragraph">
+<p>As our programs become bigger and more complex, we&#8217;ll need to work within a deliberate design and implementation process in order to keep ourselves organized and focused.
+Even the smaller programs we&#8217;ll develop while learning the basics will benefit from a thoughtful approach beyond just opening a new file and starting to type.
+It ensures that we use our time efficiently.
+And when we are faced with solving a programming problem that really intimidates us, the process will help make the task more approachable.</p>
+</div>
+<div class="paragraph">
+<p>For big or small projects, a good general approach to software development is:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Planning and Analysis</dt>
+<dd>
+<p>Identify the goals and scope of the program. As a rule, keep it small and focused—we can always add features later. <strong>Ask yourself, <em>What does this program need to do?</em></strong></p>
+</dd>
+<dt class="hdlist1">Testing Plan</dt>
+<dd>
+<p>Determine how the final program will be tested. The testing plan will be useful, but most importantly, taking the time to establish a specific testing plan ensures that we thoroughly understand the program before we begin writing code. If we don&#8217;t know how the program will work, we&#8217;re not yet ready to begin coding. <strong>Ask yourself, <em>How will I make sure the program works correctly?</em></strong></p>
+</dd>
+<dt class="hdlist1">Implementation</dt>
+<dd>
+<p>Write and test the code. We say that this is an <em>iterative</em> (or "repeating") process, meaning we&#8217;ll write and test one small piece, staying with it until we know it&#8217;s good. Then we&#8217;ll move on to the next piece and repeat. <strong>Ask yourself, <em>What code do I need in order to get the next part of the program working?</em></strong></p>
+</dd>
+<dt class="hdlist1">Deployment</dt>
+<dd>
+<p>Once the program is complete and has passed all tests, it&#8217;s time to deploy it. This might mean sharing it with users, installing it on a server, or simply submitting it for a class assignment. <strong>Ask yourself, <em>How will I deliver this program to its users?</em></strong></p>
+</dd>
+<dt class="hdlist1">Revise or maintain</dt>
+<dd>
+<p>If our needs or program requirements change, we&#8217;ll need to go back to the first step and begin planning the next version. If not, we&#8217;ll need to monitor that the program continues to perform as expected over time. <strong>Ask yourself, <em>What&#8217;s next for this program?</em></strong></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll flesh out this process as we go—and as our programs become more advanced.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_coding_on_a_team">10.5. Coding on a Team</h3>
+<div class="paragraph subtitle">
+<p>Keeping Everyone on the Same Page</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Agile</p>
+</li>
+<li>
+<p>Scrum</p>
+</li>
+<li>
+<p>Sprints</p>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_11">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<div class="paragraph subtitle">
+<p>Chapter Review Questions</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>1.</p>
+</div>
+<div class="paragraph">
+<p>2.</p>
+</div>
+<div class="paragraph">
+<p>3.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Sample answers provided in the <a href="#software-development-life-cycle">Liner Notes</a></em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_exceptions.html">Exceptions</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Polka Tulk Edition,&nbsp;revised&nbsp;2025-11-21<br />
+        03:27:22 UTC<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>
