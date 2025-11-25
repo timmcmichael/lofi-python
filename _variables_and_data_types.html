@@ -48,43 +48,23 @@
 <ul class="sectlevel2">
 <li><a href="_variables_and_data_types.html#_whats_the_point_2">What&#8217;s the Point?</a>
 </li>
-<li><a href="_variables_and_data_types.html#_c_identifiers">2.1. C# Identifiers</a>
+<li><a href="_variables_and_data_types.html#_variable_values">2.1. Variable Values</a>
 </li>
-<li><a href="_variables_and_data_types.html#_numeric_data_types">2.2. Numeric Data Types</a>
+<li><a href="_variables_and_data_types.html#_variable_identifiers">2.2. Variable Identifiers</a>
 </li>
-<li><a href="_variables_and_data_types.html#_bool_data_type_and_boolean_logic">2.3. <code>bool</code> Data Type (and Boolean Logic)</a>
+<li><a href="_variables_and_data_types.html#_variable_values_2">2.3. Variable Values</a>
 </li>
-<li><a href="_variables_and_data_types.html#_char_data_type">2.4. <code>char</code> Data Type</a>
+<li><a href="_variables_and_data_types.html#_variable_data_types">2.4. Variable Data Types</a>
 </li>
-<li><a href="_variables_and_data_types.html#_strings">2.5. Strings</a>
+<li><a href="_variables_and_data_types.html#_referencing_variable_values">2.5. Referencing Variable Values</a>
 </li>
-<li><a href="_variables_and_data_types.html#_declaring_named_constants">2.6. Declaring Named Constants</a>
+<li><a href="_variables_and_data_types.html#_math_calculations">2.6. Math Calculations</a>
 </li>
-<li><a href="_variables_and_data_types.html#_outputting_variable_and_constant_values">2.7. Outputting Variable (and Constant) Values</a>
-</li>
-<li><a href="_variables_and_data_types.html#_math_calculations">2.8. Math Calculations</a>
-</li>
-<li><a href="_variables_and_data_types.html#_handling_user_input">2.9. Handling User Input</a>
+<li><a href="_variables_and_data_types.html#_handling_user_input">2.7. Handling User Input</a>
 </li>
 <li><a href="_variables_and_data_types.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_3">Check Yourself Before You Wreck Yourself (on the assignments)</a>
 </li>
 </ul>
-</li>
-<li><a href="_decisions.html">3. Decisions</a>
-</li>
-<li><a href="_loops.html">4. Loops</a>
-</li>
-<li><a href="_functions.html">5. Functions</a>
-</li>
-<li><a href="_strings_2.html">6. Strings</a>
-</li>
-<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
-</li>
-<li><a href="_data_structures.html">8. Data Structures</a>
-</li>
-<li><a href="_exceptions.html">9. Exceptions</a>
-</li>
-<li><a href="_files.html">10. Files</a>
 </li>
 <li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
 </li>
@@ -127,13 +107,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Know how to select a data type</p>
-</li>
-<li>
 <p>Write code to declare variables and assign values</p>
 </li>
 <li>
-<p>Use standard C# naming conventions</p>
+<p>Understand Python data types</p>
+</li>
+<li>
+<p>Use standard Python naming conventions</p>
+</li>
+<li>
+<p>Output variables using <em>concatenation</em> and <em>interpolation</em></p>
 </li>
 <li>
 <p>Do some basic math calculations</p>
@@ -150,51 +133,37 @@
 <div class="paragraph">
 <p>It&#8217;s fun to create programs that display stuff on the screen, but that&#8217;s pretty limited.
 To start doing things that are more interesting—and useful—we&#8217;ll need to keep track of some information.
-In computer programming, a piece of information is called <strong>data</strong>.</p>
+In computer programming, information is called <strong>data</strong>, and data is stored in <strong>variables</strong>.</p>
 </div>
-<div class="paragraph">
-<p>In broad terms, there are two kinds of data:</p>
-</div>
-<div class="dlist unordered">
+<div class="dlist">
 <dl>
-<dt>constant</dt>
-<dd>
-<p>A piece of data that can&#8217;t change during program execution.</p>
-</dd>
-<dt>variable</dt>
+<dt class="hdlist1">variable</dt>
 <dd>
 <p>A piece of data that may change (or "vary") during program execution.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>In our <code>Hello World</code> code, the letters and characters we output are <em>constant</em> data.</p>
+<p>A variable has three parts:</p>
 </div>
-<div class="listingblock">
-<div class="title">Example 2.1 - <code>HelloWorld</code> in C#</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;Hello World!&quot;</span><span style="color: #f8f8f2">);</span>
-</pre></div></td></tr></table></div></code></pre>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A value</p>
+</li>
+<li>
+<p>An identifier</p>
+</li>
+<li>
+<p>A data type</p>
+</li>
+</ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_variable_values">2.1. Variable Values</h3>
 <div class="paragraph">
-<p>The only way to change what&#8217;s output is by editing that constant—in the quotation marks—in our source code, before we run the program.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The string literal in our <code>Hello World</code> code is just one kind of constant. We&#8217;ll learn about others later.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>In order for our programs to be flexible and responsive, we&#8217;ll need <strong>variables</strong>.
-I encourage beginning students to think of a variable like a container, such as a cup.</p>
+<p>I encourage beginning students to think of a variable like a container, such as a cup.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -204,21 +173,85 @@ I encourage beginning students to think of a variable like a container, such as 
 </div>
 <div class="paragraph">
 <p>The container can hold one thing at a time.
-We can put coffee in it, or we can put water in it—but we can&#8217;t put both.
+We can put coffee in it, or we can put water in it—but we can&#8217;t put both in at the same time.
 If we start with coffee and decide we want to put water in there, the coffee gets dumped out and is gone forever.
-That&#8217;s fine, but we better make sure we don&#8217;t want the coffee anymore before we put something else in the mug.</p>
+That&#8217;s fine, but we&#8217;d better make sure we don&#8217;t want the coffee anymore before we put something else in the mug.</p>
 </div>
 <div class="paragraph">
 <p>A variable works the same way.
-It can hold one value, and that value can vary—remember, that&#8217;s where the name comes from—but once it&#8217;s changed, that old value is lost.</p>
+It can hold one value, and that value can vary—that&#8217;s where the term comes from—but once it&#8217;s changed, that old value is lost.</p>
 </div>
 <div class="paragraph">
 <p>I guess we could mix coffee and water, but then that&#8217;s really a new substance and we can&#8217;t get back our plain coffee (or our water).
 If we want to store coffee <strong>and</strong> water, we can do that by using two different containers.</p>
 </div>
 <div class="paragraph">
-<p>From a programming perspective—rather than a coffee perspective—a variable is a location in the computer&#8217;s memory where we can store a value.
-In order to use that value, we have to know where to find it, so we give the memory location a name, technically called an <strong>identifier</strong>.</p>
+<p>From a programming perspective—rather than a coffee perspective—a variable is a location in the computer&#8217;s memory where we can store a value.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_variable_identifiers">2.2. Variable Identifiers</h3>
+<div class="paragraph">
+<p>In order to use that value, we have to know where to find it, so we give the memory location a name, technically called an <strong>identifier</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Variable identifiers or names are the character sequences that identify a variable.
+There are a few rules that determine whether or not an identifier is valid:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It can contain letters (upper or lower case), digits (0 - 9), and/or underscores (_).</p>
+</li>
+<li>
+<p>The first character <strong>can&#8217;t</strong> be a digit.</p>
+</li>
+<li>
+<p>It can&#8217;t contain whitespaces (tab, space, etc.) or special characters (like @, #, $, etc.) except for the underscore.</p>
+</li>
+<li>
+<p>It can&#8217;t be a Python keyword or reserved word. These are words that are used in the Python language, like <code>if</code> and <code>for</code>, and you&#8217;ll learn them as we go.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In addition to those technical rules about identifier names, PEP-8 states that variable identifiers should be all lowercase, with and underscore used to separate words.</p>
+</div>
+<div class="paragraph">
+<p>By common practice, variable identifiers should be descriptive.
+Single-letter variable names, like <code>x</code> for a number, are fine in your math class, but are generally <strong>not</strong> okay when you&#8217;re coding.</p>
+</div>
+<div class="paragraph">
+<p>Examples of good variable names include: <code>band_name</code>, <code>num_band_members</code>, <code>hourly_wage</code>, and so on.</p>
+</div>
+<div class="paragraph">
+<p>The expectation in my course is that your code will align with those conventions, because that&#8217;s what industry people expect.
+And you will lose points if you don&#8217;t.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_variable_values_2">2.3. Variable Values</h3>
+<div class="paragraph">
+<p>Unlike many other languages, Python does not have a specific command for creating (or, as we will call it, <em>initializing</em>) a variable.
+Instead, the interpreter automatically makes a variable when we assign a value to it for the first time, and that&#8217;s done with an <strong>assignment statement</strong>.</p>
+</div>
+<div class="paragraph">
+<p>An assignment statement, as the name suggests, assigns a value to a variable.
+The syntax for an assignment statement is an identifier, followed by the equals sign, followed by the value to assign. An assignment statement to create a variable for a grade point average might look like this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>gpa = 4.0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The interpreter will create the "container" called <code>gpa</code> and fill it with the value <code>4.0</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_variable_data_types">2.4. Variable Data Types</h3>
+<div class="paragraph">
+<p>A variable is really just a location in computer memory where a piece of data is stored.</p>
 </div>
 <div class="imageblock right">
 <div class="content">
@@ -227,28 +260,138 @@ In order to use that value, we have to know where to find it, so we give the mem
 <div class="title">Figure 2.2 - A really great quarterback</div>
 </div>
 <div class="paragraph">
-<p>And the computer will need to know how much memory to set aside for that variable, which depends on the kinds of values we want to store.
-Storing the number 7 doesn&#8217;t take very much space; storing a picture of John Elway takes a lot more space (but it&#8217;s worth it!).
-The <strong>type</strong> of data we can store in a variable is called its</p>
+<p>When we initialize a variable, the computer will need to know how much memory to set aside for it, and that depends on the kinds of values we want to store.
+Storing the number 7 doesn&#8217;t take very much space; storing a picture of John Elway takes a lot more space (but it&#8217;s worth it!).</p>
 </div>
 <div class="paragraph">
-<p>&#8230;&#8203;<em>drumroll</em>, please&#8230;&#8203;</p>
+<p>The <strong>type</strong> of data we can store in a variable is called its</p>
+</div>
+<div class="paragraph">
+<p>&#8230;&#8203;<em>drumroll, please</em>&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
 <p><strong>data type</strong>.</p>
 </div>
 <div class="paragraph">
-<p>Reserving a memory location by specifying a data type and identifier is known as <strong>declaring</strong> a variable.
-Placing data in that variable is referred to as <strong>assigning</strong> a value to a variable.</p>
+<p>In many other programming languages, the programmer specifies the data type.
+In Python, the interpreter looks at a value and automatically determines the appropriate data type when we initialize the variable.
+For our purposes at this time, there are three Python data types: <code>int</code>, <code>float</code>, and <code>str</code>, with additional types coming later.</p>
 </div>
-<div class="admonitionblock note">
+<div class="sect3">
+<h4 id="_the_int_data_type">2.4.1. The <code>int</code> Data Type</h4>
+<div class="paragraph">
+<p>The <code>int</code> data type is for <strong>integers</strong>.
+As you may remember from your math class, an integer is a whole number; that is, a number that doesn&#8217;t include any decimal places or fractional values.
+<strong><em>5</em></strong> is an integer and <strong><em>-824</em></strong> is an integer, while <strong><em>3.14</em></strong> and <strong><em>7 1/2</em></strong> are not.</p>
+</div>
+<div class="paragraph">
+<p>Python will automatically use an <code>int</code> when we are storing whole numbers.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 2.1 - Initializing <code>int</code> variables</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">otis_redding_birth_year</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">1941</span>
+<span style="color: #f8f8f2">billie_holiday_record_sales</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">1200000</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_the_float_data_type">2.4.2. The <code>float</code> Data Type</h4>
+<div class="paragraph">
+<p>The <code>float</code> data type refers to <strong>floating-point</strong> numbers.
+A floating point number is a number that includes decimal data, such as <strong><em>4.723</em></strong> and <strong><em>-100.23</em></strong>.
+A fraction like <strong><em>7 1/2</em></strong> can also be stored as a floating-point number, but only in decimal form (i.e., <strong><em>7.5</em></strong>).</p>
+</div>
+<div class="paragraph">
+<p>The Python interpreter will create a <code>float</code> when we&#8217;re initialize a variable with a decimal number.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 2.2 - Initializing <code>float</code> variables</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">marias_gpa</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">4.0</span>
+<span style="color: #f8f8f2">vinyl_record_rpm</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">33.33</span>
+<span style="color: #f8f8f2">ticket_price_discount</span> <span style="color: #ff4689">=</span> <span style="color: #ff4689">-</span><span style="color: #ae81ff">23.45</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_the_str_data_type">2.4.3. The <code>str</code> Data Type</h4>
+<div class="paragraph">
+<p>The <code>str</code> data type, perhaps confusingly, refers to <strong>text</strong> data.
+It gets its name because it can hold a bunch of characters put together, like a string of holiday lights.
+So we pronounce this data type "string".</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chapter2/string_of_lights.png" alt="A string of holiday lights">
+</div>
+<div class="title">Figure 2.3 - A <code>str</code> variable is multiple characters strung together like a set of lights.</div>
+</div>
+<div class="paragraph">
+<p>A string can hold any characters: letters (upper and lowercase, which are different), digits (0 through 9), symbols (such as <code>^</code> and <code><strong></code>), and a variety of special characters.
+Since one of the characters a string can hold is a *<em>space</em></strong>, we need a way to indicate the start and stop of a <code>str</code>.</p>
+</div>
+<div class="paragraph">
+<p>In Python, we can use quotation marks, which coders often call <em>double quotes</em>, or apostrophes, which we call <em>single quotes</em>.
+Unlike many other languages, in Python it doesn&#8217;t matter which we use to denote our strings.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 2.3 - Initializing <code>str</code> variables</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">drummers_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Charlie Watts&quot;</span>
+<span style="color: #f8f8f2">address</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&#39;315 Bowery, New York, NY 10003, USA&#39;</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use whichever symbol you want, but having both as options allows us to include quotes or apostrophes in our strings.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 2.4 - Quotation marks and apostrophes in strings</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;That&#39;s alright&quot;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">controversial_quote</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&#39;John Lennon said, &quot;We are more popular than Jesus now.&quot;&#39;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This string includes an apostrophe</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>This string includes two quotation marks</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Both of those values are valid, but you can see the problem if you try to use the wrong one:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>song_title = 'That's alright'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The interpreter will see the apostrophe after the word <strong><em>That</em></strong> and think it&#8217;s the end of the string; then it will get confused when it sees the additional characters <strong><em>s alright'</em></strong>.</p>
+</div>
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-If you have programming experience in Python or JavaScript, the idea of a data type might be new to you. In those languages, the interpreter determines the data type for you—so you don&#8217;t have to specify it. It&#8217;s one reason I prefer to teach beginners using C# or Java, which teaches you how data types work.
+You can indicate that a symbol is part of the string (and not the end of it) by using a <strong>backslash</strong> character in front of the symbol: <code>song_title = 'That\'s alright'</code>
 </td>
 </tr>
 </table>
@@ -259,329 +402,32 @@ If you have programming experience in Python or JavaScript, the idea of a data t
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
 </div>
 <div class="paragraph video-title">
-<p>Using Variables in C#</p>
+<p>Initializing Variables in Python [COMING SOON!]</p>
 </div>
-<div class="videoblock">
-<div class="content">
-<iframe src="https://www.youtube.com/embed/9MFR1sxC568?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD&index=5" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
-<div class="paragraph">
-<p>Files from video:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/02%20Variables/DeclaringVariables.cs" target="_blank" rel="noopener"><code>DeclaringVariables.cs</code></a></p>
-</li>
-</ul>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_c_identifiers">2.1. C# Identifiers</h3>
+<h3 id="_referencing_variable_values">2.5. Referencing Variable Values</h3>
 <div class="paragraph">
-<p>Variable names (more properly called variable <em>identifiers</em>) are the character sequences that identify a variable.
-There are a few rules that determine whether or not an identifier is valid:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Can contain letters (upper or lower case), digits (0 - 9), and/or underscores (_).</p>
-</li>
-<li>
-<p>The first character <strong>can&#8217;t</strong> be a digit.</p>
-</li>
-<li>
-<p>Can&#8217;t contain whitespaces (tab, space, etc.) or special characters (like @, #, $, etc.) except for the underscore.</p>
-</li>
-<li>
-<p>Can&#8217;t be a C# keyword or reserved word (words that are used in the C# language, like <code>double</code> or <code>public</code>)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>In addition to those technical rules about identifier names, the convention in C# is to use descriptive names in "camel case" format, as described in the preceding video.
-Single-letter variable names, like <code>x</code> for a number, are fine in your math class, but are generally <strong>not</strong> okay when you&#8217;re coding.
-The expectation in my course is that your code will align with those conventions—because that&#8217;s what industry people expect—and you will lose points if you don&#8217;t.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_numeric_data_types">2.2. Numeric Data Types</h3>
-<div class="paragraph">
-<p>Variables for storing numbers come in two flavors: <strong>integers</strong> and <strong>floating-point</strong> numbers.
-As you may remember from your math class, an integer is a whole number; that is, a number that doesn&#8217;t include any decimal places or fractional values.
-<em>5</em> is an integer, <em>-824</em> is an integer, while <em>3.14</em> and <em>7 1/2</em> are not.</p>
-</div>
-<div class="paragraph">
-<p>A floating-point number includes decimals, so 3.14 can be stored as a floating-point number.
-7 1/2 can also be stored as a floating-point number, but only as a decimal (i.e., 7.5).</p>
-</div>
-<div class="paragraph">
-<p>The most common numeric data types in C# are <code>int</code> for integers and <code>double</code> for floating-point numbers.
-You can get pretty far in programming just using those three, and in courses I teach you won&#8217;t need to use any other numeric data types—but others do exist.</p>
-</div>
-<div class="paragraph">
-<p>Other data types for integers are <code>byte</code>, <code>short</code>, and <code>long</code>.
-These different types exist because they use different amounts of memory. <code>byte</code> and <code>short</code> are smaller than <code>int</code>, while <code>long</code> is larger.
-The impact of these different memory sizes (or memory <strong>allocations</strong>) is that the types can store values of different sizes.
-For example, a <code>byte</code> uses 8 bits of memory and can store a number between -128 and 127 (inclusive), while an <code>int</code> takes 32 bits and can store a value between -2,147,483,648 and 2,147,483,647 (inclusive).</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Interesting!</div>
-<div class="paragraph">
-<p>This all goes back to binary numbers. An 8-bit number has 8 digits, and we use the first digit to specify whether the number is positive or negative. That leaves 7 digits, and we can make 128 different combinations of 1s and 0s in 7 digits: <code>0000000</code>, <code>0000001</code>, <code>0000002</code>, and so on, all the way up to <code>1111111</code>. Those 128 possibilities give us the <code>byte</code> range of -128 to 127 (keeping in mind that we do need one of those combinations to represent zero).</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Other floating-point data type in C# are <code>float</code> and <code>decimal</code>.
-'float' is called "single" in some programming languages, which helps understand where the name <code>double</code> comes from: <code>double</code> uses twice as much memory (64 bits) as a <code>float</code> or "single" (32 bits)—and therefore its range of values is twice as big. Be aware that to make a <code>float</code> number in C#, you have to add the letter F (in capital or lowercase form) at the end of the number.</p>
-</div>
-<div class="paragraph">
-<p>The <code>decimal</code> data type is slower and uses more memory than float or double, but it&#8217;s more precise.
-It&#8217;s used for financial calculations and other situations where precision is important.</p>
+<p>Initializing a variable with a value does not produce any output.
+If we want to display the output of a variable we just put the identifier in a <code>print()</code> statement without any quotation marks:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.2 - Numeric variable declarations in C#</div>
+<div class="title">Example 2.5 - Basic variable output in Python</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> milesDavisBirthYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1926</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">float</span><span style="color: #f8f8f2"> vinylRecordRPM </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">33.33f</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> billieHolidayRecordSales </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">_200_000; </span><span style="color: #959077">// Approximate sales</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The <code>f</code> suffix denotes that the value 33.33 is a <code>float</code> rather than a <code>double</code>.</td>
-</tr>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_who_cares_about_variable_size">2.2.1. Who Cares About Variable Size?</h4>
-<div class="paragraph">
-<p>The general rule in programming is to be as efficient with your resources (memory, storage, processing speed, network bandwidth, etc.) as possible.
-If you&#8217;re storing a person&#8217;s age, you don&#8217;t really need an <code>int</code>; nobody is going to be two million years old!
-A <code>byte</code> has plenty of room (up to 127) to store even the oldest person&#8217;s age, and it uses a fraction of the memory—8 bits instead of 32.
-So I should be telling you to use a <code>byte</code> in this case.</p>
-</div>
-<div class="paragraph">
-<p>And I should be insisting on <code>decimal</code> when we store money, because it&#8217;s more precise than <code>double</code> or <code>float</code>.</p>
-</div>
-<div class="paragraph">
-<p>But I don&#8217;t worry about that stuff with beginning programmers for two reasons.
-First, it&#8217;s hard enough for a beginner to write programs that work—so instead of asking you to deal with <em>all</em> of the numeric types, I just have you use <code>int</code> whenever you need a whole number, and <code>double</code> when you need something with a decimal.
-Second, these days even the wimpiest computer has waaaaaay more RAM than is needed by even the most complex program a beginner will write, so we don&#8217;t need to worry about it.</p>
-</div>
-<div class="paragraph">
-<p>But understand that this attitude is only a teaching and learning aid.
-It&#8217;s like saying we shouldn&#8217;t worry about the price of groceries because we have plenty of money.
-That might be true, but it&#8217;s good to be careful with your money—and it&#8217;s irresponsible of me to tell you to just waste your money.</p>
-</div>
-<div class="paragraph">
-<p>As you get more comfortable with programming, use your memory resources efficiently.
-While you&#8217;re learning, just worry about getting your code to work.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_bool_data_type_and_boolean_logic">2.3. <code>bool</code> Data Type (and Boolean Logic)</h3>
-<div class="paragraph">
-<p>A <code>bool</code> variable has only two possible values: <code>true</code> and <code>false</code>.
-It&#8217;s useful for tracking information that is only one thing or the other.
-<em>Is U2 my favorite band?</em>
-The answer to that is either <code>true</code> or <code>false</code>—there is no other possibility.
-<em>Does Julia have all of the Beatles albums?</em>
-Again, only two possible answers to that question; she either owns them or she doesn&#8217;t.</p>
-</div>
-<div class="paragraph">
-<p>The best practice is to name a <code>bool</code> variable in a way that expresses this either/or state.
-That is to say, we usually name our <code>bool</code> variables using words like <em>is</em>, <em>has</em>, <em>can</em>, and so on.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example 2.3 - Boolean variable declarations in C#</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">bool</span><span style="color: #f8f8f2"> isFavoriteBand </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">true</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">bool</span><span style="color: #f8f8f2"> hasAllAlbums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">false</span><span style="color: #f8f8f2">;</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><code>boolean</code> variables go hand-in-hand with <em>Boolean expressions</em> which are statements that evaluate to be either <code>true</code> or <code>false</code>, like those questions above.
-We&#8217;ll look at this "Boolean logic" in the chapter on <a href="_decisions.html">decisions</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_char_data_type">2.4. <code>char</code> Data Type</h3>
-<div class="paragraph">
-<p>If we want to store a single character, like a student&#8217;s letter grade or their first initial, we can use the <code>char</code> data type.
-<code>char</code> literals are created by putting a character in <strong>single quotes</strong>, and that character can be a letter, number, punctuation mark or symbol—or some other weird stuff, too.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example 2.4 - Character variable declarations in C#</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">char</span><span style="color: #f8f8f2"> goodRockChord </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&#39;G&#39;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">char</span><span style="color: #f8f8f2"> jaggersFirstInitial </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&#39;M&#39;</span><span style="color: #f8f8f2">;</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Some people pronounce the <code>char</code> data type like the word "chart" without the "t". And some people pronounce it like the word "care". Either is okay.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Also, I pronounce it "char" like "chart" without the "t" and firmly believe that only a sociopath would say it like the word "care".
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>A <code>char</code> is really just an integer, but the number it holds conforms to a standard list of character values called <strong>ASCII</strong> (with the fun pronunciation "ass key").
-In this standard, the number 65 is a capital 'A', 66 is 'B', and so on.
-Lowercase letters are considered different characters, so 97 is 'a' and 98 is 'b'. Check out the <a href="https://en.wikipedia.org/wiki/ASCII#Table_of_codes" target="_blank" rel="noopener">complete ASCII table</a> if you&#8217;re curious.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_strings">2.5. Strings</h3>
-<div class="paragraph">
-<p>A <code>char</code> is pretty limited since it can only hold a single character.
-If we want to put a collection of characters together to make words and sentences, we need multiple <code>char</code>s grouped into a single variable.
-That data type is called <code>string</code>, because it strings together a bunch of <code>char</code>s, like a string of holiday lights.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/chapter2/string_of_lights.png" alt="A string of holiday lights">
-</div>
-<div class="title">Figure 2.3 - A <code>string</code> variable is multiple <code>char</code>s strung together like a set of lights.</div>
-</div>
-<div class="paragraph">
-<p><code>string</code> literals are denoted with <strong>double quotation marks</strong>; remember that <code>char</code> values use single quotation marks.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example 2.5 - <code>string</code> variable declarations in C#</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> address </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;315 Bowery, New York, NY 10003, USA&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> bestClass </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;CIS162AD&quot;</span><span style="color: #f8f8f2">;</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Strings are really important and there&#8217;s all kinds of fun and useful stuff we can do with them, but we&#8217;ll need to save all of that for later while we stay focused on the basics.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Always remember that, in C#, single quotes <kbd>'</kbd> enclose a <code>char</code> and double quotes <kbd>"</kbd> enclose a <code>string</code>. It&#8217;s easy to get them mixed up—especially if you&#8217;re used to Python, where they are interchangeable—but your code won&#8217;t compile if you mix them up.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_declaring_named_constants">2.6. Declaring Named Constants</h3>
-<div class="paragraph">
-<p>A named constant is similar to a variable, with two rules:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>A value must be assigned when the constant is declared.</p>
-</li>
-<li>
-<p>The assigned value can&#8217;t change during program execution.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>To create a named constant (often just called a constant), add the keyword <code>const</code> at the start of your statement, followed by the rest of a declaration and assignment statement you&#8217;d use for a variable.
-So that people looking at your code can easily tell it&#8217;s a constant rather than a variable, it should be named with all capital letters, using the underscore character to separate words.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example 2.6 - Constant declarations in C#</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> VinylAlbumThickness </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1.8</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> BritishInvasionYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1964</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> FavoriteClass </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;CIS162AD&quot;</span><span style="color: #f8f8f2">;</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>There are a few different reasons to use named constants in your code. For now:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Constants improve readability—they identify the purpose of a value within your code.</p>
-</li>
-<li>
-<p>Constants prevent writing code that accidentally changes a value that shouldn&#8217;t change.</p>
-</li>
-<li>
-<p>Constants make code easier to maintain/update.</p>
-</li>
-<li>
-<p>In some situations, constants are more efficient than variables.</p>
-</li>
-</ul>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Interesting!</div>
-<div class="paragraph">
-<p>The naming convention used for named constants in C# is called <strong>Pascal Case</strong>. Like camel case, it uses capital letters to signify new words; but unlike camel Case, it also capitalizes the first word. In many languages, programmers identify constants in all caps with underscores between words, so you sometimes see that in C# as well.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_outputting_variable_and_constant_values">2.7. Outputting Variable (and Constant) Values</h3>
-<div class="paragraph">
-<p>Assigning a value to a variable or constant does not produce any output.
-If we want to display the output of a variable—or a constant—we just put the identifier in a <code>Write()</code> or <code>WriteLine()</code> statement without any quotation marks:</p>
-</div>
-<div class="listingblock">
-<div class="title">Example 2.7 - Basic variable output in C#</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> artistName </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Elvis Presley&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> birthYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1935</span><span style="color: #f8f8f2">;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">artist_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Diana Ross&quot;</span>
+<span style="color: #f8f8f2">birth_year</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;1944&quot;</span>
 
-<span style="color: #f8f8f2">Console.Write(artistName);</span>
-<span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot; was born in &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">Console.WriteLine(birthYear);</span>
+<span style="color: #f8f8f2">print(artist_name)</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;was born in&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">print(birth_year)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -590,55 +436,77 @@ If we want to display the output of a variable—or a constant—we just put the
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Elvis Presley was born in 1935.</pre>
+<pre>Diana Ross
+was born in
+1935</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Whenever the interpreter sees a variable identifier in a line of code, which we call a <em>variable reference</em>, it will look up the variable&#8217;s value in computer memory and essentially substitute it in place of the identifier.
+In the first <code>print()</code> statement in the preceding code, it will see the identifier <code>artist_name</code> and retrieve the value <code>"Diana Ross"</code>, which it then places into the <code>print()</code> statement.</p>
 </div>
 <div class="sect3">
-<h4 id="_concatenating_output">2.7.1. Concatenating Output</h4>
+<h4 id="_concatenating_output">2.5.1. Concatenating Output</h4>
 <div class="paragraph">
-<p>We can combine output into one statement by creating a string with multiple pieces using the <code>+</code> symbol.</p>
+<p>We can combine the output into one statement by creating a string from multiple pieces using the <code>+</code> symbol.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.8 - Outputting variables with concatenation</div>
+<div class="title">Example 2.6 - Outputting variables with concatenation</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> artistName </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Elvis Presley&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> birthYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1935</span><span style="color: #f8f8f2">;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">artist_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Diana Ross&quot;</span>
+<span style="color: #f8f8f2">birth_year</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;1944&quot;</span>
 
-<span style="color: #f8f8f2">Console.WriteLine(artistName </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot; was born in &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> birthYear);</span>
+<span style="color: #f8f8f2">print(artist_name</span> <span style="color: #ff4689">+</span> <span style="color: #e6db74">&quot; was born in &quot;</span> <span style="color: #ff4689">+</span> <span style="color: #f8f8f2">birth_year)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Creating a <code>string</code> using the <code>+</code> symbol is called <em>concatenating</em>.
-Be thoughtful when concatenating, because the <code>+</code> symbol is also used to do addition with numbers, as you&#8217;ll see soon.</p>
+<p>This will output all of the information on one line:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Diana Ross was born in 1935</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Creating a <code>str</code> using the <code>\+</code> symbol is called <em>concatenating</em>.
+Python is assembling the different strings into one longer string.</p>
+</div>
+<div class="paragraph">
+<p>In Python, we can only concatenate two strings together; it won&#8217;t work if we try to concatenate a number onto a string.
+For that reason, the <code>birth_year</code> variable in this version of the code is initialized as a <code>str</code> using double quotes.
+We&#8217;ll see a workaround for that later.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_interpolating_output">2.7.2. Interpolating Output</h4>
+<h4 id="_interpolating_output">2.5.2. Interpolating Output</h4>
 <div class="paragraph">
 <p>Another way to output variables and constants is to use <em>interpolation</em>.
-Interpolation is a way to insert the value of a variable or constant into a string.
-There are two ways to interpolate in C#.
-The easiest for beginners is to put the <code>$</code> symbol in front of the opening quotation mark of the string, and then put the variable or constant name in curly braces <code>{}</code> where you want those values inserted.</p>
+Interpolation is a way to insert the value of a variable or constant into a string at a designated spot.
+There are a few different ways to interpolate in Python, but the one we&#8217;ll use for now is called <strong>f-strings</strong>.
+To use an f-string, we put the character <code>f</code> in front of the opening quotation mark of the string, and then we can put the variable identifier in curly braces <code>{}</code> in the position we want the value inserted.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.9 - Outputting variables with interpolation</div>
+<div class="title">Example 2.7 - Outputting variables with interpolation</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> artistName </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Elvis Presley&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> birthYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1935</span><span style="color: #f8f8f2">;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">artist_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Diana Ross&quot;</span>
+<span style="color: #f8f8f2">birth_year</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;1944&quot;</span>
 
-<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">$&quot;{artistName} was born in {birthYear}&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&quot;{</span><span style="color: #f8f8f2">artist_name</span><span style="color: #e6db74">} was born in {</span><span style="color: #f8f8f2">birth_year</span><span style="color: #e6db74">}&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>For my assignments, you can use either concatenation or interpretation, but I encourage you to learn interpolation.
+<p>Because the <code>f</code> indicates that we want to interpolate values into the string, the interpreter will retrieve values to insert wherever it sees identifiers in curly braces.</p>
+</div>
+<div class="paragraph">
+<p>For coursework in my class, you can use either concatenation or interpretation, but I encourage you to learn interpolation.
 It&#8217;s easier to read and write than concatenation and is considered the standard approach.
 Once you&#8217;ve gotten the hang of it, it&#8217;s very easy to use.</p>
 </div>
@@ -648,45 +516,20 @@ Once you&#8217;ve gotten the hang of it, it&#8217;s very easy to use.</p>
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
 </div>
 <div class="paragraph video-title">
-<p>Outputting Variables in C#</p>
-</div>
-<div class="videoblock">
-<div class="content">
-<iframe src="https://www.youtube.com/embed/TbQrenDgB8Y?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
-<div class="paragraph">
-<p>Files from video:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/02%20Variables/EllaFitzgerald.cs" target="_blank" rel="noopener"><code>EllaFitzgerald.cs</code></a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="exampleblock callout dc">
-<div class="content">
-<div class="paragraph">
-<p><svg xmlns="http://www.w3.org/2000/svg" class="dc-icon" viewBox="0 0 274.1 276.86" width="1em" height="1em" fill="currentColor"><path d="M148.45,139.81c0-6.21-5.18-11.39-11.39-11.39s-11.39,5.18-11.39,11.39,5.18,11.39,11.39,11.39,11.39-5.18,11.39-11.39Z"/><path d="M220.6,121.86l-21.75,21.75,5.52,5.52-7.94,8.29c-2.08,2.08-2.08,5.18,0,7.25,1.04,1.04,2.42,1.38,3.45,1.38,1.38,0,2.77-.69,3.79-1.73l7.94-8.29,4.14,4.14,21.75-21.75-4.47-3.79,16.91-17.26c1.04-1.04,1.38-2.42,1.38-3.45V5.18c.01-2.77-2.41-5.18-5.16-5.18s-5.18,2.42-5.18,5.18v106.68l-15.19,15.54-5.19-5.53h0Z"/><path d="M258.23,75.26v38.66c0,3.11-1.38,6.21-3.45,8.29l-12.09,12.43,4.48,4.48-31.41,31.41-4.14-4.14-3.11,3.11c-2.42,2.42-5.52,3.79-8.63,3.79s-6.21-1.38-8.29-3.45c-4.83-4.48-4.83-12.43-.35-16.91l3.45-3.45-5.52-5.52,31.41-31.41,5.18,5.18,8.29-8.63V42.81C209.21,17.96,175.03,2.76,137.06,2.76c-75.6,0-137.06,61.45-137.06,137.05s61.45,137.05,137.05,137.05,137.05-61.45,137.05-137.05c0-23.12-5.87-45.22-15.87-64.56h0ZM196.09,192.98c2.42,2.42,2.08,6.21-.35,8.63-15.19,14.5-35.56,22.79-56.61,23.47-3.11,0-5.87-2.77-6.21-5.87,0-3.45,2.42-6.21,5.87-6.21,18.29-.35,35.56-7.6,48.68-20.02,2.41-2.42,6.2-2.42,8.62,0h0ZM65.25,71.11c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21,0-8.63,20.02-19.33,46.26-30.03,73.88-30.72,3.45-.35,6.21,2.77,6.21,5.87,0,3.45-2.77,6.21-5.87,6.21-24.51.35-47.99,10.01-65.59,27.27-1.05,1.4-2.77,1.73-4.15,1.73h0ZM82.51,88.38c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21.35-8.63,15.19-14.5,35.56-22.79,56.61-23.47,3.11-.35,6.21,2.42,6.21,5.87s-2.42,6.21-5.87,6.21c-18.29.35-35.56,7.6-48.68,20.02-1.02,1.04-2.75,1.73-4.14,1.73h0ZM94.93,139.81c0-23.12,18.99-42.12,42.12-42.12s42.12,18.99,42.12,42.12-18.99,42.12-42.12,42.12-42.12-19-42.12-42.12ZM213,218.87c-20.02,19.33-46.26,30.03-73.88,30.72-3.45,0-5.87-2.77-6.21-5.87,0-3.45,2.77-6.21,5.87-6.21,24.51-.35,47.99-10.01,65.59-27.27,2.42-2.42,6.21-2.08,8.63,0,2.42,2.42,2.42,6.21,0,8.63h0Z"/></svg><strong class="callout-title">Deep Cut</strong></p>
-</div>
-<div class="paragraph">
-<p>You can also insert variables into strings using the <a href="deep-cuts.html#_string_format_method"><code>string.Format()</code> Method</a>, which uses a similar placeholder syntax.</p>
+<p>Outputting Variables in Python [COMING SOON!]</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_choosing_an_output_method">2.7.3. Choosing an Output Method</h4>
+<h4 id="_choosing_an_output_method">2.5.3. Choosing an Output Method</h4>
 <div class="paragraph">
 <p>For our purposes, there&#8217;s no difference between outputting using separate <code>Write()</code> statements, concatenation, or interpolation; you can use whichever approach you prefer.
 Most programmers end up using interpolation because it&#8217;s easy to write—and easy to read.
 It also lends itself well to formatting output, which means making the output look nice and readable; we don&#8217;t worry about that here, but eventually you&#8217;ll find it useful.</p>
 </div>
 <div class="paragraph">
-<p>But as far as I&#8217;m concerned, use whatever approach you like.</p>
+<p>But if concatenation is easier for you, feel free to use it.</p>
 </div>
 <div class="exampleblock callout spin">
 <div class="content">
@@ -701,7 +544,7 @@ It also lends itself well to formatting output, which means making the output lo
 </div>
 </div>
 <div class="sect2">
-<h3 id="_math_calculations">2.8. Math Calculations</h3>
+<h3 id="_math_calculations">2.6. Math Calculations</h3>
 <div class="paragraph">
 <p>To start doing some calculations, we&#8217;ll use <em>operators</em>.
 You can think of an operator as a symbol that performs a calculation or other action.
@@ -750,7 +593,7 @@ In C#, there are five basic arithmetic operators:</p>
 Each operator acts on the value to either side:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.10 - Simple arithmetic operations in C#</div>
+<div class="title">Example 2.8 - Simple arithmetic operations in C#</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
@@ -796,7 +639,7 @@ Each operator acts on the value to either side:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_order_of_operations">2.8.1. Order of Operations</h4>
+<h4 id="_order_of_operations">2.6.1. Order of Operations</h4>
 <div class="paragraph">
 <p>Early on in your math studies you learned about <em>order of operations</em> when an arithmetic expression has more than one calculation, and it works the same in C#.
 We call this <em>operator precedence</em>, and here are the guidelines:</p>
@@ -818,7 +661,7 @@ We call this <em>operator precedence</em>, and here are the guidelines:</p>
 <p>Consider the following examples:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.11 - Operator precedence in C#</div>
+<div class="title">Example 2.9 - Operator precedence in C#</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -846,7 +689,7 @@ We call this <em>operator precedence</em>, and here are the guidelines:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_more_arithmetic_with_less_typing">2.8.2. More Arithmetic with Less Typing!</h4>
+<h4 id="_more_arithmetic_with_less_typing">2.6.2. More Arithmetic with Less Typing!</h4>
 <div class="paragraph">
 <p>There&#8217;s a pretty consistent rule of thumb in coding that says programmers want to type as little as possible, so programming languages often provide shorthand ways of writing code that&#8217;s used frequently.
 <em>Compound assignment operators</em> (also called <em>shorthand operators</em>) simplify the syntax when you need to change a variable&#8217;s value relative to it&#8217;s existing value.
@@ -944,14 +787,14 @@ There are two forms to the increment and decrement operators: <strong>prefix</st
 </div>
 </div>
 <div class="sect2">
-<h3 id="_handling_user_input">2.9. Handling User Input</h3>
+<h3 id="_handling_user_input">2.7. Handling User Input</h3>
 <div class="paragraph">
 <p>Until now, our code hasn&#8217;t been interactive—each execution of a program results in the exact same output, and the user never has the chance to input anything.
 To produce output, we&#8217;ve been using <code>Console.WriteLine</code> and <code>Console.Write</code> to display text on the screen.
 For input, we&#8217;ll use <code>Console.ReadLine</code> (and, occasionally, <code>Console.Read</code>).</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.12 - Simple user input in C#</div>
+<div class="title">Example 2.10 - Simple user input in C#</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -967,7 +810,7 @@ For input, we&#8217;ll use <code>Console.ReadLine</code> (and, occasionally, <co
 <p><code>Console.ReadLine</code> only deals with <code>string</code> values; even if the user types in a number, it will be stored as a <code>string</code>—which means we&#8217;ll need to convert it to a number if we want to do any math with it.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.13 - Incorrect use of user input</div>
+<div class="title">Example 2.11 - Incorrect use of user input</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -990,7 +833,7 @@ For input, we&#8217;ll use <code>Console.ReadLine</code> (and, occasionally, <co
 </table>
 </div>
 <div class="sect3">
-<h4 id="_converting_data_types">2.9.1. Converting Data Types</h4>
+<h4 id="_converting_data_types">2.7.1. Converting Data Types</h4>
 <div class="paragraph">
 <p>When we looked at arithmetic, we saw that data types are really important.
 For example, if we divide an <code>int</code> by another <code>int</code>, the result is an <code>int</code>—even if we stick that result in a <code>double</code> variable.
@@ -1030,7 +873,7 @@ The 32 in <code>ToInt32</code> is the number of bits used to store the number, a
 </table>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.14 - Conversion of user input using the <code>Convert</code> class</div>
+<div class="title">Example 2.12 - Conversion of user input using the <code>Convert</code> class</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -1061,7 +904,7 @@ If we are converting from a <code>string</code> to an <code>int</code>, the synt
 For a double, it would be <code>double.Parse()</code>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.15 - Correct conversion of user input using the <code>Parse</code> method</div>
+<div class="title">Example 2.13 - Correct conversion of user input using the <code>Parse</code> method</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -1187,19 +1030,19 @@ You should recognize both, but you can use whichever you prefer in your code.</p
 </div>
 </div>
 <div class="paragraph">
-<p><em>Sample answers provided in the <a href="_liner_notes.html#variables-and-data-types">Liner Notes</a></em>.</p>
+<p><em>Sample answers provided in the <a href="#variables-and-data-types">Liner Notes</a></em>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="_computers_and_coding.html">Computers and Coding</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_decisions.html">Decisions</a> →</p>
+<p>← Previous: <a href="_computers_and_coding.html">Computers and Coding</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a> →</p>
 </div>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2025-11-21<br />
-        03:27:22 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2025-11-25<br />
+        00:45:00 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
