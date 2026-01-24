@@ -56,7 +56,7 @@
 </li>
 <li><a href="_variables_and_data_types.html#_variable_data_types">2.4. Variable Data Types</a>
 </li>
-<li><a href="_variables_and_data_types.html#_referencing_variable_values">2.5. Referencing Variable Values</a>
+<li><a href="_variables_and_data_types.html#_referencing_and_outputting_variable_values">2.5. Referencing and Outputting Variable Values</a>
 </li>
 <li><a href="_variables_and_data_types.html#_math_calculations">2.6. Math Calculations</a>
 </li>
@@ -409,7 +409,7 @@ You can indicate that a symbol is part of the string (and not the end of it) by 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_referencing_variable_values">2.5. Referencing Variable Values</h3>
+<h3 id="_referencing_and_outputting_variable_values">2.5. Referencing and Outputting Variable Values</h3>
 <div class="paragraph">
 <p>Initializing a variable with a value does not produce any output.
 If we want to display the output of a variable we just put the identifier in a <code>print()</code> statement without any quotation marks:</p>
@@ -472,7 +472,7 @@ In the first <code>print()</code> statement in the preceding code, it will see t
 </div>
 </div>
 <div class="paragraph">
-<p>Creating a <code>str</code> using the <code>\+</code> symbol is called <em>concatenating</em>.
+<p>Creating a <code>str</code> using the <code>+</code> symbol is called <em>concatenating</em>.
 Python is assembling the different strings into one longer string.</p>
 </div>
 <div class="paragraph">
@@ -486,8 +486,8 @@ We&#8217;ll see a workaround for that later.</p>
 <div class="paragraph">
 <p>Another way to output variables and constants is to use <em>interpolation</em>.
 Interpolation is a way to insert the value of a variable or constant into a string at a designated spot.
-There are a few different ways to interpolate in Python, but the one we&#8217;ll use for now is called <strong>f-strings</strong>.
-To use an f-string, we put the character <code>f</code> in front of the opening quotation mark of the string, and then we can put the variable identifier in curly braces <code>{}</code> in the position we want the value inserted.</p>
+There are a few different ways to interpolate in Python, but the one we&#8217;ll use for now is called <strong>formatted string literals</strong>, commonly referred to as <strong>f-strings</strong>.
+To use an f-string, we put the character <code>f</code> in front of the opening quotation mark of the string, and then we can put the variable identifier in curly braces <code>{ }</code> in the position we want the value inserted.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 2.7 - Outputting variables with interpolation</div>
@@ -524,8 +524,8 @@ Once you&#8217;ve gotten the hang of it, it&#8217;s very easy to use.</p>
 <div class="sect3">
 <h4 id="_choosing_an_output_method">2.5.3. Choosing an Output Method</h4>
 <div class="paragraph">
-<p>For our purposes, there&#8217;s no difference between outputting using separate <code>Write()</code> statements, concatenation, or interpolation; you can use whichever approach you prefer.
-Most programmers end up using interpolation because it&#8217;s easy to write—and easy to read.
+<p>For our purposes, there&#8217;s no difference between outputting using separate <code>print()</code> statements, concatenation, or interpolation; you can use whichever approach you prefer (and gets the result you want).
+Many programmers end up using interpolation because it&#8217;s easy to write—and easy to read.
 It also lends itself well to formatting output, which means making the output look nice and readable; we don&#8217;t worry about that here, but eventually you&#8217;ll find it useful.</p>
 </div>
 <div class="paragraph">
@@ -538,6 +538,18 @@ It also lends itself well to formatting output, which means making the output lo
 </div>
 <div class="paragraph">
 <p>This is a good time to stop and try out what you&#8217;ve learned so far. The <em>Coding Practice</em> assignment for this chapter can be completed with the concepts covered to this point.</p>
+</div>
+</div>
+</div>
+<div class="exampleblock callout dc">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="dc-icon" viewBox="0 0 274.1 276.86" width="1em" height="1em" fill="currentColor"><path d="M148.45,139.81c0-6.21-5.18-11.39-11.39-11.39s-11.39,5.18-11.39,11.39,5.18,11.39,11.39,11.39,11.39-5.18,11.39-11.39Z"/><path d="M220.6,121.86l-21.75,21.75,5.52,5.52-7.94,8.29c-2.08,2.08-2.08,5.18,0,7.25,1.04,1.04,2.42,1.38,3.45,1.38,1.38,0,2.77-.69,3.79-1.73l7.94-8.29,4.14,4.14,21.75-21.75-4.47-3.79,16.91-17.26c1.04-1.04,1.38-2.42,1.38-3.45V5.18c.01-2.77-2.41-5.18-5.16-5.18s-5.18,2.42-5.18,5.18v106.68l-15.19,15.54-5.19-5.53h0Z"/><path d="M258.23,75.26v38.66c0,3.11-1.38,6.21-3.45,8.29l-12.09,12.43,4.48,4.48-31.41,31.41-4.14-4.14-3.11,3.11c-2.42,2.42-5.52,3.79-8.63,3.79s-6.21-1.38-8.29-3.45c-4.83-4.48-4.83-12.43-.35-16.91l3.45-3.45-5.52-5.52,31.41-31.41,5.18,5.18,8.29-8.63V42.81C209.21,17.96,175.03,2.76,137.06,2.76c-75.6,0-137.06,61.45-137.06,137.05s61.45,137.05,137.05,137.05,137.05-61.45,137.05-137.05c0-23.12-5.87-45.22-15.87-64.56h0ZM196.09,192.98c2.42,2.42,2.08,6.21-.35,8.63-15.19,14.5-35.56,22.79-56.61,23.47-3.11,0-5.87-2.77-6.21-5.87,0-3.45,2.42-6.21,5.87-6.21,18.29-.35,35.56-7.6,48.68-20.02,2.41-2.42,6.2-2.42,8.62,0h0ZM65.25,71.11c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21,0-8.63,20.02-19.33,46.26-30.03,73.88-30.72,3.45-.35,6.21,2.77,6.21,5.87,0,3.45-2.77,6.21-5.87,6.21-24.51.35-47.99,10.01-65.59,27.27-1.05,1.4-2.77,1.73-4.15,1.73h0ZM82.51,88.38c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21.35-8.63,15.19-14.5,35.56-22.79,56.61-23.47,3.11-.35,6.21,2.42,6.21,5.87s-2.42,6.21-5.87,6.21c-18.29.35-35.56,7.6-48.68,20.02-1.02,1.04-2.75,1.73-4.14,1.73h0ZM94.93,139.81c0-23.12,18.99-42.12,42.12-42.12s42.12,18.99,42.12,42.12-18.99,42.12-42.12,42.12-42.12-19-42.12-42.12ZM213,218.87c-20.02,19.33-46.26,30.03-73.88,30.72-3.45,0-5.87-2.77-6.21-5.87,0-3.45,2.77-6.21,5.87-6.21,24.51-.35,47.99-10.01,65.59-27.27,2.42-2.42,6.21-2.08,8.63,0,2.42,2.42,2.42,6.21,0,8.63h0Z"/></svg><strong class="callout-title">Deep Cut</strong></p>
+</div>
+<div class="paragraph">
+<p>Python allows us to control how our output strings are formatted. We might want our numbers to show a certain number of decimal places (like two decimals for currency values) or include commas to make large numbers easier to read (like 1,000,000 instead of 1000000). And there are other formatting options as well.
+At this stage, we don&#8217;t worry about making our numbers look pretty, but you&#8217;re welcome to learn more about
+ <a href="deep-cuts.html#_formatting_strings">formatting strings</a>.</p>
 </div>
 </div>
 </div>
@@ -1041,8 +1053,8 @@ You should recognize both, but you can use whichever you prefer in your code.</p
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2025-11-25<br />
-        00:45:00 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-01-24<br />
+        20:13:29 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
