@@ -378,7 +378,7 @@ Unlike many other languages, in Python it doesn&#8217;t matter which we use to d
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>song_title = 'That's alright'</pre>
+<pre>song_title = 'That's alright' # This doesn't work!</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -650,11 +650,6 @@ Each operator acts on the value to either side:</p>
 <div class="paragraph video-title">
 <p>Arithmetic Operations in Python [COMING SOON!]</p>
 </div>
-<div class="videoblock">
-<div class="content">
-<iframe src="https://www.youtube.com/embed/n7KhnilZr68?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
 <div class="paragraph">
 <p>Files from video:</p>
 </div>
@@ -732,7 +727,7 @@ For example, if we want to add 10 to a <code>weight</code> variable that already
 <p>The Python interpreter starts on the right side of the assignment expression and retrieves the current value of <code>weight</code>, which is 145, adds 10 to that value, and stores the result back in <code>weight</code>.</p>
 </div>
 <div class="paragraph">
-<p>We can combine the addition operator (<code>pass[]`) with the assignment operator (`=`) to make an assignment operator: `=</code>, which allows us to rewrite the above line of code as:</p>
+<p>We can combine the addition operator (<code>pass[]`) with the assignment operator (`=`) to make an augmented assignment operator: `=</code>, which allows us to rewrite the above line of code as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -743,7 +738,7 @@ For example, if we want to add 10 to a <code>weight</code> variable that already
 <p>You can use assignment operators for all of the arithmetic operations.</p>
 </div>
 <table class="tableblock frame-all grid-all stripes-even" style="width: 75%;">
-<caption class="title">Table 2. Python compound assignment operators</caption>
+<caption class="title">Table 2. Python augmented assignment operators</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 55.5555%;">
@@ -797,29 +792,6 @@ For example, if we want to add 10 to a <code>weight</code> variable that already
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>An operation we might not use much now, but will start using a lot when we learn to write loops, is <em>incrementing</em> a value, or adding 1 to a value.
-The <em>increment operator</em> (two plus symbols) gives us a very easy way to do that.
-On somebody&#8217;s birthday, for example, we could write:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><span></span><span style="color: #f8f8f2">age</span><span style="color: #ff4689">++</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>++</code> operator simply adds 1 to the current value of <code>age</code>.
-The <em>decrement operator</em> is <code>—-</code>, and it subtracts 1 from a variable&#8217;s value.
-If we&#8217;re counting down the number of days until our next birthday, we could execute this expression each morning:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><span></span><span style="color: #f8f8f2">daysRemaining</span><span style="color: #ff4689">--</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Increment and decrement only require one operand, so we call them <em>unary</em> operators.</p>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -827,7 +799,7 @@ If we&#8217;re counting down the number of days until our next birthday, we coul
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-There are two forms to the increment and decrement operators: <strong>prefix</strong> and <strong>postfix</strong>. These examples use the postfix form, putting the operator after the variable name, whereas a prefix form would have the operator before the variable name: <code>++age</code>. There&#8217;s a subtle difference in how postfix and prefix operations work, but for now you can use them interchangeably. I mention it here only because you might see code examples online using the prefix form.
+Python doesn&#8217;t have an <strong>increment</strong> or <strong>decrement</strong> operator like some other programming languages. To increase a number by one, use <code>+= 1</code>
 </td>
 </tr>
 </table>
@@ -838,37 +810,43 @@ There are two forms to the increment and decrement operators: <strong>prefix</st
 <h3 id="_handling_user_input">2.7. Handling User Input</h3>
 <div class="paragraph">
 <p>Until now, our code hasn&#8217;t been interactive—each execution of a program results in the exact same output, and the user never has the chance to input anything.
-To produce output, we&#8217;ve been using <code>Console.WriteLine</code> and <code>Console.Write</code> to display text on the screen.
-For input, we&#8217;ll use <code>Console.ReadLine</code> (and, occasionally, <code>Console.Read</code>).</p>
+To produce output, we&#8217;ve been using <code>print()</code> to display text on the screen.
+For input, we&#8217;ll use <code>input()</code>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.10 - Simple user input in C#</div>
+<div class="title">Example 2.10 - Simple user input in Python</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">string</span> <span style="color: #f8f8f2">artist</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">Write(</span><span style="color: #e6db74">&quot;Enter the name of your favorite music artist: &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">artist</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ReadLine();</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #ed007e; background-color: #1e0010">$</span><span style="color: #e6db74">&quot;Your favorite music artist is: {artist}&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Enter the name of your favorite music artist: &quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">artist</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">input()</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&quot;Your favorite music artist is: {</span><span style="color: #f8f8f2">artist</span><span style="color: #e6db74">}&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><code>Console.ReadLine</code> only deals with <code>string</code> values; even if the user types in a number, it will be stored as a <code>string</code>—which means we&#8217;ll need to convert it to a number if we want to do any math with it.</p>
+<p>You can also specify a prompt string when calling input so you don&#8217;t have to use a <code>print()</code> statement to tell the user what to input.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.11 - Incorrect use of user input</div>
+<div class="title">Example 2.11 - Simple user input with a prompt in Python</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">artist</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Enter the name of your favorite music artist: &quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&quot;Your favorite music artist is: {</span><span style="color: #f8f8f2">artist</span><span style="color: #e6db74">}&quot;</span><span style="color: #f8f8f2">)</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>input()</code> only deals with <code>str</code> values; even if the user types in a number, it will be stored as a <code>str</code>—which means we&#8217;ll need to convert it to a number if we want to do any math with it.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 2.12 - Incorrect use of user input</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">int</span> <span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">Write(</span><span style="color: #e6db74">&quot;Enter your age: &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ReadLine();</span> <i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #f8f8f2">age</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #ed007e; background-color: #1e0010">$</span><span style="color: #e6db74">&quot;Next year you will be {age}&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">input</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Enter your age: &quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">age</span><span style="color: #ff4689">+=</span><span style="color: #ae81ff">1</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&quot;Next year you will be {</span><span style="color: #f8f8f2">age</span><span style="color: #e6db74">}&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -876,109 +854,49 @@ For input, we&#8217;ll use <code>Console.ReadLine</code> (and, occasionally, <co
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>This code will not compile because <code>Console.ReadLine</code> returns a <code>string</code>, but we&#8217;re trying to assign it to an <code>int</code>.</td>
+<td>This will cause the program to crash because <code>input()</code> returns a <code>str</code> and therefore creates <code>age</code> as a string rather than a numeric type, and you can&#8217;t do arithmetic on a <code>str</code>.</td>
 </tr>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_converting_data_types">2.7.1. Converting Data Types</h4>
+<h4 id="_type_conversion">2.7.1. Type Conversion</h4>
 <div class="paragraph">
-<p>When we looked at arithmetic, we saw that data types are really important.
-For example, if we divide an <code>int</code> by another <code>int</code>, the result is an <code>int</code>—even if we stick that result in a <code>double</code> variable.
-And we learned that we can use a process called <em>type casting</em> to help switch between two numeric types.</p>
-</div>
-<div class="paragraph">
-<p>But we can&#8217;t just cast a <code>string</code> to numeric type because the <code>string</code> might not contain a number—it might have letters and weird symbols.
-Instead, we need to use a method to convert the string to a number.</p>
+<p>Since the user&#8217;s input is store as a <code>str</code>, we&#8217;ll need to convert it to a number before we can do any math with it.
+Python provices built-in functions for converting a <code>str</code> to a number: <code>int()</code> and <code>float()</code>, which convert a string to an integer (whole number) or floating point (decimal) number, respectively.</p>
 </div>
 <div class="paragraph">
-<p>There are two basic ways to do the conversion: with the <code>Convert</code> class or with the <code>Parse</code> method.</p>
+<p>caption="Example 2.1 - "]
+.Incorrect use of user input</p>
 </div>
-<div class="paragraph">
-<p>The <code>Convert</code> class has a few methods for converting values.
-The two we&#8217;ll use most are:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Enter your age: &quot;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #f8f8f2">age</span><span style="color: #ff4689">+=</span><span style="color: #ae81ff">1</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&quot;Next year you will be {</span><span style="color: #f8f8f2">age</span><span style="color: #e6db74">}&quot;</span><span style="color: #f8f8f2">)</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>Convert.ToInt32</code>, which can convert a <code>string</code> to an <code>int</code>.</p>
-</li>
-<li>
-<p><code>Convert.ToDouble</code> which can convert a <code>string</code> to a <code>double</code>.</p>
-</li>
-</ul>
 </div>
-<div class="admonitionblock note">
+<div class="colist arabic">
 <table>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The 32 in <code>ToInt32</code> is the number of bits used to store the number, and that&#8217;s the size of the <code>int</code> data type. There are methods to convert to 16-bit and 64-bit integers as well, though we won&#8217;t be using them.
-</td>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This works because the <code>int()</code> function converts the user&#8217;s input from a <code>str</code> to an <code>int</code>.</td>
 </tr>
 </table>
 </div>
-<div class="listingblock">
-<div class="title">Example 2.12 - Conversion of user input using the <code>Convert</code> class</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">int</span> <span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">double</span> <span style="color: #f8f8f2">gpa</span> <span style="color: #ff4689">=</span> <span style="color: #ff4689">-</span><span style="color: #ae81ff">1.0</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">Write(</span><span style="color: #e6db74">&quot;Enter your age: &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">Convert</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ToInt32(Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ReadLine());</span>
-<span style="color: #f8f8f2">age</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #ed007e; background-color: #1e0010">$</span><span style="color: #e6db74">&quot;Next year you will be {age}&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">Write(</span><span style="color: #e6db74">&quot;Enter your GPA: &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">gpa</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">Convert</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ToDouble(Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ReadLine());</span>
-<span style="color: #f8f8f2">gpa</span> <span style="color: #ff4689">+=</span> <span style="color: #ae81ff">0.5</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #ed007e; background-color: #1e0010">$</span><span style="color: #e6db74">&quot;If you improve by half a letter grade, you GPA will be {gpa}&quot;</span><span style="color: #f8f8f2">);</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>We can also use the <code>Parse</code> method to convert a <code>string</code> to a number.
-The <code>Parse</code> method is a little different because it is called on the data type we want to convert to, rather than using a class method.
-If we are converting from a <code>string</code> to an <code>int</code>, the syntax is <code>int.Parse()</code>.
-For a double, it would be <code>double.Parse()</code>.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example 2.13 - Correct conversion of user input using the <code>Parse</code> method</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">int</span> <span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">double</span> <span style="color: #f8f8f2">gpa</span> <span style="color: #ff4689">=</span> <span style="color: #ff4689">-</span><span style="color: #ae81ff">1.0</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">Write(</span><span style="color: #e6db74">&quot;Enter your age: &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">Parse(Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ReadLine());</span>
-<span style="color: #f8f8f2">age</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #ed007e; background-color: #1e0010">$</span><span style="color: #e6db74">&quot;Next year you will be {age}&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">Write(</span><span style="color: #e6db74">&quot;Enter your GPA: &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">gpa</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">double</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">Parse(Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ReadLine());</span>
-<span style="color: #f8f8f2">gpa</span> <span style="color: #ff4689">+=</span> <span style="color: #ae81ff">0.5</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #ed007e; background-color: #1e0010">$</span><span style="color: #e6db74">&quot;If you improve by half a letter grade, you GPA will be {gpa}&quot;</span><span style="color: #f8f8f2">);</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>There are some differences between the two approaches, but for our purposes, they&#8217;re interchangeable.
-You should recognize both, but you can use whichever you prefer in your code.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If the Python interpreter is not able to convert the string to a number, it causes an error and the program will crash. For example, if the user types in <code>purple</code> for their age, the program will crash—<code>purple</code> can&#8217;t be converted to an <code>int</code>. Eventually, we&#8217;ll learn how to handle that kind of error gracefully, but for now, we have to live with users being able to crash our programs.
+</td>
+</tr>
+</table>
 </div>
 <div class="exampleblock callout ttw">
 <div class="content">
@@ -986,22 +904,10 @@ You should recognize both, but you can use whichever you prefer in your code.</p
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
 </div>
 <div class="paragraph video-title">
-<p>User Input and Conversions in C#</p>
-</div>
-<div class="videoblock">
-<div class="content">
-<iframe src="https://www.youtube.com/embed/cmJOooH4N8g?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
-</div>
+<p>User Input and Conversions in Python [COMING SOON!]</p>
 </div>
 <div class="paragraph">
 <p>File from video:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/02%20Variables/AllmanBrothers.cs" target="_blank" rel="noopener"><code>AllmanBrothers.cs</code></a></p>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -1090,7 +996,7 @@ You should recognize both, but you can use whichever you prefer in your code.</p
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2026-04-29<br />
-        02:55:29 UTC<br />
+        22:55:59 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
