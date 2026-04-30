@@ -488,9 +488,9 @@ We&#8217;ll see a workaround for that later.</p>
 <div class="sect4">
 <h5 id="_converting_a_number_to_a_string_for_concatenation">Converting a number to a string for concatenation</h5>
 <div class="paragraph">
-<p>Because Python uses the <code>+</code> symbol for concatenation and, as we&#8217;ll soon see, also for addition, it stumbles when we try to concatenate a numeric value to a <code>str</code>.
+<p>Because Python uses the <code>+</code> symbol for concatenation and, as we&#8217;ll soon see, also for addition, it stumbles when we try to concatenate a numeric value with a <code>str</code>.
 In fact, a program will crash if it encounters that situation.
-We avoided that on the previous example by initializing <code>birth_year</code> as a <code>str</code> by putting the value in double quotes, but we should really keep numbers as numbers.
+We avoided that on the previous example because we initialized <code>birth_year</code> as a <code>str</code> by putting the value in double quotes, but we should really keep numbers as numbers.
 To address this, we can use the <code>str()</code> function to convert the number to a string.
 Inside the parentheses, we just put the value or the variable we want to convert; Python will make the conversion and put the resulting string in place of the function call.
 We call this <em>type conversion</em> or <em>type casting</em>.</p>
@@ -544,11 +544,6 @@ To use an f-string, we put the character <code>f</code> in front of the opening 
 </div>
 <div class="paragraph">
 <p>Because the <code>f</code> indicates that we want to interpolate values into the string, the interpreter will retrieve values to insert wherever it sees identifiers in curly braces.</p>
-</div>
-<div class="paragraph">
-<p>For coursework in my class, you can use either concatenation or interpretation, but I encourage you to learn interpolation.
-It&#8217;s easier to read and write than concatenation and is considered the standard approach.
-Once you&#8217;ve gotten the hang of it, it&#8217;s very easy to use.</p>
 </div>
 <div class="exampleblock callout ttw">
 <div class="content">
@@ -987,7 +982,7 @@ If the Python interpreter is not able to convert the string to a number, it caus
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2026-04-30<br />
-        15:15:08 UTC<br />
+        15:22:08 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
