@@ -485,6 +485,41 @@ Python is assembling the different strings into one longer string.</p>
 For that reason, the <code>birth_year</code> variable in this version of the code is initialized as a <code>str</code> using double quotes.
 We&#8217;ll see a workaround for that later.</p>
 </div>
+<div class="sect4">
+<h5 id="_converting_a_number_to_a_string_for_concatenation">Converting a number to a string for concatenation</h5>
+<div class="paragraph">
+<p>Because Python uses the <code>+</code> symbol for concatenation and, as we&#8217;ll soon see, also for addition, it stumbles when we try to concatenate a numeric value to a <code>str</code>.
+In fact, a program will crash if it encounters that situation.
+We avoided that on the previous example by initializing <code>birth_year</code> as a <code>str</code> by putting the value in double quotes, but we should really keep numbers as numbers.
+To address this, we can use the <code>str()</code> function to convert the number to a string.
+Inside the parentheses, we just put the value or the variable we want to convert; Python will make the conversion and put the resulting string in place of the function call.
+We call this <em>type conversion</em> or <em>type casting</em>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 2.7 - Outputting variables with concatenation and type conversion</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">artist_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Diana Ross&quot;</span>
+<span style="color: #f8f8f2">birth_year</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">1944</span> <i class="conum" data-value="1"></i><b>(1)</b>
+
+<span style="color: #f8f8f2">print(artist_name</span> <span style="color: #ff4689">+</span> <span style="color: #e6db74">&quot; was born in &quot;</span> <span style="color: #ff4689">+</span> <span style="color: #f8f8f2">str(birth_year))</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>birth_year</code> is initialized as an <code>int</code>, so it must be converted using the <code>str()</code> function within the <code>print()</code> statement.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll take another look at type conversion later in the chapter.</p>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_interpolating_output">2.5.2. Interpolating Output</h4>
@@ -495,7 +530,7 @@ There are a few different ways to interpolate in Python, but the one we&#8217;ll
 To use an f-string, we put the character <code>f</code> in front of the opening quotation mark of the string, and then we can put the variable identifier in curly braces <code>{ }</code> in the position we want the value inserted.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.7 - Outputting variables with interpolation</div>
+<div class="title">Example 2.8 - Outputting variables with interpolation</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -521,7 +556,7 @@ Once you&#8217;ve gotten the hang of it, it&#8217;s very easy to use.</p>
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
 </div>
 <div class="paragraph video-title">
-<p>Outputting Variables in Python [COMING SOON!]</p>
+<p>Outputting Variables in Python</p>
 </div>
 <div class="videoblock">
 <div class="content">
@@ -634,7 +669,7 @@ In Python, there are five basic arithmetic operators:</p>
 Each operator acts on the value to either side:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.8 - Simple arithmetic operations in Python</div>
+<div class="title">Example 2.9 - Simple arithmetic operations in Python</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">sum</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">5</span> <span style="color: #ff4689">+</span> <span style="color: #ae81ff">7</span> <i class="conum" data-value="1"></i><b>(1)</b>
@@ -699,7 +734,7 @@ We call this <em>operator precedence</em>, and here are the guidelines:</p>
 <p>Consider the following examples:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.9 - Operator precedence in Python</div>
+<div class="title">Example 2.10 - Operator precedence in Python</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -829,7 +864,7 @@ To produce output, we&#8217;ve been using <code>print()</code> to display text o
 For input, we&#8217;ll use <code>input()</code>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.10 - Simple user input in Python</div>
+<div class="title">Example 2.11 - Simple user input in Python</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -843,7 +878,7 @@ For input, we&#8217;ll use <code>input()</code>.</p>
 <p>You can also specify a prompt string when calling input so you don&#8217;t have to use a <code>print()</code> statement to tell the user what to input.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.11 - Simple user input with a prompt in Python</div>
+<div class="title">Example 2.12 - Simple user input with a prompt in Python</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">artist</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Enter the name of your favorite music artist: &quot;</span><span style="color: #f8f8f2">)</span>
@@ -855,7 +890,7 @@ For input, we&#8217;ll use <code>input()</code>.</p>
 <p><code>input()</code> only deals with <code>str</code> values; even if the user types in a number, it will be stored as a <code>str</code>—which means we&#8217;ll need to convert it to a number if we want to do any math with it.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.12 - Incorrect use of user input</div>
+<div class="title">Example 2.13 - Incorrect use of user input</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -952,7 +987,7 @@ If the Python interpreter is not able to convert the string to a number, it caus
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2026-04-30<br />
-        15:07:55 UTC<br />
+        15:15:08 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
