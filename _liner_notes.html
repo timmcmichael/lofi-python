@@ -54,6 +54,8 @@
 </li>
 <li><a href="_liner_notes.html#computers-and-coding">1. Computers and Coding</a>
 </li>
+<li><a href="_liner_notes.html#variables-data-and-operations">2. Variables and Data Types</a>
+</li>
 </ul>
 </li>
 <li><a href="deep-cuts.html">Deep Cuts</a>
@@ -132,6 +134,80 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="variables-data-and-operations">2. Variables and Data Types</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>1. What are <em>variables</em>, and what are they used for?</strong></em></p>
+<p>Variables are named locations in memory that store data. They are used to hold information that can be used and manipulated in a program.</p>
+</li>
+<li>
+<p><em><strong>2. How do you create a variable in Python? Give a simple example.</strong></em></p>
+<p>You create a variable in Python by using an assignment statement, which assigns a value to a name/identifier. For example: <code>beatlemania_year = 1964</code> creates a variable named <code>beatlemania_year</code> and assigns to it the numeric value <code>1964</code>.</p>
+</li>
+<li>
+<p><em><strong>3. What is the difference between an integer (<code>int</code>) and a floating-point number (<code>float</code>)?</strong></em></p>
+<p>An <code>int</code> is a whole number without a decimal point, such as <code>7</code>, <code>18</code>, and <code>-24</code>. A <code>float</code> is a number that can have a decimal point, such as <code>3.14</code>. Floats can represent fractional values, while integers cannot.</p>
+</li>
+<li>
+<p><em><strong>4. Write a line of Python code that creates a variable to store the volume level and sets it to 11 (à la <a href="https://en.wikipedia.org/wiki/This_Is_Spinal_Tap">Spinal Tap</a>).</strong></em></p>
+<p><code>volume_level = 11</code></p>
+</li>
+<li>
+<p><em><strong>5. Explain the use of the <code>str()</code> function in output. When would you need to use it?</strong></em></p>
+<p>The <code>str()</code> function converts a value to a string. You would need to use it when concatenating a numeric value (like an <code>int</code> or <code>float</code>) with a string.</p>
+</li>
+<li>
+<p><em><strong>6. Write a line of code that calculates 4 to the power of 4 and puts the result in a variable.</strong></em></p>
+<p><code>result = 4 ** 4</code></p>
+</li>
+<li>
+<p><em><strong>7. What will the following code print? Why?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><span></span><span style="color: #f8f8f2">tracks</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">5</span>
+<span style="color: #f8f8f2">bonus</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">tracks</span> <span style="color: #ff4689">+</span> <span style="color: #ae81ff">3</span>
+<span style="color: #f8f8f2">tracks</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">10</span>
+<span style="color: #f8f8f2">print(bonus)</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output will be <code>8</code> because the variable <code>bonus</code> is calculated using the value of <code>tracks</code> at the time of the calculation, which is <code>5</code>. Changing <code>tracks</code> to <code>10</code> after the calculation does not affect the value of <code>bonus</code>.</p>
+</div>
+</li>
+<li>
+<p><em><strong>8. Explain the difference between <code>/</code> and <code>//</code> in Python.</strong></em></p>
+<p><code>/</code> is the division operator that performs floating-point division, which means it will return a decimal result even if both operands (values) are whole numbers. For example, <code>4 / 2</code> will return <code>2.0</code>. <code>//</code> is the floor division operator that performs integer division, which means it will return the whole number part of the division result, discarding any decimal portion. For example, <code>5 // 2</code> will return <code>2</code> rather than <code>2.5</code>.</p>
+</li>
+<li>
+<p><em><strong>9. Which of the following variable names are invalid? Explain why.</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code><span></span>4_lads_from_liverpool
+shows_in_1963
+side_a_tracks!
+sideBTracks
+volume%_of_100
+supremes_members
+smokey-robinson-hits
+blues_with_12_bars</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following variable names are invalid:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>4_lads_from_liverpool</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
@@ -141,7 +217,7 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-01<br />
-        00:15:32 UTC<br />
+        01:20:31 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
