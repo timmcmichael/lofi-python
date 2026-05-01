@@ -48,11 +48,11 @@
 <ul class="sectlevel2">
 <li><a href="_variables_data_and_operations.html#_whats_the_point_2">What&#8217;s the Point?</a>
 </li>
-<li><a href="_variables_data_and_operations.html#_variable_values">2.1. Variable Values</a>
+<li><a href="_variables_data_and_operations.html#_variables_in_coding">2.1. Variables in Coding</a>
 </li>
 <li><a href="_variables_data_and_operations.html#_variable_identifiers">2.2. Variable Identifiers</a>
 </li>
-<li><a href="_variables_data_and_operations.html#_variable_values_2">2.3. Variable Values</a>
+<li><a href="_variables_data_and_operations.html#_variable_values">2.3. Variable Values</a>
 </li>
 <li><a href="_variables_data_and_operations.html#_variable_data_types">2.4. Variable Data Types</a>
 </li>
@@ -161,7 +161,7 @@ In computer programming, information is called <strong>data</strong>, and data i
 </div>
 </div>
 <div class="sect2">
-<h3 id="_variable_values">2.1. Variable Values</h3>
+<h3 id="_variables_in_coding">2.1. Variables in Coding</h3>
 <div class="paragraph">
 <p>I encourage beginning students to think of a variable like a container, such as a cup.</p>
 </div>
@@ -215,7 +215,7 @@ There are a few rules that determine whether or not an identifier is valid:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>In addition to those technical rules about identifier names, PEP-8 states that variable identifiers should be all lowercase, with and underscore used to separate words.</p>
+<p>In addition to those technical rules about identifier names, PEP-8 states that variable identifiers should be all lowercase, with an underscore used to separate words.</p>
 </div>
 <div class="paragraph">
 <p>By common practice, variable identifiers should be descriptive.
@@ -233,7 +233,7 @@ And you will lose points if you don&#8217;t.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_variable_values_2">2.3. Variable Values</h3>
+<h3 id="_variable_values">2.3. Variable Values</h3>
 <div class="paragraph">
 <p>Unlike many other languages, Python does not have a specific command for creating (or, as we will call it, <em>initializing</em>) a variable.
 Instead, the interpreter automatically makes a variable when we assign a value to it for the first time, and that&#8217;s done with an <strong>assignment statement</strong>.</p>
@@ -308,7 +308,7 @@ A floating point number is a number that includes decimal data, such as <strong>
 A fraction like <strong><em>7 1/2</em></strong> can also be stored as a floating-point number, but only in decimal form (i.e., <strong><em>7.5</em></strong>).</p>
 </div>
 <div class="paragraph">
-<p>The Python interpreter will create a <code>float</code> when we&#8217;re initialize a variable with a decimal number.</p>
+<p>The Python interpreter will create a <code>float</code> when we initialize a variable with a decimal number.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 2.2 - Initializing <code>float</code> variables</div>
@@ -646,7 +646,7 @@ In Python, there are five basic arithmetic operators:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>/</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Division (quotient)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Float Division (quotient)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>%</code></p></td>
@@ -775,7 +775,7 @@ For example, if we want to add 10 to a <code>weight</code> variable that already
 <p>The Python interpreter starts on the right side of the assignment expression and retrieves the current value of <code>weight</code>, which is 145, adds 10 to that value, and stores the result back in <code>weight</code>.</p>
 </div>
 <div class="paragraph">
-<p>We can combine the addition operator (<code>pass[]`) with the assignment operator (`=`) to make an augmented assignment operator: `=</code>, which allows us to rewrite the above line of code as:</p>
+<p>We can combine the addition operator (<code>+</code>) with the assignment operator (<code>=</code>) to make an augmented assignment operator: <code>+=</code>, which allows us to rewrite the above line of code as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -810,7 +810,7 @@ For example, if we want to add 10 to a <code>weight</code> variable that already
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>-=</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Substracts the value on the right from the variable on the left</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subtracts the value on the right from the variable on the left</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>x-=9</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>x = x - 9</code></p></td>
 </tr>
@@ -910,7 +910,7 @@ For input, we&#8217;ll use <code>input()</code>.</p>
 <h4 id="_type_conversion">2.7.1. Type Conversion</h4>
 <div class="paragraph">
 <p>Since the user&#8217;s input is store as a <code>str</code>, we&#8217;ll need to convert it to a number before we can do any math with it.
-Python provices built-in functions for converting a <code>str</code> to a number: <code>int()</code> and <code>float()</code>, which convert a string to an integer (whole number) or floating point (decimal) number, respectively.</p>
+Python provides built-in functions for converting a <code>str</code> to a number: <code>int()</code> and <code>float()</code>, which convert a string to an integer (whole number) or floating point (decimal) number, respectively.</p>
 </div>
 <div class="paragraph">
 <p>caption="Example 2.1 - "]
@@ -1038,7 +1038,7 @@ blues_with_12_bars</code></pre>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-01<br />
-        03:47:25 UTC<br />
+        23:49:13 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
