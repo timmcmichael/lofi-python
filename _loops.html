@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<link rel="icon" type="image/svg" href="./images/favicon.svg">
+<title>Lo-Fi Python: Programming Fundamentals</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toc = document.getElementById("toc");
+        if (toc) {
+            const btn = document.createElement("button");
+            btn.id = "theme-toggle";
+            btn.textContent = "Toggle Dark/Light Mode";
+            // toc.appendChild(btn);
+            toc.insertBefore(btn, toc.firstChild);
+        }
+    });
+</script>
+</head>
+<body id="_loops" class="article toc2 toc-left">
+<link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+<!-- TODO: Keep link to font awesome? -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- <div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div> -->
+<div id="header">
+<h1>Lo-Fi Python: Programming Fundamentals</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi Python: Programming Fundamentals</a></span></p><ul class="sectlevel1">
+<li><a href="_sound_check.html">Sound Check</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_data_and_operations.html">2. Variables, Data, and Operations</a>
+</li>
+<li><a href="_decisions.html">3. Decisions</a>
+</li>
+<li><a href="_loops.html"><span class="toc-current">4. Loops</span></a>
+<ul class="sectlevel2">
+<li><a href="_loops.html#_whats_the_point_4">What&#8217;s the Point?</a>
+</li>
+<li><a href="_loops.html#_while_loops">4.1. <code>while</code> Loops</a>
+</li>
+<li><a href="_loops.html#_infinite_loops">4.2. Infinite Loops</a>
+</li>
+<li><a href="_loops.html#_do_while_loops">4.3. <code>do-while</code> Loops</a>
+</li>
+<li><a href="_loops.html#_input_validation_with_loops">4.4. Input Validation with Loops</a>
+</li>
+<li><a href="_loops.html#_for_loops">4.5. <code>for</code> Loops</a>
+</li>
+<li><a href="_loops.html#_break_and_continue_statements">4.6. <code>break</code> and <code>continue</code> Statements</a>
+</li>
+<li><a href="_loops.html#_counters_and_accumulators">4.7. Counters and Accumulators</a>
+</li>
+<li><a href="_loops.html#_a_word_about_nested_loops">4.8. A Word About Nested Loops</a>
+</li>
+<li><a href="_loops.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_5">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+</li>
+</ul>
+</li>
+<li><a href="_functions_and_modules.html">5. Functions and Modules</a>
+</li>
+<li><a href="_working_with_strings.html">6. Working with Strings</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_inheritance.html">8. Inheritance</a>
+</li>
+<li><a href="_data_structures.html">9. Data Structures</a>
+</li>
+<li><a href="_exceptions.html">10. Exceptions</a>
+</li>
+<li><a href="_working_with_files.html">11. Working with Files</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_loops">4. Loops</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p><span title='This is "Chapter Four" in binary (base 2)'>Chapter 0100 <sub>2</sub></span></p>
+</div>
+<div class="exampleblock callout spin">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="https://optraffic.com/wp-content/uploads/2024/10/Standard-Stop-Signs--1024x768.jpg" alt="Stop" width="250" height="250">
+</div>
+</div>
+<div class="paragraph">
+<p><strong class="callout-title">Unfinished Chapter!!</strong></p>
+</div>
+<div class="paragraph">
+<p>I am actively working to complete this eBook, and I haven&#8217;t gotten to this chapter yet. In fact, it&#8217;s probably just a copy/paste from a similar chapter in my C# book.</p>
+</div>
+<div class="paragraph">
+<p><strong>In other words, don&#8217;t read this yet!</strong></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_whats_the_point_4">What&#8217;s the Point?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Understand the purpose of loops</p>
+</li>
+<li>
+<p>Understand the difference between definite and indefinite loops</p>
+</li>
+<li>
+<p>Use <code>while</code> loops</p>
+</li>
+<li>
+<p>Use <code>do-while</code> loops</p>
+</li>
+<li>
+<p>Use <code>for</code> loops</p>
+</li>
+<li>
+<p>Understand why <code>break</code> and <code>continue</code> are crimes against nature</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/04%20Loops" target="_blank" rel="noopener">GitHub</a>.</em></p>
+</div>
+<hr>
+<div class="paragraph">
+<p>A computer is designed to execute a series of instructions, in order, very quickly.
+Now that we understand how to use Boolean expressions to control the flow of our programs, we can use that concept for a programming structure that really unlocks the power of the computer: <em>repetition</em>.
+Many of the tasks we think of as "computer tasks" are repetitive in nature.
+Processing data often involves performing the same operation on each piece of information, one after the other, until everything is processed.
+A computer game has to draw the screen, check for collisions, check what the user is doing with the gamepad, and update the positions of all the objects on the screen, over and over again, until the game ends.
+When we use a search engine on the web, that search engine has scanned the web one page at a time, indexing what it finds and then moving on to the next page, until it&#8217;s scanned all of the pages in its database.
+These kinds of repetitive tasks everywhere in computer use&mdash;and in computer programming.</p>
+</div>
+<div class="paragraph">
+<p>Computers are great for these kinds of tasks: they don&#8217;t get bored, they don&#8217;t get tired, and they don&#8217;t make mistakes—other than the mistakes we make when programming them!</p>
+</div>
+<div class="paragraph">
+<p>To create the kind of repetition that leverages this processing power, programmers use <em>loops</em>.
+A loop is a structure that repeats a block of code as long as a certain condition is true.
+Each time the loop repeats is called an <em>iteration</em>.</p>
+</div>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Introduction to Loops</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/eq9oHVazmZI?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_while_loops">4.1. <code>while</code> Loops</h3>
+<div class="paragraph">
+<p>The first structure we&#8217;ll look at for creating loops in C# is the <code>while</code> loop.
+A <code>while</code> loop repeats a block of code as long as a specified condition is true.
+The condition is checked before the block of code is executed, so the block of code might not execute at all if the condition is false the first time it&#8217;s checked.
+We can call this a <em>check first, then run</em> loop.</p>
+</div>
+<div class="paragraph">
+<p>A <code>while</code> loop is exactly like an <code>if</code> statement: a Boolean expression is checked, and if it&#8217;s true, the block of code is executed.
+The only difference is that, after the block of code is executed, program execution jumps back to the beginning of the loop and checks the condition again, instead of just moving forward as an <code>if</code> statement would.
+If the condition is still true, the block of code is executed again.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 4.1 - A basic <code>while</code> loop</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">    count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, the Boolean expression <code>count &lt; 10</code> is checked; if it&#8217;s true, the block of code is executed.
+The block of code prints out the value of <code>count</code>, then increments <code>count</code> by 1.
+The program then jumps back to the beginning of the loop and checks the condition again.
+This process repeats until the expression <code>count &lt; 10</code> is false.</p>
+</div>
+<div class="paragraph">
+<p>The result of this loop is that the program prints out the value of <code>count</code> 10 times, starting with 0 and ending with 9.
+It is a <em>definite loop</em> (see the video <strong>Introduction to Loops</strong>, above) because, before the loop starts, it&#8217;s already been determined that the loop will repeat 10 times.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_infinite_loops">4.2. Infinite Loops</h3>
+<div class="paragraph">
+<p>One thing to be careful of when using a <code>while</code> loop is the possibility of creating an <em>infinite loop</em>; they&#8217;re possible in any loop structure, but especially easy with a <code>while</code> loop.
+An infinite loop is a loop that repeats forever, because the condition that determines whether the loop should repeat is never <code>false</code>.
+Infinite loops are a common mistake for new programmers, and they cause our program to crash or appear to freeze.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 4.2 - An infinite loop using <code>while</code></div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, we&#8217;ve forgotten to increment <code>count</code> by 1 after printing it out.
+<code>count</code> will always be <code>0</code>, so the condition <code>count &lt; 10</code> will always be true.
+The program will print out "Count is: 0" over and over again, forever.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Your IDE has a way to stop the program if it&#8217;s stuck in an infinite loop. Often, this is a square button—like the symbol for "stop" in a media player app. Every IDE should also allow you to press <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> to stop a program.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A simple infinite loop in C# is:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 4.3 - An infinite loop using a <code>while</code> statement.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">true</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// hey, there&#39;s nothing to stop this loop!</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This loop will repeat forever, because the condition <code>true</code> is always true.
+Some programmers use <code>while (true)</code> to start a loop and then use an <code>if</code> statement to break out of the loop when a certain condition is met, but that&#8217;s not really an infinite loop—it just puts the boolean expression that controls the loop in an <code>if</code> statement within the loop&#8217;s body instead of in the <code>while</code> statement.
+I personally consider that less readable than using a clear condition in the <code>while</code> statement, so I don&#8217;t write loops like that.
+I&#8217;ll rant and rave about that a little later in the chapter.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>There&#8217;s a common beginner mistake that also creates an infinite loop: adding a semicolon immediately after the <code>while</code> statement.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">    count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This semicolon ends the line!</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A semicolon by itself in C# essentially means "do nothing."
+So this really says, "While the count is less than 10, do nothing" and it never even gets to the code block.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_do_while_loops">4.3. <code>do-while</code> Loops</h3>
+<div class="paragraph">
+<p>As we&#8217;ve seen, a <code>while</code> loop checks the condition before executing the block of code.
+A <code>do-while</code> loop is similar, but it checks the condition <strong>after</strong> executing the block of code: <em>run first, then check</em>.
+This means that the block of code will always execute at least once.
+Other than that, a <code>do-while</code> loop is exactly the same as a <code>while</code> loop.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 4.4 - A basic <code>do-while</code> loop in C#.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">do</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">    count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is the same loop as the <code>while</code> loop we looked at earlier, but the condition is checked after the block of code is executed.
+The <code>while</code> statement is at the end of the loop; the <code>do</code> statement at the beginning indicates the block of code that should iterate.</p>
+</div>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p><code>while</code> and <code>do-while</code> Loops in C#</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/YHSmVzpy90g?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/04%20Loops/PearlJamDebut.cs" target="_blank" rel="noopener"><code>PearlJamDebut.cs</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/04%20Loops/PearlJamDebutFinished.cs" target="_blank" rel="noopener"><code>PearlJamDebutFinished.cs</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/04%20Loops/LoopCounting.cs" target="_blank" rel="noopener"><code>LoopCounting.cs</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/04%20Loops/LoopCountingFinished.cs" target="_blank" rel="noopener"><code>LoopCountingFinished.cs</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_choosing_between_a_while_and_a_do_while_loop">4.3.1. Choosing Between a <code>while</code> and a <code>do-while</code> Loop</h4>
+<div class="paragraph">
+<p>Both <code>while</code> and <code>do-while</code> loops work well for <em>indefinite loops</em> (though they can be used for definite loops as well).
+There&#8217;s nothing in the structure of these loops that requires a counter or other control variable, so they can be used for loops that repeat until a certain condition is met, however many iterations that requires.</p>
+</div>
+<div class="paragraph">
+<p>In many cases, it doesn&#8217;t matter whether we use a <code>while</code> or a <code>do-while</code> loop.
+We really can use either one to create the same loop.
+However, in some cases, one might be a better choice than the other.
+The simple rule of thumb for now is: if we need to guarantee that the block of code will execute at least once, we should use a <code>do-while</code> loop; if we need to check the condition before executing the block of code, we should use a <code>while</code> loop.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chapter4/while_do-while.jpg" alt="while do while" width="400">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_input_validation_with_loops">4.4. Input Validation with Loops</h3>
+<div class="paragraph">
+<p>A common use for indefinite loops is <em>input validation</em>.
+Input validation is the process of checking the data a user inputs into a program to make sure it&#8217;s valid.
+For example, if a program displays a menu with three options, a loop could keep asking for a selection until the user enters one of the three choices.</p>
+</div>
+<div class="paragraph">
+<p>There are more advanced techniques we&#8217;ll eventually use for input validation, but indefinite loops are a simple way to make sure the user&#8217;s input is what we expect.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 4.5 - Input validation with a <code>do-while</code> loop</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> choice;</span>
+<span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> choiceString;</span>
+
+<span style="color: #66d9ef">do</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Choose an option:&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;1. Check balance&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;2. Deposit&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;3. Withdraw&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;4. Exit&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.Write(</span><span style="color: #e6db74">&quot;Your choice: &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    choiceString </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Console.ReadLine();</span>
+<span style="color: #f8f8f2">    choice </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(choiceString);</span>
+<span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (choice </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">||</span><span style="color: #f8f8f2"> choice </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #959077">// Rest of the code...</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This code will keep displaying the menu and asking for the user&#8217;s choice until the user enters a number between 1 and 4.</p>
+</div>
+<div class="exampleblock callout spin">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="spin-icon" width="88.88" height="62.42" viewBox="0 0 88.88 62.42" fill="currentColor"><path d="M60.84,29.26c-1.16.32-1.79,1.37-1.47,2.42.32,1.05,1.37,1.68,2.42,1.47,1.05-.32,1.68-1.37,1.47-2.42-.32-1.16-1.37-1.79-2.42-1.47Z"/><path d="M40.63,15.26c-.32-.21-.74-.32-1.16-.21l-17.26,4.32c-.53.11-.95.63-.95,1.26v18.63c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-13.79l14.74-3.79v9.26c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-22.63c-.21-.42-.31-.84-.63-1.05h0ZM18.42,45.26c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.27,2-2.74,2ZM35.68,40.95c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.16,2-2.74,2ZM38.53,22.95l-14.74,3.79v-5.16l14.74-3.68v5.05Z"/><path d="M88,24.21c-3.16-12-13.79-20.1-25.58-20.53V1.47c0-.84-.63-1.47-1.47-1.47H1.47C.63,0,0,.64,0,1.48v59.47c0,.84.63,1.47,1.47,1.47h59.47c.84,0,1.47-.63,1.47-1.47v-2.21c2-.11,4-.32,5.89-.84,14.64-3.89,23.48-18.94,19.69-33.68h0ZM61.27,39.05c-4.32,0-7.79-3.47-7.79-7.79s3.47-7.79,7.79-7.79,7.79,3.47,7.79,7.79-3.48,7.79-7.79,7.79ZM2.95,2.84h56.53v3.26H2.95s0-3.26,0-3.26ZM59.47,59.48H2.95v-2.74h56.53v2.74ZM59.47,53.69H2.95V9.05h56.53v11.05c-5.47.74-9.58,5.37-9.58,10.95s4.21,10.32,9.58,10.95v11.68ZM76.74,28c-.63.21-1.26-.21-1.47-.84-1.05-3.47-3.26-6.42-6.32-8.32-.32-.21-.42-.42-.53-.74-.11-.32,0-.63.11-.95.32-.53,1.05-.74,1.68-.42,3.58,2.21,6.21,5.68,7.37,9.68.21.74-.21,1.38-.84,1.59h0ZM81.37,26.74c-.63.21-1.26-.21-1.47-.84-1.37-4.74-4.32-8.74-8.53-11.26-.32-.21-.42-.42-.53-.74s0-.63.11-.95c.32-.53,1.05-.74,1.68-.42,4.74,2.84,8.11,7.37,9.58,12.63.21.74-.21,1.48-.84,1.58h0Z"/></svg><strong class="callout-title">Take It for a Spin</strong></p>
+</div>
+<div class="paragraph">
+<p>This is a good time to stop and try out what you&#8217;ve learned so far. The <em>Coding Practice</em> assignment for this chapter can be completed with the concepts covered to this point.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_loops">4.5. <code>for</code> Loops</h3>
+<div class="paragraph">
+<p>Definite loops are really common, especially when we learn about things like <em><a href="#_arrays">arrays</a></em> later on, so C# provides a shorthand format to create that kind of loop: the <code>for</code> keyword.
+The syntax of a <code>for</code> loop can be a little intimidating for new coders, but it really just takes  all three of the pieces we need for a loop and combines them into one line of code: initializing a counter, checking the counter, and changing the counter.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 4.6 - A simple <code>for</code> loop.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">; count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>for</code> loop has three parts, separated by semicolons:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">1.&#160;Initialization</dt>
+<dd>
+<p>Runs at the start of the loop; used to set a counter.</p>
+<div class="paragraph">
+<p><em>Example:</em></p>
+</div>
+<div class="paragraph">
+<p><code>int count = 0</code></p>
+</div>
+</dd>
+<dt class="hdlist1">2.&#160;Condition</dt>
+<dd>
+<p>Checked before each iteration; the loop stops when this returns <code>false</code>.</p>
+<div class="paragraph">
+<p><em>Example:</em></p>
+</div>
+<div class="paragraph">
+<p><code>count &lt; 10</code></p>
+</div>
+</dd>
+<dt class="hdlist1">3.&#160;Update</dt>
+<dd>
+<p>Runs after each iteration; used to update the counter.</p>
+<div class="paragraph">
+<p><em>Example:</em></p>
+</div>
+<div class="paragraph">
+<p><code>count++</code></p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Once you get the hang of the syntax, the <code>for</code> loop is a really convenient way to create a definite loop.</p>
+</div>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p><code>for</code> Loops in C#</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/MN679VK7OS4?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>File from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/04%20Loops/ForLoopDemo.cs" target="_blank" rel="noopener"><code>ForLoopDemo.cs</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/04%20Loops/ForLoopDemoFinished.cs" target="_blank" rel="noopener"><code>ForLoopDemoFinished.cs</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_break_and_continue_statements">4.6. <code>break</code> and <code>continue</code> Statements</h3>
+<div class="paragraph">
+<p>I believe that <code>while</code>, <code>do-while</code>, and <code>for</code> loops, when written with clear Boolean expressions, are the most readable loops, and any loop a coder will need in their career can be written with one of those structures.
+A well-written loop will execute the block of code as many times as necessary, and then stop when the condition is false, without any additional help from the programmer.
+However, C# provides two statements that can be used to alter the flow of a loop: the <code>break</code> statement and the <code>continue</code> statement.</p>
+</div>
+<div class="paragraph">
+<p>Since they aren&#8217;t necessary for writing loops, I consider them somewhat optional: <strong>none of my assignments questions will require you to use them</strong>.
+However, it is important for beginners to know how they work.</p>
+</div>
+<div class="paragraph">
+<p>The <code>break</code> statement is used to exit a loop early.
+When a <code>break</code> statement is executed, the loop stops, and the program continues with the next statement after the loop; think of it as a <code>return</code> statement for a loop (except that it can&#8217;t pass a value anywhere).
+Some programmers use <code>break</code> when they need to get out of a loop before the controlling condition is false.
+My own opinion is that this is a sign the controlling condition should be rewritten to account for all contingencies, but because you&#8217;re likely to see <code>break</code> in other people&#8217;s code, I think it&#8217;s important to know about it.</p>
+</div>
+<div class="paragraph">
+<p>The <code>continue</code> statement is used to skip the rest of the block of code in a loop and jump back to the beginning of the loop.
+When the <code>continue</code> statement is executed, the program stops executing the loop&#8217;s block of code, and jumps to the Boolean expression that controls the loop to see if it should run again.</p>
+</div>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p><code>break</code> and <code>continue</code> in <strong>Java</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Note: you read that right&#8212;&#8203;this video is in Java, and I haven&#8217;t had time to re-record it yet. Java and C# are nearly identical, so you&#8217;ll be able to follow this. I&#8217;ve linked C# versions of the demo code below.</em></p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/gc4D-7UhxR0?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video (C# translations):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/04%20Loops/BreakDemo1.cs" target="_blank" rel="noopener"><code>BreakDemo1.cs</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/04%20Loops/BreakDemo2.cs" target="_blank" rel="noopener"><code>BreakDemo2.cs</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/04%20Loops/EvilDemo.cs" target="_blank" rel="noopener"><code>EvilDemo.cs</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_counters_and_accumulators">4.7. Counters and Accumulators</h3>
+<div class="paragraph">
+<p>Loops are often used to calculate a total or to count how many times something happens.
+When we use a loop to calculate a total, we call the variable that holds the total an <em>accumulator</em>.
+When we use a loop to count how many times something happens, we call the variable that holds the count a <em>counter</em>.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ve seen counters in the examples of definite loops, where we used a counter variable to control how many times the loop repeated.
+In fact, <code>for</code> loops essentially require a counter variable to work.
+But in addition to controlling the loop, we can also use a counter variable to count how many times something happens within the loop.
+As a trivial example, we could count how many numbers are divisible by 4 in a given range.
+(We&#8217;ll pretend that we don&#8217;t know a mathematical solution to that problem&#8212;&#8203;we&#8217;re trying to learn loops here!)</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 4.7 - A loop that counts how many numbers between 33 and 75 are divisible by 4.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> divisible </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// This is our counter variable</span>
+<span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">33</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">75</span><span style="color: #f8f8f2">; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (i </span><span style="color: #ff4689">%</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        divisible</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// Increment the counter when we find a number divisible by 4</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;There are &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> divisible </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot; numbers between 33 and 75 that are divisible by 4.&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Before starting the loop, we declare and initialize a variable that will hold our count; in this case, we call it <code>divisible</code>.
+The <code>for</code> loop uses a control variable called <code>i</code> to iterate through the numbers from 33 to 75.
+Then, inside the loop, we check each number to see if it&#8217;s divisible by 4.
+To check that, we use the modulus operator (<code>%</code>), which gives us the remainder when one number is divided by another; if there is no remainder when <code>i</code> is divided by 4, then <code>i</code> is divisible by 4.
+When we find a number that meets that condition, we increment our counter variable <code>divisible</code> by 1.
+Once the loop is finished, the variable <code>divisible</code> holds the total count of numbers between 33 and 75 that are divisible by 4, and we can output that value.</p>
+</div>
+<div class="paragraph">
+<p>An <em>accumulator</em> is similar, but instead of counting how many times something happens, it adds up a total.</p>
+</div>
+<div class="paragraph">
+<p>Again, we&#8217;ll initialize a variable before the loop starts.
+Within the loop, we&#8217;ll add to that variable as necessary, and when the loop is finished, the variable will hold the total.</p>
+</div>
+<div class="paragraph">
+<p>In this example, we&#8217;ll ask the user to input numbers until they enter a zero, and then we&#8217;ll output the total of all the numbers they entered.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 4.8 - A loop that accumulates a total of user-entered numbers.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> total </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// This is our accumulator variable</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> number;</span>
+<span style="color: #66d9ef">do</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.Write(</span><span style="color: #e6db74">&quot;Enter a number (0 to stop): &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    number </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(Console.ReadLine());</span>
+<span style="color: #f8f8f2">    total </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> number; </span><span style="color: #959077">// Add the entered number to the total</span>
+<span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (number </span><span style="color: #ff4689">!=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;The total is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> total);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that counters and accumulators may not seem that important in these simple examples, but as we learn more about programming, we&#8217;ll see that they are essential tools for working with data.
+They&#8217;ll be especially important when we learn about <a href="#_arrays">arrays</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_word_about_nested_loops">4.8. A Word About Nested Loops</h3>
+<div class="paragraph">
+<p>We can put a loop inside another loop, and that&#8217;s called a <em>nested loop</em>. They are useful in some situations, and studying them can improve your ability to think through loop-based algorithms.</p>
+</div>
+<div class="paragraph">
+<p>However, they are beyond the scope of this course, which focuses on the fundamentals of C# programming.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_5">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<div class="paragraph subtitle">
+<p>Chapter Review Questions</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Explain the difference between a definite loop and an indefinite loop?</p>
+</li>
+<li>
+<p>In a <code>while</code> loop, what happens if the Boolean condition is <code>false</code> on the first check?</p>
+</li>
+<li>
+<p>Describe one way an infinite loop can occur.</p>
+</li>
+<li>
+<p>When doing input validation with loops, why might a do-while loop be preferable to a while loop?</p>
+</li>
+<li>
+<p>List and describe the three parts of a for loop in C#.</p>
+</li>
+<li>
+<p>Explain what the <code>break</code> statement does inside a loop.</p>
+</li>
+<li>
+<p>Explain what the <code>continue</code> statement does inside a loop.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Sample answers provided in the <a href="#loops">Liner Notes</a></em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_decisions.html">Decisions</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_functions_and_modules.html">Functions and Modules</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-02<br />
+        15:06:55 UTC<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>

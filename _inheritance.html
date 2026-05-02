@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<link rel="icon" type="image/svg" href="./images/favicon.svg">
+<title>Lo-Fi Python: Programming Fundamentals</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toc = document.getElementById("toc");
+        if (toc) {
+            const btn = document.createElement("button");
+            btn.id = "theme-toggle";
+            btn.textContent = "Toggle Dark/Light Mode";
+            // toc.appendChild(btn);
+            toc.insertBefore(btn, toc.firstChild);
+        }
+    });
+</script>
+</head>
+<body id="_inheritance" class="article toc2 toc-left">
+<link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+<!-- TODO: Keep link to font awesome? -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- <div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div> -->
+<div id="header">
+<h1>Lo-Fi Python: Programming Fundamentals</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi Python: Programming Fundamentals</a></span></p><ul class="sectlevel1">
+<li><a href="_sound_check.html">Sound Check</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_data_and_operations.html">2. Variables, Data, and Operations</a>
+</li>
+<li><a href="_decisions.html">3. Decisions</a>
+</li>
+<li><a href="_loops.html">4. Loops</a>
+</li>
+<li><a href="_functions_and_modules.html">5. Functions and Modules</a>
+</li>
+<li><a href="_working_with_strings.html">6. Working with Strings</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_inheritance.html"><span class="toc-current">8. Inheritance</span></a>
+<ul class="sectlevel2">
+<li><a href="_inheritance.html#_whats_the_point_8">What&#8217;s the Point?</a>
+</li>
+<li><a href="_inheritance.html#_inheritance_overview">8.1. Inheritance Overview</a>
+</li>
+<li><a href="_inheritance.html#_implementing_inheritance">8.2. Implementing Inheritance</a>
+</li>
+<li><a href="_inheritance.html#_inheritance_hierarchies_and_overriding">8.3. Inheritance Hierarchies and Overriding</a>
+</li>
+<li><a href="_inheritance.html#_constructors_inheritance">8.4. Constructors &amp; Inheritance</a>
+</li>
+<li><a href="_inheritance.html#_introduction_to_polymorphism">8.5. Introduction to Polymorphism</a>
+</li>
+<li><a href="_inheritance.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_9">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+</li>
+</ul>
+</li>
+<li><a href="_data_structures.html">9. Data Structures</a>
+</li>
+<li><a href="_exceptions.html">10. Exceptions</a>
+</li>
+<li><a href="_working_with_files.html">11. Working with Files</a>
+</li>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_inheritance">8. Inheritance</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p><span title='This is "Chapter Eight" in binary (base 2)'>Chapter 1000 <sub>2</sub></span></p>
+</div>
+<div class="exampleblock callout spin">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="https://optraffic.com/wp-content/uploads/2024/10/Standard-Stop-Signs--1024x768.jpg" alt="Stop" width="250" height="250">
+</div>
+</div>
+<div class="paragraph">
+<p><strong class="callout-title">Unfinished Chapter!!</strong></p>
+</div>
+<div class="paragraph">
+<p>I am actively working to complete this eBook, and I haven&#8217;t gotten to this chapter yet. In fact, it&#8217;s probably just a copy/paste from a similar chapter in my C# book.</p>
+</div>
+<div class="paragraph">
+<p><strong>In other words, don&#8217;t read this yet!</strong></p>
+</div>
+</div>
+</div>
+<hr>
+<div class="sect2">
+<h3 id="_whats_the_point_8">What&#8217;s the Point?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Design classes using inheritance</p>
+</li>
+<li>
+<p>Use the <code>extends</code> keyword to create a subclass</p>
+</li>
+<li>
+<p>Override methods in a subclass</p>
+</li>
+<li>
+<p>Implement constructors in a subclass</p>
+</li>
+<li>
+<p>Use polymorphism to create arrays of subclass objects</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance" target="_blank" rel="noopener">GitHub</a>.</em></p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_inheritance_overview">8.1. Inheritance Overview</h3>
+<div class="paragraph">
+<p>Inheritance is a core object-oriented programming concept that allows us to reuse code from one class—known as a <em>parent class</em>—in a new class, which we call a <em>child class</em>.
+In the same way that people can inherit traits from their parents, child classes inherit the attributes and behaviors of their parent classes.
+This means that a child class automatically has all of the fields and methods of a parent class, and just like people, a child class can also have its own unique fields and methods.</p>
+</div>
+<div class="paragraph">
+<p>Though there are other ways to think about inheritance, I encourage students to think of it as a way to create a class that is a more specific version of another class. For example, if we have a class called <code>Athlete</code>, we can create a child class called <code>FootballPlayer</code>.
+A <code>FootballPlayer</code> is a type of <code>Athlete</code>, and there might be other types of athletes that are not football players: gymnasts, tennis players, and so on.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+We can think of inheritance as an "is-a" relationship: a <code>House</code> <em>is a</em> <code>Building</code>, for example. When deciding whether to use inheritance, ask yourself if the child class <em>is a</em> type of the parent class. We call this the <em>is-a test</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When we design classes in UML, we use an arrow to indicate inheritance. The arrow points from the child class to the parent class.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chapter8/AthleteDiagram.png" alt="AthleteDiagram" width="356" height="332">
+</div>
+<div class="title">Figure 8.1 - An <code>Athlete</code> parent class with two child classes, <code>FootballPlayer</code> and <code>TennisPlayer</code></div>
+</div>
+<div class="paragraph">
+<p>In this example, the <code>FootballPlayer</code> class inherits the fields and methods of the <code>Athlete</code> class, so we don&#8217;t have to rewrite those, and then it adds on its own unique fields and methods, like <code>teamName</code> and <code>position</code>.</p>
+</div>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Introduction to Inheritance</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/LXKXWT0y3oQ?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_implementing_inheritance">8.2. Implementing Inheritance</h3>
+<div class="paragraph">
+<p>When we move from a design in UML to writing actual code—which we refer to as <em>implementation</em>—we use different terms to describe the relationships between classes.</p>
+</div>
+<div class="paragraph">
+<p>A parent class becomes a <em>superclass</em>, and a child class becomes a <em>subclass</em>. You may also hear the terms <em>base class</em> and <em>derived class</em> to describe the same relationship, especially in other programming languages.</p>
+</div>
+<div class="paragraph">
+<p>In Java, we use the <code>extends</code> keyword to indicate that one class is a subclass of another class.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 8.1 - A <code>FootballPlayer</code> class that extends the <code>Athlete</code> class.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Athlete</span><span style="color: #f8f8f2"> {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String athleteName;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> weight;</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">run</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Running!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">jump</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Jumping!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">throwBall</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Throwing!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">FootballPlayer</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">extends</span><span style="color: #f8f8f2"> Athlete {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String teamName;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String position;</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">tackle</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Tackling!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">pass</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Passing!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Extending a Class in Java</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/HjI19TvQkII?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/BankAccount.java" target="_blank" rel="noopener"><code>BankAccount.java</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/TestAccounts.java" target="_blank" rel="noopener"><code>TestAccounts.java</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/CheckingAccount.java" target="_blank" rel="noopener"><code>CheckingAccount.java</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/SavingsAccount.java" target="_blank" rel="noopener"><code>SavingsAccount.java</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inheritance_hierarchies_and_overriding">8.3. Inheritance Hierarchies and Overriding</h3>
+<div class="paragraph">
+<p>When we extend a class, we are building an <em>inheritance hierarchy</em>.
+This is a tree-like structure where each class has only one parent class (such as our <code>Athlete</code> class), but can have multiple child classes (like <code>FootballPlayer</code> and <code>TennisPlayer</code>).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chapter8/AthleteDiagram.png" alt="Inheritance hierarchy for the `Athlete` class" width="]">
+</div>
+<div class="title">Figure 8.2 - Inheritance hierarchy for the <code>Athlete</code> class</div>
+</div>
+<div class="paragraph">
+<p>When a method is called on an object, Java begins by looking for that method in the object&#8217;s class.
+If it doesn&#8217;t find the method there, it looks in the superclass.
+If there&#8217;s no method in there, it goes to <strong>that</strong> class&#8217;s superclass, and so on up the hierarchy.
+If it gets to the top of the hierarchy and still hasn&#8217;t found the method, the code will not compile.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 8.2 - Method calls on a <code>TennisPlayer</code> object.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">TennisPlayer serena </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> TennisPlayer();</span>
+<span style="color: #f8f8f2">serena.</span><span style="color: #a6e22e">serve</span><span style="color: #f8f8f2">(); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">serena.</span><span style="color: #a6e22e">run</span><span style="color: #f8f8f2">(); </span><i class="conum" data-value="2"></i><b>(2)</b>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The compiler checks the <code>TennisPlayer</code> class for the <code>serve()</code> method. Since it finds an implementation there, it will execute that code.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The compiler checks the <code>TennisPlayer</code> class for the <code>run()</code> method. Since it doesn&#8217;t find an implementation there, it will check the superclass, <code>Athlete</code>. Since it finds the <code>run()</code> method there, it will execute that code.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In some cases, we might want to provide a different implementation of a method in a subclass. This is called <em>method overriding</em>. Because the compiler starts at the bottom of the inheritance hierarchy and works its way up, it will use the overridden method in the subclass instead of the method in the superclass.</p>
+</div>
+<div class="paragraph">
+<p>If a <code>TennisPlayer</code> has a specific way of running that is different from the way an <code>Athlete</code> runs, we can override the <code>run()</code> method in the <code>TennisPlayer</code> class.
+The <code>FootballPlayer</code> class will still use the <code>run()</code> method from the <code>Athlete</code> class, unless we override it in the <code>FootballPlayer</code> class as well.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 8.3 - A <code>TennisPlayer</code> class that extends the <code>Athlete</code> class and overrides the <code>run()</code> method.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">TennisPlayer</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">extends</span><span style="color: #f8f8f2"> Athlete {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String dominantHand;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> rank;</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">serve</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Serving!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">volley</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Volleying!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #a6e22e">@Override</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">run</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Running like a tennis player!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The <code>@Override</code> annotation is optional, but it&#8217;s a good idea to use it. It tells the compiler that you intend to override a method from the superclass. If you make a mistake in the method signature, the compiler will let you know.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_the_object_class">8.3.1. The <code>Object</code> Class</h4>
+<div class="paragraph">
+<p>In Java, every class is a subclass of the <code>Object</code> class.
+This means that every class that does not explicitly extend another class extends <code>Object</code>.
+The result is that <code>Object</code> is at the top of the inheritance hierarchy for all Java classes—and every object inherits the methods in the <code>Object</code> class.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Object</code> class provides a handful of methods, but there is one that is particularly useful at this stage of our learning: the <code>toString()</code> method.
+This method returns a <code>String</code> representation of the object.</p>
+</div>
+<div class="paragraph">
+<p>The compiler will automatically call the <code>toString()</code> method when we use an object as a <code>String</code>, such as in a <code>print()</code> or <code>println()</code> statement.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 8.4 - An implicit call to the <code>toString()</code> method.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">TennisPlayer serena </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> TennisPlayer();</span>
+<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(serena);</span>
+<span style="color: #959077">// Compiler changes this to: System.out.println(serena.toString());</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since <code>TennisPlayer</code> does not have an implementation of the <code>toString()</code> method, the compiler will work up the inheritance hierarchy until it finds an implementation in the <code>Object</code> class.
+The default implementation of <code>toString()</code> in the <code>Object</code> class returns a string that includes the class name and the memory address of the object, which looks something like this: <code>TennisPlayer@15db9742</code>.</p>
+</div>
+<div class="paragraph">
+<p>This is probably not very useful to us, but we can override the <code>toString()</code> method in our <code>TennisPlayer</code> class to provide a more meaningful representation of the object.
+A common practice is to return a string that includes the values of the object&#8217;s fields.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 8.5 - Overriding the <code>toString()</code> method in the <code>TennisPlayer</code> class</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #a6e22e">@Override</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> String </span><span style="color: #a6e22e">toString</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;TennisPlayer{&quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span>
+<span style="color: #f8f8f2">            </span><span style="color: #e6db74">&quot;dominantHand=&#39;&quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> dominantHand </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&#39;\&#39;&#39;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span>
+<span style="color: #f8f8f2">            </span><span style="color: #e6db74">&quot;, rank=&quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> rank </span><span style="color: #ff4689">+</span>
+<span style="color: #f8f8f2">            </span><span style="color: #e6db74">&#39;}&#39;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now when we print a <code>TennisPlayer</code> object, we will see a string that looks something like this: <code>TennisPlayer{dominantHand='right', rank=1}</code>.
+However, we can return any information we want in the <code>toString()</code> method, so we can customize it to fit our needs.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The <code>toString()</code> method is used in many places in Java, so it&#8217;s a good idea to override it in your classes to provide a more meaningful representation of your objects.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>Object</code> class also provides other methods, such as <code>equals()</code>, which is used to compare two objects for equality.
+For example, we use the <code>equals()</code> method when we check if two strings are the same.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (bestSchool.</span><span style="color: #a6e22e">equals</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;EMCC&quot;</span><span style="color: #f8f8f2">)) { </span><span style="color: #959077">/* do something */</span><span style="color: #f8f8f2"> }</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For details on this, see <a href="#string-equality">[string-equality]</a>.</p>
+</div>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Method Overriding in Java</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/NFi4uhXK8FM?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/Friend.java" target="_blank" rel="noopener"><code>Friend.java</code></a></p>
+</li>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/CloseFriend.java" target="_blank" rel="noopener"><code>CloseFriend.java</code></a></p>
+</li>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/BestFriend.java" target="_blank" rel="noopener"><code>BestFriend.java</code></a></p>
+</li>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/TestFriend.java" target="_blank" rel="noopener"><code>TestFriend.java</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/BankAccount.java" target="_blank" rel="noopener"><code>BankAccount.java</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/CheckingAccount.java" target="_blank" rel="noopener"><code>CheckingAccount.java</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/SavingsAccount.java" target="_blank" rel="noopener"><code>SavingsAccount.java</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/TestAccounts.java" target="_blank" rel="noopener"><code>TestAccounts.java</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/VIPCheckingAccount.java" target="_blank" rel="noopener"><code>VIPCheckingAccount.java</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="exampleblock callout spin">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="spin-icon" width="88.88" height="62.42" viewBox="0 0 88.88 62.42" fill="currentColor"><path d="M60.84,29.26c-1.16.32-1.79,1.37-1.47,2.42.32,1.05,1.37,1.68,2.42,1.47,1.05-.32,1.68-1.37,1.47-2.42-.32-1.16-1.37-1.79-2.42-1.47Z"/><path d="M40.63,15.26c-.32-.21-.74-.32-1.16-.21l-17.26,4.32c-.53.11-.95.63-.95,1.26v18.63c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-13.79l14.74-3.79v9.26c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-22.63c-.21-.42-.31-.84-.63-1.05h0ZM18.42,45.26c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.27,2-2.74,2ZM35.68,40.95c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.16,2-2.74,2ZM38.53,22.95l-14.74,3.79v-5.16l14.74-3.68v5.05Z"/><path d="M88,24.21c-3.16-12-13.79-20.1-25.58-20.53V1.47c0-.84-.63-1.47-1.47-1.47H1.47C.63,0,0,.64,0,1.48v59.47c0,.84.63,1.47,1.47,1.47h59.47c.84,0,1.47-.63,1.47-1.47v-2.21c2-.11,4-.32,5.89-.84,14.64-3.89,23.48-18.94,19.69-33.68h0ZM61.27,39.05c-4.32,0-7.79-3.47-7.79-7.79s3.47-7.79,7.79-7.79,7.79,3.47,7.79,7.79-3.48,7.79-7.79,7.79ZM2.95,2.84h56.53v3.26H2.95s0-3.26,0-3.26ZM59.47,59.48H2.95v-2.74h56.53v2.74ZM59.47,53.69H2.95V9.05h56.53v11.05c-5.47.74-9.58,5.37-9.58,10.95s4.21,10.32,9.58,10.95v11.68ZM76.74,28c-.63.21-1.26-.21-1.47-.84-1.05-3.47-3.26-6.42-6.32-8.32-.32-.21-.42-.42-.53-.74-.11-.32,0-.63.11-.95.32-.53,1.05-.74,1.68-.42,3.58,2.21,6.21,5.68,7.37,9.68.21.74-.21,1.38-.84,1.59h0ZM81.37,26.74c-.63.21-1.26-.21-1.47-.84-1.37-4.74-4.32-8.74-8.53-11.26-.32-.21-.42-.42-.53-.74s0-.63.11-.95c.32-.53,1.05-.74,1.68-.42,4.74,2.84,8.11,7.37,9.58,12.63.21.74-.21,1.48-.84,1.58h0Z"/></svg><strong class="callout-title">Take It for a Spin</strong></p>
+</div>
+<div class="paragraph">
+<p>This is a good time to stop and try out what you&#8217;ve learned so far. The <em>Coding Practice</em> assignment for this chapter can be completed with the concepts covered to this point.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_constructors_inheritance">8.4. Constructors &amp; Inheritance</h3>
+<div class="paragraph">
+<p>As we&#8217;ve seen, when we create an object of a class, Java automatically calls the class&#8217;s constructor to initialize the object.
+When we create an object of a subclass, Java will call the constructor of the superclass first, and then the constructor of the subclass.
+Remember that the compiler will create default constructors for us if we don&#8217;t provide any, but if we do provide a constructor, the compiler will not create a default constructor.
+Things are pretty straightforward when using default or parameterless constructors.</p>
+</div>
+<div class="paragraph">
+<p>However, if we provide a constructor with parameters in the superclass, we need to make sure that the subclass constructor calls the superclass constructor and provides values for the parameters.
+To <em>explicitly</em> call the superclass constructor, use the <code>super</code> keyword.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 8.6 - Constructors added to the <code>Athlete</code> and <code>FootballPlayer</code> classes.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Athlete</span><span style="color: #f8f8f2"> {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String athleteName;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> weight;</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Athlete</span><span style="color: #f8f8f2">(String athleteName, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> weight) {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">athleteName</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> athleteName;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">age</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> age;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">weight</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> weight;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">FootballPlayer</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">extends</span><span style="color: #f8f8f2"> Athlete {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String teamName;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String position;</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">FootballPlayer</span><span style="color: #f8f8f2">(String athleteName, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> weight, String teamName, String position) {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">super</span><span style="color: #f8f8f2">(athleteName, age, weight); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">teamName</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> teamName;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">position</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> position;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>super</code> keyword is used to call the superclass constructor. Since the <code>Athlete</code> class constructor requires three parameters, we need to provide values for those parameters here.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The superclass constructor call (using the <code>super</code> keyword) must be the first statement in the subclass constructor, so we can&#8217;t have any other code before it.
+If we don&#8217;t provide a call to the superclass constructor, Java will automatically call the superclass&#8217;s default/parameterless constructor, which may not be what we want.</p>
+</div>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Constructors and Inheritance in Java</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/IFTod6pc7Go?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/BankAccount.java" target="_blank" rel="noopener"><code>BankAccount.java</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/CheckingAccount.java" target="_blank" rel="noopener"><code>CheckingAccount.java</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/SavingsAccount.java" target="_blank" rel="noopener"><code>SavingsAccount.java</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/TestAccounts.java" target="_blank" rel="noopener"><code>TestAccounts.java</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/CheckingAccountFinished.java" target="_blank" rel="noopener"><code>CheckingAccountFinished.java</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_introduction_to_polymorphism">8.5. Introduction to Polymorphism</h3>
+<div class="paragraph">
+<p>Polymorphism is a powerful concept in object-oriented programming that allows us to treat objects of different classes as if they were objects of a common superclass.
+It can be difficult for inexperienced programmers to recognize all of the ways that polymorphism can be used, but one of the most common uses is to create arrays of objects of different subclasses.</p>
+</div>
+<div class="paragraph">
+<p>This means that we can create an array of <code>Athlete</code> objects, and we can use it to store objects of the <code>Athlete</code> class, the <code>FootballPlayer</code> class, and the <code>TennisPlayer</code> class.
+This is possible because every <code>FootballPlayer</code> <em>is an</em> <code>Athlete</code>, and every <code>TennisPlayer</code> <em>is an</em> <code>Athlete</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 8.7 - An array of <code>Athlete</code> objects, using polymorphism to store <code>FootballPlayer</code> and <code>TennisPlayer</code> instances.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Athlete</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> athletes </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Athlete</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">3</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">athletes</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">0</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Athlete(</span><span style="color: #e6db74">&quot;Alice&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">25</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">150</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">athletes</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">1</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> FootballPlayer(</span><span style="color: #e6db74">&quot;Bob&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">30</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">200</span><span style="color: #f8f8f2">, </span><span style="color: #e6db74">&quot;Broncos&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #e6db74">&quot;Quarterback&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">athletes</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">2</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> TennisPlayer(</span><span style="color: #e6db74">&quot;Charlie&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">20</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">175</span><span style="color: #f8f8f2">, </span><span style="color: #e6db74">&quot;right&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When we access an object in the array, we can only use the methods that are available in the <code>Athlete</code> class (unless we use something called <em>casting</em>, which is beyond our scope here).
+This means that we can call the <code>run()</code> method on any object in the array, but we can&#8217;t call and any subclassclass methods like <code>tackle()</code> in  <code>FootballPlayer</code> or <code>serve()</code> in <code>TennisPlayer</code>.</p>
+</div>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Arrays of Subclasses in Java</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/7sBbGqkEr0Q?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/BankAccount.java" target="_blank" rel="noopener"><code>BankAccount.java</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/CheckingAccount.java" target="_blank" rel="noopener"><code>CheckingAccount.java</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/SavingsAccount.java" target="_blank" rel="noopener"><code>SavingsAccount.java</code></a></p>
+</li>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/08%20Inheritance/InheritanceArrays.java" target="_blank" rel="noopener"><code>InheritanceArrays.java</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_9">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<div class="paragraph subtitle">
+<p>Chapter Review Questions</p>
+</div>
+<div class="paragraph">
+<p><em>Note: These questions were created with the assistance of generative AI.</em></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In your own words, explain what inheritance is and why it&#8217;s useful in object-oriented programming.</p>
+</li>
+<li>
+<p>Describe the difference between a superclass and a subclass, and give a real-world example of each.</p>
+</li>
+<li>
+<p>Explain what method overriding is, and give an example of when you might want to override a method in a subclass.</p>
+</li>
+<li>
+<p>What does the <code>@Override</code> annotation do, and why is it good practice to use it?</p>
+</li>
+<li>
+<p>Explain how to use the <code>super</code> keyword in a constructor.</p>
+</li>
+<li>
+<p>Explain how Java finds the correct method to call when a subclass overrides a superclass method.</p>
+</li>
+<li>
+<p>What is <em>polymorphism</em> in the context of inheritance? Give an example involving an array of superclass references.</p>
+</li>
+<li>
+<p>Given an existing class named <code>Restaurant</code>, write a class definition statement for a subclass named <code>FastFoodRestaurant</code>.</p>
+</li>
+<li>
+<p>In the chapter example, what are the advantages of storing different subclass objects in a single <code>Athlete[]</code> array? What are the limitations?</p>
+</li>
+<li>
+<p>Describe the role of the <code>Object</code> class in inheritance. Why might you override <code>toString()</code> in your own classes?</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Sample answers provided in the <a href="#inheritance">Liner Notes</a></em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_classes_and_objects.html">Classes and Objects</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="_data_structures.html">Data Structures</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-02<br />
+        15:06:55 UTC<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>
