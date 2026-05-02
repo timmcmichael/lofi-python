@@ -233,19 +233,19 @@ Clicking on the icon to open Microsoft Word runs a file that&#8217;s been compil
 That&#8217;s called <strong>interpreting</strong> instead of compiling, but it&#8217;s conceptually the same thing.</p>
 </div>
 <div class="paragraph">
-<p>Python is an example of an interpreted languagel; popular compiled languages include C++ and (sort of) Java and C#.</p>
+<p>Python is an example of an interpreted language; popular compiled languages include C++ and (sort of) Java and C#.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_the_python_programming_language">1.2. The Python Programming Language</h3>
 <div class="paragraph">
-<p>The language we&#8217;ll be learning is called Python; the name is a reference to the British comedy group <a href="https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus">Monty Python Flying Circus</a>.
+<p>The language we&#8217;ll be learning is called Python; the name is a reference to the British comedy group <a href="https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus">'s' Flying Circus</a>.
 As a side note, you can&#8217;t call yourself a real nerd if you&#8217;ve never seen <a href="https://www.youtube.com/watch?v=YAA-G947ofg">Monty Python and the Holy Grail</a>.</p>
 </div>
 <div class="paragraph">
 <p>As mentioned above, Python is an interpreted language.
 Instead of compiling our source code and then running the compiled file, the Python interpreter reads the first line of our source code, translates it into machine language, and immediately executes it.
-Then it goes on the to next line, translates and executes it, and goes on.
+Then it moves to next line, translates and executes it, and goes on.
 This continues until the interpreter reaches the end of the source code file (or crashes because of an error).</p>
 </div>
 <div class="paragraph">
@@ -355,7 +355,8 @@ Take a sad song, and make it better.</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If we want to continue the next <code>print()</code> statement on the same line, we can add another piece of information inside the prentheses: <code>end=""</code> with no characters between the parentheses.</p>
+<p>If we want to continue the next <code>print()</code> statement on the same line, we can add another piece of information inside the parentheses: <code>end=""</code> with no characters between the quotes.
+We can also use single quotes: <code>end=''</code>—Python considers these interchangeable in this case.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 1.3 - A <code>print()</code> statement that doesn&#8217;t advance to the next line</div>
@@ -428,7 +429,7 @@ To indicate a comment, use the <code>#</code> symbol, which we call a <em>pound<
 </div>
 <div class="paragraph">
 <p>Once the interpreter sees that symbol, it just skips the rest of the line and moves on to the next line.
-If we add a comment onto the end a line of code, it&#8217;s called an <em>inline comment</em>:</p>
+If we add a comment onto the end of a line of code, it&#8217;s called an <em>inline comment</em>:</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 1.5 - An inline comment</div>
@@ -473,7 +474,7 @@ In other words, just use multiple single-line comments.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Triple <em>quotation marks</em> (<code>"""</code>) to indicate the start of the comment block, and the same triple quotes on a separate line to mark the end of the comment block.</p>
+<p>Triple <em>double quotes</em> (<code>"""</code>) to indicate the start of the comment block, and the same triple quotes on a separate line to mark the end of the comment block.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
@@ -490,7 +491,7 @@ In other words, just use multiple single-line comments.</p>
 </div>
 </li>
 <li>
-<p>Triple <em>apostrophe symbols</em> (<code>```</code>) to indicate the start of the comment block, and the same triple apostrophes on a separate line to mark the end of the comment block.</p>
+<p>Triple <em>single quotes</em> (<code>'''</code>) to indicate the start of the comment block, and the same triple apostrophes on a separate line to mark the end of the comment block.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
@@ -536,7 +537,7 @@ Given that process, it&#8217;s not unusual to delete something only to regret it
 <div class="paragraph">
 <p>Code commenting gives us a life hack to help prevent that regret.
 Instead of deleting code that&#8217;s not working the way we want, we can just mark it as a comment.
-As far as the compiler is concerned, we&#8217;ve deleted the code.
+As far as the interpreter is concerned, we&#8217;ve deleted the code.
 But if we want to see or use the code again down the road, it&#8217;s still there.</p>
 </div>
 <div class="admonitionblock tip">
@@ -546,7 +547,7 @@ But if we want to see or use the code again down the road, it&#8217;s still ther
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Almost all IDEs have a keyboard shortcut for commenting out code—and in many, it&#8217;s the same shortcut. Highlight a section of code and press <span class="keyseq"><kbd>Alt</kbd>+<kbd>/</kbd></span> on Windows or <span class="keyseq"><kbd>⌘</kbd>+<kbd>/</kbd></span> on macOS, and many IDEs will add <code>//</code> at the start of each line. Highlighting a comment and pressing the shortcut again will usually "uncomment" it and remove the slashes. If that doesn&#8217;t work, check the IDE&#8217;s documentation to see if there&#8217;s a different shortcut.
+Almost all IDEs have a keyboard shortcut for commenting out code—and in many, it&#8217;s the same shortcut. Highlight a section of code and press <span class="keyseq"><kbd>Alt</kbd>+<kbd>/</kbd></span> on Windows or <span class="keyseq"><kbd>⌘</kbd>+<kbd>/</kbd></span> on macOS, and many IDEs will add <code>#</code> at the start of each line. Highlighting a comment and pressing the shortcut again will usually "uncomment" it and remove the slashes. If that doesn&#8217;t work, check the IDE&#8217;s documentation to see if there&#8217;s a different shortcut.
 </td>
 </tr>
 </table>
@@ -580,7 +581,7 @@ Take a sad song, and make it better.</pre>
 <div class="sect2">
 <h3 id="_python_style_guidelines_pep_8">1.6. Python Style Guidelines (PEP-8)</h3>
 <div class="paragraph">
-<p>There is an official set of guilelines for writing Python code called <a href="https://peps.python.org/pep-0008/">PEP-8</a> (Python Enhancement Proposal #8).
+<p>There is an official set of guidelines for writing Python code called <a href="https://peps.python.org/pep-0008/">PEP-8</a> (Python Enhancement Proposal #8).
 The goal of such style guidelines is to promote consistency in the way Python programmers write their code, which makes it easier for us all to read and understand one another&#8217;s code.</p>
 </div>
 <div class="paragraph">
@@ -592,7 +593,7 @@ The goal of such style guidelines is to promote consistency in the way Python pr
 <p>Use 4 spaces to indent. Your IDE should handle this automatically, but indenting is important in Python so it&#8217;s worth calling out.</p>
 </li>
 <li>
-<p>Limit lines to 79 characters in length. Your IDE may or may not do this by default, but you can configure it the settings.</p>
+<p>Limit lines to 79 characters in length. Your IDE may or may not do this by default, but you can configure it in the settings.</p>
 </li>
 <li>
 <p>Specific guidelines for how we name things in our programs.</p>
@@ -616,7 +617,7 @@ Speaking of indenting: for now, do <strong>not</strong> indent your source code!
 </table>
 </div>
 <div class="paragraph">
-<p>While the conventions sometimes seem nitpicky and artibtrary, they are important.
+<p>While the conventions sometimes seem nitpicky and arbitrary, they are important.
 I do my best to follow PEP-8 guidelines throughout my examples, and I expect students to do the same in their own work.
 I don&#8217;t go looking for weird violations, but I do penalize students for obvious or repeated violations.</p>
 </div>
@@ -663,7 +664,7 @@ I don&#8217;t go looking for weird violations, but I do penalize students for ob
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-02<br />
-        00:19:20 UTC<br />
+        00:47:11 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
