@@ -440,7 +440,7 @@ If we want to display the output of a variable we just put the identifier in a <
 </div>
 </div>
 <div class="paragraph">
-<p>This code outputs</p>
+<p>This code outputs:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -688,7 +688,43 @@ Each operator acts on the value to either side:</p>
 </table>
 </div>
 <div class="paragraph">
-<p>The last three operators listed above are probably less familiar, so we&#8217;ll look at those in the video.</p>
+<p>While addition, subtraction, multiplication, and division are straightforward, Python includes three additional operators that are essential for data manipulation and logic.</p>
+</div>
+<div class="paragraph">
+<p><em>Modulo</em> (<code>%</code>) lets us find the remainder of a division operation; this is useful for determining if a number is odd or even, among other things. For example, <code>5 % 2</code> evaluates to <code>1</code>, because when you divide 5 by 2, you get a remainder of 1.</p>
+</div>
+<div class="paragraph">
+<p><em>Exponentiation</em> (<code><strong></code>) allows us to raise a number to the power of another number. For example, what we&#8217;d write in our math class as 4<sup>2</sup> is written in Python as <code>4 </strong> 2</code>; it evaluates to <code>16</code>.</p>
+</div>
+<div class="paragraph">
+<p><em>Floor division</em> (<code>//</code>) performs division and rounds down (or "floors") the result to a whole number; it basically chops off the decimal part. For example, <code>7 // 2</code> is <code>3</code>, because 7 divided by 2 is 3.5, and removing the decimal part leaves us with 3.</p>
+</div>
+<div class="listingblock">
+<div class="title">Advanced arithmetic operators in Python</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">remainder</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">13</span> <span style="color: #ff4689">%</span> <span style="color: #ae81ff">5</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">power</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">5</span> <span style="color: #ff4689">**</span> <span style="color: #ae81ff">3</span> <i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">floor_division</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">14</span> <span style="color: #ff4689">//</span> <span style="color: #ae81ff">3</span> <i class="conum" data-value="3"></i><b>(3)</b>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>the value of <code>remainder</code> will be 3, because 13 divided by 5 is 2 with a remainder of 3</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>the value of <code>power</code> will be 125, because 5 to the power of 3 is 125 (5 times 5 times 5)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>the value of <code>floor_division</code> will be 4, because 14 divided by 3 is 4.6666, and when we remove the decimal portion, we are left with 4.</td>
+</tr>
+</table>
 </div>
 <div class="exampleblock callout ttw">
 <div class="content">
@@ -888,7 +924,7 @@ For input, we&#8217;ll use <code>input()</code>.</p>
 <p><code>input()</code> only deals with <code>str</code> values; even if the user types in a number, it will be stored as a <code>str</code>—which means we&#8217;ll need to convert it to a number if we want to do any math with it.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.13 - Incorrect use of user input</div>
+<div class="title">Example 2.13 - Incorrect use of numeric user input</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -914,7 +950,7 @@ Python provides built-in functions for converting a <code>str</code> to a number
 </div>
 <div class="paragraph">
 <p>caption="Example 2.1 - "]
-.Incorrect use of user input</p>
+.Correct use of numeric user input</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1037,8 +1073,8 @@ blues_with_12_bars</code></pre>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-01<br />
-        23:59:41 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-02<br />
+        00:17:30 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
