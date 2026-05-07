@@ -346,7 +346,7 @@ The program would then continue to the next line of code, which prints <code>"Ke
 Line 5 will execute every time the program runs, regardless of the value of <code>age</code>.</p>
 </div>
 <div class="paragraph">
-<p>Keep in mind, the parentheses after the <code>if</code> keyword can contain any Boolean expression—not just this simple example.</p>
+<p>Keep in mind, the <code>if</code> statement can contain any Boolean expression—not just this simple example.</p>
 </div>
 </div>
 <div class="sect2">
@@ -354,30 +354,22 @@ Line 5 will execute every time the program runs, regardless of the value of <cod
 <div class="paragraph">
 <p>An <code>if</code> statement simply determines whether or not to execute a single block of code.
 If we want to choose between two blocks of code, we can add an <code>else</code> block to the <code>if</code> statement.
-The syntax is straightforward: after the <code>if</code> block, add the keyword <code>else</code>, followed by a block of code in curly braces.</p>
+The syntax is straightforward: after the <code>if</code> block, add the keyword <code>else</code> and a colon, followed by a block of indented code.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 3.6 - An <code>if-else</code> statement in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">int</span> <span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">20</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(age</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">21</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;You can&#39;t buy alcohol.&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;You can buy alcohol.&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;Keep that in mind when you go to the store!&quot;</span><span style="color: #f8f8f2">);</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">20</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">age</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">21</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;You can&#39;t buy alcohol.&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;You can buy alcohol.&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Keep that in mind when you go to the store!&quot;</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -1215,7 +1207,7 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-07<br />
-        23:29:56 UTC<br />
+        23:35:31 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
