@@ -81,6 +81,12 @@ h4::before {
   color: var(--tertiarycolor)
 }
 
+.literalblock {
+  background-color: #000000;
+  color: green
+
+}
+
 .title {
   color: var(--black) !important;
   font-family: var(--main-font);
