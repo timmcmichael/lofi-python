@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.26">
+<meta name="generator" content="Asciidoctor 2.0.23">
 <meta name="author" content="Tim McMichael">
 <link rel="icon" type="image/svg" href="./images/favicon.svg">
 <title>Lo-Fi Python: Programming Fundamentals</title>
@@ -208,7 +208,7 @@ We can think of inheritance as an "is-a" relationship: a <code>House</code> <em>
 <div class="listingblock">
 <div class="title">Example 8.1 - A <code>FootballPlayer</code> class that extends the <code>Athlete</code> class.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -237,36 +237,36 @@ We can think of inheritance as an "is-a" relationship: a <code>House</code> <em>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span> <span style="color: #A6E22E">Athlete</span><span style="color: #F8F8F2"> {</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> String athleteName;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> age;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> weight;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Athlete</span><span style="color: #f8f8f2"> {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String athleteName;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> weight;</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">run</span><span style="color: #F8F8F2">() {</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Running!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">run</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Running!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">jump</span><span style="color: #F8F8F2">() {</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Jumping!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">jump</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Jumping!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">throwBall</span><span style="color: #F8F8F2">() {</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Throwing!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">throwBall</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Throwing!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
 
-<span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span> <span style="color: #A6E22E">FootballPlayer</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">extends</span><span style="color: #F8F8F2"> Athlete {</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> String teamName;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> String position;</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">FootballPlayer</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">extends</span><span style="color: #f8f8f2"> Athlete {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String teamName;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String position;</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">tackle</span><span style="color: #F8F8F2">() {</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Tackling!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">tackle</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Tackling!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">pass</span><span style="color: #F8F8F2">() {</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Passing!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">pass</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Passing!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -326,11 +326,11 @@ If it gets to the top of the hierarchy and still hasn&#8217;t found the method, 
 <div class="listingblock">
 <div class="title">Example 8.2 - Method calls on a <code>TennisPlayer</code> object.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">TennisPlayer serena </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> TennisPlayer();</span>
-<span style="color: #F8F8F2">serena.</span><span style="color: #A6E22E">serve</span><span style="color: #F8F8F2">(); </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">serena.</span><span style="color: #A6E22E">run</span><span style="color: #F8F8F2">(); </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">TennisPlayer serena </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> TennisPlayer();</span>
+<span style="color: #f8f8f2">serena.</span><span style="color: #a6e22e">serve</span><span style="color: #f8f8f2">(); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">serena.</span><span style="color: #a6e22e">run</span><span style="color: #f8f8f2">(); </span><i class="conum" data-value="2"></i><b>(2)</b>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -356,7 +356,7 @@ The <code>FootballPlayer</code> class will still use the <code>run()</code> meth
 <div class="listingblock">
 <div class="title">Example 8.3 - A <code>TennisPlayer</code> class that extends the <code>Athlete</code> class and overrides the <code>run()</code> method.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -372,23 +372,23 @@ The <code>FootballPlayer</code> class will still use the <code>run()</code> meth
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span> <span style="color: #A6E22E">TennisPlayer</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">extends</span><span style="color: #F8F8F2"> Athlete {</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> String dominantHand;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> rank;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">TennisPlayer</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">extends</span><span style="color: #f8f8f2"> Athlete {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String dominantHand;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> rank;</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">serve</span><span style="color: #F8F8F2">() {</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Serving!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">serve</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Serving!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">volley</span><span style="color: #F8F8F2">() {</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Volleying!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">volley</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Volleying!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #A6E22E">@Override</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">run</span><span style="color: #F8F8F2">() {</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Running like a tennis player!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">    </span><span style="color: #a6e22e">@Override</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">run</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Running like a tennis player!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -421,10 +421,10 @@ This method returns a <code>String</code> representation of the object.</p>
 <div class="listingblock">
 <div class="title">Example 8.4 - An implicit call to the <code>toString()</code> method.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">TennisPlayer serena </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> TennisPlayer();</span>
-<span style="color: #F8F8F2">System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(serena);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">TennisPlayer serena </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> TennisPlayer();</span>
+<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(serena);</span>
 <span style="color: #959077">// Compiler changes this to: System.out.println(serena.toString());</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
@@ -440,19 +440,19 @@ A common practice is to return a string that includes the values of the object&#
 <div class="listingblock">
 <div class="title">Example 8.5 - Overriding the <code>toString()</code> method in the <code>TennisPlayer</code> class</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #A6E22E">@Override</span>
-<span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> String </span><span style="color: #A6E22E">toString</span><span style="color: #F8F8F2">() {</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">return</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;TennisPlayer{&quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span>
-<span style="color: #F8F8F2">            </span><span style="color: #E6DB74">&quot;dominantHand=&#39;&quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> dominantHand </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;\&#39;&#39;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span>
-<span style="color: #F8F8F2">            </span><span style="color: #E6DB74">&quot;, rank=&quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> rank </span><span style="color: #FF4689">+</span>
-<span style="color: #F8F8F2">            </span><span style="color: #E6DB74">&#39;}&#39;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #a6e22e">@Override</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> String </span><span style="color: #a6e22e">toString</span><span style="color: #f8f8f2">() {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;TennisPlayer{&quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span>
+<span style="color: #f8f8f2">            </span><span style="color: #e6db74">&quot;dominantHand=&#39;&quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> dominantHand </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&#39;\&#39;&#39;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span>
+<span style="color: #f8f8f2">            </span><span style="color: #e6db74">&quot;, rank=&quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> rank </span><span style="color: #ff4689">+</span>
+<span style="color: #f8f8f2">            </span><span style="color: #e6db74">&#39;}&#39;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -478,7 +478,7 @@ For example, we use the <code>equals()</code> method when we check if two string
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><span></span><span style="color: #66D9EF">if</span><span style="color: #F8F8F2"> (bestSchool.</span><span style="color: #A6E22E">equals</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;EMCC&quot;</span><span style="color: #F8F8F2">)) { </span><span style="color: #959077">/* do something */</span><span style="color: #F8F8F2"> }</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (bestSchool.</span><span style="color: #a6e22e">equals</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;EMCC&quot;</span><span style="color: #f8f8f2">)) { </span><span style="color: #959077">/* do something */</span><span style="color: #f8f8f2"> }</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -560,7 +560,7 @@ To <em>explicitly</em> call the superclass constructor, use the <code>super</cod
 <div class="listingblock">
 <div class="title">Example 8.6 - Constructors added to the <code>Athlete</code> and <code>FootballPlayer</code> classes.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -581,28 +581,28 @@ To <em>explicitly</em> call the superclass constructor, use the <code>super</cod
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span> <span style="color: #A6E22E">Athlete</span><span style="color: #F8F8F2"> {</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> String athleteName;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> age;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> weight;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Athlete</span><span style="color: #f8f8f2"> {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String athleteName;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> weight;</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">Athlete</span><span style="color: #F8F8F2">(String athleteName, </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> age, </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> weight) {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">athleteName</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> athleteName;</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">age</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> age;</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">weight</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> weight;</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Athlete</span><span style="color: #f8f8f2">(String athleteName, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> weight) {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">athleteName</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> athleteName;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">age</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> age;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">weight</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> weight;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
 
-<span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span> <span style="color: #A6E22E">FootballPlayer</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">extends</span><span style="color: #F8F8F2"> Athlete {</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> String teamName;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> String position;</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">FootballPlayer</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">extends</span><span style="color: #f8f8f2"> Athlete {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String teamName;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String position;</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">FootballPlayer</span><span style="color: #F8F8F2">(String athleteName, </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> age, </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> weight, String teamName, String position) {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">super</span><span style="color: #F8F8F2">(athleteName, age, weight); </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">teamName</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> teamName;</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">position</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> position;</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">FootballPlayer</span><span style="color: #f8f8f2">(String athleteName, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> weight, String teamName, String position) {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">super</span><span style="color: #f8f8f2">(athleteName, age, weight); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">teamName</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> teamName;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">position</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> position;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -669,13 +669,13 @@ This is possible because every <code>FootballPlayer</code> <em>is an</em> <code>
 <div class="listingblock">
 <div class="title">Example 8.7 - An array of <code>Athlete</code> objects, using polymorphism to store <code>FootballPlayer</code> and <code>TennisPlayer</code> instances.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">Athlete</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> athletes </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> Athlete</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">3</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">athletes</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">0</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> Athlete(</span><span style="color: #E6DB74">&quot;Alice&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">25</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">150</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">athletes</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">1</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> FootballPlayer(</span><span style="color: #E6DB74">&quot;Bob&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">30</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">200</span><span style="color: #F8F8F2">, </span><span style="color: #E6DB74">&quot;Broncos&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #E6DB74">&quot;Quarterback&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">athletes</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">2</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> TennisPlayer(</span><span style="color: #E6DB74">&quot;Charlie&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">20</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">175</span><span style="color: #F8F8F2">, </span><span style="color: #E6DB74">&quot;right&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Athlete</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> athletes </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Athlete</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">3</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">athletes</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">0</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Athlete(</span><span style="color: #e6db74">&quot;Alice&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">25</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">150</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">athletes</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">1</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> FootballPlayer(</span><span style="color: #e6db74">&quot;Bob&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">30</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">200</span><span style="color: #f8f8f2">, </span><span style="color: #e6db74">&quot;Broncos&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #e6db74">&quot;Quarterback&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">athletes</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">2</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> TennisPlayer(</span><span style="color: #e6db74">&quot;Charlie&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">20</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">175</span><span style="color: #f8f8f2">, </span><span style="color: #e6db74">&quot;right&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -778,7 +778,7 @@ This means that we can call the <code>run()</code> method on any object in the a
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-07<br />
-        17:05:14 UTC<br />
+        17:10:15 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
