@@ -58,7 +58,7 @@
 </li>
 <li><a href="_decisions.html#_the_elif_keyword">3.4. The <code>elif</code> Keyword</a>
 </li>
-<li><a href="_decisions.html#_nested_if_else_statements">3.5. Nested <code>if-else</code> Statements</a>
+<li><a href="_decisions.html#_nested_if_statements">3.5. Nested <code>if</code> Statements</a>
 </li>
 <li><a href="_decisions.html#_using_logical_operators">3.6. Using Logical Operators</a>
 </li>
@@ -391,7 +391,7 @@ Basically, it&#8217;s an either-or situation.</p>
 <div class="content">
 <div class="title">Interesting!</div>
 <div class="paragraph">
-<p>Python includes a shorthand form of an <code>if-else</code> statement called the <em>ternary operator</em>, which allows for concise (one-line) <code>if-else</code> statements. It&#8217;s a useful little trick, but it can be confusing for beginners—and for the people reading our code later. We won&#8217;t look at ternary operators in this course, but a web search should turn up plenty of examples if you are curious.</p>
+<p>Python includes a shorthand form of an <code>if-else</code> statement called the <em>ternary operation</em>, which allows for concise (one-line) <code>if-else</code> statements. It&#8217;s a useful little trick, but it can be confusing for beginners—and for the people reading our code later. We won&#8217;t look at ternary operators in this course, but a web search should turn up plenty of examples if you are curious.</p>
 </div>
 <div class="paragraph">
 <p>Assignments in my course require you to use complete if-else statements with indented blocks, so you shouldn&#8217;t use a ternary operation in code you submit to me.</p>
@@ -534,7 +534,7 @@ If an <code>else</code> block is included at the end, it guarantees that exactly
 </div>
 </div>
 <div class="sect2">
-<h3 id="_nested_if_else_statements">3.5. Nested <code>if-else</code> Statements</h3>
+<h3 id="_nested_if_statements">3.5. Nested <code>if</code> Statements</h3>
 <div class="paragraph">
 <p>If we want a block of code to execute only if two different conditions are met, we can place <code>if</code> statements inside of each other, which is called <em>nesting</em>.
 Nested if statements check multiple conditions in a hierarchical way: if one condition is met, it will proceed and check the next condition; if the first condition is not met, it will skip the inner <code>if</code> block.</p>
@@ -546,7 +546,7 @@ Nested if statements check multiple conditions in a hierarchical way: if one con
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-This is not a special structure or keyword in Python, it&#8217;s just a useful way to help beginners understand how and when this way of organizing <code>if-else</code> statements is useful.
+This is not a special structure or keyword in Python, it&#8217;s just a useful way to help beginners understand how and when this way of organizing <code>if-else</code> and/or <code>if-elif</code> statements is useful.
 </td>
 </tr>
 </table>
@@ -608,120 +608,38 @@ The if-else structures within those blocks check the track number and return the
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">31</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">32</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">33</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">34</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">35</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">36</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">37</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">38</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">39</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">40</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">41</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">42</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">43</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">44</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">45</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">46</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">47</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">48</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">49</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">50</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">51</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">52</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">53</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">54</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">55</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">56</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">57</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">58</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">59</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">60</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">61</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">62</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">63</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">64</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">65</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">66</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">67</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">68</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">69</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">70</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">71</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">72</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">73</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">string</span> <span style="color: #f8f8f2">input</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">int</span> <span style="color: #f8f8f2">sideNum</span> <span style="color: #ff4689">=</span> <span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">int</span> <span style="color: #f8f8f2">trackNum</span> <span style="color: #ff4689">=</span> <span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">string</span> <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">32</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">side_num</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Enter side number: &quot;</span><span style="color: #f8f8f2">))</span>
 
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">Write(</span><span style="color: #e6db74">&quot;Enter side number: &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">input</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ReadLine();</span>
-<span style="color: #f8f8f2">sideNum</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">Convert</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ToInt32(input);</span>
+<span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Enter track number: &quot;</span><span style="color: #f8f8f2">))</span>
 
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">Write(</span><span style="color: #e6db74">&quot;Enter track number: &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">input</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ReadLine();</span>
-<span style="color: #f8f8f2">trackNum</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">Convert</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ToInt32(input);</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">side_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;What&#39;s Going On&quot;</span>
+    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;What&#39;s Happening Brother&quot;</span>
+    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Flyin&#39; High (In the Friendly Sky)&quot;</span>
+    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Save the Children&quot;</span>
+    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;God Is Love&quot;</span>
+    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Mercy Mercy Me (The Ecology)&quot;</span>
+    <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;not found&quot;</span>
+<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">side_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Right On&quot;</span>
+    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Wholy Holy&quot;</span>
+    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Inner City Blues (Make Me Wanna Holler)&quot;</span>
+    <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;not found&quot;</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;not found&quot;</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(sideNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Peter Piper&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;It&#39;s Tricky&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;My Adidas&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Walk This Way&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Is It Live&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Perfection&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(sideNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Hit It Run&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Raising Hell&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;You Be Illin&#39;&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Dumb Girl&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Son of Byford&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Proud to Be Black&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Not found&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
-
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #ed007e; background-color: #1e0010">$</span><span style="color: #e6db74">&quot;Track #{trackNum} on side {sideNum} of Raising Hell by Run D.M.C. is {songTitle}.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&#39;Track #{</span><span style="color: #f8f8f2">track_num</span><span style="color: #e6db74">} on side {</span><span style="color: #f8f8f2">side_num</span><span style="color: #e6db74">} of &quot;What</span><span style="color: #ae81ff">\&#39;</span><span style="color: #e6db74">s Going On&quot; by Marvin Gaye is &quot;{</span><span style="color: #f8f8f2">song_title</span><span style="color: #e6db74">}&quot;.&#39;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -757,8 +675,9 @@ The if-else structures within those blocks check the track number and return the
 <div class="sect2">
 <h3 id="_using_logical_operators">3.6. Using Logical Operators</h3>
 <div class="paragraph">
-<p>In addition to the relational operators, Python also includes logical operators we can use to make more complex Boolean expressions.
-A logical operator is a binary operation, so it takes two operands—but the operands are Boolean expressions instead of numbers.</p>
+<p>In addition to the comparison operators, Python also has three logical operators we can use to make more complex Boolean expressions.
+Two of the logical operators are binary, so they take two operands—but the operands are Boolean expressions or values instead of numbers.
+The third logical operator is <em>unary</em>, meaning it only takes one operand—which is also a Boolean expression or value.</p>
 </div>
 <table class="tableblock frame-all grid-all stripes-even" style="width: 75%;">
 <caption class="title">Table 2. Python logical operators</caption>
@@ -776,18 +695,18 @@ A logical operator is a binary operation, so it takes two operands—but the ope
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&amp;&amp;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AND</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">and</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logical AND</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Evaluates to <code>True</code> if <strong>both</strong> operands are <code>True</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>||</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">or</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logical OR</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Evaluates to <code>True</code> if <strong>either</strong> operand is <code>True</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>!</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NOT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">not</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logical NOT</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Evaluates to <code>True</code> if the operand is <code>False</code>; evaluates to <code>False</code> if the operand is <code>True</code></p></td>
 </tr>
 </tbody>
@@ -1146,7 +1065,7 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-24<br />
-        14:34:57 UTC<br />
+        22:54:02 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
