@@ -56,7 +56,7 @@
 </li>
 <li><a href="_decisions.html#_adding_an_else_block">3.3. Adding an <code>else</code> Block</a>
 </li>
-<li><a href="_decisions.html#_the_if_else_if_structure">3.4. The <code>if-else if</code> Structure</a>
+<li><a href="_decisions.html#_the_elif_keyword">3.4. The <code>elif</code> Keyword</a>
 </li>
 <li><a href="_decisions.html#_nested_if_else_statements">3.5. Nested <code>if-else</code> Statements</a>
 </li>
@@ -70,17 +70,17 @@
 </li>
 <li><a href="_loops.html">4. Loops</a>
 </li>
-<li><a href="_functions_and_modules.html">5. Functions and Modules</a>
+<li><a href="_exceptions.html">5. Exceptions</a>
 </li>
-<li><a href="_working_with_strings.html">6. Working with Strings</a>
+<li><a href="_functions_and_modules.html">6. Functions and Modules</a>
 </li>
-<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+<li><a href="_working_with_strings.html">7. Working with Strings</a>
 </li>
-<li><a href="_inheritance.html">8. Inheritance</a>
+<li><a href="_classes_and_objects.html">8. Classes and Objects</a>
 </li>
-<li><a href="_data_structures.html">9. Data Structures</a>
+<li><a href="_inheritance.html">9. Inheritance</a>
 </li>
-<li><a href="_exceptions.html">10. Exceptions</a>
+<li><a href="_data_structures.html">10. Data Structures</a>
 </li>
 <li><a href="_working_with_files.html">11. Working with Files</a>
 </li>
@@ -385,40 +385,27 @@ Basically, it&#8217;s an either-or situation.</p>
 <div class="paragraph video-title">
 <p><code>if</code> and <code>if-else</code> Statements in Python [COMING SOON!!!]</p>
 </div>
-<div class="videoblock">
-<div class="content">
-<iframe src="https://www.youtube.com/embed/d45KmuDzidk?rel=0&amp;list=PL_Lc2HVYD16aPswxFiEZXFu7jsNx_H6vD" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
-<div class="paragraph">
-<p>File from video:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/03%20Decisions/AlbumPurchase.cs" target="_blank" rel="noopener"><code>AlbumPurchase.cs</code></a></p>
-</li>
-</ul>
-</div>
 </div>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="title">Interesting!</div>
 <div class="paragraph">
-<p>Python includes a shorthand form of an if-else statement called the <em>ternary operator</em>, which uses the question mark symbol. It&#8217;s a useful little trick, but it can be confusing for beginners—and for the people reading our code later. We won&#8217;t look at ternary operators in this course, but a web search should turn up plenty of examples if you are curious.</p>
+<p>Python includes a shorthand form of an <code>if-else</code> statement called the <em>ternary operator</em>, which allows for concise (one-line) <code>if-else</code> statements. It&#8217;s a useful little trick, but it can be confusing for beginners—and for the people reading our code later. We won&#8217;t look at ternary operators in this course, but a web search should turn up plenty of examples if you are curious.</p>
 </div>
 <div class="paragraph">
-<p>Assignments in my course require you to use complete if-else statements, so you shouldn&#8217;t use the ternary operator in code you submit to me.</p>
+<p>Assignments in my course require you to use complete if-else statements with indented blocks, so you shouldn&#8217;t use a ternary operation in code you submit to me.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_if_else_if_structure">3.4. The <code>if-else if</code> Structure</h3>
+<h3 id="_the_elif_keyword">3.4. The <code>elif</code> Keyword</h3>
 <div class="paragraph">
 <p>The basic <code>if-else</code> structure is great for choosing between two blocks of code, but what if we have more than two options?
-To handle this, we can chain multiple <code>if-else</code> statements together.</p>
+To handle this, we can use the keyword <code>elif</code>, which is short for <em>else if</em>.
+<code>elif</code> basically means "if the last condition was <code>False</code>, then try this one."
+If the previous condition was <code>True</code>, the <code>elif</code> block just gets skipped without even checking the condition in the <code>elif</code> statement.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -427,13 +414,13 @@ To handle this, we can chain multiple <code>if-else</code> statements together.<
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-This <code>if-else if</code> structure isn&#8217;t really a <em>thing</em> in Python. This is really just a way to write a series of <code>if</code> statements that are all part of the same decision-making process. But it&#8217;s a useful made-up name to help beginners understand the concept, so we&#8217;ll use it here.
+Many other programming languages, such as Java and C#, don&#8217;t have an <code>elif</code> keyword, but instead chain together the keywords <code>else if</code> to accomplish the same thing.
 </td>
 </tr>
 </table>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.7 - Use of an <code>if-else if</code> structure to select one option from many.</div>
+<div class="title">Example 3.7 - Use of the <code>elif</code> keyword to select one option from many.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -452,76 +439,44 @@ This <code>if-else if</code> structure isn&#8217;t really a <em>thing</em> in Py
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">31</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">32</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">33</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">34</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">35</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">36</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">37</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">38</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">string</span> <span style="color: #f8f8f2">input</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">int</span> <span style="color: #f8f8f2">trackNum</span> <span style="color: #ff4689">=</span> <span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">string</span> <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Enter track number: &quot;</span><span style="color: #f8f8f2">))</span>
 
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">Write(</span><span style="color: #e6db74">&quot;Enter track number: &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">input</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ReadLine();</span>
-<span style="color: #f8f8f2">trackNum</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">Convert</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">ToInt32(input);</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;What&#39;s Going On&quot;</span>
+<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;What&#39;s Happening Brother&quot;</span>
+<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Flyin&#39; High (In the Friendly Sky)&quot;</span>
+<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Save the Children&quot;</span>
+<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;God Is Love&quot;</span>
+<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Mercy Mercy Me (The Ecology)&quot;</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;not found&quot;</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Peter Piper&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;It&#39;s Tricky&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;My Adidas&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Walk This Way&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Is It Live&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNum</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Perfection&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">songTitle</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Not found&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
-
-<span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #ed007e; background-color: #1e0010">$</span><span style="color: #e6db74">&quot;Track #{trackNum} on side one of Raising Hell by Run D.M.C. is {songTitle}.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&#39;Track #{</span><span style="color: #f8f8f2">track_num</span><span style="color: #e6db74">} on side one of &quot;What</span><span style="color: #ae81ff">\&#39;</span><span style="color: #e6db74">s Going On&quot; by Marvin Gaye is &quot;{</span><span style="color: #f8f8f2">song_title</span><span style="color: #e6db74">}&quot;.&#39;</span><span style="color: #f8f8f2">)</span> <i class="conum" data-value="1"></i><b>(1)</b>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>In this example, the user inputs a track number and we use an <code>if-else if</code> structure to output the song&#8217;s title.</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Note the use of an escape character (`) in the `print()` statement to allow for the single quote in <strong>What&#8217;s Going On</strong> without a syntax error.</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>The code begins with the first statement, and if it evaluates to <code>True</code>, the corresponding block of code will execute—setting the song title to "Peter Piper".
-If the first statement evaluates to <code>False</code>, the program will move on to the next <code>else if</code> statement and check that condition, and so on through all of the <code>else if</code> blocks.
-Once an expression evaluates to <code>True</code> and the corresponding code block is executed, the program will then jump to the first line of code <strong>after</strong> the end of the <code>if-else if</code> structure—the <code>WriteLine()</code> statement.
+<p>In this example, the user inputs a track number and we use an <code>if-elif</code> structure to output the song&#8217;s title.</p>
+</div>
+<div class="paragraph">
+<p>The code begins with the first statement, and if it evaluates to <code>True</code>, the corresponding block of code will execute—setting the song title to "What&#8217;s Going On".
+If the first statement evaluates to <code>False</code>, the program will move on to the next <code>elif</code> statement and check that condition, and so on through all of the <code>elif</code> blocks.
+Once an expression evaluates to <code>True</code> and the corresponding code block is executed, the program will then jump to the first line of code <strong>after</strong> the end of the <code>if-elif</code> structure—the <code>print()</code> statement.
 Only one block of code can execute.
-If the program gets through the entire structure without finding a <code>True</code> condition, it will execute the block of code in the <code>else</code> block, if one is present.</p>
+If the program gets through the entire structure without finding a <code>True</code> condition, it will execute the block of code in the <code>else</code> block, if one is present; if there&#8217;s no <code>else block</code>, the program will just continue on to the next line of code after the <code>if-elif</code> structure.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -530,13 +485,13 @@ If the program gets through the entire structure without finding a <code>True</c
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-As is often the case in programming, there are multiple ways to solve this problem. As we learn more (or if you have previous coding experience), you may find that you prefer a different way to write this code. That&#8217;s great, and is part of the fun of coding. But keep in mind that your instructor&#8217;s job is to assess your understanding of the concepts being taught. You can&#8217;t get points on an if-else-if assignment if you don&#8217;t use an if-else-if structure!
+As is often the case in programming, there are multiple ways to solve this problem. As we learn more (or if you have previous coding experience), you may find that you prefer a different way to write this code. That&#8217;s great, and is part of the fun of coding. But keep in mind that your instructor&#8217;s job is to assess your understanding of the concepts being taught. You can&#8217;t get points on an if-elif assignment if you don&#8217;t use an if-elif structure!
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>In summary, an <code>if-else if</code> structure can execute, at most, one block of code.
+<p>In summary, an <code>if-elif</code> structure can execute, at most, one block of code.
 If an <code>else</code> block is included at the end, it guarantees that exactly one block of code will execute.</p>
 </div>
 <div class="exampleblock callout ttw">
@@ -545,7 +500,7 @@ If an <code>else</code> block is included at the end, it guarantees that exactly
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
 </div>
 <div class="paragraph video-title">
-<p><code>if-else if</code> Statements in Python [COMING SOON!!!]</p>
+<p><code>elif</code> Statements in Python [COMING SOON!!!]</p>
 </div>
 <div class="videoblock">
 <div class="content">
@@ -591,7 +546,7 @@ Nested if statements check multiple conditions in a hierarchical way: if one con
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Just like the <code>if-else if</code> structure, this is not a special structure in Python—again, it&#8217;s just a useful way to help beginners understand how and when this way of organizing <code>if-else</code> statements is useful. Indeed, what I call an <code>if-else if</code> structure is really just nested <code>if</code> statements, too.
+This is not a special structure or keyword in Python, it&#8217;s just a useful way to help beginners understand how and when this way of organizing <code>if-else</code> statements is useful.
 </td>
 </tr>
 </table>
@@ -599,41 +554,25 @@ Just like the <code>if-else if</code> structure, this is not a special structure
 <div class="listingblock">
 <div class="title">Example 3.8 - Basic structure of a nested <code>if-else</code> statement.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(condition1)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(condition2)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #ff4689">//</span> <span style="color: #f8f8f2">executes</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">both</span> <span style="color: #f8f8f2">condition1</span> <span style="color: #ff4689">and</span> <span style="color: #f8f8f2">condition2</span> <span style="color: #f8f8f2">are</span> <span style="color: #f8f8f2">true</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #ff4689">//</span> <span style="color: #f8f8f2">executes</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition1</span> <span style="color: #ff4689">is</span> <span style="color: #f8f8f2">true</span> <span style="color: #ff4689">and</span> <span style="color: #f8f8f2">condition2</span> <span style="color: #ff4689">is</span> <span style="color: #f8f8f2">false</span>
-    <span style="color: #f8f8f2">}</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #ff4689">//</span> <span style="color: #f8f8f2">executes</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition1</span> <span style="color: #ff4689">is</span> <span style="color: #f8f8f2">false</span>
-<span style="color: #f8f8f2">}</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition1:</span>
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition2:</span>
+        <span style="color: #959077"># executes if both condition1 and condition2 are True</span>
+    <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #959077"># executes if condition1 is True and condition2 is False</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #959077"># executes if condition1 is False</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In the example below, the outermost if-else structure checks the high temperature of the day.
-The if-else structures within those blocks check the average wind speed and return an appropriate description.</p>
+<p>In the example below, the outermost if-else structure checks the side number of the album.
+The if-else structures within those blocks check the track number and return the appropriate song title.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 3.9 - Use of nested <code>if-else</code> statements to select one option from many.</div>
@@ -1206,8 +1145,8 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-07<br />
-        23:35:31 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-24<br />
+        14:34:57 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
