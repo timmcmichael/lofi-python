@@ -311,10 +311,10 @@ In either case the program will continue executing the next line of code after t
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">20</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">age</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">21</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;You can&#39;t buy alcohol.&quot;</span><span style="color: #f8f8f2">)</span> <i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Keep that in mind when you go to the store!&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">cash</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;How much money do you have? &quot;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">cash</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">15</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Check the bargain bin.&quot;</span><span style="color: #f8f8f2">)</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Hope you find something you like!&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -327,23 +327,23 @@ In either case the program will continue executing the next line of code after t
 </table>
 </div>
 <div class="paragraph">
-<p>In this example, the <code>if</code> statement checks if the variable <code>age</code> is less than <code>21</code>.
-Since <code>20</code> is less than <code>21</code>, the Boolean expression evaluates to <code>True</code>, and the block of code inside the <code>if</code> statement (line 3) is executed—and it prints <code>"You can&#8217;t buy alcohol."</code>
-The program then continues to the next line of code, which prints <code>"Keep that in mind when you go to the store!"</code></p>
+<p>In this example, the <code>if</code> statement checks if the variable <code>cash</code> is less than <code>15</code>.
+if the input is less than <code>15</code>, the Boolean expression evaluates to <code>True</code>, and the block of code inside the <code>if</code> statement (line 3) is executed—and it prints <code>Check the bargain bin."</code>
+The program then continues to the next line of code, which prints <code>Hope you find something you like!</code></p>
 </div>
 <div class="paragraph">
-<p>So, the output of the above program is:</p>
+<p>So, the output of the above program, if the user enters <code>14</code>, is:</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>You can't buy alcohol.
-Keep that in mind when you go to the store!</pre>
+<pre>Check the bargain bin.
+Hope you find something you like!</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If the value of <code>age</code> were <code>22</code>, the Boolean expression would evaluate to <code>False</code>, and the block of code inside the <code>if</code> statement would be skipped.
-The program would then continue to the next line of code, which prints <code>"Keep that in mind when you go to the store!"</code>
-Line 5 will execute every time the program runs, regardless of the value of <code>age</code>.</p>
+<p>If the user enters <code>22</code>, the Boolean expression would evaluate to <code>False</code>, and the block of code inside the <code>if</code> statement would be skipped.
+The program would then continue to the next line of code, which prints <code>Hope you find something you like!</code>
+Line 5 will execute every time the program runs, regardless of the value of <code>cash</code>.</p>
 </div>
 <div class="paragraph">
 <p>Keep in mind, the <code>if</code> statement can contain any Boolean expression—not just this simple example.</p>
@@ -364,12 +364,12 @@ The syntax is straightforward: after the <code>if</code> block, add the keyword 
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">20</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">age</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">21</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;You can&#39;t buy alcohol.&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">cash</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;How much money do you have? &quot;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">cash</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">15</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Check the bargain bin.&quot;</span><span style="color: #f8f8f2">)</span>
 <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;You can buy alcohol.&quot;</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Keep that in mind when you go to the store!&quot;</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;You can probably afford a new release.&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Hope you find something you like!&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -719,17 +719,13 @@ For example, we could check if a student is eligible for a scholarship based on 
 <div class="title">Example 3.10 - A decision using a logical AND operation in Python.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(gpa</span> <span style="color: #ff4689">&gt;=</span> <span style="color: #ae81ff">3.5</span> <span style="color: #ff4689">&amp;&amp;</span> <span style="color: #f8f8f2">age</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">25</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;You qualify for the scholarship!&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">day</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">casefold()</span> <span style="color: #ff4689">==</span> <span style="color: #e6db74">&quot;Tuesday&quot;</span> <span style="color: #ff4689">and</span> <span style="color: #f8f8f2">age</span> <span style="color: #ff4689">&gt;</span> <span style="color: #ae81ff">55</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;You qualify for the Tuesday afternoon Senior Discount!&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In this example, the <code>&amp;&amp;</code> operator is used to combine two Boolean expressions.
+<p>In this example, the <code>and</code> operator is used to combine two Boolean expressions.
 The <code>if</code> statement will only execute the block of code if both expressions are <code>True</code>.</p>
 </div>
 <div class="admonitionblock tip">
@@ -745,7 +741,7 @@ Often, the logic we create using an AND operation can be implemented using neste
 </table>
 </div>
 <div class="paragraph">
-<p>The OR operation is similar, but only one of the expressions needs to be <code>True</code> for the entire expression to be <code>True</code>.</p>
+<p>The OR operation is similar to AND, but only one of the expressions needs to be <code>True</code> for the entire expression to be <code>True</code>.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 3.11 - A decision using a logical OR operation in Python.</div>
@@ -753,36 +749,17 @@ Often, the logic we create using an AND operation can be implemented using neste
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">bool</span> <span style="color: #f8f8f2">isTimAmazing</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">false;</span>
-<span style="color: #f8f8f2">bool</span> <span style="color: #f8f8f2">isClassFun</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">true;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">genre</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Enter the album genre: &quot;</span><span style="color: #f8f8f2">)</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(isTimAmazing</span> <span style="color: #ff4689">||</span> <span style="color: #f8f8f2">isClassFun)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">System</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">out</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">println(</span><span style="color: #e6db74">&quot;You should take this class!&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">genre</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">casefold()</span> <span style="color: #ff4689">==</span> <span style="color: #e6db74">&quot;blues&quot;</span> <span style="color: #ff4689">or</span> <span style="color: #f8f8f2">genre</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">casefold()</span> <span style="color: #ff4689">==</span> <span style="color: #e6db74">&quot;r&amp;b&quot;</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Good choice. This album qualifies for a discount.&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>Both operands in an AND or OR operation have to be complete Boolean expressions.
-Put another way, each side of the <code>&amp;&amp;</code> or <code>||</code> operator must be able to evaluate to <code>True</code> or <code>False</code> on its own.
-The following code is a very common beginner mistake and will <strong>not</strong> compile:</p>
-</div>
-<div class="paragraph">
-<p><code>if (percentage &gt;= 80 &amp;&amp; &lt; 90)
-{ &#8230;&#8203; }</code></p>
-</div>
-<div class="paragraph">
-<p>This reads like "if the percentage is greater than or equal to 80 and less than 90," but the second part of the expression is not a complete Boolean expression.
-We need to include the variable name and the comparison operator on <strong>both</strong> sides of the <code>&amp;&amp;</code> operator.</p>
 </div>
 <div class="sect3">
 <h4 id="_the_not_operator">3.6.1. The NOT Operator</h4>
 <div class="paragraph">
-<p>The NOT operation is a little different, as it only takes one operand (making it a <em>unary</em> operator_, if you&#8217;re nerdy about words, like I am).
+<p>The NOT operation is a little different, as it only takes one operand (making it a <em>unary</em> operator_ if you&#8217;re nerdy about words, like I am).
 It simply inverts the value of the operand.
 If the operand is <code>True</code>, the NOT operation will evaluate to <code>False</code>.
 If the operand is <code>False</code>, the NOT operation will evaluate to <code>True</code>.</p>
@@ -793,14 +770,10 @@ If the operand is <code>False</code>, the NOT operation will evaluate to <code>T
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">bool</span> <span style="color: #f8f8f2">isTimAmazing</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">false;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">isBieberAmazing</span> <span style="color: #ff4689">=</span> <span style="color: #66d9ef">False</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(</span><span style="color: #ed007e; background-color: #1e0010">!</span><span style="color: #f8f8f2">isTimAmazing)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">System</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">out</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">println(</span><span style="color: #e6db74">&quot;At least his mom still loves him!&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(</span><span style="color: #ff4689">not</span> <span style="color: #f8f8f2">isBieberAmazing):</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;At least his mom still loves him!&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -809,10 +782,39 @@ If the operand is <code>False</code>, the NOT operation will evaluate to <code>T
 <h4 id="_range_checking">3.6.2. Range Checking</h4>
 <div class="paragraph">
 <p>There are a lot of situations where we might need to combine multiple conditions to make a decision, but one of the most common is <em>range checking</em>.
-Range checking means we want to see if a value is within a specified range.</p>
+Range checking means we want to see if a value is within a specified range, and is useful for things like categorizing data, validating user input, and enforcing rules or constraints on values.</p>
 </div>
 <div class="paragraph">
-<p>A common example of range checking is to convert a percentage grade to a letter grade.</p>
+<p>A common example of range checking is to convert a percentage grade to a letter grade.
+A percentage between 80 and 99.9 would be a B, for example, while a percentage between 60 and 69.9 would be a D.</p>
+</div>
+<div class="paragraph">
+<p>There are two ways to write range checks in Python.
+First, we can use logical AND operations to combine multiple comparisons:</p>
+</div>
+<div class="paragraph">
+<p><code>if percentage &gt;= 80 and percentage &lt;90:</code></p>
+</div>
+<div class="paragraph">
+<p>Or, we can chain together the comparisons without the <code>and</code> operator:</p>
+</div>
+<div class="paragraph">
+<p><code>if 80 &#8656; percentage &lt; 90:</code></p>
+</div>
+<div class="paragraph">
+<p>This second way of writing essentially makes two comparisons: is <code>percentage</code> greater than or equal to <code>80</code>, and is <code>percentage</code> less that <code>90</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Many programming languages don&#8217;t allow this second, more abbreviated way of writing range checks. In those languages we&#8217;d need to use AND operations.
+</td>
+</tr>
+</table>
 </div>
 <div class="listingblock">
 <div class="title">Example 3.13 - Range checking using logical operators in Python.</div>
@@ -826,150 +828,98 @@ Range checking means we want to see if a value is within a specified range.</p>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">public</span> <span style="color: #f8f8f2">string</span> <span style="color: #f8f8f2">GetLetterGrade(int</span> <span style="color: #f8f8f2">percentage)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(percentage</span> <span style="color: #ff4689">&gt;=</span> <span style="color: #ae81ff">90</span> <span style="color: #ff4689">&amp;&amp;</span> <span style="color: #f8f8f2">percentage</span> <span style="color: #ff4689">&lt;=</span> <span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;A&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(percentage</span> <span style="color: #ff4689">&gt;=</span> <span style="color: #ae81ff">80</span> <span style="color: #ff4689">&amp;&amp;</span> <span style="color: #f8f8f2">percentage</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">90</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;B&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(percentage</span> <span style="color: #ff4689">&gt;=</span> <span style="color: #ae81ff">70</span> <span style="color: #ff4689">&amp;&amp;</span> <span style="color: #f8f8f2">percentage</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">80</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;C&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(percentage</span> <span style="color: #ff4689">&gt;=</span> <span style="color: #ae81ff">60</span> <span style="color: #ff4689">&amp;&amp;</span> <span style="color: #f8f8f2">percentage</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">70</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;D&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(percentage</span> <span style="color: #ff4689">&gt;=</span> <span style="color: #ae81ff">0</span> <span style="color: #ff4689">&amp;&amp;</span> <span style="color: #f8f8f2">percentage</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">60</span><span style="color: #f8f8f2">)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;F&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #66d9ef">else</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;Invalid percentage&quot;</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">}</span>
-<span style="color: #f8f8f2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">minutes</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Enter album length in minutes: &quot;</span><span style="color: #f8f8f2">))</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">minutes</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">10</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;This release is a single.&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">elif</span> <span style="color: #ae81ff">10</span> <span style="color: #ff4689">&lt;=</span> <span style="color: #f8f8f2">minutes</span> <span style="color: #ff4689">&lt;=</span> <span style="color: #ae81ff">29</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;This release is an EP (Extended Play).&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">elif</span> <span style="color: #ae81ff">30</span> <span style="color: #ff4689">&lt;=</span> <span style="color: #f8f8f2">minutes</span> <span style="color: #ff4689">&lt;=</span> <span style="color: #ae81ff">50</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;This release is an LP (Long Play).&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;This is a double album or box set.&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>The AND operator <code>&amp;&amp;</code> used in this example means that in order to return <code>"B"</code>, for example, the percentage must be greater than or equal to <code>80</code> <em>and</em> the percentage must be less than <code>90</code>.
-If either of those conditions is not met, the program will move on to the next <code>else if</code> statement.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_switch_statements">3.7. <code>switch</code> Statements</h3>
 <div class="paragraph">
-<p>Python includes a structure called a <code>switch</code> statement that can be used to choose between multiple options.
-It is essentially another way to write an <code>if-else if</code> structure, but it can be more readable and easier to write in some situations.
-I generally consider <code>switch</code> structures to be optional—you can complete all of the assignments in this course without using them—but they are a useful tool to have in your programming toolbox.
+<p>Python includes a structure called a <code>match</code> statement that can be used to choose one code block from many options.
+It is essentially another way to write an <code>if-elif</code> structure, but it can be more readable and easier to write in some situations.
+I generally consider <code>match</code> structures to be optional—you can complete all of the assignments in this course without using them—but they are a useful tool to have in your programming toolbox.
 And since you see them often in code written by others, it&#8217;s good to know how they work.</p>
 </div>
 <div class="paragraph">
-<p>The basic structure of a <code>switch</code> statement is as follows:</p>
+<p>Functionally, a <code>match</code> statement compares an expression&#8217;s (variable&#8217;s) value to a series of values (or patterns) of <code>case</code> blocks.
+The first value (or pattern) that matches gets executed, and the rest of the <code>case</code> blocks are skipped. \
+If the <code>match</code> statement doesn&#8217;t find a match, it doesn&#8217;t execute any <code>case</code> blocks; however, we can choose to define a <em>wildcard</em> case block that will execute if no other match is found, similar to an <code>else</code> block at the end of an <code>if-elif</code> structure.</p>
+</div>
+<div class="paragraph">
+<p>The basic syntax of a <code>match</code> statement is as follows:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.14 - A basic <code>switch</code> statement in Python.</div>
+<div class="title">Example 3.14 - A basic <code>match</code> statement in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">switch</span> <span style="color: #f8f8f2">(expression)</span>
-<span style="color: #f8f8f2">{</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">match</span> <span style="color: #f8f8f2">expression:</span>
     <span style="color: #66d9ef">case</span> <span style="color: #f8f8f2">value1:</span>
-        <span style="color: #ff4689">//</span> <span style="color: #f8f8f2">Code</span> <span style="color: #f8f8f2">to</span> <span style="color: #f8f8f2">be</span> <span style="color: #f8f8f2">executed</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">expression</span> <span style="color: #f8f8f2">equals</span> <span style="color: #f8f8f2">value1</span>
-        <span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #959077"># Code to be executed if expression equals value1</span>
     <span style="color: #66d9ef">case</span> <span style="color: #f8f8f2">value2:</span>
-        <span style="color: #ff4689">//</span> <span style="color: #f8f8f2">Code</span> <span style="color: #f8f8f2">to</span> <span style="color: #f8f8f2">be</span> <span style="color: #f8f8f2">executed</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">expression</span> <span style="color: #f8f8f2">equals</span> <span style="color: #f8f8f2">value2</span>
-        <span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #959077"># Code to be executed if expression equals value2</span>
     <span style="color: #66d9ef">case</span> <span style="color: #f8f8f2">value3:</span>
-        <span style="color: #ff4689">//</span> <span style="color: #f8f8f2">Code</span> <span style="color: #f8f8f2">to</span> <span style="color: #f8f8f2">be</span> <span style="color: #f8f8f2">executed</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">expression</span> <span style="color: #f8f8f2">equals</span> <span style="color: #f8f8f2">value3</span>
-        <span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #f8f8f2">default:</span>
-        <span style="color: #ff4689">//</span> <span style="color: #f8f8f2">Code</span> <span style="color: #f8f8f2">to</span> <span style="color: #f8f8f2">be</span> <span style="color: #f8f8f2">executed</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">expression</span> <span style="color: #f8f8f2">doesn</span><span style="color: #e6db74">&#39;t match any case</span>
-<span style="color: #f8f8f2">}</span>
+        <span style="color: #959077"># Code to be executed if expression equals value3</span>
+    <span style="color: #66d9ef">case</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">_</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #959077"># Code to be executed if expression doesn&#39;t match any case</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>expression</code> in the parentheses after the <code>switch</code> keyword is evaluated, and then the program will jump to the <code>case</code> that matches the value of the expression.
-If there is no match, the program will execute the <code>default</code> block, if it is present.</p>
-</div>
-<div class="paragraph">
-<p>The <code>break</code> statement is used to exit the <code>switch</code> block due to a behavior of <code>switch</code> that can be confusing to beginners, known as <em>fall-through</em>.
-If we don&#8217;t include a <code>break</code> statement at the end of a <code>case</code> block, the program will continue executing the code in the next <code>case</code> block, even if the value of the expression doesn&#8217;t match the <code>case</code>.
-This can be useful in some situations, but it&#8217;s generally not what you want, so you&#8217;ll usually see a <code>break</code> statement at the end of each <code>case</code> block.</p>
+<p>The <code>expression</code> after the <code>match</code> keyword is evaluated, and then the program will move through the <code>case</code> statements one at a time until if finds a match for the value of the expression.
+If there is no match, the program will execute the block, if it is present; a default block is defined with the wildcard character <code>_</code>, which matches anything.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 3.15 - A <code>switch</code> statement in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">public</span> <span style="color: #f8f8f2">void</span> <span style="color: #f8f8f2">TrafficInstructions(string</span> <span style="color: #f8f8f2">lightColor)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">switch</span> <span style="color: #f8f8f2">(lightColor)</span>
-    <span style="color: #f8f8f2">{</span>
-        <span style="color: #66d9ef">case</span> <span style="color: #e6db74">&quot;red&quot;</span><span style="color: #f8f8f2">:</span>
-            <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;Stop! In the Name of Love!&quot;</span><span style="color: #f8f8f2">);</span>
-            <span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
-        <span style="color: #66d9ef">case</span> <span style="color: #e6db74">&quot;yellow&quot;</span><span style="color: #f8f8f2">:</span>
-            <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;Slow down!&quot;</span><span style="color: #f8f8f2">);</span>
-            <span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
-        <span style="color: #66d9ef">case</span> <span style="color: #e6db74">&quot;green&quot;</span><span style="color: #f8f8f2">:</span>
-            <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;Go!&quot;</span><span style="color: #f8f8f2">);</span>
-            <span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
-        <span style="color: #f8f8f2">default:</span>
-            <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;Invalid light color.&quot;</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #f8f8f2">}</span>
-<span style="color: #f8f8f2">}</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">switch</span> <span style="color: #f8f8f2">(lightColor)</span>
+    <span style="color: #66d9ef">case</span> <span style="color: #e6db74">&quot;red&quot;</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Stop! In the Name of Love!&quot;</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">case</span> <span style="color: #e6db74">&quot;yellow&quot;</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Slow ride! Take it easy!&quot;</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">case</span> <span style="color: #e6db74">&quot;green&quot;</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Go Johnny, go go!&quot;</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">case</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">_</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Invalid light color.&quot;</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Programmers coming to Python from other languages may be familiar with switch-case statements. From a beginner&#8217;s perspective, Python&#8217;s <code>match</code> statement serves the same purpose, but it&#8217;s matching is generally more flexible than the simple value matching of a switch-case statement, so they aren&#8217;t exactly the same thing. Don&#8217;t let this brief overview fool you—there are a lot of useful things you can do with <code>match</code> statements.
+</td>
+</tr>
+</table>
 </div>
 <hr>
 </div>
@@ -1064,8 +1014,8 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-24<br />
-        22:54:02 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-25<br />
+        20:46:18 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
