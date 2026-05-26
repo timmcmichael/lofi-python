@@ -930,76 +930,7 @@ Programmers coming to Python from other languages may be familiar with switch-ca
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>What type of value or expression must go inside the parentheses of an <code>if</code> statement?</p>
-</li>
-<li>
-<p>Write an <code>if</code> statement that checks if the variable <code>volume</code> is less than 11. If it is, print "This amp goes to <a href="https://www.youtube.com/watch?v=4xgx4k83zzc" target="_blank" rel="noopener">eleven</a>!".</p>
-</li>
-<li>
-<p>What does the <code>==</code> operator do, and how is it different from <code>=</code>?</p>
-</li>
-<li>
-<p>Explain the difference between using <code>else if</code> and just writing another <code>if</code> statement?</p>
-</li>
-<li>
-<p>Write a comment that explains the following code:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(scratchCount</span> <span style="color: #ff4689">&gt;=</span> <span style="color: #ae81ff">3</span> <span style="color: #ff4689">&amp;&amp;</span> <span style="color: #f8f8f2">scratchCount</span> <span style="color: #ff4689">&lt;=</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">condition</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;very good&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Rewrite the following <code>if-else if</code> structure using a <code>switch</code> statement:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNumber</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;Playing: Brown Sugar&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNumber</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;Playing: Sway&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(trackNumber</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;Playing: Wild Horses&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #66d9ef">else</span>
-<span style="color: #f8f8f2">{</span>
-    <span style="color: #f8f8f2">Console</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">WriteLine(</span><span style="color: #e6db74">&quot;Playing: Unknown Track&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">}</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
+
 </div>
 </div>
 <div class="paragraph">
@@ -1014,8 +945,8 @@ Programmers coming to Python from other languages may be familiar with switch-ca
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-25<br />
-        20:46:18 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-26<br />
+        00:33:49 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
