@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<meta name="description" content="A beginner-friendly Python programming textbook and accompanything videos with a music-inspired theme. Intended to be a complete introduction to programming for students with no prior experience, and is designed for a one-semester 100-level programming course.">
 <meta name="author" content="Tim McMichael">
 <link rel="icon" type="image/svg" href="./images/favicon.svg">
 <title>Lo-Fi Python: Programming Fundamentals</title>
@@ -184,10 +185,10 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p><em><strong>What will the following code print? Why?</strong></em></p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><span></span><span style="color: #f8f8f2">tracks</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">5</span>
-<span style="color: #f8f8f2">bonus</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">tracks</span> <span style="color: #ff4689">+</span> <span style="color: #ae81ff">3</span>
-<span style="color: #f8f8f2">tracks</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">10</span>
-<span style="color: #f8f8f2">print(bonus)</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><span></span><span style="color: #F8F8F2">tracks</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">5</span>
+<span style="color: #F8F8F2">bonus</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">tracks</span> <span style="color: #FF4689">+</span> <span style="color: #AE81FF">3</span>
+<span style="color: #F8F8F2">tracks</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">10</span>
+<span style="color: #F8F8F2">print(bonus)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -202,7 +203,7 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p><em><strong>Which of the following variable names are invalid? Explain why.</strong></em></p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code><span></span>4_lads_from_liverpool
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code><span></span>4_lads_from_liverpool
 shows_in_1963
 side_a_tracks!
 sideBTracks
@@ -237,9 +238,9 @@ blues_with_12_bars</code></pre>
 <p><em>Concatenation</em> is the process of joining strings together using the <code>+</code> operator:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><span></span><span style="color: #f8f8f2">singer_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Freddie Mercury&quot;</span>
-<span style="color: #f8f8f2">band_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Queen&quot;</span>
-<span style="color: #f8f8f2">print(singer_name</span> <span style="color: #ff4689">+</span> <span style="color: #e6db74">&quot; was the lead singer of &quot;</span> <span style="color: #ff4689">+</span> <span style="color: #f8f8f2">band_name</span> <span style="color: #ff4689">+</span> <span style="color: #e6db74">&quot;.&quot;</span><span style="color: #f8f8f2">)</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><span></span><span style="color: #F8F8F2">singer_name</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Freddie Mercury&quot;</span>
+<span style="color: #F8F8F2">band_name</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Queen&quot;</span>
+<span style="color: #F8F8F2">print(singer_name</span> <span style="color: #FF4689">+</span> <span style="color: #E6DB74">&quot; was the lead singer of &quot;</span> <span style="color: #FF4689">+</span> <span style="color: #F8F8F2">band_name</span> <span style="color: #FF4689">+</span> <span style="color: #E6DB74">&quot;.&quot;</span><span style="color: #F8F8F2">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -247,9 +248,9 @@ blues_with_12_bars</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><span></span><span style="color: #f8f8f2">singer_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Freddie Mercury&quot;</span>
-<span style="color: #f8f8f2">band_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Queen&quot;</span>
-<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&quot;{</span><span style="color: #f8f8f2">singer_name</span><span style="color: #e6db74">} was the lead singer of {</span><span style="color: #f8f8f2">band_name</span><span style="color: #e6db74">}.&quot;</span><span style="color: #f8f8f2">)</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><span></span><span style="color: #F8F8F2">singer_name</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Freddie Mercury&quot;</span>
+<span style="color: #F8F8F2">band_name</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Queen&quot;</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">singer_name</span><span style="color: #E6DB74">} was the lead singer of {</span><span style="color: #F8F8F2">band_name</span><span style="color: #E6DB74">}.&quot;</span><span style="color: #F8F8F2">)</span></code></pre>
 </div>
 </div>
 </li>
@@ -264,8 +265,8 @@ blues_with_12_bars</code></pre>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-26<br />
-        00:33:49 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-29<br />
+        13:44:36 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

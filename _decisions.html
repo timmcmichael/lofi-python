@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<meta name="description" content="A beginner-friendly Python programming textbook and accompanything videos with a music-inspired theme. Intended to be a complete introduction to programming for students with no prior experience, and is designed for a one-semester 100-level programming course.">
 <meta name="author" content="Tim McMichael">
 <link rel="icon" type="image/svg" href="./images/favicon.svg">
 <title>Lo-Fi Python: Programming Fundamentals</title>
@@ -171,9 +172,9 @@ These can be assigned to variables of type <code>bool</code> (which is technical
 <div class="listingblock">
 <div class="title">Example 3.1 - Declaring and assigning Boolean variables in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">isTimAmazing</span> <span style="color: #ff4689">=</span> <span style="color: #66d9ef">True</span>
-<span style="color: #f8f8f2">isClassBoring</span> <span style="color: #ff4689">=</span> <span style="color: #66d9ef">False</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">isTimAmazing</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">True</span>
+<span style="color: #F8F8F2">isClassBoring</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">False</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -234,11 +235,11 @@ We can store that result in a <code>bool</code> variable, as shown below, and we
 <div class="listingblock">
 <div class="title">Example 3.2 - Using comparison operators in Python</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">canBuyAlcohol</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">age</span> <span style="color: #ff4689">&gt;=</span> <span style="color: #ae81ff">21</span>
-<span style="color: #f8f8f2">isNegative</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">number</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">0</span>
-<span style="color: #f8f8f2">isArethaFranklin</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">name</span> <span style="color: #ff4689">==</span> <span style="color: #e6db74">&quot;Aretha Franklin&quot;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">canBuyAlcohol</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">age</span> <span style="color: #FF4689">&gt;=</span> <span style="color: #AE81FF">21</span>
+<span style="color: #F8F8F2">isNegative</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">number</span> <span style="color: #FF4689">&lt;</span> <span style="color: #AE81FF">0</span>
+<span style="color: #F8F8F2">isArethaFranklin</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">name</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;Aretha Franklin&quot;</span> <i class="conum" data-value="1"></i><b>(1)</b>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -268,11 +269,11 @@ To perform a case-insensitive comparison, we can use the <code>casefold()</code>
 <div class="listingblock">
 <div class="title">Example 3.3 - Case insensitive string comparison in Python</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;aretha franklin&quot;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">name</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;aretha franklin&quot;</span>
 
-<span style="color: #f8f8f2">isArethaFranklin3</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">name</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">casefold()</span> <span style="color: #ff4689">==</span> <span style="color: #e6db74">&quot;aretha franklin&quot;</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">casefold()</span>
+<span style="color: #F8F8F2">isArethaFranklin3</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">name</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">casefold()</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;aretha franklin&quot;</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">casefold()</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -283,11 +284,11 @@ Though the above approach using <code>casefold()</code> is preferred, you could 
 <div class="listingblock">
 <div class="title">Example 3.4 - Case insensitive string comparison in Python</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;aretha franklin&quot;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">name</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;aretha franklin&quot;</span>
 
-<span style="color: #f8f8f2">isArethaFranklin4</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">name</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">upper()</span> <span style="color: #ff4689">==</span> <span style="color: #e6db74">&quot;ARETHA FRANKLIN&quot;</span>
+<span style="color: #F8F8F2">isArethaFranklin4</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">name</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">upper()</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;ARETHA FRANKLIN&quot;</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -308,13 +309,13 @@ In either case the program will continue executing the next line of code after t
 <div class="listingblock">
 <div class="title">Example 3.5 - A basic <code>if</code> statement in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">cash</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;How much money do you have? &quot;</span><span style="color: #f8f8f2">))</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">cash</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">15</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Check the bargain bin.&quot;</span><span style="color: #f8f8f2">)</span> <i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Hope you find something you like!&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">cash</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">int(input(</span><span style="color: #E6DB74">&quot;How much money do you have? &quot;</span><span style="color: #F8F8F2">))</span>
+<span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">cash</span> <span style="color: #FF4689">&lt;</span> <span style="color: #AE81FF">15</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Check the bargain bin.&quot;</span><span style="color: #F8F8F2">)</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Hope you find something you like!&quot;</span><span style="color: #F8F8F2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -359,17 +360,17 @@ The syntax is straightforward: after the <code>if</code> block, add the keyword 
 <div class="listingblock">
 <div class="title">Example 3.6 - An <code>if-else</code> statement in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">cash</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;How much money do you have? &quot;</span><span style="color: #f8f8f2">))</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">cash</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">15</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Check the bargain bin.&quot;</span><span style="color: #f8f8f2">)</span>
-<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;You can probably afford a new release.&quot;</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Hope you find something you like!&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">cash</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">int(input(</span><span style="color: #E6DB74">&quot;How much money do you have? &quot;</span><span style="color: #F8F8F2">))</span>
+<span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">cash</span> <span style="color: #FF4689">&lt;</span> <span style="color: #AE81FF">15</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Check the bargain bin.&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;You can probably afford a new release.&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Hope you find something you like!&quot;</span><span style="color: #F8F8F2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -422,7 +423,7 @@ Many other programming languages, such as Java and C#, don&#8217;t have an <code
 <div class="listingblock">
 <div class="title">Example 3.7 - Use of the <code>elif</code> keyword to select one option from many.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -439,24 +440,24 @@ Many other programming languages, such as Java and C#, don&#8217;t have an <code
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Enter track number: &quot;</span><span style="color: #f8f8f2">))</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">int(input(</span><span style="color: #E6DB74">&quot;Enter track number: &quot;</span><span style="color: #F8F8F2">))</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;What&#39;s Going On&quot;</span>
-<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;What&#39;s Happening Brother&quot;</span>
-<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Flyin&#39; High (In the Friendly Sky)&quot;</span>
-<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Save the Children&quot;</span>
-<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;God Is Love&quot;</span>
-<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Mercy Mercy Me (The Ecology)&quot;</span>
-<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;not found&quot;</span>
+<span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">1</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;What&#39;s Going On&quot;</span>
+<span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">2</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;What&#39;s Happening Brother&quot;</span>
+<span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">3</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Flyin&#39; High (In the Friendly Sky)&quot;</span>
+<span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">4</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Save the Children&quot;</span>
+<span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">5</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;God Is Love&quot;</span>
+<span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">6</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Mercy Mercy Me (The Ecology)&quot;</span>
+<span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;not found&quot;</span>
 
-<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&#39;Track #{</span><span style="color: #f8f8f2">track_num</span><span style="color: #e6db74">} on side one of &quot;What</span><span style="color: #ae81ff">\&#39;</span><span style="color: #e6db74">s Going On&quot; by Marvin Gaye is &quot;{</span><span style="color: #f8f8f2">song_title</span><span style="color: #e6db74">}&quot;.&#39;</span><span style="color: #f8f8f2">)</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&#39;Track #{</span><span style="color: #F8F8F2">track_num</span><span style="color: #E6DB74">} on side one of &quot;What</span><span style="color: #AE81FF">\&#39;</span><span style="color: #E6DB74">s Going On&quot; by Marvin Gaye is &quot;{</span><span style="color: #F8F8F2">song_title</span><span style="color: #E6DB74">}&quot;.&#39;</span><span style="color: #F8F8F2">)</span> <i class="conum" data-value="1"></i><b>(1)</b>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -554,18 +555,18 @@ This is not a special structure or keyword in Python, it&#8217;s just a useful w
 <div class="listingblock">
 <div class="title">Example 3.8 - Basic structure of a nested <code>if-else</code> statement.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition1:</span>
-    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">condition2:</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">condition1:</span>
+    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">condition2:</span>
         <span style="color: #959077"># executes if both condition1 and condition2 are True</span>
-    <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
         <span style="color: #959077"># executes if condition1 is True and condition2 is False</span>
-<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+<span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
     <span style="color: #959077"># executes if condition1 is False</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
@@ -577,7 +578,7 @@ The if-else structures within those blocks check the track number and return the
 <div class="listingblock">
 <div class="title">Example 3.9 - Use of nested <code>if-else</code> statements to select one option from many.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -608,38 +609,38 @@ The if-else structures within those blocks check the track number and return the
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">31</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">32</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">side_num</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Enter side number: &quot;</span><span style="color: #f8f8f2">))</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">32</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">side_num</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">int(input(</span><span style="color: #E6DB74">&quot;Enter side number: &quot;</span><span style="color: #F8F8F2">))</span>
 
-<span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Enter track number: &quot;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">int(input(</span><span style="color: #E6DB74">&quot;Enter track number: &quot;</span><span style="color: #F8F8F2">))</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">side_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;What&#39;s Going On&quot;</span>
-    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;What&#39;s Happening Brother&quot;</span>
-    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Flyin&#39; High (In the Friendly Sky)&quot;</span>
-    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Save the Children&quot;</span>
-    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;God Is Love&quot;</span>
-    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Mercy Mercy Me (The Ecology)&quot;</span>
-    <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;not found&quot;</span>
-<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">side_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Right On&quot;</span>
-    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Wholy Holy&quot;</span>
-    <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">track_num</span> <span style="color: #ff4689">==</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Inner City Blues (Make Me Wanna Holler)&quot;</span>
-    <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;not found&quot;</span>
-<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;not found&quot;</span>
+<span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">side_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">1</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">1</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;What&#39;s Going On&quot;</span>
+    <span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">2</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;What&#39;s Happening Brother&quot;</span>
+    <span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">3</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Flyin&#39; High (In the Friendly Sky)&quot;</span>
+    <span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">4</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Save the Children&quot;</span>
+    <span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">5</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;God Is Love&quot;</span>
+    <span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">6</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Mercy Mercy Me (The Ecology)&quot;</span>
+    <span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;not found&quot;</span>
+<span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">side_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">2</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">1</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Right On&quot;</span>
+    <span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">2</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Wholy Holy&quot;</span>
+    <span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">track_num</span> <span style="color: #FF4689">==</span> <span style="color: #AE81FF">3</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Inner City Blues (Make Me Wanna Holler)&quot;</span>
+    <span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;not found&quot;</span>
+<span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;not found&quot;</span>
 
-<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&#39;Track #{</span><span style="color: #f8f8f2">track_num</span><span style="color: #e6db74">} on side {</span><span style="color: #f8f8f2">side_num</span><span style="color: #e6db74">} of &quot;What</span><span style="color: #ae81ff">\&#39;</span><span style="color: #e6db74">s Going On&quot; by Marvin Gaye is &quot;{</span><span style="color: #f8f8f2">song_title</span><span style="color: #e6db74">}&quot;.&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&#39;Track #{</span><span style="color: #F8F8F2">track_num</span><span style="color: #E6DB74">} on side {</span><span style="color: #F8F8F2">side_num</span><span style="color: #E6DB74">} of &quot;What</span><span style="color: #AE81FF">\&#39;</span><span style="color: #E6DB74">s Going On&quot; by Marvin Gaye is &quot;{</span><span style="color: #F8F8F2">song_title</span><span style="color: #E6DB74">}&quot;.&#39;</span><span style="color: #F8F8F2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -718,9 +719,9 @@ For example, we could check if a student is eligible for a scholarship based on 
 <div class="listingblock">
 <div class="title">Example 3.10 - A decision using a logical AND operation in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">day</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">casefold()</span> <span style="color: #ff4689">==</span> <span style="color: #e6db74">&quot;Tuesday&quot;</span> <span style="color: #ff4689">and</span> <span style="color: #f8f8f2">age</span> <span style="color: #ff4689">&gt;</span> <span style="color: #ae81ff">55</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;You qualify for the Tuesday afternoon Senior Discount!&quot;</span><span style="color: #f8f8f2">)</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">day</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">casefold()</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;Tuesday&quot;</span> <span style="color: #FF4689">and</span> <span style="color: #F8F8F2">age</span> <span style="color: #FF4689">&gt;</span> <span style="color: #AE81FF">55</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;You qualify for the Tuesday afternoon Senior Discount!&quot;</span><span style="color: #F8F8F2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -746,13 +747,13 @@ Often, the logic we create using an AND operation can be implemented using neste
 <div class="listingblock">
 <div class="title">Example 3.11 - A decision using a logical OR operation in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">genre</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Enter the album genre: &quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">genre</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">input(</span><span style="color: #E6DB74">&quot;Enter the album genre: &quot;</span><span style="color: #F8F8F2">)</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">genre</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">casefold()</span> <span style="color: #ff4689">==</span> <span style="color: #e6db74">&quot;blues&quot;</span> <span style="color: #ff4689">or</span> <span style="color: #f8f8f2">genre</span><span style="color: #ff4689">.</span><span style="color: #f8f8f2">casefold()</span> <span style="color: #ff4689">==</span> <span style="color: #e6db74">&quot;r&amp;b&quot;</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Good choice. This album qualifies for a discount.&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">genre</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">casefold()</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;blues&quot;</span> <span style="color: #FF4689">or</span> <span style="color: #F8F8F2">genre</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">casefold()</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;r&amp;b&quot;</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Good choice. This album qualifies for a discount.&quot;</span><span style="color: #F8F8F2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -767,13 +768,13 @@ If the operand is <code>False</code>, the NOT operation will evaluate to <code>T
 <div class="listingblock">
 <div class="title">Example 3.12 - A decision using a logical NOT operation in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">isBieberAmazing</span> <span style="color: #ff4689">=</span> <span style="color: #66d9ef">False</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">isBieberAmazing</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">False</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(</span><span style="color: #ff4689">not</span> <span style="color: #f8f8f2">isBieberAmazing):</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;At least his mom still loves him!&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">(</span><span style="color: #FF4689">not</span> <span style="color: #F8F8F2">isBieberAmazing):</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;At least his mom still loves him!&quot;</span><span style="color: #F8F8F2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -819,7 +820,7 @@ Many programming languages don&#8217;t allow this second, more abbreviated way o
 <div class="listingblock">
 <div class="title">Example 3.13 - Range checking using logical operators in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -828,16 +829,16 @@ Many programming languages don&#8217;t allow this second, more abbreviated way o
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">minutes</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Enter album length in minutes: &quot;</span><span style="color: #f8f8f2">))</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">minutes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">int(input(</span><span style="color: #E6DB74">&quot;Enter album length in minutes: &quot;</span><span style="color: #F8F8F2">))</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">minutes</span> <span style="color: #ff4689">&lt;</span> <span style="color: #ae81ff">10</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;This release is a single.&quot;</span><span style="color: #f8f8f2">)</span>
-<span style="color: #66d9ef">elif</span> <span style="color: #ae81ff">10</span> <span style="color: #ff4689">&lt;=</span> <span style="color: #f8f8f2">minutes</span> <span style="color: #ff4689">&lt;=</span> <span style="color: #ae81ff">29</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;This release is an EP (Extended Play).&quot;</span><span style="color: #f8f8f2">)</span>
-<span style="color: #66d9ef">elif</span> <span style="color: #ae81ff">30</span> <span style="color: #ff4689">&lt;=</span> <span style="color: #f8f8f2">minutes</span> <span style="color: #ff4689">&lt;=</span> <span style="color: #ae81ff">50</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;This release is an LP (Long Play).&quot;</span><span style="color: #f8f8f2">)</span>
-<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
-    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;This is a double album or box set.&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">minutes</span> <span style="color: #FF4689">&lt;</span> <span style="color: #AE81FF">10</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;This release is a single.&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">elif</span> <span style="color: #AE81FF">10</span> <span style="color: #FF4689">&lt;=</span> <span style="color: #F8F8F2">minutes</span> <span style="color: #FF4689">&lt;=</span> <span style="color: #AE81FF">29</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;This release is an EP (Extended Play).&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">elif</span> <span style="color: #AE81FF">30</span> <span style="color: #FF4689">&lt;=</span> <span style="color: #F8F8F2">minutes</span> <span style="color: #FF4689">&lt;=</span> <span style="color: #AE81FF">50</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;This release is an LP (Long Play).&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;This is a double album or box set.&quot;</span><span style="color: #F8F8F2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -862,7 +863,7 @@ If the <code>match</code> statement doesn&#8217;t find a match, it doesn&#8217;t
 <div class="listingblock">
 <div class="title">Example 3.14 - A basic <code>match</code> statement in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
@@ -870,14 +871,14 @@ If the <code>match</code> statement doesn&#8217;t find a match, it doesn&#8217;t
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">match</span> <span style="color: #f8f8f2">expression:</span>
-    <span style="color: #66d9ef">case</span> <span style="color: #f8f8f2">value1:</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">match</span> <span style="color: #F8F8F2">expression:</span>
+    <span style="color: #66D9EF">case</span> <span style="color: #F8F8F2">value1:</span>
         <span style="color: #959077"># Code to be executed if expression equals value1</span>
-    <span style="color: #66d9ef">case</span> <span style="color: #f8f8f2">value2:</span>
+    <span style="color: #66D9EF">case</span> <span style="color: #F8F8F2">value2:</span>
         <span style="color: #959077"># Code to be executed if expression equals value2</span>
-    <span style="color: #66d9ef">case</span> <span style="color: #f8f8f2">value3:</span>
+    <span style="color: #66D9EF">case</span> <span style="color: #F8F8F2">value3:</span>
         <span style="color: #959077"># Code to be executed if expression equals value3</span>
-    <span style="color: #66d9ef">case</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">_</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #66D9EF">case</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">_</span><span style="color: #F8F8F2">:</span>
         <span style="color: #959077"># Code to be executed if expression doesn&#39;t match any case</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
@@ -889,7 +890,7 @@ If there is no match, the program will execute the block, if it is present; a de
 <div class="listingblock">
 <div class="title">Example 3.15 - A <code>switch</code> statement in Python.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
@@ -897,15 +898,15 @@ If there is no match, the program will execute the block, if it is present; a de
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">switch</span> <span style="color: #f8f8f2">(lightColor)</span>
-    <span style="color: #66d9ef">case</span> <span style="color: #e6db74">&quot;red&quot;</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Stop! In the Name of Love!&quot;</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #66d9ef">case</span> <span style="color: #e6db74">&quot;yellow&quot;</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Slow ride! Take it easy!&quot;</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #66d9ef">case</span> <span style="color: #e6db74">&quot;green&quot;</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Go Johnny, go go!&quot;</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #66d9ef">case</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">_</span><span style="color: #f8f8f2">:</span>
-        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Invalid light color.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">switch</span> <span style="color: #F8F8F2">(lightColor)</span>
+    <span style="color: #66D9EF">case</span> <span style="color: #E6DB74">&quot;red&quot;</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Stop! In the Name of Love!&quot;</span><span style="color: #F8F8F2">);</span>
+    <span style="color: #66D9EF">case</span> <span style="color: #E6DB74">&quot;yellow&quot;</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Slow ride! Take it easy!&quot;</span><span style="color: #F8F8F2">);</span>
+    <span style="color: #66D9EF">case</span> <span style="color: #E6DB74">&quot;green&quot;</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Go Johnny, go go!&quot;</span><span style="color: #F8F8F2">);</span>
+    <span style="color: #66D9EF">case</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">_</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Invalid light color.&quot;</span><span style="color: #F8F8F2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -945,8 +946,8 @@ Programmers coming to Python from other languages may be familiar with switch-ca
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-26<br />
-        00:33:49 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-05-29<br />
+        13:44:36 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
