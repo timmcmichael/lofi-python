@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.26">
+<meta name="generator" content="Asciidoctor 2.0.23">
 <meta name="description" content="">
 <meta name="author" content="Tim McMichael">
 <link rel="icon" type="image/svg" href="./images/favicon.svg">
@@ -52,37 +52,33 @@
 </li>
 <li><a href="loops.html">4. Loops</a>
 </li>
-<li><a href="exceptions.html">5. Exceptions</a>
+<li><a href="functions-and-modules.html">5. Functions and Modules</a>
 </li>
-<li><a href="functions-and-modules.html">6. Functions and Modules</a>
+<li><a href="working-with-strings.html">6. Working with Strings</a>
 </li>
-<li><a href="working-with-strings.html">7. Working with Strings</a>
-</li>
-<li><a href="classes-and-objects.html">8. Classes and Objects</a>
-</li>
-<li><a href="inheritance.html">9. Inheritance</a>
-</li>
-<li><a href="data-structures.html"><span class="toc-current">10. Data Structures</span></a>
+<li><a href="data-structures.html"><span class="toc-current">7. Data Structures</span></a>
 <ul class="sectlevel2">
-<li><a href="data-structures.html#_whats_the_point_10">What&#8217;s the Point?</a>
+<li><a href="data-structures.html#_whats_the_point_7">What&#8217;s the Point?</a>
 </li>
-<li><a href="data-structures.html#_arrays_and_indexes">10.1. Arrays and Indexes</a>
+<li><a href="data-structures.html#_arrays_and_indexes">7.1. Arrays and Indexes</a>
 </li>
-<li><a href="data-structures.html#_defining_and_using_arrays">10.2. Defining and Using Arrays</a>
+<li><a href="data-structures.html#_defining_and_using_arrays">7.2. Defining and Using Arrays</a>
 </li>
-<li><a href="data-structures.html#_traversing_arrays">10.3. Traversing Arrays</a>
+<li><a href="data-structures.html#_traversing_arrays">7.3. Traversing Arrays</a>
 </li>
-<li><a href="data-structures.html#_putting_objects_in_arrays">10.4. Putting Objects in Arrays</a>
+<li><a href="data-structures.html#_putting_objects_in_arrays">7.4. Putting Objects in Arrays</a>
 </li>
-<li><a href="data-structures.html#_foreach_loops_optional">10.5. <code>foreach</code> Loops (Optional)</a>
+<li><a href="data-structures.html#_foreach_loops_optional">7.5. <code>foreach</code> Loops (Optional)</a>
 </li>
-<li><a href="data-structures.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_11">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+<li><a href="data-structures.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_8">Check Yourself Before You Wreck Yourself (on the assignments)</a>
 </li>
 </ul>
 </li>
-<li><a href="working-with-files.html">11. Working with Files</a>
+<li><a href="working-with-files.html">8. Working with Files</a>
 </li>
-<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+<li><a href="classes-and-objects.html">9. Classes and Objects</a>
+</li>
+<li><a href="software-dev.html">B-Side: Lo-Fi Software Development</a>
 </li>
 <li><a href="liner-notes.html">Liner Notes</a>
 </li>
@@ -95,10 +91,10 @@
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="data-structures">10. Data Structures</h2>
+<h2 id="data-structures">7. Data Structures</h2>
 <div class="sectionbody">
 <div class="paragraph subtitle">
-<p><span title='This is "Chapter Ten" in binary (base 2)'>Chapter 1010 <sub>2</sub></span></p>
+<p><span title='This is "Chapter Seven" in binary (base 2)'>Chapter 0111 <sub>2</sub></span></p>
 </div>
 <div class="exampleblock callout spin">
 <div class="content">
@@ -119,7 +115,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_whats_the_point_10">What&#8217;s the Point?</h3>
+<h3 id="_whats_the_point_7">What&#8217;s the Point?</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -137,7 +133,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/10%20Data%20Structures" target="_blank" rel="noopener">GitHub</a>.</em></p>
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/07%20Data%20Structures" target="_blank" rel="noopener">GitHub</a>.</em></p>
 </div>
 <hr>
 <div class="paragraph">
@@ -148,7 +144,7 @@ Arrays aren&#8217;t necessarily the best data structure for every situation, but
 </div>
 </div>
 <div class="sect2">
-<h3 id="_arrays_and_indexes">10.1. Arrays and Indexes</h3>
+<h3 id="_arrays_and_indexes">7.1. Arrays and Indexes</h3>
 <div class="paragraph">
 <p>The variables we&#8217;ve used to this point can only store one piece of data at a time, and sometimes we need to store more than that.
 For example, we might need to store a list of cities in a band&#8217;s world tour.
@@ -180,7 +176,7 @@ If our grocery list has 5 items, the indexes of the items would be 0, 1, 2, 3, a
 </div>
 </div>
 <div class="sect2">
-<h3 id="_defining_and_using_arrays">10.2. Defining and Using Arrays</h3>
+<h3 id="_defining_and_using_arrays">7.2. Defining and Using Arrays</h3>
 <div class="paragraph">
 <p>In C#, arrays are objects, so they have to be created with the <code>new</code> keyword, and array identifiers use square brackets <code>[</code> and <code>]</code> to specify index numbers.</p>
 </div>
@@ -201,7 +197,7 @@ Any time you see square brackets in C#, you&#8217;re dealing with an array.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">string</span><span style="color: #F8F8F2">[] tourStops </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">string</span><span style="color: #F8F8F2">[</span><span style="color: #AE81FF">5</span><span style="color: #F8F8F2">];</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2">[] tourStops </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2">[</span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">];</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -213,15 +209,15 @@ Any time you see square brackets in C#, you&#8217;re dealing with an array.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">tourStops[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;Phoenix&quot;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">tourStops[</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;San Diego&quot;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">tourStops[</span><span style="color: #AE81FF">2</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;Denver&quot;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">tourStops[</span><span style="color: #AE81FF">3</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;San Francisco&quot;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">tourStops[</span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;Los Angeles&quot;</span><span style="color: #F8F8F2">;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">tourStops[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Phoenix&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">tourStops[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;San Diego&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">tourStops[</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Denver&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">tourStops[</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;San Francisco&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">tourStops[</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Los Angeles&quot;</span><span style="color: #f8f8f2">;</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -233,15 +229,15 @@ Any time you see square brackets in C#, you&#8217;re dealing with an array.
 The element is just like any other variable, so we can use it in expressions, pass it to methods, and so on.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 10.1 - Accessing and modifying array elements by index.</div>
+<div class="title">Example 7.1 - Accessing and modifying array elements by index.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">Console.WriteLine(</span><span style="color: #E6DB74">&quot;The first item on the list is &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> tourStops[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">]);</span>
-<span style="color: #F8F8F2">Console.WriteLine(</span><span style="color: #E6DB74">&quot;The last item on the list is &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> tourStops[</span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">]);</span>
-<span style="color: #F8F8F2">tourStops[</span><span style="color: #AE81FF">2</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;New York City&quot;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">Console.WriteLine(</span><span style="color: #E6DB74">&quot;The third stop has been changed &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> tourStops[</span><span style="color: #AE81FF">2</span><span style="color: #F8F8F2">]);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;The first item on the list is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> tourStops[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]);</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;The last item on the list is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> tourStops[</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">]);</span>
+<span style="color: #f8f8f2">tourStops[</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;New York City&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;The third stop has been changed &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> tourStops[</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">]);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -272,7 +268,7 @@ In our tour cities example, any index greater than 4 would be out of bounds.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/10%20Data%20Structures/BasicSyntax.cs" target="_blank" rel="noopener"><code>BasicSyntax.cs</code></a></p>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/07%20Data%20Structures/BasicSyntax.cs" target="_blank" rel="noopener"><code>BasicSyntax.cs</code></a></p>
 </li>
 </ul>
 </div>
@@ -280,7 +276,7 @@ In our tour cities example, any index greater than 4 would be out of bounds.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_traversing_arrays">10.3. Traversing Arrays</h3>
+<h3 id="_traversing_arrays">7.3. Traversing Arrays</h3>
 <div class="paragraph">
 <p>Working with individual elements in an array can be useful, but to really see the power of arrays, we need loops.
 With a loop, we can easily move through an array and perform some task or operation on each element.
@@ -296,21 +292,21 @@ We can also use a traversal to search for something within an array, or to put t
 <p>Most of the time, we&#8217;ll use a simple <code>for</code> loop to traverse an array.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 10.2 - Using a <code>for</code> loop to traverse an array</div>
+<div class="title">Example 7.2 - Using a <code>for</code> loop to traverse an array</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> scores[] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> {</span><span style="color: #AE81FF">90</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">85</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">95</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">88</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">92</span><span style="color: #F8F8F2">};</span>
-<span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> sum </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> i </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; i </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> scores.Length; i</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    sum </span><span style="color: #FF4689">+=</span><span style="color: #F8F8F2"> scores[i];</span>
-<span style="color: #F8F8F2">}</span>
-<span style="color: #F8F8F2">Console.WriteLine(</span><span style="color: #E6DB74">$&quot;The sum of the scores is {sum}&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> scores[] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> {</span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">85</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">95</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">88</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">92</span><span style="color: #f8f8f2">};</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> scores.Length; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    sum </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> scores[i];</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">$&quot;The sum of the scores is {sum}&quot;</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -340,21 +336,21 @@ That way, this same loop will work for any array of any size.
 If we hard-coded the size of the array into the loop, we would have to change our code every time we changed the size of the array.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 10.3 - A <code>for</code> loop unwisely using a "hard coded" literal for the array length</div>
+<div class="title">Example 7.3 - A <code>for</code> loop unwisely using a "hard coded" literal for the array length</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> scores[] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> {</span><span style="color: #AE81FF">90</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">85</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">95</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">88</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">92</span><span style="color: #F8F8F2">};</span>
-<span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> sum </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> i </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; i </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">5</span><span style="color: #F8F8F2">; i</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">{ </span><span style="color: #959077">// Uh oh! What if we decide to hold more scores?</span>
-<span style="color: #F8F8F2">    sum </span><span style="color: #FF4689">+=</span><span style="color: #F8F8F2"> scores[i];</span>
-<span style="color: #F8F8F2">}</span>
-<span style="color: #F8F8F2">Console.WriteLine(</span><span style="color: #E6DB74">$&quot;The sum of the scores is {sum}&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> scores[] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> {</span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">85</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">95</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">88</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">92</span><span style="color: #f8f8f2">};</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{ </span><span style="color: #959077">// Uh oh! What if we decide to hold more scores?</span>
+<span style="color: #f8f8f2">    sum </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> scores[i];</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">$&quot;The sum of the scores is {sum}&quot;</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -402,10 +398,10 @@ If we hard-coded the size of the array into the loop, we would have to change ou
 <div class="ulist">
 <ul>
 <li>
-<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/10%20Data%20Structures/ArrayLoops.cs" target="_blank" rel="noopener"><code>ArrayLoops.cs</code></a></p>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/07%20Data%20Structures/ArrayLoops.cs" target="_blank" rel="noopener"><code>ArrayLoops.cs</code></a></p>
 </li>
 <li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/10%20Data%20Structures/ArrayLoopsFinished.cs" target="_blank" rel="noopener"><code>ArrayLoopsFinished.cs</code></a></p>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/07%20Data%20Structures/ArrayLoopsFinished.cs" target="_blank" rel="noopener"><code>ArrayLoopsFinished.cs</code></a></p>
 </li>
 </ul>
 </div>
@@ -423,7 +419,7 @@ If we hard-coded the size of the array into the loop, we would have to change ou
 </div>
 </div>
 <div class="sect2">
-<h3 id="_putting_objects_in_arrays">10.4. Putting Objects in Arrays</h3>
+<h3 id="_putting_objects_in_arrays">7.4. Putting Objects in Arrays</h3>
 <div class="paragraph">
 <p>In C#, an array can hold a primitive type, like an <code>int</code>, or an object.
 We&#8217;ve been using arrays of strings, which are objects, but students sometimes don&#8217;t realize that they can also create arrays of objects they define themselves.</p>
@@ -432,19 +428,19 @@ We&#8217;ve been using arrays of strings, which are objects, but students someti
 <p>If we were to define a GroceryItem class with fields for the name and the aisle where it&#8217;s located, we could create an array of GroceryItem objects.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 10.4 - Creating and populating an array of objects</div>
+<div class="title">Example 7.4 - Creating and populating an array of objects</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">GroceryItem[] groceryItems </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem[</span><span style="color: #AE81FF">5</span><span style="color: #F8F8F2">];</span>
-<span style="color: #F8F8F2">groceryItems[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem(</span><span style="color: #E6DB74">&quot;milk&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">groceryItems[</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem(</span><span style="color: #E6DB74">&quot;eggs&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">9</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">groceryItems[</span><span style="color: #AE81FF">2</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem(</span><span style="color: #E6DB74">&quot;bread&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">7</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">groceryItems[</span><span style="color: #AE81FF">3</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem(</span><span style="color: #E6DB74">&quot;butter&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">groceryItems[</span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem(</span><span style="color: #E6DB74">&quot;cheese&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">GroceryItem[] groceryItems </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem[</span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">];</span>
+<span style="color: #f8f8f2">groceryItems[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem(</span><span style="color: #e6db74">&quot;milk&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">groceryItems[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem(</span><span style="color: #e6db74">&quot;eggs&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">9</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">groceryItems[</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem(</span><span style="color: #e6db74">&quot;bread&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">groceryItems[</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem(</span><span style="color: #e6db74">&quot;butter&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">groceryItems[</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">] </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem(</span><span style="color: #e6db74">&quot;cheese&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -471,10 +467,10 @@ Our array can hold multiple objects, and each object can have multiple fields—
 <div class="ulist">
 <ul>
 <li>
-<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/10%20Data%20Structures/Dog.cs" target="_blank" rel="noopener"><code>Dog.cs</code></a></p>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/07%20Data%20Structures/Dog.cs" target="_blank" rel="noopener"><code>Dog.cs</code></a></p>
 </li>
 <li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/10%20Data%20Structures/ArrayOfObjects.cs" target="_blank" rel="noopener"><code>ArrayOfObjects.cs</code></a></p>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Beginning%20Python%20(CIS156)/07%20Data%20Structures/ArrayOfObjects.cs" target="_blank" rel="noopener"><code>ArrayOfObjects.cs</code></a></p>
 </li>
 </ul>
 </div>
@@ -482,7 +478,7 @@ Our array can hold multiple objects, and each object can have multiple fields—
 </div>
 </div>
 <div class="sect2">
-<h3 id="_foreach_loops_optional">10.5. <code>foreach</code> Loops (Optional)</h3>
+<h3 id="_foreach_loops_optional">7.5. <code>foreach</code> Loops (Optional)</h3>
 <div class="paragraph">
 <p>Because array traversal is such a common task, C# provides a keyword that makes it easier to write a traversal loop: <code>foreach</code>.
 A <code>foreach</code> loop is easy to write, and because it handles index management for us, it is less error-prone than a traditional for loop.
@@ -501,21 +497,21 @@ The <code>foreach</code> loop is optional. You can always use a traditional for 
 </table>
 </div>
 <div class="listingblock">
-<div class="title">Example 10.5 - Using a <code>foreach</code> loop to traverse an array</div>
+<div class="title">Example 7.5 - Using a <code>foreach</code> loop to traverse an array</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2">[] scores </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> {</span><span style="color: #AE81FF">90</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">85</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">95</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">88</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">92</span><span style="color: #F8F8F2">};</span>
-<span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> sum </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #66D9EF">foreach</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> score </span><span style="color: #66D9EF">in</span><span style="color: #F8F8F2"> scores)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    sum </span><span style="color: #FF4689">+=</span><span style="color: #F8F8F2"> score;</span>
-<span style="color: #F8F8F2">}</span>
-<span style="color: #F8F8F2">Console.WriteLine(</span><span style="color: #E6DB74">$&quot;The sum of the scores is {sum}&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">[] scores </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> {</span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">85</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">95</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">88</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">92</span><span style="color: #f8f8f2">};</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">foreach</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> score </span><span style="color: #66d9ef">in</span><span style="color: #f8f8f2"> scores)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    sum </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> score;</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">$&quot;The sum of the scores is {sum}&quot;</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -532,7 +528,7 @@ The <code>foreach</code> loop is optional. You can always use a traditional for 
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_11">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_8">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
 <div class="paragraph subtitle">
 <p>Chapter Review Questions</p>
 </div>
@@ -556,9 +552,9 @@ The <code>foreach</code> loop is optional. You can always use a traditional for 
 <p>What&#8217;s the difference between these two statements?</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2">[] numbers;</span>
-<span style="color: #66D9EF">int</span><span style="color: #F8F8F2">[] numbers </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2">[</span><span style="color: #AE81FF">3</span><span style="color: #F8F8F2">];</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">[] numbers;</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2">[] numbers </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">[</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">];</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -580,13 +576,13 @@ The <code>foreach</code> loop is optional. You can always use a traditional for 
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="inheritance.html">Inheritance</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="working-with-files.html">Working with Files</a> →</p>
+<p>← Previous: <a href="working-with-strings.html">Working with Strings</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="working-with-files.html">Working with Files</a> →</p>
 </div>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-03<br />
-        12:53:33 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-12<br />
+        02:39:37 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

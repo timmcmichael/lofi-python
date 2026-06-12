@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.26">
+<meta name="generator" content="Asciidoctor 2.0.23">
 <meta name="description" content="">
 <meta name="author" content="Tim McMichael">
 <link rel="icon" type="image/svg" href="./images/favicon.svg">
@@ -72,21 +72,17 @@
 </li>
 <li><a href="loops.html">4. Loops</a>
 </li>
-<li><a href="exceptions.html">5. Exceptions</a>
+<li><a href="functions-and-modules.html">5. Functions and Modules</a>
 </li>
-<li><a href="functions-and-modules.html">6. Functions and Modules</a>
+<li><a href="working-with-strings.html">6. Working with Strings</a>
 </li>
-<li><a href="working-with-strings.html">7. Working with Strings</a>
+<li><a href="data-structures.html">7. Data Structures</a>
 </li>
-<li><a href="classes-and-objects.html">8. Classes and Objects</a>
+<li><a href="working-with-files.html">8. Working with Files</a>
 </li>
-<li><a href="inheritance.html">9. Inheritance</a>
+<li><a href="classes-and-objects.html">9. Classes and Objects</a>
 </li>
-<li><a href="data-structures.html">10. Data Structures</a>
-</li>
-<li><a href="working-with-files.html">11. Working with Files</a>
-</li>
-<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+<li><a href="software-dev.html">B-Side: Lo-Fi Software Development</a>
 </li>
 <li><a href="liner-notes.html">Liner Notes</a>
 </li>
@@ -306,9 +302,9 @@ As you may remember from your math class, an integer is a whole number; that is,
 <div class="listingblock">
 <div class="title">Example 2.1 - Initializing <code>int</code> variables</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">otis_redding_birth_year</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">1941</span>
-<span style="color: #F8F8F2">billie_holiday_record_sales</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">1200000</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">otis_redding_birth_year</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">1941</span>
+<span style="color: #f8f8f2">billie_holiday_record_sales</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">1200000</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -326,11 +322,11 @@ A fraction like <strong><em>7 1/2</em></strong> can also be stored as a floating
 <div class="listingblock">
 <div class="title">Example 2.2 - Initializing <code>float</code> variables</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">marias_gpa</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">4.0</span>
-<span style="color: #F8F8F2">vinyl_record_rpm</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">33.33</span>
-<span style="color: #F8F8F2">ticket_price_discount</span> <span style="color: #FF4689">=</span> <span style="color: #FF4689">-</span><span style="color: #AE81FF">23.45</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">marias_gpa</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">4.0</span>
+<span style="color: #f8f8f2">vinyl_record_rpm</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">33.33</span>
+<span style="color: #f8f8f2">ticket_price_discount</span> <span style="color: #ff4689">=</span> <span style="color: #ff4689">-</span><span style="color: #ae81ff">23.45</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -359,9 +355,9 @@ Unlike many other languages, in Python it doesn&#8217;t matter which we use to d
 <div class="listingblock">
 <div class="title">Example 2.3 - Initializing <code>str</code> variables</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">drummers_name</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Charlie Watts&quot;</span>
-<span style="color: #F8F8F2">address</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&#39;315 Bowery, New York, NY 10003, USA&#39;</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">drummers_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Charlie Watts&quot;</span>
+<span style="color: #f8f8f2">address</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&#39;315 Bowery, New York, NY 10003, USA&#39;</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -371,9 +367,9 @@ Unlike many other languages, in Python it doesn&#8217;t matter which we use to d
 <div class="listingblock">
 <div class="title">Example 2.4 - Quotation marks and apostrophes in strings</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">song_title</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;That&#39;s alright&quot;</span> <i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">controversial_quote</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&#39;John Lennon said, &quot;We are more popular than Jesus now.&quot;&#39;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">song_title</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;That&#39;s alright&quot;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">controversial_quote</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&#39;John Lennon said, &quot;We are more popular than Jesus now.&quot;&#39;</span> <i class="conum" data-value="2"></i><b>(2)</b>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -438,17 +434,17 @@ If we want to display the output of a variable we just put the identifier in a <
 <div class="listingblock">
 <div class="title">Example 2.5 - Basic variable output in Python</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">artist_name</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Diana Ross&quot;</span>
-<span style="color: #F8F8F2">birth_year</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;1944&quot;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">artist_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Diana Ross&quot;</span>
+<span style="color: #f8f8f2">birth_year</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;1944&quot;</span>
 
-<span style="color: #F8F8F2">print(artist_name)</span>
-<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;was born in&quot;</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">print(birth_year)</span>
+<span style="color: #f8f8f2">print(artist_name)</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;was born in&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">print(birth_year)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -474,13 +470,13 @@ In the first <code>print()</code> statement in the preceding code, it will see t
 <div class="listingblock">
 <div class="title">Example 2.6 - Outputting variables with concatenation</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">artist_name</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Diana Ross&quot;</span>
-<span style="color: #F8F8F2">birth_year</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;1944&quot;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">artist_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Diana Ross&quot;</span>
+<span style="color: #f8f8f2">birth_year</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;1944&quot;</span>
 
-<span style="color: #F8F8F2">print(artist_name</span> <span style="color: #FF4689">+</span> <span style="color: #E6DB74">&quot; was born in &quot;</span> <span style="color: #FF4689">+</span> <span style="color: #F8F8F2">birth_year)</span>
+<span style="color: #f8f8f2">print(artist_name</span> <span style="color: #ff4689">+</span> <span style="color: #e6db74">&quot; was born in &quot;</span> <span style="color: #ff4689">+</span> <span style="color: #f8f8f2">birth_year)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -514,13 +510,13 @@ We call this <em>type conversion</em> or <em>type casting</em>.</p>
 <div class="listingblock">
 <div class="title">Example 2.7 - Outputting variables with concatenation and type conversion</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">artist_name</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Diana Ross&quot;</span>
-<span style="color: #F8F8F2">birth_year</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">1944</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">artist_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Diana Ross&quot;</span>
+<span style="color: #f8f8f2">birth_year</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">1944</span> <i class="conum" data-value="1"></i><b>(1)</b>
 
-<span style="color: #F8F8F2">print(artist_name</span> <span style="color: #FF4689">+</span> <span style="color: #E6DB74">&quot; was born in &quot;</span> <span style="color: #FF4689">+</span> <span style="color: #F8F8F2">str(birth_year))</span>
+<span style="color: #f8f8f2">print(artist_name</span> <span style="color: #ff4689">+</span> <span style="color: #e6db74">&quot; was born in &quot;</span> <span style="color: #ff4689">+</span> <span style="color: #f8f8f2">str(birth_year))</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -548,13 +544,13 @@ To use an f-string, we put the character <code>f</code> in front of the opening 
 <div class="listingblock">
 <div class="title">Example 2.8 - Outputting variables with interpolation</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">artist_name</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;Diana Ross&quot;</span>
-<span style="color: #F8F8F2">birth_year</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;1944&quot;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">artist_name</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Diana Ross&quot;</span>
+<span style="color: #f8f8f2">birth_year</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;1944&quot;</span>
 
-<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">artist_name</span><span style="color: #E6DB74">} was born in {</span><span style="color: #F8F8F2">birth_year</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&quot;{</span><span style="color: #f8f8f2">artist_name</span><span style="color: #e6db74">} was born in {</span><span style="color: #f8f8f2">birth_year</span><span style="color: #e6db74">}&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -682,9 +678,9 @@ Each operator acts on the value to either side:</p>
 <div class="listingblock">
 <div class="title">Example 2.9 - Simple arithmetic operations in Python</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">sum</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">5</span> <span style="color: #FF4689">+</span> <span style="color: #AE81FF">7</span> <i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">difference</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">sum</span> <span style="color: #FF4689">-</span> <span style="color: #AE81FF">2</span> <i class="conum" data-value="2"></i><b>(2)</b>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">sum</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">5</span> <span style="color: #ff4689">+</span> <span style="color: #ae81ff">7</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">difference</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">sum</span> <span style="color: #ff4689">-</span> <span style="color: #ae81ff">2</span> <i class="conum" data-value="2"></i><b>(2)</b>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -719,11 +715,11 @@ Each operator acts on the value to either side:</p>
 <div class="listingblock">
 <div class="title">Advanced arithmetic operators in Python</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">remainder</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">13</span> <span style="color: #FF4689">%</span> <span style="color: #AE81FF">5</span> <i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">power</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">5</span> <span style="color: #FF4689">**</span> <span style="color: #AE81FF">3</span> <i class="conum" data-value="2"></i><b>(2)</b>
-<span style="color: #F8F8F2">floor_division</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">14</span> <span style="color: #FF4689">//</span> <span style="color: #AE81FF">3</span> <i class="conum" data-value="3"></i><b>(3)</b>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">remainder</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">13</span> <span style="color: #ff4689">%</span> <span style="color: #ae81ff">5</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">power</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">5</span> <span style="color: #ff4689">**</span> <span style="color: #ae81ff">3</span> <i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">floor_division</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">14</span> <span style="color: #ff4689">//</span> <span style="color: #ae81ff">3</span> <i class="conum" data-value="3"></i><b>(3)</b>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -789,11 +785,11 @@ We call this <em>operator precedence</em>, and here are the guidelines:</p>
 <div class="listingblock">
 <div class="title">Example 2.10 - Operator precedence in Python</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">result1</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">17</span> <span style="color: #FF4689">-</span> <span style="color: #AE81FF">4</span> <span style="color: #FF4689">*</span> <span style="color: #AE81FF">6</span> <span style="color: #FF4689">/</span> <span style="color: #AE81FF">3</span> <i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">result2</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">17</span> <span style="color: #FF4689">-</span> <span style="color: #AE81FF">4</span> <span style="color: #FF4689">/</span> <span style="color: #AE81FF">2</span> <span style="color: #FF4689">+</span> <span style="color: #AE81FF">2</span> <i class="conum" data-value="2"></i><b>(2)</b>
-<span style="color: #F8F8F2">result3</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">17</span> <span style="color: #FF4689">-</span> <span style="color: #AE81FF">4</span> <span style="color: #FF4689">/</span> <span style="color: #F8F8F2">(</span><span style="color: #AE81FF">2</span> <span style="color: #FF4689">+</span> <span style="color: #AE81FF">2</span><span style="color: #F8F8F2">)</span> <i class="conum" data-value="3"></i><b>(3)</b>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">result1</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">17</span> <span style="color: #ff4689">-</span> <span style="color: #ae81ff">4</span> <span style="color: #ff4689">*</span> <span style="color: #ae81ff">6</span> <span style="color: #ff4689">/</span> <span style="color: #ae81ff">3</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">result2</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">17</span> <span style="color: #ff4689">-</span> <span style="color: #ae81ff">4</span> <span style="color: #ff4689">/</span> <span style="color: #ae81ff">2</span> <span style="color: #ff4689">+</span> <span style="color: #ae81ff">2</span> <i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">result3</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">17</span> <span style="color: #ff4689">-</span> <span style="color: #ae81ff">4</span> <span style="color: #ff4689">/</span> <span style="color: #f8f8f2">(</span><span style="color: #ae81ff">2</span> <span style="color: #ff4689">+</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <i class="conum" data-value="3"></i><b>(3)</b>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -823,7 +819,7 @@ For example, if we want to add 10 to a <code>weight</code> variable that already
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><span></span><span style="color: #F8F8F2">weight</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">weight</span> <span style="color: #FF4689">+</span> <span style="color: #AE81FF">10</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><span></span><span style="color: #f8f8f2">weight</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">weight</span> <span style="color: #ff4689">+</span> <span style="color: #ae81ff">10</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -834,7 +830,7 @@ For example, if we want to add 10 to a <code>weight</code> variable that already
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><span></span><span style="color: #F8F8F2">weight</span> <span style="color: #FF4689">+=</span> <span style="color: #AE81FF">10</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><span></span><span style="color: #f8f8f2">weight</span> <span style="color: #ff4689">+=</span> <span style="color: #ae81ff">10</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -919,11 +915,11 @@ For input, we&#8217;ll use <code>input()</code>.</p>
 <div class="listingblock">
 <div class="title">Example 2.11 - Simple user input in Python</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Enter the name of your favorite music artist: &quot;</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">artist</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">input()</span>
-<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Your favorite music artist is: {</span><span style="color: #F8F8F2">artist</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Enter the name of your favorite music artist: &quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">artist</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">input()</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&quot;Your favorite music artist is: {</span><span style="color: #f8f8f2">artist</span><span style="color: #e6db74">}&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -933,9 +929,9 @@ For input, we&#8217;ll use <code>input()</code>.</p>
 <div class="listingblock">
 <div class="title">Example 2.12 - Simple user input with a prompt in Python</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">artist</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">input(</span><span style="color: #E6DB74">&quot;Enter the name of your favorite music artist: &quot;</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Your favorite music artist is: {</span><span style="color: #F8F8F2">artist</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">artist</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Enter the name of your favorite music artist: &quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&quot;Your favorite music artist is: {</span><span style="color: #f8f8f2">artist</span><span style="color: #e6db74">}&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -945,11 +941,11 @@ For input, we&#8217;ll use <code>input()</code>.</p>
 <div class="listingblock">
 <div class="title">Example 2.13 - Incorrect use of numeric user input</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">age</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">input</span> <span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Enter your age: &quot;</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">age</span><span style="color: #FF4689">+=</span><span style="color: #AE81FF">1</span> <i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Next year you will be {</span><span style="color: #F8F8F2">age</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">input</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Enter your age: &quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">age</span><span style="color: #ff4689">+=</span><span style="color: #ae81ff">1</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&quot;Next year you will be {</span><span style="color: #f8f8f2">age</span><span style="color: #e6db74">}&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -973,11 +969,11 @@ Python provides built-in functions for converting a <code>str</code> to a number
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">age</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">int(input(</span><span style="color: #E6DB74">&quot;Enter your age: &quot;</span><span style="color: #F8F8F2">))</span>
-<span style="color: #F8F8F2">age</span> <span style="color: #FF4689">+=</span> <span style="color: #AE81FF">1</span> <i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Next year you will be {</span><span style="color: #F8F8F2">age</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">age</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Enter your age: &quot;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #f8f8f2">age</span> <span style="color: #ff4689">+=</span> <span style="color: #ae81ff">1</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">print(</span><span style="color: #e6db74">f&quot;Next year you will be {</span><span style="color: #f8f8f2">age</span><span style="color: #e6db74">}&quot;</span><span style="color: #f8f8f2">)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -1060,10 +1056,10 @@ If the Python interpreter is not able to convert the string to a number, it caus
 <p>What will the following code print? Why?</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="python"><span></span><span style="color: #F8F8F2">tracks</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">5</span>
-<span style="color: #F8F8F2">bonus</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">tracks</span> <span style="color: #FF4689">+</span> <span style="color: #AE81FF">3</span>
-<span style="color: #F8F8F2">tracks</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">10</span>
-<span style="color: #F8F8F2">print(bonus)</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><span></span><span style="color: #f8f8f2">tracks</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">5</span>
+<span style="color: #f8f8f2">bonus</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">tracks</span> <span style="color: #ff4689">+</span> <span style="color: #ae81ff">3</span>
+<span style="color: #f8f8f2">tracks</span> <span style="color: #ff4689">=</span> <span style="color: #ae81ff">10</span>
+<span style="color: #f8f8f2">print(bonus)</span></code></pre>
 </div>
 </div>
 </li>
@@ -1074,7 +1070,7 @@ If the Python interpreter is not able to convert the string to a number, it caus
 <p>Which of the following variable names are invalid? Explain why.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code><span></span>4_lads_from_liverpool
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code><span></span>4_lads_from_liverpool
 shows_in_1963
 side_a_tracks!
 sideBTracks
@@ -1104,8 +1100,8 @@ blues_with_12_bars</code></pre>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-03<br />
-        12:53:33 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-12<br />
+        02:39:37 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

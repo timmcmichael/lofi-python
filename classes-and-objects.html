@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.26">
+<meta name="generator" content="Asciidoctor 2.0.23">
 <meta name="description" content="">
 <meta name="author" content="Tim McMichael">
 <link rel="icon" type="image/svg" href="./images/favicon.svg">
@@ -52,49 +52,45 @@
 </li>
 <li><a href="loops.html">4. Loops</a>
 </li>
-<li><a href="exceptions.html">5. Exceptions</a>
+<li><a href="functions-and-modules.html">5. Functions and Modules</a>
 </li>
-<li><a href="functions-and-modules.html">6. Functions and Modules</a>
+<li><a href="working-with-strings.html">6. Working with Strings</a>
 </li>
-<li><a href="working-with-strings.html">7. Working with Strings</a>
+<li><a href="data-structures.html">7. Data Structures</a>
 </li>
-<li><a href="classes-and-objects.html"><span class="toc-current">8. Classes and Objects</span></a>
+<li><a href="working-with-files.html">8. Working with Files</a>
+</li>
+<li><a href="classes-and-objects.html"><span class="toc-current">9. Classes and Objects</span></a>
 <ul class="sectlevel2">
-<li><a href="classes-and-objects.html#_whats_the_point_8">What&#8217;s the Point?</a>
+<li><a href="classes-and-objects.html#_whats_the_point_9">What&#8217;s the Point?</a>
 </li>
-<li><a href="classes-and-objects.html#_oop_basics">8.1. OOP Basics</a>
+<li><a href="classes-and-objects.html#_oop_basics">9.1. OOP Basics</a>
 </li>
-<li><a href="classes-and-objects.html#_defining_a_class">8.2. Defining a Class</a>
+<li><a href="classes-and-objects.html#_defining_a_class">9.2. Defining a Class</a>
 </li>
-<li><a href="classes-and-objects.html#_fields">8.3. Fields</a>
+<li><a href="classes-and-objects.html#_fields">9.3. Fields</a>
 </li>
-<li><a href="classes-and-objects.html#_methods">8.4. Methods</a>
+<li><a href="classes-and-objects.html#_methods">9.4. Methods</a>
 </li>
-<li><a href="classes-and-objects.html#_the_this_keyword">8.5. The <code>this</code> Keyword</a>
+<li><a href="classes-and-objects.html#_the_this_keyword">9.5. The <code>this</code> Keyword</a>
 </li>
-<li><a href="classes-and-objects.html#_validating_data_in_a_setter">8.6. Validating Data in a Setter</a>
+<li><a href="classes-and-objects.html#_validating_data_in_a_setter">9.6. Validating Data in a Setter</a>
 </li>
-<li><a href="classes-and-objects.html#_fully_defined_poolrecord_class">8.7. Fully Defined <code>PoolRecord</code> Class</a>
+<li><a href="classes-and-objects.html#_fully_defined_poolrecord_class">9.7. Fully Defined <code>PoolRecord</code> Class</a>
 </li>
-<li><a href="classes-and-objects.html#_using_a_class">8.8. Using a Class</a>
+<li><a href="classes-and-objects.html#_using_a_class">9.8. Using a Class</a>
 </li>
-<li><a href="classes-and-objects.html#_constructors">8.9. Constructors</a>
+<li><a href="classes-and-objects.html#_constructors">9.9. Constructors</a>
 </li>
-<li><a href="classes-and-objects.html#_properties">8.10. Properties</a>
+<li><a href="classes-and-objects.html#_properties">9.10. Properties</a>
 </li>
-<li><a href="classes-and-objects.html#_static_methods_and_constants">8.11. <code>static</code> Methods and Constants</a>
+<li><a href="classes-and-objects.html#_static_methods_and_constants">9.11. <code>static</code> Methods and Constants</a>
 </li>
-<li><a href="classes-and-objects.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_9">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+<li><a href="classes-and-objects.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_10">Check Yourself Before You Wreck Yourself (on the assignments)</a>
 </li>
 </ul>
 </li>
-<li><a href="inheritance.html">9. Inheritance</a>
-</li>
-<li><a href="data-structures.html">10. Data Structures</a>
-</li>
-<li><a href="working-with-files.html">11. Working with Files</a>
-</li>
-<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+<li><a href="software-dev.html">B-Side: Lo-Fi Software Development</a>
 </li>
 <li><a href="liner-notes.html">Liner Notes</a>
 </li>
@@ -107,7 +103,7 @@
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="classes-and-objects">8. Classes and Objects</h2>
+<h2 id="classes-and-objects">9. Classes and Objects</h2>
 <div class="sectionbody">
 <div class="paragraph subtitle">
 <p><span title='This is "Chapter Eight" in binary (base 2)'>Chapter 1000 <sub>2</sub></span></p>
@@ -131,7 +127,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_whats_the_point_8">What&#8217;s the Point?</h3>
+<h3 id="_whats_the_point_9">What&#8217;s the Point?</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -163,7 +159,7 @@ In this chapter, we&#8217;ll start dip our toes into OOP by learning about <em>c
 </div>
 </div>
 <div class="sect2">
-<h3 id="_oop_basics">8.1. OOP Basics</h3>
+<h3 id="_oop_basics">9.1. OOP Basics</h3>
 <div class="paragraph">
 <p>There&#8217;s nothing wrong with procedural programming—and, in fact, OOP is a form of procedural programming—but it can get cumbersome as a program grows in size and complexity. And, it isn&#8217;t always an intuitive way to plan our programs.</p>
 </div>
@@ -199,7 +195,7 @@ A class defines the <strong>attributes</strong> and <strong>behaviors</strong> o
 </div>
 </div>
 <div class="sect3">
-<h4 id="_class_diagrams">8.1.1. Class Diagrams</h4>
+<h4 id="_class_diagrams">9.1.1. Class Diagrams</h4>
 <div class="paragraph">
 <p>In OOP, our planning for a program starts by deciding what objects—and therefore, what classes—we&#8217;ll need in order to implement the functionality we want.
 To help organize our thinking, we&#8217;ll use a tool called a <strong>class diagram</strong>, which gives us a visual representation of the classes and their relationships in our program.
@@ -242,7 +238,7 @@ Your Canvas course includes access to <strong>Lucid (Whiteboard)</strong>, which
 </div>
 </div>
 <div class="sect3">
-<h4 id="_encapsulation">8.1.2. Encapsulation</h4>
+<h4 id="_encapsulation">9.1.2. Encapsulation</h4>
 <div class="paragraph">
 <p>Object-oriented programming is all about creating objects that can interact with each other.
 Since the objects will be interacting, we need to think about how to keep them from interfering with each other in ways we don&#8217;t want.
@@ -276,7 +272,7 @@ But it&#8217;s a best practice—and an important one—so we will encapsulate a
 </div>
 </div>
 <div class="sect2">
-<h3 id="_defining_a_class">8.2. Defining a Class</h3>
+<h3 id="_defining_a_class">9.2. Defining a Class</h3>
 <div class="paragraph">
 <p>We&#8217;ll look at a hypothetical program to keep rudimentary swimming pool maintenance records; for a single day&#8217;s data, we&#8217;ll have a class called <code>PoolRecord</code>.</p>
 </div>
@@ -293,17 +289,17 @@ The class header is followed by a code block, enclosed in curly braces.</p>
 <div class="listingblock">
 <div class="title">Example 8.4 - <code>PoolRecord.cs</code>. A class header and code block.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">PoolRecord</span>
-<span style="color: #F8F8F2">{</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">PoolRecord</span>
+<span style="color: #f8f8f2">{</span>
 
-<span style="color: #F8F8F2">   </span><span style="color: #959077">// class code goes here</span>
+<span style="color: #f8f8f2">   </span><span style="color: #959077">// class code goes here</span>
 
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -329,7 +325,7 @@ For now, we&#8217;ll focus on the types of instance members: <strong>fields</str
 </div>
 </div>
 <div class="sect2">
-<h3 id="_fields">8.3. Fields</h3>
+<h3 id="_fields">9.3. Fields</h3>
 <div class="paragraph">
 <p><strong>Fields</strong> are the implementation of the <em>attributes</em> of the class.
 They are also known as <strong>instance variables</strong> because they are similar to the variables we&#8217;ve been using in our programs, but their <a href="functions-and-modules.html#_variable_scope">scope</a> is the object created from the class, not the method where they&#8217;re defined.
@@ -354,17 +350,17 @@ Since a class will compile and run even if we leave off the <code>private</code>
 <div class="listingblock">
 <div class="title">Example 8.5 - <code>PoolRecord.cs</code>. Fields added to the <code>PoolRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">PoolRecord</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">   </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">string</span><span style="color: #F8F8F2"> date;</span>
-<span style="color: #F8F8F2">   </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> waterTemp;</span>
-<span style="color: #F8F8F2">   </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">double</span><span style="color: #F8F8F2"> phLevel;</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">PoolRecord</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> date;</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> waterTemp;</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> phLevel;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -391,7 +387,7 @@ And so no puppies' toys will be harmed as long as we use that <strong>private</s
 </div>
 </div>
 <div class="sect2">
-<h3 id="_methods">8.4. Methods</h3>
+<h3 id="_methods">9.4. Methods</h3>
 <div class="paragraph">
 <p>Ensuring that our fields are <code>private</code> is the first step in encapsulating our class, but it&#8217;s not the only step.
 We also need to create methods that can access and change the fields appropriately—otherwise, the fields are not very useful.
@@ -406,7 +402,7 @@ Remember, the foundation of encapsulation is having <code>private</code> fields 
 <p>In broad terms, we can categorize instance methods into two types: <strong>accessor</strong> methods and <strong>mutator</strong> methods.</p>
 </div>
 <div class="sect3">
-<h4 id="_accessor_methods">8.4.1. Accessor Methods</h4>
+<h4 id="_accessor_methods">9.4.1. Accessor Methods</h4>
 <div class="paragraph">
 <p>Accessor methods give access to the fields of the class, but they don&#8217;t change the fields.
 Think of them as "read only" methods, and often all they do is return the value of a field.
@@ -416,13 +412,13 @@ Because of that convention, another name for accessor methods is <strong>getters
 <div class="listingblock">
 <div class="title">Example 8.6 - An accessor method (or "getter")</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">GetWaterTemp</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">return</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.waterTemp;</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GetWaterTemp</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.waterTemp;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -448,7 +444,7 @@ But read-only access usually does no harm, so often we&#8217;ll have getters for
 <div class="listingblock">
 <div class="title">Example 8.7 - <code>PoolRecord.cs</code>. Getters added to the <code>PoolRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -469,34 +465,34 @@ But read-only access usually does no harm, so often we&#8217;ll have getters for
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">PoolRecord</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">   </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">string</span><span style="color: #F8F8F2"> date;</span>
-<span style="color: #F8F8F2">   </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> waterTemp;</span>
-<span style="color: #F8F8F2">   </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">double</span><span style="color: #F8F8F2"> phLevel;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">PoolRecord</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> date;</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> waterTemp;</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> phLevel;</span>
 
-<span style="color: #F8F8F2">   </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">string</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">GetDate</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">   {</span>
-<span style="color: #F8F8F2">      </span><span style="color: #66D9EF">return</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.date;</span>
-<span style="color: #F8F8F2">   }</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GetDate</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">   {</span>
+<span style="color: #f8f8f2">      </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.date;</span>
+<span style="color: #f8f8f2">   }</span>
 
-<span style="color: #F8F8F2">   </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">GetWaterTemp</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">   {</span>
-<span style="color: #F8F8F2">      </span><span style="color: #66D9EF">return</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.waterTemp;</span>
-<span style="color: #F8F8F2">   }</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GetWaterTemp</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">   {</span>
+<span style="color: #f8f8f2">      </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.waterTemp;</span>
+<span style="color: #f8f8f2">   }</span>
 
-<span style="color: #F8F8F2">   </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">double</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">GetPhLevel</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">   {</span>
-<span style="color: #F8F8F2">      </span><span style="color: #66D9EF">return</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.phLevel;</span>
-<span style="color: #F8F8F2">   }</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GetPhLevel</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">   {</span>
+<span style="color: #f8f8f2">      </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.phLevel;</span>
+<span style="color: #f8f8f2">   }</span>
 
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mutator_methods">8.4.2. Mutator Methods</h4>
+<h4 id="_mutator_methods">9.4.2. Mutator Methods</h4>
 <div class="paragraph">
 <p>Mutator methods change the fields of the class.
 Though they sometimes return a value, their primary purpose is to change the value of a field and they often have a <code>void</code> return type.
@@ -506,13 +502,13 @@ The naming convention for setters is to start with <code>Set</code> and then the
 <div class="listingblock">
 <div class="title">Example 8.8 - A mutator method (or "setter")</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">SetWaterTemp</span><span style="color: #F8F8F2">(</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> temp)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.waterTemp </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> temp;</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">SetWaterTemp</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> temp)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.waterTemp </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> temp;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -565,7 +561,7 @@ These methods are still mutators, and we might even still refer to them as <em>s
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_this_keyword">8.5. The <code>this</code> Keyword</h3>
+<h3 id="_the_this_keyword">9.5. The <code>this</code> Keyword</h3>
 <div class="paragraph">
 <p>Notice that we&#8217;ve been prefixing the field names with <code>this.</code> in our methods.
 <code>this</code> is a C# keyword that refers to the current instance.
@@ -582,17 +578,17 @@ But it&#8217;s common for programmers to use the same name for a parameter as th
 <div class="listingblock">
 <div class="title">Example 8.9 - Ambiguous identifiers in a setter method.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> waterTemp;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> waterTemp;</span>
 
-<span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">SetWaterTemp</span><span style="color: #F8F8F2">(</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> waterTemp)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    waterTemp </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> waterTemp; </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">SetWaterTemp</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> waterTemp)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    waterTemp </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> waterTemp; </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -620,17 +616,17 @@ The solution is the <code>this</code> keyword, which tells the compiler when we 
 <div class="listingblock">
 <div class="title">Example 8.10 - Use of <code>this</code> to clarify an ambiguous identifier.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> waterTemp;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> waterTemp;</span>
 
-<span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">SetWaterTemp</span><span style="color: #F8F8F2">(</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> waterTemp)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.waterTemp </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> waterTemp; </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">SetWaterTemp</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> waterTemp)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.waterTemp </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> waterTemp; </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -649,7 +645,7 @@ I recommend that new programmers just get in the habit of using it from the star
 </div>
 </div>
 <div class="sect2">
-<h3 id="_validating_data_in_a_setter">8.6. Validating Data in a Setter</h3>
+<h3 id="_validating_data_in_a_setter">9.6. Validating Data in a Setter</h3>
 <div class="paragraph">
 <p>The setters we&#8217;ve seen to this point don&#8217;t actually do anything other than set the value of a field to whatever is passed to them.
 In other words, they are no different than making the fields <code>public</code>—which, as we&#8217;ve learned, is a bad practice.</p>
@@ -683,14 +679,14 @@ We&#8217;ll eventually learn more sophisticated ways to handle invalid data, but
 </div>
 </div>
 <div class="sect2">
-<h3 id="_fully_defined_poolrecord_class">8.7. Fully Defined <code>PoolRecord</code> Class</h3>
+<h3 id="_fully_defined_poolrecord_class">9.7. Fully Defined <code>PoolRecord</code> Class</h3>
 <div class="paragraph">
 <p>Here&#8217;s how the <code>PoolRecord</code> class looks with the setters added, and using <code>this.</code> to indicate when we&#8217;re referring to a field.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 8.12 - <code>PoolRecord.cs</code>. Setters added to the <code>PoolRecord</code> class, and comments identifying the parts.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -732,55 +728,55 @@ We&#8217;ll eventually learn more sophisticated ways to handle invalid data, but
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">40</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">41</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">42</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">43</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">PoolRecord</span>
-<span style="color: #F8F8F2">{</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">43</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">PoolRecord</span>
+<span style="color: #f8f8f2">{</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #959077">// Fields</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">string</span><span style="color: #F8F8F2"> date;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> waterTemp;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">double</span><span style="color: #F8F8F2"> phLevel;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// Fields</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> date;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> waterTemp;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> phLevel;</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #959077">// Getters</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">string</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">GetDate</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">return</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.date;</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// Getters</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GetDate</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.date;</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">GetWaterTemp</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">return</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.waterTemp;</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GetWaterTemp</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.waterTemp;</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">double</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">GetPhLevel</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">return</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.phLevel;</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GetPhLevel</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.phLevel;</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #959077">// Setters and Mutators</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">SetDate</span><span style="color: #F8F8F2">(</span><span style="color: #66D9EF">string</span><span style="color: #F8F8F2"> date)</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.date </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> date;</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// Setters and Mutators</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">SetDate</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> date)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.date </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> date;</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">SetWaterTemp</span><span style="color: #F8F8F2">(</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> waterTemp)</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.waterTemp </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> waterTemp;</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">SetWaterTemp</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> waterTemp)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.waterTemp </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> waterTemp;</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">SetPhLevel</span><span style="color: #F8F8F2">(</span><span style="color: #66D9EF">double</span><span style="color: #F8F8F2"> phLevel)</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">if</span><span style="color: #F8F8F2"> (phLevel </span><span style="color: #FF4689">&gt;=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0.0</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">&amp;&amp;</span><span style="color: #F8F8F2"> phLevel </span><span style="color: #FF4689">&lt;=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">14.0</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">        {</span>
-<span style="color: #F8F8F2">            </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.phLevel </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> phLevel;</span>
-<span style="color: #F8F8F2">        }</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">SetPhLevel</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> phLevel)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (phLevel </span><span style="color: #ff4689">&gt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0.0</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">&amp;&amp;</span><span style="color: #f8f8f2"> phLevel </span><span style="color: #ff4689">&lt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">14.0</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">        {</span>
+<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.phLevel </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> phLevel;</span>
+<span style="color: #f8f8f2">        }</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_a_class">8.8. Using a Class</h3>
+<h3 id="_using_a_class">9.8. Using a Class</h3>
 <div class="paragraph">
 <p>As we&#8217;ve learned, defining a class establishes a blueprint; to make use of a class in a program, we need to use that blueprint to create an object.
 We can as many objects from a class as we need, and each object is known as an <strong>instance</strong> of the class.
@@ -793,7 +789,7 @@ The declaration is still a <em>data type</em> and an _identifier, but in this ca
 <div class="listingblock">
 <div class="title">Example 8.13 - A declaration statement for an object.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">PoolRecord day1;</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">PoolRecord day1;</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -809,9 +805,9 @@ We&#8217;ll use the <code>new</code> keyword to allocate memory, and then we&#82
 <div class="listingblock">
 <div class="title">Example 8.14 - An assignment statement for a newly declared object.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">PoolRecord day1;</span>
-<span style="color: #F8F8F2">day1 </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> PoolRecord();</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">PoolRecord day1;</span>
+<span style="color: #f8f8f2">day1 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> PoolRecord();</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -836,7 +832,7 @@ We&#8217;ve already learned that the presense of parentheses in C# usually means
 <div class="listingblock">
 <div class="title">Example 8.15 - A combined declaration and instantiation statement.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">PoolRecord day1 </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> PoolRecord();</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">PoolRecord day1 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> PoolRecord();</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -846,11 +842,11 @@ We&#8217;ve already learned that the presense of parentheses in C# usually means
 <div class="listingblock">
 <div class="title">Example 8.16 - Instance method calls using dot notation.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">PoolRecord day1 </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> PoolRecord();</span>
-<span style="color: #F8F8F2">day1.SetWaterTemperature(</span><span style="color: #AE81FF">87</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">Console.WriteLine(</span><span style="color: #E6DB74">&quot;Water temperature on day 1:&quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day1.GetWaterTemperature());</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">PoolRecord day1 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> PoolRecord();</span>
+<span style="color: #f8f8f2">day1.SetWaterTemperature(</span><span style="color: #ae81ff">87</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;Water temperature on day 1:&quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day1.GetWaterTemperature());</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -865,13 +861,13 @@ To see why it&#8217;s necessary, consider the following example.</p>
 <div class="listingblock">
 <div class="title">Example 8.17 - Instance method calls on multiple objects.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">PoolRecord day1 </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> PoolRecord();</span>
-<span style="color: #F8F8F2">PoolRecord day2 </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> PoolRecord();</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">PoolRecord day1 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> PoolRecord();</span>
+<span style="color: #f8f8f2">PoolRecord day2 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> PoolRecord();</span>
 
-<span style="color: #F8F8F2">day1.SetWaterTemperature(</span><span style="color: #AE81FF">87</span><span style="color: #F8F8F2">); </span><span style="color: #959077">// This won&#39;t compile!</span>
+<span style="color: #f8f8f2">day1.SetWaterTemperature(</span><span style="color: #ae81ff">87</span><span style="color: #f8f8f2">); </span><span style="color: #959077">// This won&#39;t compile!</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -880,7 +876,7 @@ To see why it&#8217;s necessary, consider the following example.</p>
 And even when we only have one instance, the compiler needs to know where to find that method, so the dot notation is required every time we call an instance method.</p>
 </div>
 <div class="sect3">
-<h4 id="_object_classes_vs_driver_classes">8.8.1. Object Classes vs. Driver Classes</h4>
+<h4 id="_object_classes_vs_driver_classes">9.8.1. Object Classes vs. Driver Classes</h4>
 <div class="paragraph">
 <p>Ok, time for another convention that seems only intended to be nitpicky and pointless, but is important and is expected on assignments in this course.
 OOP nerds value keeping the different parts of our programs compartmentalized, and that includes separating the class definition from the code that uses the class.
@@ -954,7 +950,7 @@ Sorry, I can&#8217;t do much better than that for now.</p>
 <div class="listingblock">
 <div class="title">Example 8.18 - <code>PoolRecordDemo.cs</code>. A driver class to demonstrate the <code>PoolRecord</code> getter and setter methods.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -982,35 +978,35 @@ Sorry, I can&#8217;t do much better than that for now.</p>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">PoolRecordDemo</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">static</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">Main</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #959077">// Instantiate two objects</span>
-<span style="color: #F8F8F2">        PoolRecord day1 </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> PoolRecord();</span>
-<span style="color: #F8F8F2">        PoolRecord day2 </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> PoolRecord();</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">PoolRecordDemo</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #959077">// Instantiate two objects</span>
+<span style="color: #f8f8f2">        PoolRecord day1 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> PoolRecord();</span>
+<span style="color: #f8f8f2">        PoolRecord day2 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> PoolRecord();</span>
 
-<span style="color: #F8F8F2">        </span><span style="color: #959077">// Set field values for both instances</span>
-<span style="color: #F8F8F2">        day1.SetDate(</span><span style="color: #E6DB74">&quot;2024-10-01&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        day1.SetWaterTemp(</span><span style="color: #AE81FF">87</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        day1.SetPhLevel(</span><span style="color: #AE81FF">1.5</span><span style="color: #F8F8F2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #959077">// Set field values for both instances</span>
+<span style="color: #f8f8f2">        day1.SetDate(</span><span style="color: #e6db74">&quot;2024-10-01&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        day1.SetWaterTemp(</span><span style="color: #ae81ff">87</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        day1.SetPhLevel(</span><span style="color: #ae81ff">1.5</span><span style="color: #f8f8f2">);</span>
 
-<span style="color: #F8F8F2">        day2.SetDate(</span><span style="color: #E6DB74">&quot;2024-10-02&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        day2.SetWaterTemp(</span><span style="color: #AE81FF">75</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        day2.SetPhLevel(</span><span style="color: #AE81FF">8.25</span><span style="color: #F8F8F2">);</span>
+<span style="color: #f8f8f2">        day2.SetDate(</span><span style="color: #e6db74">&quot;2024-10-02&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        day2.SetWaterTemp(</span><span style="color: #ae81ff">75</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        day2.SetPhLevel(</span><span style="color: #ae81ff">8.25</span><span style="color: #f8f8f2">);</span>
 
-<span style="color: #F8F8F2">        </span><span style="color: #959077">// Output field values for both instances</span>
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;Date: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day1.GetDate());</span>
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;Water Temperature: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day1.GetWaterTemp());</span>
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;pH Level: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day1.GetPhLevel());</span>
+<span style="color: #f8f8f2">        </span><span style="color: #959077">// Output field values for both instances</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Date: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day1.GetDate());</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Water Temperature: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day1.GetWaterTemp());</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;pH Level: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day1.GetPhLevel());</span>
 
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;------------------------------&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;------------------------------&quot;</span><span style="color: #f8f8f2">);</span>
 
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;Date: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day2.GetDate());</span>
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;Water Temperature: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day2.GetWaterTemp());</span>
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;pH Level: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day2.GetPhLevel());</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Date: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day2.GetDate());</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Water Temperature: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day2.GetWaterTemp());</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;pH Level: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day2.GetPhLevel());</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -1060,7 +1056,7 @@ In general, I ask students to create at least two instances of each class they a
 </div>
 </div>
 <div class="sect2">
-<h3 id="_constructors">8.9. Constructors</h3>
+<h3 id="_constructors">9.9. Constructors</h3>
 <div class="paragraph">
 <p>When we instantiate a new object, the syntax includes a call to a method, immediately following the <code>new</code> keyword:</p>
 </div>
@@ -1082,13 +1078,13 @@ A constructor is always public, it has no return type (not even <code>void</code
 <div class="listingblock">
 <div class="title">Example 8.19 - A constructor definition for the <code>PoolRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">PoolRecord</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #959077">// code to initialize fields goes here</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">PoolRecord</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// code to initialize fields goes here</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -1099,17 +1095,17 @@ As a beginner, our rule of thumb is to just make a simple assignment statement f
 <div class="listingblock">
 <div class="title">Example 8.20 - A constructor that initializes fields.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">PoolRecord</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.date </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;2025-01-01&quot;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.waterTemp </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.phLevel </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0.0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">PoolRecord</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.date </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;2025-01-01&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.waterTemp </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.phLevel </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0.0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -1123,17 +1119,17 @@ We can initialize those fields to any value we want, but we should choose values
 <div class="listingblock">
 <div class="title">Example 8.21 - A constructor that initializes fields using properties.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">PoolRecord</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.Date </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;2025-01-01&quot;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.WaterTemp </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.PhLevel </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0.0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">PoolRecord</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.Date </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;2025-01-01&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.WaterTemp </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.PhLevel </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0.0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -1166,17 +1162,17 @@ We add parameters to our constructor just like we do with any other method, by l
 <div class="listingblock">
 <div class="title">Example 8.22 - A constructor with parameters.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">PoolRecord</span><span style="color: #F8F8F2">(</span><span style="color: #66D9EF">string</span><span style="color: #F8F8F2"> date)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.date </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> date;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.waterTemp </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.phLevel </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0.0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">PoolRecord</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> date)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.date </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> date;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.waterTemp </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.phLevel </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0.0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -1254,7 +1250,7 @@ To see complete examples of the <code>PoolRecord</code> class with constructors,
 </div>
 </div>
 <div class="sect3">
-<h4 id="_constructors_and_encapsulation">8.9.1. Constructors and Encapsulation</h4>
+<h4 id="_constructors_and_encapsulation">9.9.1. Constructors and Encapsulation</h4>
 <div class="paragraph">
 <p>Constructors allow us to be stricter with our encapsulation since now we don&#8217;t have to have setters to put data into our objects.
 We can provide a constructor to accept all the data the object needs, decide if we give access to change a field after the object has been instantiated.</p>
@@ -1266,7 +1262,7 @@ In that case, our constructor would accept the account number, but we wouldn&#82
 </div>
 </div>
 <div class="sect2">
-<h3 id="_properties">8.10. Properties</h3>
+<h3 id="_properties">9.10. Properties</h3>
 <div class="paragraph">
 <p>In some programming languages—most notably Java—all encapsulation is handled using methods, as we&#8217;ve seen to this point.
 However, C# includes a feature called <strong>properties</strong> that can simplify encapsulation.
@@ -1281,7 +1277,7 @@ Those accessors, in turn, have code block that define what happens when the prop
 <div class="listingblock">
 <div class="title">Example 8.23 - <code>PoolRecord.cs</code>. Getters and setters replaced by properties in the <code>PoolRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -1310,36 +1306,36 @@ Those accessors, in turn, have code block that define what happens when the prop
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">PoolRecord</span>
-<span style="color: #F8F8F2">{</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">PoolRecord</span>
+<span style="color: #f8f8f2">{</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #959077">// Fields</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">string</span><span style="color: #F8F8F2"> date;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> waterTemp;</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">private</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">double</span><span style="color: #F8F8F2"> phLevel;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// Fields</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> date;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> waterTemp;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> phLevel;</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #959077">// Properties</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">string</span><span style="color: #F8F8F2"> Date</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">get</span><span style="color: #F8F8F2"> { </span><span style="color: #66D9EF">return</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.date; }</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">set</span><span style="color: #F8F8F2"> { </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.date </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">value</span><span style="color: #F8F8F2">; } </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> WaterTemp</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">get</span><span style="color: #F8F8F2"> { </span><span style="color: #66D9EF">return</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.waterTemp; }</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">set</span><span style="color: #F8F8F2"> { </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.waterTemp </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">value</span><span style="color: #F8F8F2">; }</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">double</span><span style="color: #F8F8F2"> PhLevel</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">get</span><span style="color: #F8F8F2"> { </span><span style="color: #66D9EF">return</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.phLevel; }</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">set</span>
-<span style="color: #F8F8F2">        {</span>
-<span style="color: #F8F8F2">            </span><span style="color: #66D9EF">if</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">value</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">&gt;=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0.0</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">&amp;&amp;</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">value</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">&lt;=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">14.0</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">            {</span>
-<span style="color: #F8F8F2">                </span><span style="color: #66D9EF">this</span><span style="color: #F8F8F2">.phLevel </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">value</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">            }</span>
-<span style="color: #F8F8F2">        }</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// Properties</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> Date</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">get</span><span style="color: #f8f8f2"> { </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.date; }</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">set</span><span style="color: #f8f8f2"> { </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.date </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">value</span><span style="color: #f8f8f2">; } </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> WaterTemp</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">get</span><span style="color: #f8f8f2"> { </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.waterTemp; }</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">set</span><span style="color: #f8f8f2"> { </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.waterTemp </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">value</span><span style="color: #f8f8f2">; }</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> PhLevel</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">get</span><span style="color: #f8f8f2"> { </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.phLevel; }</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">set</span>
+<span style="color: #f8f8f2">        {</span>
+<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">value</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">&gt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0.0</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">&amp;&amp;</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">value</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">&lt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">14.0</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">            {</span>
+<span style="color: #f8f8f2">                </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.phLevel </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">value</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">            }</span>
+<span style="color: #f8f8f2">        }</span>
+<span style="color: #f8f8f2">    }</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -1357,7 +1353,7 @@ Those accessors, in turn, have code block that define what happens when the prop
 <div class="listingblock">
 <div class="title">Example 8.24 - <code>PoolRecordDemo.cs</code>. A driver class to demonstrate the <code>PoolRecord</code> properties.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -1386,36 +1382,36 @@ Those accessors, in turn, have code block that define what happens when the prop
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">PoolRecordDemo</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">static</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">Main</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        </span><span style="color: #959077">// Instantiate two objects</span>
-<span style="color: #F8F8F2">        PoolRecord day1 </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> PoolRecord();</span>
-<span style="color: #F8F8F2">        PoolRecord day2 </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> PoolRecord();</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">PoolRecordDemo</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #959077">// Instantiate two objects</span>
+<span style="color: #f8f8f2">        PoolRecord day1 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> PoolRecord();</span>
+<span style="color: #f8f8f2">        PoolRecord day2 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> PoolRecord();</span>
 
-<span style="color: #F8F8F2">        </span><span style="color: #959077">// Set field values for both instances</span>
-<span style="color: #F8F8F2">        day1.Date </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;2024-10-01&quot;</span><span style="color: #F8F8F2">;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #959077">// Set field values for both instances</span>
+<span style="color: #f8f8f2">        day1.Date </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;2024-10-01&quot;</span><span style="color: #f8f8f2">;</span>
 
-<span style="color: #F8F8F2">        day1.WaterTemp </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">87</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">        day1.PhLevel </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">1.5</span><span style="color: #F8F8F2">;</span>
+<span style="color: #f8f8f2">        day1.WaterTemp </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">87</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        day1.PhLevel </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1.5</span><span style="color: #f8f8f2">;</span>
 
-<span style="color: #F8F8F2">        day2.Date </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;2024-10-02&quot;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">        day2.WaterTemp </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">75</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">        day2.PhLevel </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">8.25</span><span style="color: #F8F8F2">;</span>
+<span style="color: #f8f8f2">        day2.Date </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;2024-10-02&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        day2.WaterTemp </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">75</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        day2.PhLevel </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">8.25</span><span style="color: #f8f8f2">;</span>
 
-<span style="color: #F8F8F2">        </span><span style="color: #959077">// Output field values for both instances</span>
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;Date: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day1.Date);</span>
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;Water Temperature: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day1.WaterTemp);</span>
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;pH Level: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day1.PhLevel);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #959077">// Output field values for both instances</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Date: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day1.Date);</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Water Temperature: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day1.WaterTemp);</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;pH Level: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day1.PhLevel);</span>
 
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;------------------------------&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;------------------------------&quot;</span><span style="color: #f8f8f2">);</span>
 
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;Date: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day2.Date);</span>
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;Water Temperature: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day2.WaterTemp);</span>
-<span style="color: #F8F8F2">        Console.WriteLine(</span><span style="color: #E6DB74">&quot;pH Level: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> day2.PhLevel);</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Date: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day2.Date);</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Water Temperature: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day2.WaterTemp);</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;pH Level: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> day2.PhLevel);</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -1468,7 +1464,7 @@ Those accessors, in turn, have code block that define what happens when the prop
 </div>
 </div>
 <div class="sect2">
-<h3 id="_static_methods_and_constants">8.11. <code>static</code> Methods and Constants</h3>
+<h3 id="_static_methods_and_constants">9.11. <code>static</code> Methods and Constants</h3>
 <div class="paragraph">
 <p>Since we first started learning about <a href="classes-and-objects.html#_methods">methods</a>, we&#8217;ve been using the <code>static</code> keyword as part of those definitions.
 And though you&#8217;re probably often using <a href="#_first_c_program">top-level statements</a> in your programs, we&#8217;ve also seen the <code>static</code> keyword in front of the <code>Main()</code> method when we create a program the "old fashioned" way.
@@ -1490,7 +1486,7 @@ Since they&#8217;re <code>static</code>, we can call them without creating a <co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><span></span><span style="color: #F8F8F2">Console.WriteLine(</span><span style="color: #E6DB74">&quot;Hello, World!&quot;</span><span style="color: #F8F8F2">);</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;Hello, World!&quot;</span><span style="color: #f8f8f2">);</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1514,7 +1510,7 @@ This would mean that every savings account would earn the same interest rate, wh
 <div class="listingblock">
 <div class="title">Example 8.25 - A class with a <code>static</code> constant.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -1525,25 +1521,25 @@ This would mean that every savings account would earn the same interest rate, wh
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">SavingsAccount</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">const</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">double</span><span style="color: #F8F8F2"> InterestRate  </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0.02</span><span style="color: #F8F8F2">;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">SavingsAccount</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> InterestRate  </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0.02</span><span style="color: #f8f8f2">;</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #959077">// other fields and methods go here. See the repository for the complete code.</span>
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// other fields and methods go here. See the repository for the complete code.</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">AddInterest</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        balance </span><span style="color: #FF4689">+=</span><span style="color: #F8F8F2"> balance </span><span style="color: #FF4689">*</span><span style="color: #F8F8F2"> InterestRate;</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AddInterest</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        balance </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> balance </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> InterestRate;</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_9">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_10">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
 <div class="paragraph subtitle">
 <p>Chapter Review Questions</p>
 </div>
@@ -1583,13 +1579,13 @@ This would mean that every savings account would earn the same interest rate, wh
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="working-with-strings.html">Working with Strings</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="inheritance.html">Inheritance</a> →</p>
+<p>← Previous: <a href="working-with-files.html">Working with Files</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="software-dev.html">B-Side: Lo-Fi Software Development</a> →</p>
 </div>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-03<br />
-        12:53:33 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-12<br />
+        02:39:37 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

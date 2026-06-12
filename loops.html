@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.26">
+<meta name="generator" content="Asciidoctor 2.0.23">
 <meta name="description" content="">
 <meta name="author" content="Tim McMichael">
 <link rel="icon" type="image/svg" href="./images/favicon.svg">
@@ -74,21 +74,17 @@
 </li>
 </ul>
 </li>
-<li><a href="exceptions.html">5. Exceptions</a>
+<li><a href="functions-and-modules.html">5. Functions and Modules</a>
 </li>
-<li><a href="functions-and-modules.html">6. Functions and Modules</a>
+<li><a href="working-with-strings.html">6. Working with Strings</a>
 </li>
-<li><a href="working-with-strings.html">7. Working with Strings</a>
+<li><a href="data-structures.html">7. Data Structures</a>
 </li>
-<li><a href="classes-and-objects.html">8. Classes and Objects</a>
+<li><a href="working-with-files.html">8. Working with Files</a>
 </li>
-<li><a href="inheritance.html">9. Inheritance</a>
+<li><a href="classes-and-objects.html">9. Classes and Objects</a>
 </li>
-<li><a href="data-structures.html">10. Data Structures</a>
-</li>
-<li><a href="working-with-files.html">11. Working with Files</a>
-</li>
-<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+<li><a href="software-dev.html">B-Side: Lo-Fi Software Development</a>
 </li>
 <li><a href="liner-notes.html">Liner Notes</a>
 </li>
@@ -201,17 +197,17 @@ If the condition is still true, the block of code is executed again.</p>
 <div class="listingblock">
 <div class="title">Example 4.1 - A basic <code>while</code> loop</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
-<span style="color: #F8F8F2">    count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">    count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -236,15 +232,15 @@ Infinite loops are a common mistake for new programmers, and they cause our prog
 <div class="listingblock">
 <div class="title">Example 4.2 - An infinite loop using <code>while</code></div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -271,13 +267,13 @@ Your IDE has a way to stop the program if it&#8217;s stuck in an infinite loop. 
 <div class="listingblock">
 <div class="title">Example 4.3 - An infinite loop using a <code>while</code> statement.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #959077">// hey, there&#39;s nothing to stop this loop!</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">true</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// hey, there&#39;s nothing to stop this loop!</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -299,17 +295,17 @@ I&#8217;ll rant and rave about that a little later in the chapter.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">); </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
-<span style="color: #F8F8F2">    count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">    count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -341,17 +337,17 @@ Other than that, a <code>do-while</code> loop is exactly the same as a <code>whi
 <div class="listingblock">
 <div class="title">Example 4.4 - A basic <code>do-while</code> loop in C#.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #66D9EF">do</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
-<span style="color: #F8F8F2">    count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">} </span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">do</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">    count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -425,7 +421,7 @@ For example, if a program displays a menu with three options, a loop could keep 
 <div class="listingblock">
 <div class="title">Example 4.5 - Input validation with a <code>do-while</code> loop</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -440,20 +436,20 @@ For example, if a program displays a menu with three options, a loop could keep 
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> choice;</span>
-<span style="color: #66D9EF">string</span><span style="color: #F8F8F2"> choiceString;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> choice;</span>
+<span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> choiceString;</span>
 
-<span style="color: #66D9EF">do</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Choose an option:&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;1. Check balance&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;2. Deposit&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;3. Withdraw&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;4. Exit&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    Console.Write(</span><span style="color: #E6DB74">&quot;Your choice: &quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    choiceString </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> Console.ReadLine();</span>
-<span style="color: #F8F8F2">    choice </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> Convert.ToInt32(choiceString);</span>
-<span style="color: #F8F8F2">} </span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (choice </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">||</span><span style="color: #F8F8F2"> choice </span><span style="color: #FF4689">&gt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">);</span>
+<span style="color: #66d9ef">do</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Choose an option:&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;1. Check balance&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;2. Deposit&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;3. Withdraw&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;4. Exit&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.Write(</span><span style="color: #e6db74">&quot;Your choice: &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    choiceString </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Console.ReadLine();</span>
+<span style="color: #f8f8f2">    choice </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(choiceString);</span>
+<span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (choice </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">||</span><span style="color: #f8f8f2"> choice </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
 
 <span style="color: #959077">// Rest of the code...</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -482,13 +478,13 @@ The syntax of a <code>for</code> loop can be a little intimidating for new coder
 <div class="listingblock">
 <div class="title">Example 4.6 - A simple <code>for</code> loop.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">; count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">; count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -634,7 +630,7 @@ As a trivial example, we could count how many numbers are divisible by 4 in a gi
 <div class="listingblock">
 <div class="title">Example 4.7 - A loop that counts how many numbers between 33 and 75 are divisible by 4.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
@@ -642,15 +638,15 @@ As a trivial example, we could count how many numbers are divisible by 4 in a gi
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> divisible </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; </span><span style="color: #959077">// This is our counter variable</span>
-<span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> i </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">33</span><span style="color: #F8F8F2">; i </span><span style="color: #FF4689">&lt;=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">75</span><span style="color: #F8F8F2">; i</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">if</span><span style="color: #F8F8F2"> (i </span><span style="color: #FF4689">%</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">==</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">)</span>
-<span style="color: #F8F8F2">    {</span>
-<span style="color: #F8F8F2">        divisible</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">; </span><span style="color: #959077">// Increment the counter when we find a number divisible by 4</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">}</span>
-<span style="color: #F8F8F2">Console.WriteLine(</span><span style="color: #E6DB74">&quot;There are &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> divisible </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot; numbers between 33 and 75 that are divisible by 4.&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> divisible </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// This is our counter variable</span>
+<span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">33</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">75</span><span style="color: #f8f8f2">; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (i </span><span style="color: #ff4689">%</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        divisible</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// Increment the counter when we find a number divisible by 4</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;There are &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> divisible </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot; numbers between 33 and 75 that are divisible by 4.&quot;</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -675,7 +671,7 @@ Within the loop, we&#8217;ll add to that variable as necessary, and when the loo
 <div class="listingblock">
 <div class="title">Example 4.8 - A loop that accumulates a total of user-entered numbers.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
@@ -683,15 +679,15 @@ Within the loop, we&#8217;ll add to that variable as necessary, and when the loo
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> total </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; </span><span style="color: #959077">// This is our accumulator variable</span>
-<span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> number;</span>
-<span style="color: #66D9EF">do</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    Console.Write(</span><span style="color: #E6DB74">&quot;Enter a number (0 to stop): &quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    number </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> Convert.ToInt32(Console.ReadLine());</span>
-<span style="color: #F8F8F2">    total </span><span style="color: #FF4689">+=</span><span style="color: #F8F8F2"> number; </span><span style="color: #959077">// Add the entered number to the total</span>
-<span style="color: #F8F8F2">} </span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (number </span><span style="color: #FF4689">!=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">Console.WriteLine(</span><span style="color: #E6DB74">&quot;The total is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> total);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> total </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// This is our accumulator variable</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> number;</span>
+<span style="color: #66d9ef">do</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.Write(</span><span style="color: #e6db74">&quot;Enter a number (0 to stop): &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    number </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(Console.ReadLine());</span>
+<span style="color: #f8f8f2">    total </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> number; </span><span style="color: #959077">// Add the entered number to the total</span>
+<span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (number </span><span style="color: #ff4689">!=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;The total is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> total);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -751,13 +747,13 @@ They&#8217;ll be especially important when we learn about <a href="#_arrays">arr
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="decisions.html">Decisions</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="exceptions.html">Exceptions</a> →</p>
+<p>← Previous: <a href="decisions.html">Decisions</a> | ↑ Up: <a href="index.html">Lo-Fi Python: Programming Fundamentals</a> | Next: <a href="functions-and-modules.html">Functions and Modules</a> →</p>
 </div>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-03<br />
-        12:53:33 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-12<br />
+        02:39:37 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
