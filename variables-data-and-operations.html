@@ -1113,7 +1113,7 @@ The following code initializes a <code>list</code> of the top 5 songs from 1964:
 <h4 id="_list_indexing">2.8.1. List Indexing</h4>
 <div class="paragraph">
 <p>If we want to work with one of the individual items in the <code>list</code>, we refer to it by its <em>index</em>.
-An index is a number that indicated the position of the item in the <code>list</code>, much like a room number indicates the position of a hotel room on a floor.</p>
+An index is a number that indicates the position of the item in the <code>list</code>, much like a room number indicates the position of a room on the floor of a hotel.</p>
 </div>
 <div class="paragraph">
 <p>In general, computers start counting at 0, so the first item in a <code>list</code> is at index 0.
@@ -1139,16 +1139,61 @@ This <em>zero-based indexing</em> is common in programming and is a frequent sou
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>This will output <code>I Want to Hold Your Hand</code>, since index 0 is the first item in the <code>list</code>.</td>
+<td>This will output <code>I Want to Hold Your Hand</code>, since index <code>0</code> refers to the first item in the <code>list</code>.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This will output <code>Hello, Dolly!</code>, since index 2 is the third item in the <code>list</code>.</td>
+<td>This will output <code>Hello, Dolly!</code>, since index <code>2</code> refers to the third item in the <code>list</code>.</td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>We&#8217;ll take a deeper look at `list`s and indexing in the <a href="data-structures.html">Data Structures</a> chapter.</p>
+<p>We can also use this indexing syntax to change a value in the <code>list</code> using an assignment statement.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 2.19 - Changing an individual value in a <code>list</code></div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">top_songs</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;I Want to Hold Your Hand&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;She Loves You&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;Hello, Dolly!&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;Oh, Pretty Woman&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;I Get Around&quot;</span><span style="color: #f8f8f2">]</span>
+
+<span style="color: #f8f8f2">print(top_songs)</span>
+
+<span style="color: #f8f8f2">top_songs[</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">]</span> <span style="color: #ff4689">=</span> <span style="color: #e6db74">&quot;Can&#39;t Buy Me Love&quot;</span>
+<span style="color: #f8f8f2">print(top_songs)</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Assigning a value to <code>top_songs[2]</code> replaces the value at that index, so <code>Hello, Dolly!</code> is replaced with <code>Can&#8217;t Buy Me Love</code>.
+This code will output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="text"><span></span>[“I Want to Hold Your Hand”, “She Loves You”, “Hello, Dolly!”, “Oh, Pretty Woman”, “I Get Around”]
+[“I Want to Hold Your Hand”, “She Loves You”, “Can&#39;t Buy Me Love”, “Oh, Pretty Woman”, “I Get Around”]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When we reference an item using this index syntax, we can treat an element like any other variable we&#8217;ve been working with to this point.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Although there are definitely similarities between a Python <code>list</code> and arrays, which you may have used in a different language, it&#8217;s important to understand that they are different.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll take a deeper look at <code>list</code> and indexing in the <a href="data-structures.html">Data Structures</a> chapter, and for now we just need to know how to create a <code>list</code> and print what&#8217;s in it.</p>
 </div>
 <hr>
 </div>
@@ -1229,7 +1274,7 @@ blues_with_12_bars</code></pre>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-13<br />
-        01:27:58 UTC<br />
+        21:21:39 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
