@@ -125,6 +125,12 @@ mark {
   background-color: var(--sidebarbackground) !important;
 }
 
+/* Inverty color of Font Awesome adminonition icons, which otherwise don't show clearly in dark mode */
+.admonitionblock td.icon [class^="fa icon-"] {
+    filter: invert(1) brightness(1.2);
+
+}
+
 .literalblock pre {
   background-color: #191b1d;
 }

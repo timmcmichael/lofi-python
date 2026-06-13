@@ -2,6 +2,10 @@
 
 @import url('./architech.css');
 
+.literalblock pre {
+  background-color: #191b1d;
+}
+
 #toc.toc2 {
   background-image: url('../images/blue-grid.png');
   /* Adjust path as necessary */
@@ -28,8 +32,4 @@
     font-family: var(--main-font) !important;
   }
 
-}
-
-.literalblock pre {
-  background-color: #191b1d;
 }

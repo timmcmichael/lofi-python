@@ -64,6 +64,8 @@
 </li>
 <li><a href="variables-data-and-operations.html#_handling_user_input">2.7. Handling User Input</a>
 </li>
+<li><a href="variables-data-and-operations.html#_lists">2.8. Lists</a>
+</li>
 <li><a href="variables-data-and-operations.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_3">Check Yourself Before You Wreck Yourself (on the assignments)</a>
 </li>
 </ul>
@@ -133,6 +135,9 @@
 <li>
 <p>Get and process user input</p>
 </li>
+<li>
+<p>Initialize and access lists</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
@@ -142,7 +147,7 @@
 <div class="paragraph">
 <p>It&#8217;s fun to create programs that display stuff on the screen, but that&#8217;s pretty limited.
 To start doing things that are more interesting—and useful—we&#8217;ll need to keep track of some information.
-In computer programming, information is called <strong>data</strong>, and data is stored in <strong>variables</strong>.</p>
+In computer programming, information is called <em>data</em>, and data is stored in <em>variables</em>.</p>
 </div>
 <div class="dlist">
 <dl>
@@ -201,7 +206,7 @@ If we want to store coffee <strong>and</strong> water, we can do that by using t
 <div class="sect2">
 <h3 id="_variable_identifiers">2.2. Variable Identifiers</h3>
 <div class="paragraph">
-<p>In order to use that value, we have to know where to find it, so we give the memory location a name, technically called an <strong>identifier</strong>.</p>
+<p>In order to use that value, we have to know where to find it, so we give the memory location a name, technically called an <em>identifier</em>.</p>
 </div>
 <div class="paragraph">
 <p>Variable identifiers or names are the character sequences that identify a variable.
@@ -245,7 +250,7 @@ And you will lose points if you don&#8217;t.</p>
 <h3 id="_variable_values">2.3. Variable Values</h3>
 <div class="paragraph">
 <p>Unlike many other languages, Python does not have a specific command for creating (or, as we will call it, <em>initializing</em>) a variable.
-Instead, the interpreter automatically makes a variable when we assign a value to it for the first time, and that&#8217;s done with an <strong>assignment statement</strong>.</p>
+Instead, the interpreter automatically makes a variable when we assign a value to it for the first time, and that&#8217;s done with an <em>assignment statement</em>.</p>
 </div>
 <div class="paragraph">
 <p>An assignment statement, as the name suggests, assigns a value to a variable.
@@ -282,7 +287,7 @@ Storing the number 7 doesn&#8217;t take very much space; storing a picture of Jo
 <p>&#8230;&#8203;<em>drumroll, please</em>&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p><strong>data type</strong>.</p>
+<p><em>data type</em>.</p>
 </div>
 <div class="paragraph">
 <p>In many other programming languages, the programmer specifies the data type.
@@ -292,7 +297,7 @@ For our purposes at this time, there are three Python data types: <code>int</cod
 <div class="sect3">
 <h4 id="_the_int_data_type">2.4.1. The <code>int</code> Data Type</h4>
 <div class="paragraph">
-<p>The <code>int</code> data type is for <strong>integers</strong>.
+<p>The <code>int</code> data type is for <em>integers</em>.
 As you may remember from your math class, an integer is a whole number; that is, a number that doesn&#8217;t include any decimal places or fractional values.
 <strong><em>5</em></strong> is an integer and <strong><em>-824</em></strong> is an integer, while <strong><em>3.14</em></strong> and <strong><em>7 1/2</em></strong> are not.</p>
 </div>
@@ -312,7 +317,7 @@ As you may remember from your math class, an integer is a whole number; that is,
 <div class="sect3">
 <h4 id="_the_float_data_type">2.4.2. The <code>float</code> Data Type</h4>
 <div class="paragraph">
-<p>The <code>float</code> data type refers to <strong>floating-point</strong> numbers.
+<p>The <code>float</code> data type refers to <em>floating-point</em> numbers.
 A floating point number is a number that includes decimal data, such as <strong><em>4.723</em></strong> and <strong><em>-100.23</em></strong>.
 A fraction like <strong><em>7 1/2</em></strong> can also be stored as a floating-point number, but only in decimal form (i.e., <strong><em>7.5</em></strong>).</p>
 </div>
@@ -334,7 +339,7 @@ A fraction like <strong><em>7 1/2</em></strong> can also be stored as a floating
 <div class="sect3">
 <h4 id="_the_str_data_type">2.4.3. The <code>str</code> Data Type</h4>
 <div class="paragraph">
-<p>The <code>str</code> data type, perhaps confusingly, refers to <strong>text</strong> data.
+<p>The <code>str</code> data type, perhaps confusingly, refers to <em>text</em> data.
 It gets its name because it can hold a bunch of characters put together, like a string of holiday lights.
 So we pronounce this data type "string".</p>
 </div>
@@ -345,8 +350,8 @@ So we pronounce this data type "string".</p>
 <div class="title">Figure 2.3 - A <code>str</code> variable is multiple characters strung together like a set of lights.</div>
 </div>
 <div class="paragraph">
-<p>A string can hold any characters: letters (upper and lowercase, which are different), digits (0 through 9), symbols (such as <code>^</code> and <code><strong></code>), and a variety of special characters.
-Since one of the characters a string can hold is a *<em>space</em></strong>, we need a way to indicate the start and stop of a <code>str</code>.</p>
+<p>A string can hold any characters: letters (upper and lowercase, which are different), digits (0 through 9), symbols (such as <code>^</code> and <code>*</code>), and a variety of special characters.
+Since one of the characters a string can hold is a <em>space</em>, we need a way to indicate the start and stop of a <code>str</code>.</p>
 </div>
 <div class="paragraph">
 <p>In Python, we can use quotation marks, which coders often call <em>double quotes</em>, or apostrophes, which we call <em>single quotes</em>.
@@ -538,7 +543,7 @@ We call this <em>type conversion</em> or <em>type casting</em>.</p>
 <div class="paragraph">
 <p>Another way to output variables and constants is to use <em>interpolation</em>.
 Interpolation is a way to insert the value of a variable or constant into a string at a designated spot.
-There are a few different ways to interpolate in Python, but the one we&#8217;ll use for now is called <strong>formatted string literals</strong>, commonly referred to as <strong>f-strings</strong>.
+There are a few different ways to interpolate in Python, but the one we&#8217;ll use for now is called <em>formatted string literals</em>, commonly referred to as <em>f-strings</em>.
 To use an f-string, we put the character <code>f</code> in front of the opening quotation mark of the string, and then we can put the variable identifier in curly braces <code>{ }</code> in the position we want the value inserted.</p>
 </div>
 <div class="listingblock">
@@ -898,7 +903,7 @@ For example, if we want to add 10 to a <code>weight</code> variable that already
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Python doesn&#8217;t have an <strong>increment</strong> or <strong>decrement</strong> operator like some other programming languages. To increase a number by one, use <code>+= 1</code>
+Python doesn&#8217;t have an <em>increment</em> or <em>decrement</em> operator like some other programming languages. To increase a number by one, use <code>+= 1</code>, and to decrease a number by one, use <code>-= 1</code>.
 </td>
 </tr>
 </table>
@@ -1022,8 +1027,55 @@ If the Python interpreter is not able to convert the string to a number, it caus
 </div>
 </div>
 </div>
-<hr>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_lists">2.8. Lists</h3>
+<div class="paragraph">
+<p>To this point, we&#8217;ve made a big deal about how a variable can only hold one value at a time.
+If you try to put another value in a variable, the existing value is lost.
+When we need to store a bunch of stuff, we just make more variables.</p>
+</div>
+<div class="paragraph">
+<p>Consider keeping track of the top 5 songs for the year 1964.
+Though we might put all five song titles in one big string and find some clever way to separate them when we need to, we really need to treat individual data items as separate values.
+So, we might do something like this:</p>
+</div>
+<div class="paragraph">
+<p>caption="Example 2.2 - "]
+.Using multiple variables to store related data</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">first_song</span> <span style="color: #ff4689">=</span> <span style="color: #ed007e; background-color: #1e0010">“</span><span style="color: #f8f8f2">I</span> <span style="color: #f8f8f2">Want</span> <span style="color: #f8f8f2">to</span> <span style="color: #f8f8f2">Hold</span> <span style="color: #f8f8f2">Your</span> <span style="color: #f8f8f2">Hand</span><span style="color: #ed007e; background-color: #1e0010">”</span> <span style="color: #959077"># The Beatles</span>
+<span style="color: #f8f8f2">second_song</span><span style="color: #ff4689">=</span> <span style="color: #ed007e; background-color: #1e0010">“</span><span style="color: #f8f8f2">She</span> <span style="color: #f8f8f2">Loves</span> <span style="color: #f8f8f2">You</span><span style="color: #ed007e; background-color: #1e0010">”</span> <span style="color: #959077"># The Beatles</span>
+<span style="color: #f8f8f2">third_song</span> <span style="color: #ff4689">=</span> <span style="color: #ed007e; background-color: #1e0010">“</span><span style="color: #f8f8f2">Hello,</span> <span style="color: #f8f8f2">Dolly</span><span style="color: #ed007e; background-color: #1e0010">!”</span> <span style="color: #959077"># Louis Armstrong</span>
+<span style="color: #f8f8f2">fourth_song</span> <span style="color: #ff4689">=</span> <span style="color: #ed007e; background-color: #1e0010">“</span><span style="color: #f8f8f2">Oh,</span> <span style="color: #f8f8f2">Pretty</span> <span style="color: #f8f8f2">Woman</span><span style="color: #ed007e; background-color: #1e0010">”</span> <span style="color: #959077"># Roy Orbison</span>
+<span style="color: #f8f8f2">fifth_song</span> <span style="color: #ff4689">=</span> <span style="color: #ed007e; background-color: #1e0010">“</span><span style="color: #f8f8f2">I</span> <span style="color: #f8f8f2">Get</span> <span style="color: #f8f8f2">Around</span><span style="color: #ed007e; background-color: #1e0010">”</span> <span style="color: #959077"># The Beach Boys</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These five pieces of data are related to each other (they&#8217;re all top songs from 1964), but we can store and work with them separately.
+And this works just fine, especially if we only have a few items to keep track of.</p>
+</div>
+<div class="paragraph">
+<p>But what if we want the top 20 songs, or the top 100?
+Using this approach, we&#8217;re going to be creating a lot of variables!</p>
+</div>
+<div class="paragraph">
+<p>Have groups of related data is a common situation, so computer scientists have come up with a variety of ways to store and organize collections of data.
+In general terms, we can call these collections <em>data structures</em>, and <a href="https://en.wikipedia.org/wiki/List_of_data_structures" target="_blank" rel="noopener">there are a ton of them</a>.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll take a closer look at some basic and commonly used data structures <a href="data-structures.html">later in the book</a>, but for now, we should at least know one simple way to store a collection.
+We&#8217;ll do that with <em>lists</em>.</p>
+</div>
+<hr>
 </div>
 <div class="sect2">
 <h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_3">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
@@ -1100,8 +1152,8 @@ blues_with_12_bars</code></pre>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-12<br />
-        02:39:37 UTC<br />
+        Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-13<br />
+        00:03:16 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
