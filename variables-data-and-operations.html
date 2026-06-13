@@ -1109,6 +1109,18 @@ The following code initializes a <code>list</code> of the top 5 songs from 1964:
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="text"><span></span>[“I Want to Hold Your Hand”, “She Loves You”, “Hello, Dolly!”, “Oh, Pretty Woman”, “I Get Around”]</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>A <code>list</code> can hold any type of data, so we can have a list of numbers, a list of strings, or even a list that contains a mix of different data types—though that&#8217;s usually not a good idea.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 2.18 - Using a <code>list</code> of numbers</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">smashed_guitars</span> <span style="color: #ff4689">=</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">]</span> <span style="color: #959077"># the number of guitars smahed in each of the last 5 concerts</span>
+<span style="color: #f8f8f2">print(smashed_guitars)</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
 <div class="sect3">
 <h4 id="_list_indexing">2.8.1. List Indexing</h4>
 <div class="paragraph">
@@ -1123,7 +1135,7 @@ This <em>zero-based indexing</em> is common in programming and is a frequent sou
 <p>To access a <code>list</code> item, reference the <code>list</code> identifier, followed by square brackets containing the apprpriate index number.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.18 - Outputting the values of a <code>list</code></div>
+<div class="title">Example 2.19 - Outputting the values of a <code>list</code></div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -1151,7 +1163,7 @@ This <em>zero-based indexing</em> is common in programming and is a frequent sou
 <p>We can also use this indexing syntax to change a value in the <code>list</code> using an assignment statement.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.19 - Changing an individual value in a <code>list</code></div>
+<div class="title">Example 2.20 - Changing an individual value in a <code>list</code></div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="python"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -1274,7 +1286,7 @@ blues_with_12_bars</code></pre>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Polka Tulk Edition,&nbsp;revised&nbsp;2026-06-13<br />
-        21:21:39 UTC<br />
+        21:31:39 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
